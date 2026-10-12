@@ -19,7 +19,8 @@
   visible.sort((a,b)=>(sort.value==='oldest'?a.year-b.year:sort.value==='newest'?b.year-a.year:0)||a.id.localeCompare(b.id));
   const shown=new Set(visible.map(p=>p.id));
   for(const p of papers)nodes.get(p.id).hidden=!shown.has(p.id);
-  for(const p of visible)list.append(nodes.get(p.id));
+  const order=[...list.children].filter(node=>shown.has(node.dataset.id)).map(node=>node.dataset.id);
+  if(visible.some((p,i)=>order[i]!==p.id))for(const p of visible)list.append(nodes.get(p.id));
   for(const chip of chips)chip.setAttribute('aria-pressed',String(chip.dataset.filter===topic));
   document.getElementById('paper-result-count').textContent=`显示 ${visible.length} / ${papers.length} 篇文献`;
   document.getElementById('library-empty').hidden=visible.length!==0;
