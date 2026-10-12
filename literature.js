@@ -1,5 +1,6 @@
 'use strict';
 (() => {
+ document.getElementById('copy-status').textContent='';
  const papers=JSON.parse(document.getElementById('literature-data').textContent);
  const list=document.getElementById('paper-list');
  const nodes=new Map([...list.children].map(node=>[node.dataset.id,node]));

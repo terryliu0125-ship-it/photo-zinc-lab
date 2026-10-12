@@ -36,7 +36,7 @@ Buddha Deka Boruah; Bo Wen; Michael De Volder. Molybdenum Disulfide–Zinc Oxide
 
 ## L05 · 可控氧化构筑 V₂O₅/VO₂ 空心光正极
 
-Hongran Yang; Shilei Wu; Akesh Manimendra Badalge; Xinyu Li; Qianjin Wang; Yu Lin Zhong; Ting Zhu. Controlled oxidation of V2O5/VO2hollow nanospheres as photocathodes for photo-rechargeable zinc ion batteries with an ultrahigh capacity enhancement. *Journal of Materials Chemistry A*, 2025, 13: 12216-12225. [DOI](https://doi.org/10.1039/d5ta00517e) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd5ta00517e)
+Hongran Yang; Shilei Wu; Akesh Manimendra Badalge; Xinyu Li; Qianjin Wang; Yu Lin Zhong; Ting Zhu. Controlled oxidation of V2O5/VO2 hollow nanospheres as photocathodes for photo-rechargeable zinc ion batteries with an ultrahigh capacity enhancement. *Journal of Materials Chemistry A*, 2025, 13: 12216-12225. [DOI](https://doi.org/10.1039/d5ta00517e) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd5ta00517e)
 
 以可控氧化形成 V₂O₅/VO₂ 空心纳米球，利用表面光电压研究其光响应，为混合价态钒氧化物与界面构筑提供案例。
 
