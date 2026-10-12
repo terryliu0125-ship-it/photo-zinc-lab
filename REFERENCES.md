@@ -1,10 +1,10 @@
-# 精选文献与来源
+# 文献与来源
 
-书目信息通过 Crossref DOI 注册记录核对；中文导读为本站整理，非作者摘要的逐字翻译。核对日期：2026-10-12。
+精选条目含人工中文导读；标记为自动收录的条目仅经元数据与关键词筛选，尚未人工研读。
 
 ## L01 · 光充电锌离子电池的代表性起点
 
-Buddha Deka Boruah; Angus Mathieson; Bo Wen; Sascha Feldmann; Wesley M. Dose; Michael De Volder. Photo-rechargeable zinc-ion batteries. *Energy & Environmental Science*, 2020, 13: 2414-2421. [DOI](https://doi.org/10.1039/d0ee01392g) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd0ee01392g)
+Buddha Deka Boruah; Angus Mathieson; Bo Wen; Sascha Feldmann; Wesley M. Dose; Michael De Volder. Photo-rechargeable zinc-ion batteries. *Energy & Environmental Science*, 2020. [DOI](https://doi.org/10.1039/d0ee01392g) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd0ee01392g)
 
 介绍将光吸收、载流子分离与锌离子存储整合在同一光电极中的设计，并展示直接光充电。适合用来理解光电极各组分的作用。
 
@@ -12,7 +12,7 @@ Buddha Deka Boruah; Angus Mathieson; Bo Wen; Sascha Feldmann; Wesley M. Dose; Mi
 
 ## L02 · 从 V₂O₅ 到 VO₂：关注高倍率储锌
 
-Buddha Deka Boruah; Angus Mathieson; Sul Ki Park; Xiao Zhang; Bo Wen; Lifu Tan; Adam Boies; Michael De Volder. Vanadium Dioxide Cathodes for High‐Rate Photo‐Rechargeable Zinc‐Ion Batteries. *Advanced Energy Materials*, 2021, 11: 2100115. [DOI](https://doi.org/10.1002/aenm.202100115) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Faenm.202100115)
+Buddha Deka Boruah; Angus Mathieson; Sul Ki Park; Xiao Zhang; Bo Wen; Lifu Tan; Adam Boies; Michael De Volder. Vanadium Dioxide Cathodes for High‐Rate Photo‐Rechargeable Zinc‐Ion Batteries. *Advanced Energy Materials*, 2021. [DOI](https://doi.org/10.1002/aenm.202100115) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Faenm.202100115)
 
 以 VO₂ 纳米棒与还原氧化石墨烯构建光正极，讨论光充电及光照下的倍率表现，为钒氧化物的材料选择提供对照。
 
@@ -20,7 +20,7 @@ Buddha Deka Boruah; Angus Mathieson; Sul Ki Park; Xiao Zhang; Bo Wen; Lifu Tan; 
 
 ## L03 · 堆叠光正极：分离吸光与电荷传输功能
 
-Buddha Deka Boruah; Michael De Volder. Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries. *Journal of Materials Chemistry A*, 2021, 9: 23199-23205. [DOI](https://doi.org/10.1039/d1ta07572a) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd1ta07572a)
+Buddha Deka Boruah; Michael De Volder. Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries. *Journal of Materials Chemistry A*, 2021. [DOI](https://doi.org/10.1039/d1ta07572a) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd1ta07572a)
 
 通过 VO₂ 与 ZnO 的层状堆叠安排储能与电荷传输路径。可结合能带示意和光响应实验，理解界面设计为何影响光充电。
 
@@ -28,7 +28,7 @@ Buddha Deka Boruah; Michael De Volder. Vanadium dioxide–zinc oxide stacked pho
 
 ## L04 · MoS₂/ZnO：与钒氧化物体系交叉比较
 
-Buddha Deka Boruah; Bo Wen; Michael De Volder. Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries. *ACS Nano*, 2021, 15: 16616-16624. [DOI](https://doi.org/10.1021/acsnano.1c06372) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsnano.1c06372)
+Buddha Deka Boruah; Bo Wen; Michael De Volder. Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries. *ACS Nano*, 2021. [DOI](https://doi.org/10.1021/acsnano.1c06372) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsnano.1c06372)
 
 将 MoS₂ 与 ZnO 分层生长在集流体上，探索异质界面的光生电荷分离与光充电。适合作为钒基光电极之外的比较体系。
 
@@ -36,7 +36,7 @@ Buddha Deka Boruah; Bo Wen; Michael De Volder. Molybdenum Disulfide–Zinc Oxide
 
 ## L05 · 可控氧化构筑 V₂O₅/VO₂ 空心光正极
 
-Hongran Yang; Shilei Wu; Akesh Manimendra Badalge; Xinyu Li; Qianjin Wang; Yu Lin Zhong; Ting Zhu. Controlled oxidation of V2O5/VO2 hollow nanospheres as photocathodes for photo-rechargeable zinc ion batteries with an ultrahigh capacity enhancement. *Journal of Materials Chemistry A*, 2025, 13: 12216-12225. [DOI](https://doi.org/10.1039/d5ta00517e) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd5ta00517e)
+Hongran Yang; Shilei Wu; Akesh Manimendra Badalge; Xinyu Li; Qianjin Wang; Yu Lin Zhong; Ting Zhu. Controlled oxidation of V2O5/VO2 hollow nanospheres as photocathodes for photo-rechargeable zinc ion batteries with an ultrahigh capacity enhancement. *Journal of Materials Chemistry A*, 2025. [DOI](https://doi.org/10.1039/d5ta00517e) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd5ta00517e)
 
 以可控氧化形成 V₂O₅/VO₂ 空心纳米球，利用表面光电压研究其光响应，为混合价态钒氧化物与界面构筑提供案例。
 
@@ -44,7 +44,7 @@ Hongran Yang; Shilei Wu; Akesh Manimendra Badalge; Xinyu Li; Qianjin Wang; Yu Li
 
 ## L06 · 评价方法：区分暗态、光辅助与纯光充电
 
-Meng Wei; Guangyu Lin; Donghui Chen; Qiongzhi Gao; Xin Cai; Shengsen Zhang; Lixing Ding; Xiaosong Zhou; Guangqi Hu; Siyuan Yang. Charging-Mode-Resolved Energy-Storage Mechanisms in TiO2/MoS2-Enabled Photorechargeable Zinc-Ion Batteries. *JACS Au*, 2026, 6: 3713-3725. [DOI](https://doi.org/10.1021/jacsau.6c00282) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Fjacsau.6c00282)
+Meng Wei; Guangyu Lin; Donghui Chen; Qiongzhi Gao; Xin Cai; Shengsen Zhang; Lixing Ding; Xiaosong Zhou; Guangqi Hu; Siyuan Yang. Charging-Mode-Resolved Energy-Storage Mechanisms in TiO2/MoS2-Enabled Photorechargeable Zinc-Ion Batteries. *JACS Au*, 2026. [DOI](https://doi.org/10.1021/jacsau.6c00282) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Fjacsau.6c00282)
 
 对比三种充电协议，并结合电流—电压同步测量、界面过程和理论计算讨论储能机理，提出扣除自充电贡献的 OCV 评价方法。
 
@@ -52,7 +52,7 @@ Meng Wei; Guangyu Lin; Donghui Chen; Qiongzhi Gao; Xin Cai; Shengsen Zhang; Lixi
 
 ## L07 · 光电与光热协同：水合钒氧化物的新案例
 
-Jiaming Liu; Xinyu Gao; Jiayu Wang; Xinran Hu; Yunpeng Fang; Sha Zhao; Yuxin He; Dan Li; Zhitao Shao; Xuanyu Ren; Nan Sun; Wei Feng. Photoelectric-photothermal synergistic enhanced photo-assisted zinc-ion batteries based on carbon-coated hydrated vanadium oxide. *Journal of Materials Chemistry A*, 2026, 14: 30746-30757. [DOI](https://doi.org/10.1039/d6ta03521c) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd6ta03521c)
+Jiaming Liu; Xinyu Gao; Jiayu Wang; Xinran Hu; Yunpeng Fang; Sha Zhao; Yuxin He; Dan Li; Zhitao Shao; Xuanyu Ren; Nan Sun; Wei Feng. Photoelectric-photothermal synergistic enhanced photo-assisted zinc-ion batteries based on carbon-coated hydrated vanadium oxide. *Journal of Materials Chemistry A*, 2026. [DOI](https://doi.org/10.1039/d6ta03521c) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd6ta03521c)
 
 讨论碳包覆水合钒氧化物中的光电荷转移与光致升温协同效应，关注低温条件下的光辅助储锌。
 
@@ -60,7 +60,7 @@ Jiaming Liu; Xinyu Gao; Jiayu Wang; Xinran Hu; Yunpeng Fang; Sha Zhao; Yuxin He;
 
 ## L08 · 入门综述：光辅助可充金属电池的共同原理
 
-Pengpeng Zhang; Meng Cai; Yixin Wei; Jingbo Zhang; Kaizhen Li; Sembukuttiarachilage Ravi Pradip Silva; Guosheng Shao; Peng Zhang. Photo‐Assisted Rechargeable Metal Batteries: Principles, Progress, and Perspectives. *Advanced Science*, 2024, 11: 2402448. [DOI](https://doi.org/10.1002/advs.202402448) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fadvs.202402448)
+Pengpeng Zhang; Meng Cai; Yixin Wei; Jingbo Zhang; Kaizhen Li; Sembukuttiarachilage Ravi Pradip Silva; Guosheng Shao; Peng Zhang. Photo‐Assisted Rechargeable Metal Batteries: Principles, Progress, and Perspectives. *Advanced Science*, 2024. [DOI](https://doi.org/10.1002/advs.202402448) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fadvs.202402448)
 
 从电池与光电化学基础出发，梳理器件组成、工作原理和光电极设计，适合建立跨体系的概念框架。
 
@@ -68,7 +68,7 @@ Pengpeng Zhang; Meng Cai; Yixin Wei; Jingbo Zhang; Kaizhen Li; Sembukuttiarachil
 
 ## L09 · 设计综述：能带、载流子与光热效应
 
-Kejun Jin; Yingjian Yu. Principles, progress, and prospects of photo-rechargeable zinc-ion batteries. *Journal of Energy Chemistry*, 2025, 104: 382-396. [DOI](https://doi.org/10.1016/j.jechem.2024.12.058) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.jechem.2024.12.058)
+Kejun Jin; Yingjian Yu. Principles, progress, and prospects of photo-rechargeable zinc-ion batteries. *Journal of Energy Chemistry*, 2025. [DOI](https://doi.org/10.1016/j.jechem.2024.12.058) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.jechem.2024.12.058)
 
 围绕能带调控、载流子分离、复合抑制和光热效应，整理光充电锌离子电池的设计原则与挑战。
 
@@ -76,7 +76,7 @@ Kejun Jin; Yingjian Yu. Principles, progress, and prospects of photo-rechargeabl
 
 ## L10 · 光电极综述：材料选择与结构设计
 
-Qianqian Cai; Guangran Di; Xiaojing Yin; Ye Liu; Guoqiang Wang; Yubo Kuang; Xiaoqian Xiang; Kaixin Wang; Lei Zhang; Xing Chen; Xiaojun Lv. The photoelectrode of photo-rechargeable zinc-ion batteries: Design, progress. *Journal of Power Sources*, 2025, 628: 235854. [DOI](https://doi.org/10.1016/j.jpowsour.2024.235854) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.jpowsour.2024.235854)
+Qianqian Cai; Guangran Di; Xiaojing Yin; Ye Liu; Guoqiang Wang; Yubo Kuang; Xiaoqian Xiang; Kaixin Wang; Lei Zhang; Xing Chen; Xiaojun Lv. The photoelectrode of photo-rechargeable zinc-ion batteries: Design, progress. *Journal of Power Sources*, 2025. [DOI](https://doi.org/10.1016/j.jpowsour.2024.235854) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.jpowsour.2024.235854)
 
 梳理光充电锌离子电池的工作原理、光电极材料选择和结构设计，适合建立从材料到器件的阅读清单。
 
@@ -84,7 +84,7 @@ Qianqian Cai; Guangran Di; Xiaojing Yin; Ye Liu; Guoqiang Wang; Yubo Kuang; Xiao
 
 ## L11 · 模式综述：从光辅助走向直接光充电
 
-Dan Yang; Chen Xin; Hua-Kun Liu; Yaoxin Zhang; Ting Xiong. From photo-assisted to photo-rechargeable: Advancing Zn-Ion batteries with light-driven energy storage. *Green Energy & Environment*, 2026, 11: 387-400. [DOI](https://doi.org/10.1016/j.gee.2025.12.002) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.gee.2025.12.002)
+Dan Yang; Chen Xin; Hua-Kun Liu; Yaoxin Zhang; Ting Xiong. From photo-assisted to photo-rechargeable: Advancing Zn-Ion batteries with light-driven energy storage. *Green Energy & Environment*, 2026. [DOI](https://doi.org/10.1016/j.gee.2025.12.002) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.gee.2025.12.002)
 
 对照光辅助与光充电两种运行模式，梳理材料整合与器件设计，适合先建立术语边界，再阅读具体光电极案例。
 
@@ -92,7 +92,7 @@ Dan Yang; Chen Xin; Hua-Kun Liu; Yaoxin Zhang; Ting Xiong. From photo-assisted t
 
 ## L12 · 关联阅读：二维氮化碳光充电锌离子电容器
 
-Buddha Deka Boruah; Angus Mathieson; Bo Wen; Changshin Jo; Felix Deschler; Michael De Volder. Photo-Rechargeable Zinc-Ion Capacitor Using 2D Graphitic Carbon Nitride. *Nano Letters*, 2020, 20: 5967-5974. [DOI](https://doi.org/10.1021/acs.nanolett.0c01958) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facs.nanolett.0c01958)
+Buddha Deka Boruah; Angus Mathieson; Bo Wen; Changshin Jo; Felix Deschler; Michael De Volder. Photo-Rechargeable Zinc-Ion Capacitor Using 2D Graphitic Carbon Nitride. *Nano Letters*, 2020. [DOI](https://doi.org/10.1021/acs.nanolett.0c01958) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facs.nanolett.0c01958)
 
 展示二维石墨相氮化碳在光充电锌离子电容器中的应用，为光响应材料与能量存储整合提供另一种器件思路。
 
@@ -100,8 +100,16 @@ Buddha Deka Boruah; Angus Mathieson; Bo Wen; Changshin Jo; Felix Deschler; Micha
 
 ## L13 · 关联阅读：V₂O₅–活性炭光充电电容器
 
-Buddha Deka Boruah; Bo Wen; Satyawan Nagane; Xiao Zhang; Samuel D. Stranks; Adam Boies; Michael De Volder. Photo-rechargeable Zinc-Ion Capacitors using V2O5-Activated Carbon Electrodes. *ACS Energy Letters*, 2020, 5: 3132-3139. [DOI](https://doi.org/10.1021/acsenergylett.0c01528) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsenergylett.0c01528)
+Buddha Deka Boruah; Bo Wen; Satyawan Nagane; Xiao Zhang; Samuel D. Stranks; Adam Boies; Michael De Volder. Photo-rechargeable Zinc-Ion Capacitors using V2O5-Activated Carbon Electrodes. *ACS Energy Letters*, 2020. [DOI](https://doi.org/10.1021/acsenergylett.0c01528) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsenergylett.0c01528)
 
 讨论 V₂O₅ 与活性炭电极构成的光充电锌离子电容器，可作为钒基光电极在不同储能架构中的对照。
 
 阅读提示：与锌离子电池分开理解；不能直接混用能量、功率及效率指标。
+
+## L14 · 新近文献 · 待研读
+
+Wendong Zhu; Zhenkun Zhu; Tian Zhang; Tonghui Guo; Yuhong Xu; Rong Xuan; Xinlei Gan; Xiaohui Liu; Like Huang; Qidong Tai; Cuicui Su; Jing Cuan; Yuejin Zhu; Weiping Li; Jing Zhang. Voltage matching strategy to design efficient photo-rechargeable zinc-ion batteries. *Chemical Engineering Journal*, 2026. [DOI](https://doi.org/10.1016/j.cej.2026.182442) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.cej.2026.182442)
+
+标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。
+
+阅读提示：请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。

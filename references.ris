@@ -10,11 +10,12 @@ AU  - Michael De Volder
 JO  - Energy & Environmental Science
 PY  - 2020
 VL  - 13
+IS  - 8
 SP  - 2414
 EP  - 2421
 DO  - 10.1039/d0ee01392g
 UR  - https://doi.org/10.1039/d0ee01392g
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L02
@@ -30,10 +31,11 @@ AU  - Michael De Volder
 JO  - Advanced Energy Materials
 PY  - 2021
 VL  - 11
+IS  - 13
 SP  - 2100115
 DO  - 10.1002/aenm.202100115
 UR  - https://doi.org/10.1002/aenm.202100115
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L03
@@ -43,11 +45,12 @@ AU  - Michael De Volder
 JO  - Journal of Materials Chemistry A
 PY  - 2021
 VL  - 9
+IS  - 40
 SP  - 23199
 EP  - 23205
 DO  - 10.1039/d1ta07572a
 UR  - https://doi.org/10.1039/d1ta07572a
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L04
@@ -58,11 +61,12 @@ AU  - Michael De Volder
 JO  - ACS Nano
 PY  - 2021
 VL  - 15
+IS  - 10
 SP  - 16616
 EP  - 16624
 DO  - 10.1021/acsnano.1c06372
 UR  - https://doi.org/10.1021/acsnano.1c06372
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L05
@@ -77,11 +81,12 @@ AU  - Ting Zhu
 JO  - Journal of Materials Chemistry A
 PY  - 2025
 VL  - 13
+IS  - 17
 SP  - 12216
 EP  - 12225
 DO  - 10.1039/d5ta00517e
 UR  - https://doi.org/10.1039/d5ta00517e
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L06
@@ -99,11 +104,12 @@ AU  - Siyuan Yang
 JO  - JACS Au
 PY  - 2026
 VL  - 6
+IS  - 7
 SP  - 3713
 EP  - 3725
 DO  - 10.1021/jacsau.6c00282
 UR  - https://doi.org/10.1021/jacsau.6c00282
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L07
@@ -123,11 +129,12 @@ AU  - Wei Feng
 JO  - Journal of Materials Chemistry A
 PY  - 2026
 VL  - 14
+IS  - 45
 SP  - 30746
 EP  - 30757
 DO  - 10.1039/d6ta03521c
 UR  - https://doi.org/10.1039/d6ta03521c
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L08
@@ -143,10 +150,11 @@ AU  - Peng Zhang
 JO  - Advanced Science
 PY  - 2024
 VL  - 11
+IS  - 30
 SP  - 2402448
 DO  - 10.1002/advs.202402448
 UR  - https://doi.org/10.1002/advs.202402448
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L09
@@ -160,7 +168,7 @@ SP  - 382
 EP  - 396
 DO  - 10.1016/j.jechem.2024.12.058
 UR  - https://doi.org/10.1016/j.jechem.2024.12.058
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L10
@@ -182,7 +190,7 @@ VL  - 628
 SP  - 235854
 DO  - 10.1016/j.jpowsour.2024.235854
 UR  - https://doi.org/10.1016/j.jpowsour.2024.235854
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L11
@@ -195,11 +203,12 @@ AU  - Ting Xiong
 JO  - Green Energy & Environment
 PY  - 2026
 VL  - 11
+IS  - 2
 SP  - 387
 EP  - 400
 DO  - 10.1016/j.gee.2025.12.002
 UR  - https://doi.org/10.1016/j.gee.2025.12.002
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L12
@@ -213,11 +222,12 @@ AU  - Michael De Volder
 JO  - Nano Letters
 PY  - 2020
 VL  - 20
+IS  - 8
 SP  - 5967
 EP  - 5974
 DO  - 10.1021/acs.nanolett.0c01958
 UR  - https://doi.org/10.1021/acs.nanolett.0c01958
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - L13
@@ -232,8 +242,34 @@ AU  - Michael De Volder
 JO  - ACS Energy Letters
 PY  - 2020
 VL  - 5
+IS  - 10
 SP  - 3132
 EP  - 3139
 DO  - 10.1021/acsenergylett.0c01528
 UR  - https://doi.org/10.1021/acsenergylett.0c01528
-ER  - 
+ER  -
+
+TY  - JOUR
+ID  - L14
+TI  - Voltage matching strategy to design efficient photo-rechargeable zinc-ion batteries
+AU  - Wendong Zhu
+AU  - Zhenkun Zhu
+AU  - Tian Zhang
+AU  - Tonghui Guo
+AU  - Yuhong Xu
+AU  - Rong Xuan
+AU  - Xinlei Gan
+AU  - Xiaohui Liu
+AU  - Like Huang
+AU  - Qidong Tai
+AU  - Cuicui Su
+AU  - Jing Cuan
+AU  - Yuejin Zhu
+AU  - Weiping Li
+AU  - Jing Zhang
+JO  - Chemical Engineering Journal
+PY  - 2026
+SP  - 182442
+DO  - 10.1016/j.cej.2026.182442
+UR  - https://doi.org/10.1016/j.cej.2026.182442
+ER  -
