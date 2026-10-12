@@ -1,4 +1,809 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><style>/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charSet="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
 @layer theme{:root,:host{--font-sans:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--spacing:.25rem;--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.relative{position:relative}.start{inset-inline-start:var(--spacing)}.table{display:table}}:root{--ink:#07130f;--ink-2:#0b2119;--mint:#baff66;--mint-2:#62f6b0;--paper:#edf5ef;--muted:#9bb0a5;--line:#c7ffd624}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--ink);color:var(--paper);margin:0;font-family:Noto Sans SC,PingFang SC,Microsoft YaHei,Arial,sans-serif}a{color:inherit;text-decoration:none}main{overflow:hidden}.nav{border-bottom:1px solid var(--line);z-index:20;justify-content:space-between;align-items:center;max-width:1440px;height:84px;margin:auto;padding:0 5vw;display:flex;position:relative}.brand{letter-spacing:.04em;align-items:center;gap:12px;font-weight:700;display:flex}.brand>span:last-child{flex-direction:column;line-height:1.12;display:flex}.brand small{color:var(--muted);letter-spacing:.18em;margin-top:5px;font:500 9px/1 Arial}.brand-mark{border:1px solid #baff6680;border-radius:50%;place-items:center;width:34px;height:34px;display:grid;position:relative;box-shadow:inset 0 0 14px #baff661f}.brand-mark:before,.brand-mark:after,.brand-mark i{content:"";background:var(--mint);width:5px;height:5px;box-shadow:0 0 8px var(--mint);border-radius:50%;position:absolute}.brand-mark:before{top:7px;left:8px}.brand-mark:after{bottom:7px;right:8px}.brand-mark i{width:8px;height:8px}.nav-links{color:#b7c9bf;gap:clamp(20px,3vw,44px);font-size:14px;display:flex}.nav-links a{transition:color .2s}.nav-links a:hover{color:var(--mint)}.nav-cta{color:var(--mint);border:1px solid #baff6659;padding:11px 16px;font-size:13px}.nav-cta span{margin-left:15px}.hero{grid-template-columns:1.05fr .95fr;align-items:center;max-width:1440px;min-height:750px;margin:auto;padding:115px 5vw 80px;display:grid;position:relative}.hero-grid{opacity:.12;background-image:linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);background-size:54px 54px;position:absolute;inset:0;-webkit-mask-image:linear-gradient(90deg,#000,#0000 74%);mask-image:linear-gradient(90deg,#000,#0000 74%)}.orb{filter:blur(60px);pointer-events:none;border-radius:50%;position:absolute}.orb-one{background:#52e7a326;width:330px;height:330px;top:18%;right:7%}.orb-two{background:#b3ff5812;width:220px;height:220px;bottom:-5%;left:30%}.hero-copy{z-index:2;position:relative}.eyebrow,.kicker{color:var(--mint);letter-spacing:.2em;font-size:11px;font-weight:700}.eyebrow{align-items:center;gap:10px;margin-bottom:28px;display:flex}.eyebrow span{background:var(--mint);width:27px;height:1px;position:relative}.eyebrow span:after{content:"";background:var(--mint);border-radius:50%;width:4px;height:4px;position:absolute;top:-1.5px;right:0}h1{letter-spacing:-.06em;margin:0;font-size:clamp(54px,6.2vw,92px);font-weight:750;line-height:1.04}h1 span{color:#0000;-webkit-text-stroke:1px var(--mint);text-shadow:0 0 30px #baff661f}.hero-lead{color:#a8bab0;max-width:625px;margin:34px 0;font-size:17px;line-height:1.9}.hero-actions{gap:14px;display:flex}.button{justify-content:center;align-items:center;gap:28px;min-height:50px;padding:0 24px;font-size:14px;font-weight:700;transition:transform .2s,background .2s;display:inline-flex}.button:hover{transform:translateY(-2px)}.button.primary{background:var(--mint);color:#10210c;box-shadow:0 12px 35px #baff6621}.button.ghost{border:1px solid var(--line);color:#d3dfd8}.play{color:var(--mint);font-size:10px}.hero-meta{border-top:1px solid var(--line);color:#83998d;gap:30px;width:fit-content;margin-top:55px;padding-top:24px;font-size:11px;display:flex}.hero-meta strong{color:var(--paper);margin-right:5px;font-size:18px}.battery-stage{z-index:2;place-items:center;min-height:530px;display:grid;position:relative}.battery-stage:before{content:"";border:1px solid #78ffc01f;border-radius:50%;width:450px;height:450px;position:absolute;box-shadow:0 0 80px #53ffb114,inset 0 0 80px #53ffb10d}.battery-stage:after{content:"";border:1px dashed #baff6633;border-radius:50%;width:330px;height:330px;animation:28s linear infinite rotate;position:absolute}@keyframes rotate{to{transform:rotate(360deg)}}.battery{z-index:3;background:linear-gradient(90deg,#ffffff08,#78ffbe12 50%,#ffffff05);border:1px solid #d2ffe180;border-radius:24px 24px 34px 34px;width:230px;height:345px;position:relative;box-shadow:0 28px 80px #0000006b,inset 0 0 35px #6cffb414}.battery-cap{background:#0b1d17;border:1px solid #d2ffe173;border-radius:8px 8px 0 0;width:90px;height:19px;position:absolute;top:-19px;left:70px}.cell-inner{border-bottom:1px solid #baff6633;align-items:stretch;display:flex;position:absolute;inset:34px 22px}.electrode{border-radius:6px;width:28px;position:relative}.electrode small{white-space:nowrap;color:#a7b9af;font-size:9px;position:absolute;bottom:-22px}.electrode.left{background:linear-gradient(#baff66,#3cc989);box-shadow:0 0 20px #92ff6f47}.electrode.left small{left:-2px}.electrode.right{background:repeating-linear-gradient(0deg,#9db3a8 0 5px,#6e8579 5px 7px)}.electrode.right small{right:-3px}.electrolyte{background:linear-gradient(#0000 5%,#32e2a01f 90%);border-radius:8px;flex:1;margin:0 10px;position:relative}.ion{color:#d7ff9e;border:1px solid #baff6640;border-radius:50%;padding:4px;font:600 10px Arial;animation:4s ease-in-out infinite drift;position:absolute;box-shadow:0 0 12px #baff6626}.i1{top:20%;left:14%}.i2{animation-delay:-1.2s;top:48%;right:10%}.i3{animation-delay:-2.4s;bottom:16%;left:36%}@keyframes drift{50%{transform:translate(16px)translateY(-7px)}}.particle{background:var(--mint-2);width:4px;height:4px;box-shadow:0 0 8px var(--mint-2);border-radius:50%;position:absolute}.p1{top:10%;left:26%}.p2{top:35%;left:56%}.p3{top:62%;left:20%}.p4{bottom:9%;right:18%}.charge-line{border:1px solid #baff6659;border-bottom:0;border-radius:20px 20px 0 0;height:46px;position:absolute;top:-58px;left:-18px;right:-18px}.charge-line span{color:var(--mint);font:11px Arial;position:absolute;top:-8px;left:48%}.light-source{z-index:5;color:var(--mint);font:13px Arial;position:absolute;top:22px;left:18%}.light-source i{transform-origin:0;background:linear-gradient(90deg, var(--mint), transparent);width:130px;height:1px;display:block;position:absolute;top:20px;left:12px;transform:rotate(57deg)}.light-source i:nth-of-type(2){top:30px;transform:rotate(65deg)}.light-source i:nth-of-type(3){top:40px;transform:rotate(73deg)}.stage-label{z-index:5;border-left:1px solid var(--mint);flex-direction:column;padding-left:16px;display:flex;position:absolute}.stage-label b{font-size:12px}.stage-label span{color:#6f8a7c;margin-top:5px;font-size:9px}.label-a{top:33%;right:0}.label-b{bottom:25%;left:0}.stage-coordinate{color:#52695e;letter-spacing:.18em;transform-origin:100%;gap:18px;font:8px Arial;display:flex;position:absolute;bottom:7px;right:-20px;transform:rotate(-90deg)}.section{max-width:1440px;margin:auto;padding:120px 5vw}.research{border-top:1px solid var(--line);background:#0a1a14}.section-heading{grid-template-columns:1.2fr .8fr;align-items:end;gap:80px;margin-bottom:62px;display:grid}.section-heading h2,.mechanism h2,.contact h2{letter-spacing:-.045em;margin:16px 0 0;font-size:clamp(38px,4.4vw,64px);line-height:1.13}.section-heading>p,.mechanism-intro>p{color:#8fa69a;max-width:500px;font-size:15px;line-height:1.9}.direction-grid{border-left:1px solid var(--line);grid-template-columns:repeat(3,1fr);display:grid}.direction-card{border:1px solid var(--line);background:linear-gradient(145deg,#ffffff06,#0000 65%);border-left:0;flex-direction:column;min-height:470px;padding:30px;transition:background .3s,transform .3s;display:flex}.direction-card:hover{background:#baff6609;transform:translateY(-5px)}.card-top{color:#6f887b;justify-content:space-between;font:11px Arial;display:flex}.card-top small{color:var(--mint);letter-spacing:.12em}.science-icon{border:1px solid #baff6629;border-radius:50%;width:120px;height:120px;margin:45px auto;position:relative}.science-icon:before,.science-icon:after,.science-icon i{content:"";position:absolute}.icon-01:before{border:1px solid #baff6673;inset:26px;transform:rotate(45deg)}.icon-01:after{background:var(--mint);width:10px;height:10px;box-shadow:0 0 14px var(--mint);border-radius:50%;top:54px;left:54px}.icon-01 i{background:linear-gradient(90deg, transparent, var(--mint), transparent);width:80px;height:1px;transform:rotate(var(--r,0));top:59px;left:19px}.icon-01 i:nth-child(2){--r:60deg}.icon-01 i:nth-child(3){--r:-60deg}.icon-02:before{border:1px solid var(--mint);border-radius:50%;width:70px;height:42px;top:38px;left:24px;transform:rotate(24deg)}.icon-02:after{border:1px solid #62f6b099;border-radius:50%;width:70px;height:42px;top:38px;left:24px;transform:rotate(-24deg)}.icon-02 i{background:var(--mint);width:9px;height:9px;box-shadow:0 0 13px var(--mint);border-radius:50%;top:55px;left:55px}.icon-03:before{background:repeating-linear-gradient(90deg,#0000 0 8px,#baff6680 8px 9px),repeating-linear-gradient(0deg,#0000 0 8px,#baff664d 8px 9px);width:64px;height:64px;top:27px;left:27px}.icon-03:after{background:var(--mint);width:40px;height:1px;box-shadow:0 0 10px var(--mint);top:59px;left:39px;transform:rotate(-30deg)}.direction-card h3{margin:0 0 14px;font-size:21px}.direction-card>p{color:#859b8f;margin:0;font-size:13px;line-height:1.8}.direction-card>a{border-top:1px solid var(--line);color:#bfd0c6;justify-content:space-between;margin-top:auto;padding-top:25px;font-size:12px;display:flex}.direction-card>a span{color:var(--mint)}.mechanism{grid-template-columns:.9fr 1.1fr;gap:10vw;display:grid;position:relative}.mechanism:before{content:"";pointer-events:none;background:radial-gradient(circle at 25%,#36f7a512,#0000 35%);position:absolute;inset:0}.mechanism-intro{align-self:start;position:sticky;top:80px}.spectrum{color:#668073;letter-spacing:.15em;align-items:center;gap:6px;margin-top:50px;font:8px Arial;display:flex}.spectrum i{background:var(--c,#7459ff);width:36px;height:5px}.spectrum i:nth-of-type(2){--c:#397fff}.spectrum i:nth-of-type(3){--c:#32d7e9}.spectrum i:nth-of-type(4){--c:#65f19c}.spectrum i:nth-of-type(5){--c:#caff5b}.spectrum i:nth-of-type(6){--c:#ffd857}.workflow{border-top:1px solid var(--line)}.workflow article{border-bottom:1px solid var(--line);grid-template-columns:55px 1fr 20px;align-items:center;gap:20px;min-height:145px;display:grid}.workflow-number{color:var(--mint);border:1px solid #baff6647;border-radius:50%;place-items:center;width:34px;height:34px;font:11px Arial;display:grid}.workflow h3{margin:0 0 9px;font-size:20px}.workflow p{color:#7f968a;margin:0;font-size:13px;line-height:1.7}.workflow-arrow{color:var(--mint)}.outputs{color:#0c2118;background:#e8f0ea}.outputs .kicker{color:#32815e}.outputs .section-heading>p{color:#566c61}.output-grid{grid-template-columns:1.25fr .75fr;gap:20px;display:grid}.output-feature{color:#eaf4ed;background:#10271d;grid-template-columns:.9fr 1.1fr;min-height:430px;display:grid;overflow:hidden}.feature-art{background:radial-gradient(circle,#baff6629,#0000 50%),linear-gradient(135deg,#10291f,#07120e);position:relative;overflow:hidden}.feature-art:before{content:"";background-image:linear-gradient(#baff6614 1px,#0000 1px),linear-gradient(90deg,#baff6614 1px,#0000 1px);background-size:32px 32px;position:absolute;inset:0}.layers{place-items:center;display:grid;position:absolute;inset:0;transform:rotate(-18deg)}.layers i{width:170px;height:95px;transform:translate(var(--x,0), var(--y,0));background:#3b9f6c1f;border:1px solid #baff6673;position:absolute}.layers i:first-child{--x:-24px;--y:-36px}.layers i:nth-child(2){--x:-8px;--y:-12px}.layers i:nth-child(3){--x:8px;--y:12px}.layers i:nth-child(4){--x:24px;--y:36px}.feature-art>span{color:var(--mint);border:1px solid #baff6640;border-radius:50%;padding:6px;font:10px Arial;position:absolute}.feature-art>span:first-of-type{top:18%;right:20%}.feature-art>span:nth-of-type(2){bottom:22%;left:13%}.feature-art>span:nth-of-type(3){bottom:12%;right:14%}.feature-copy{flex-direction:column;justify-content:center;padding:52px 46px;display:flex}.feature-copy small{color:var(--mint);letter-spacing:.14em;font-size:9px}.feature-copy h3{margin:18px 0;font-size:28px;line-height:1.45}.feature-copy p{color:#97aa9f;font-size:13px;line-height:1.8}.feature-copy>div{flex-wrap:wrap;gap:8px;margin-top:22px;display:flex}.feature-copy>div span{color:#c9d8cf;border:1px solid #baff6633;padding:7px 10px;font-size:10px}.output-list{flex-direction:column;gap:12px;display:flex}.output-list article{border:1px solid #0c211824;flex:1;grid-template-columns:1fr auto;align-items:center;min-height:128px;padding:24px;display:grid;position:relative}.output-list article>span{letter-spacing:.15em;color:#438266;grid-column:1;font:9px Arial}.output-list strong{margin-top:8px;font-size:18px}.output-list small{color:#788b81;grid-column:1;margin-top:5px}.output-list i{color:#32815e;grid-area:1/2/4;font-size:20px;font-style:normal}.contact{text-align:center;border-top:1px solid var(--line);background:#08150f;max-width:100%;padding-top:140px;padding-bottom:140px;position:relative}.contact-glow{filter:blur(80px);pointer-events:none;background:#84ff6617;border-radius:50%;width:600px;height:300px;position:absolute;top:0;left:calc(50% - 300px)}.contact>:not(.contact-glow){position:relative}.contact h2{margin:18px auto}.contact p{color:#8fa49a;margin-bottom:34px}.contact .button{margin:auto}.contact>small{color:#586c61;margin-top:22px;font-size:10px;display:block}footer{border-top:1px solid var(--line);color:#6f8278;justify-content:space-between;align-items:center;max-width:1440px;min-height:110px;margin:auto;padding:25px 5vw;font-size:11px;display:flex}footer .brand{color:#c9d7cf}footer p{letter-spacing:.08em}@media (width<=900px){.nav-links{display:none}.nav-cta{padding:10px}.nav-cta span{margin-left:6px}.hero{grid-template-columns:1fr;padding-top:80px}.battery-stage{min-height:500px;margin-top:50px}.hero-meta{flex-wrap:wrap}.section-heading,.mechanism,.output-grid{grid-template-columns:1fr}.direction-grid{border-left:1px solid var(--line);grid-template-columns:1fr}.direction-card{border-left:0;min-height:410px}.mechanism-intro{position:static}.output-feature{grid-template-columns:1fr}.feature-art{min-height:300px}}@media (width<=560px){.nav{height:72px}.brand{font-size:13px}.brand-mark{width:30px;height:30px}.nav-cta{font-size:11px}.hero{min-height:auto;padding-top:65px}.hero-lead{font-size:15px}.hero-actions{flex-direction:column;align-items:stretch}.hero-meta{gap:16px}.battery-stage{margin:0 -50px -30px;transform:scale(.82)}.stage-label.label-a{right:4%}.stage-label.label-b{left:4%}.section{padding:85px 6vw}.section-heading{gap:24px;margin-bottom:40px}.direction-card{padding:24px}.output-feature{display:block}.feature-copy{padding:36px 26px}.output-list article{padding:20px}.contact{padding:95px 6vw}footer{text-align:center;flex-direction:column;gap:20px;padding:35px 5vw}footer p{margin:0}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.battery-stage:after,.ion{animation:none}}
-</style><title>光锌能源实验室｜光辅助锌离子电池研究</title><meta name="description" content="聚焦光辅助锌离子电池的界面化学、反应动力学与原位表征，探索安全、高效、可持续的新型储能体系。"/>
-</head><body><main><nav class="nav" aria-label="主导航"><a class="brand" href="#top" aria-label="光锌能源实验室首页"><span class="brand-mark"><i></i></span><span>光锌能源实验室<small>PHOTO–ZINC LAB</small></span></a><div class="nav-links"><a href="#research">研究方向</a><a href="#mechanism">作用机理</a><a href="#outputs">科研成果</a><a href="#contact">联系我们</a></div><a class="nav-cta" href="#contact">开放合作 <span>↗</span></a></nav><section class="hero" id="top"><div class="hero-grid" aria-hidden="true"></div><div class="orb orb-one" aria-hidden="true"></div><div class="orb orb-two" aria-hidden="true"></div><div class="hero-copy"><div class="eyebrow"><span></span> 面向下一代水系储能技术</div><h1>以光为引，<br/>重塑<span>锌离子</span>储能</h1><p class="hero-lead">聚焦光辅助锌离子电池的界面化学与反应动力学，探索光能与电化学储能的协同机制，构建安全、高效、可持续的新型能源体系。</p><div class="hero-actions"><a class="button primary" href="#research">探索研究 <span>→</span></a><a class="button ghost" href="#mechanism"><b class="play">▶</b> 了解工作原理</a></div><div class="hero-meta"><span><strong>3</strong> 核心研究方向</span><span><strong>4</strong> 关键机理环节</span><span><strong>∞</strong> 光储能可能性</span></div></div><div class="battery-stage" aria-label="光辅助锌离子电池概念示意图"><div class="light-source"><span>hν</span><i></i><i></i><i></i></div><div class="battery"><div class="battery-cap"></div><div class="cell-inner"><div class="electrode left"><small>光电极</small></div><div class="electrolyte"><span class="ion i1">Zn²⁺</span><span class="ion i2">Zn²⁺</span><span class="ion i3">Zn²⁺</span><span class="particle p1"></span><span class="particle p2"></span><span class="particle p3"></span><span class="particle p4"></span></div><div class="electrode right"><small>锌负极</small></div></div><div class="charge-line"><span>e⁻</span></div></div><div class="stage-label label-a"><b>光生载流子</b><span>Photo-generated carriers</span></div><div class="stage-label label-b"><b>Zn²⁺ 可逆迁移</b><span>Reversible ion transport</span></div><div class="stage-coordinate"><span>LIGHT</span><span>CHARGE</span><span>STORE</span></div></div></section><section class="research section" id="research"><div class="section-heading"><div><span class="kicker">RESEARCH FOCUS</span><h2>从光响应界面<br/>到完整储能体系</h2></div><p>围绕“材料—界面—器件”三个尺度，建立光辅助锌离子电池的跨尺度研究框架。</p></div><div class="direction-grid"><article class="direction-card"><div class="card-top"><span>01</span><small>Photoelectrode</small></div><div class="science-icon icon-01" aria-hidden="true"><i></i><i></i><i></i></div><h3>光电极界面设计</h3><p>构筑半导体/锌离子电池耦合界面，调控光生载流子的分离、迁移与界面反应路径。</p><a href="#contact" aria-label="了解光电极界面设计">了解方向 <span>↗</span></a></article><article class="direction-card"><div class="card-top"><span>02</span><small>Kinetics</small></div><div class="science-icon icon-02" aria-hidden="true"><i></i><i></i><i></i></div><h3>储能反应动力学</h3><p>解析光照条件下 Zn²⁺ 去溶剂化、扩散和氧化还原过程，建立光—电—化学协同机制。</p><a href="#contact" aria-label="了解储能反应动力学">了解方向 <span>↗</span></a></article><article class="direction-card"><div class="card-top"><span>03</span><small>Operando</small></div><div class="science-icon icon-03" aria-hidden="true"><i></i><i></i><i></i></div><h3>原位表征与理论计算</h3><p>结合光谱、电化学与计算模拟，追踪活性位点、能带结构和中间体的动态演化。</p><a href="#contact" aria-label="了解原位表征与理论计算">了解方向 <span>↗</span></a></article></div></section><section class="mechanism section" id="mechanism"><div class="mechanism-intro"><span class="kicker">MECHANISM</span><h2>一束光，如何<br/>改变一块电池？</h2><p>光场不是简单的外部能量输入。它通过载流子、能带与界面电荷的协同调控，贯穿反应的每一个关键步骤。</p><div class="spectrum"><span>UV</span><i></i><i></i><i></i><i></i><i></i><i></i><span>VIS</span></div></div><div class="workflow"><article><div class="workflow-number">01</div><div><h3>光吸收</h3><p>半导体电极捕获光子，产生电子—空穴对。</p></div><span class="workflow-arrow">↓</span></article><article><div class="workflow-number">02</div><div><h3>载流子分离</h3><p>内建电场推动载流子定向迁移，抑制体相复合。</p></div><span class="workflow-arrow">↓</span></article><article><div class="workflow-number">03</div><div><h3>界面耦合</h3><p>光生载流子参与电极反应，重塑界面电荷分布。</p></div><span class="workflow-arrow">↓</span></article><article><div class="workflow-number">04</div><div><h3>动力学增强</h3><p>降低关键反应能垒，促进 Zn²⁺ 传输与可逆存储。</p></div><span class="workflow-arrow">↓</span></article></div></section><section class="outputs section" id="outputs"><div class="section-heading"><div><span class="kicker">RESEARCH OUTPUTS</span><h2>让每一组数据<br/>指向更清晰的机制</h2></div><p>这里可持续更新论文、专利、项目进展与开放数据，形成面向同行的研究档案。</p></div><div class="output-grid"><article class="output-feature"><div class="feature-art" aria-hidden="true"><div class="layers"><i></i><i></i><i></i><i></i></div><span>Zn²⁺</span><span>e⁻</span><span>h⁺</span></div><div class="feature-copy"><small>FEATURED · RESEARCH PLATFORM</small><h3>光辅助水系锌离子储能研究平台</h3><p>整合材料制备、光电化学测试、原位表征与理论模拟，支撑从机理假设到器件验证的完整研究闭环。</p><div><span>材料合成</span><span>光电测试</span><span>机理分析</span></div></div></article><div class="output-list"><article><span>PUBLICATIONS</span><strong>代表性论文</strong><small>持续更新 · 即将录入</small><i>→</i></article><article><span>PROJECTS</span><strong>科研项目</strong><small>基础研究 · 应用探索</small><i>→</i></article><article><span>DATA</span><strong>开放数据</strong><small>表征数据 · 测试协议</small><i>→</i></article></div></div></section><section class="contact section" id="contact"><div class="contact-glow" aria-hidden="true"></div><span class="kicker">COLLABORATE WITH US</span><h2>让光与锌，产生更多可能</h2><p>我们期待与材料、化学、物理和能源领域的研究者展开交叉合作。</p><a class="button primary" href="mailto:lab@example.edu">发起科研合作 <span>↗</span></a><small>邮箱为示例地址，可随时替换为课题组真实联系方式</small></section><footer><a class="brand" href="#top"><span class="brand-mark"><i></i></span><span>光锌能源实验室<small>PHOTO–ZINC LAB</small></span></a><p>探索光能与电化学储能的协同边界</p><span>© 2026 PHOTO–ZINC LAB</span></footer></main></body></html>
+</style>
+<title>光锌能源实验室｜光辅助锌离子电池研究</title>
+<meta name="description" content="聚焦光辅助锌离子电池的界面化学、反应动力学与原位表征，探索安全、高效、可持续的新型储能体系。"/>
+<link rel="stylesheet" href="literature.css"/>
+</head>
+<body>
+<a class="skip-link" href="#literature">跳转到文献库</a>
+<main>
+<nav class="nav" aria-label="主导航">
+<a class="brand" href="#top" aria-label="光锌能源实验室首页">
+<span class="brand-mark">
+<i>
+</i>
+</span>
+<span>光锌能源实验室<small>PHOTO–ZINC LAB</small>
+</span>
+</a>
+<div class="nav-links">
+<a href="#research">研究方向</a>
+<a href="#mechanism">作用机理</a>
+<a href="#literature">文献资料</a>
+<a href="#reading-guide">阅读路线</a>
+<a href="#contact">联系我们</a>
+</div>
+<a class="nav-mobile-library" href="#literature">文献库 ↗</a>
+<a class="nav-cta" href="#contact">开放合作 <span>↗</span>
+</a>
+</nav>
+<section class="hero" id="top">
+<div class="hero-grid" aria-hidden="true">
+</div>
+<div class="orb orb-one" aria-hidden="true">
+</div>
+<div class="orb orb-two" aria-hidden="true">
+</div>
+<div class="hero-copy">
+<div class="eyebrow">
+<span>
+</span> 面向下一代水系储能技术</div>
+<h1>以光为引，<br/>重塑<span>锌离子</span>储能</h1>
+<p class="hero-lead">聚焦光辅助锌离子电池的界面化学与反应动力学。从材料、界面到器件，结合代表性文献，探索光能与电化学储能的协同机制。</p>
+<div class="hero-actions">
+<a class="button primary" href="#literature">浏览相关文献 <span>→</span>
+</a>
+<a class="button ghost" href="#mechanism">
+<b class="play">▶</b> 了解工作原理</a>
+</div>
+<div class="hero-meta">
+<span>
+<strong>3</strong> 核心研究方向</span>
+<span>
+<strong>4</strong> 关键机理环节</span>
+<span>
+<strong>13</strong> 篇精选文献</span>
+</div>
+</div>
+<div class="battery-stage" aria-label="光辅助锌离子电池概念示意图">
+<div class="light-source">
+<span>hν</span>
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</div>
+<div class="battery">
+<div class="battery-cap">
+</div>
+<div class="cell-inner">
+<div class="electrode left">
+<small>光电极</small>
+</div>
+<div class="electrolyte">
+<span class="ion i1">Zn²⁺</span>
+<span class="ion i2">Zn²⁺</span>
+<span class="ion i3">Zn²⁺</span>
+<span class="particle p1">
+</span>
+<span class="particle p2">
+</span>
+<span class="particle p3">
+</span>
+<span class="particle p4">
+</span>
+</div>
+<div class="electrode right">
+<small>锌负极</small>
+</div>
+</div>
+<div class="charge-line">
+<span>e⁻</span>
+</div>
+</div>
+<div class="stage-label label-a">
+<b>光生载流子</b>
+<span>Photo-generated carriers</span>
+</div>
+<div class="stage-label label-b">
+<b>Zn²⁺ 可逆迁移</b>
+<span>Reversible ion transport</span>
+</div>
+<div class="stage-coordinate">
+<span>LIGHT</span>
+<span>CHARGE</span>
+<span>STORE</span>
+</div>
+</div>
+</section>
+<section class="research section" id="research">
+<div class="section-heading">
+<div>
+<span class="kicker">RESEARCH FOCUS</span>
+<h2>从光响应界面<br/>到完整储能体系</h2>
+</div>
+<p>围绕“材料—界面—器件”三个尺度，建立光辅助锌离子电池的跨尺度研究框架。</p>
+</div>
+<div class="direction-grid">
+<article class="direction-card">
+<div class="card-top">
+<span>01</span>
+<small>Photoelectrode</small>
+</div>
+<div class="science-icon icon-01" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</div>
+<h3>光电极界面设计</h3>
+<p>构筑半导体/锌离子电池耦合界面，调控光生载流子的分离、迁移与界面反应路径。</p>
+<a href="#contact" aria-label="了解光电极界面设计">了解方向 <span>↗</span>
+</a>
+</article>
+<article class="direction-card">
+<div class="card-top">
+<span>02</span>
+<small>Kinetics</small>
+</div>
+<div class="science-icon icon-02" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</div>
+<h3>储能反应动力学</h3>
+<p>解析光照条件下 Zn²⁺ 去溶剂化、扩散和氧化还原过程，建立光—电—化学协同机制。</p>
+<a href="#contact" aria-label="了解储能反应动力学">了解方向 <span>↗</span>
+</a>
+</article>
+<article class="direction-card">
+<div class="card-top">
+<span>03</span>
+<small>Operando</small>
+</div>
+<div class="science-icon icon-03" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</div>
+<h3>原位表征与理论计算</h3>
+<p>结合光谱、电化学与计算模拟，追踪活性位点、能带结构和中间体的动态演化。</p>
+<a href="#contact" aria-label="了解原位表征与理论计算">了解方向 <span>↗</span>
+</a>
+</article>
+</div>
+</section>
+<section class="mechanism section" id="mechanism">
+<div class="mechanism-intro">
+<span class="kicker">MECHANISM</span>
+<h2>一束光，如何<br/>改变一块电池？</h2>
+<p>光响应材料吸收光子后，可能通过载流子、界面电荷与温度变化影响储锌反应。下图是阅读光电极研究的概念框架，具体路径需要结合各体系证据判断。</p>
+<div class="spectrum">
+<span>UV</span>
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+<span>VIS</span>
+</div>
+</div>
+<div class="workflow">
+<article>
+<div class="workflow-number">01</div>
+<div>
+<h3>光吸收</h3>
+<p>半导体电极捕获光子，产生电子—空穴对。</p>
+</div>
+<span class="workflow-arrow">↓</span>
+</article>
+<article>
+<div class="workflow-number">02</div>
+<div>
+<h3>载流子分离</h3>
+<p>合适的界面与能带排列有助于载流子定向迁移、抑制复合。</p>
+</div>
+<span class="workflow-arrow">↓</span>
+</article>
+<article>
+<div class="workflow-number">03</div>
+<div>
+<h3>界面耦合</h3>
+<p>光生载流子参与电极反应，重塑界面电荷分布。</p>
+</div>
+<span class="workflow-arrow">↓</span>
+</article>
+<article>
+<div class="workflow-number">04</div>
+<div>
+<h3>动力学增强</h3>
+<p>结合光暗对照与机理分析，评估 Zn²⁺ 传输及可逆存储的变化。</p>
+</div>
+<span class="workflow-arrow">↓</span>
+</article>
+</div>
+</section>
+<section class="literature section" id="literature" aria-labelledby="library-title">
+<div class="library-inner">
+ <div class="library-status">
+<span class="status-dot" aria-hidden="true">
+</span>精选文献 · 书目信息已核对 · 2026-10-12</div>
+ <div class="section-heading">
+<div>
+<span class="kicker">THE READING ROOM</span>
+<h2 id="library-title">循着证据，<br/>读懂光储能</h2>
+</div>
+<p>从经典光充电器件，到钒基光电极与界面机制。把相关论文放在一起，让每一次阅读都有清晰的入口。</p>
+</div>
+ <div class="library-intro">
+<div class="library-count">
+<strong>13</strong>
+<span>篇精选文献</span>
+</div>
+<p>收录领域研究者的代表性工作与综述，附中文导读、阅读提示和 DOI 原文入口。锌离子电容器标为关联器件，便于结合器件类型比较。<a class="text-action" href="#reading-guide">从哪里开始读？ ↗</a>
+</p>
+</div>
+ <form class="library-tools" id="library-search-form" role="search" aria-label="搜索文献">
+  <label class="search-field">
+<span class="field-label">搜索文献</span>
+<span class="search-wrap">
+<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+<circle cx="10" cy="10" r="6.5"/>
+<path d="m15 15 5 5"/>
+</svg>
+<input class="library-search" id="paper-search" type="search" placeholder="题目、作者、材料或 DOI，如 VO₂ / 光充电" autocomplete="off"/>
+</span>
+</label>
+  <label>
+<span class="field-label">发表年份</span>
+<select class="library-select" id="paper-year">
+<option value="all">全部年份</option>
+<option value="2026">2026</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+</select>
+</label>
+  <label>
+<span class="field-label">排序方式</span>
+<select class="library-select" id="paper-sort">
+<option value="newest">年份 · 由新到旧</option>
+<option value="oldest">年份 · 由旧到新</option>
+<option value="number">文献编号</option>
+</select>
+</label>
+ </form>
+ <div class="library-filters" role="group" aria-label="按主题筛选">
+<button type="button" class="filter-chip" data-filter="all" aria-pressed="true">全部<span>13</span>
+</button>
+<button type="button" class="filter-chip" data-filter="review" aria-pressed="false">综述导读<span>4</span>
+</button>
+<button type="button" class="filter-chip" data-filter="vanadium" aria-pressed="false">钒基材料<span>6</span>
+</button>
+<button type="button" class="filter-chip" data-filter="heterojunction" aria-pressed="false">异质结<span>4</span>
+</button>
+<button type="button" class="filter-chip" data-filter="mechanism" aria-pressed="false">机理与评价<span>4</span>
+</button>
+<button type="button" class="filter-chip" data-filter="capacitor" aria-pressed="false">锌离子电容器<span>2</span>
+</button>
+</div>
+ <div class="library-results-bar">
+<p id="paper-result-count" role="status" aria-live="polite">显示 13 / 13 篇文献</p>
+<div class="result-actions">
+<button type="button" class="text-action" id="clear-search">清除筛选</button>
+<button type="button" class="text-action" id="export-filtered">导出当前结果 .bib ↓</button>
+<a class="text-action" href="references.ris" download>全部文献 .ris ↓</a>
+</div>
+</div>
+ <ol class="paper-list" id="paper-list" aria-label="精选文献列表">
+<li class="paper" id="paper-L06" data-id="L06">
+ <div class="paper-index">
+<span>L06</span>
+<b>2026</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">研究论文</span>
+<span class="paper-material">TiO₂ / MoS₂</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1021/jacsau.6c00282" target="_blank" rel="noopener noreferrer">Charging-Mode-Resolved Energy-Storage Mechanisms in TiO2/MoS2-Enabled Photorechargeable Zinc-Ion Batteries</a>
+</h3>
+  <p class="paper-journal">JACS Au · 2026 · 6: 3713-3725</p>
+  <p class="paper-authors">Meng Wei; Guangyu Lin; Donghui Chen; et al.</p>
+  <p class="paper-summary">
+<strong>评价方法：区分暗态、光辅助与纯光充电</strong>对比三种充电协议，并结合电流—电压同步测量、界面过程和理论计算讨论储能机理，提出扣除自充电贡献的 OCV 评价方法。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>OCV 回升需要排查极化恢复和自充电，不能仅凭电压升高认定净能量存储。</p>
+<p>完整作者：Meng Wei; Guangyu Lin; Donghui Chen; Qiongzhi Gao; Xin Cai; Shengsen Zhang; Lixing Ding; Xiaosong Zhou; Guangqi Hu; Siyuan Yang</p>
+<a href="https://api.crossref.org/works/10.1021%2Fjacsau.6c00282" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1021/jacsau.6c00282</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1021/jacsau.6c00282" target="_blank" rel="noopener noreferrer" aria-label="阅读 Charging-Mode-Resolved Energy-Storage Mechanisms in TiO2/MoS2-Enabled Photorechargeable Zinc-Ion Batteries 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L06" aria-label="复制 L06 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L07" data-id="L07">
+ <div class="paper-index">
+<span>L07</span>
+<b>2026</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">研究论文</span>
+<span class="paper-material">碳包覆水合钒氧化物</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1039/d6ta03521c" target="_blank" rel="noopener noreferrer">Photoelectric-photothermal synergistic enhanced photo-assisted zinc-ion batteries based on carbon-coated hydrated vanadium oxide</a>
+</h3>
+  <p class="paper-journal">Journal of Materials Chemistry A · 2026 · 14: 30746-30757</p>
+  <p class="paper-authors">Jiaming Liu; Xinyu Gao; Jiayu Wang; et al.</p>
+  <p class="paper-summary">
+<strong>光电与光热协同：水合钒氧化物的新案例</strong>讨论碳包覆水合钒氧化物中的光电荷转移与光致升温协同效应，关注低温条件下的光辅助储锌。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>比较光照组与温度匹配的暗态对照，辨析光热与光电贡献。</p>
+<p>完整作者：Jiaming Liu; Xinyu Gao; Jiayu Wang; Xinran Hu; Yunpeng Fang; Sha Zhao; Yuxin He; Dan Li; Zhitao Shao; Xuanyu Ren; Nan Sun; Wei Feng</p>
+<a href="https://api.crossref.org/works/10.1039%2Fd6ta03521c" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1039/d6ta03521c</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1039/d6ta03521c" target="_blank" rel="noopener noreferrer" aria-label="阅读 Photoelectric-photothermal synergistic enhanced photo-assisted zinc-ion batteries based on carbon-coated hydrated vanadium oxide 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L07" aria-label="复制 L07 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L11" data-id="L11">
+ <div class="paper-index">
+<span>L11</span>
+<b>2026</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">综述</span>
+<span class="paper-material">PAZIB / PRZIB</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1016/j.gee.2025.12.002" target="_blank" rel="noopener noreferrer">From photo-assisted to photo-rechargeable: Advancing Zn-Ion batteries with light-driven energy storage</a>
+</h3>
+  <p class="paper-journal">Green Energy &amp; Environment · 2026 · 11: 387-400</p>
+  <p class="paper-authors">Dan Yang; Chen Xin; Hua-Kun Liu; et al.</p>
+  <p class="paper-summary">
+<strong>模式综述：从光辅助走向直接光充电</strong>对照光辅助与光充电两种运行模式，梳理材料整合与器件设计，适合先建立术语边界，再阅读具体光电极案例。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>性能提升与无外加电源的光充电应分别评价，不能互相替代。</p>
+<p>完整作者：Dan Yang; Chen Xin; Hua-Kun Liu; Yaoxin Zhang; Ting Xiong</p>
+<a href="https://api.crossref.org/works/10.1016%2Fj.gee.2025.12.002" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1016/j.gee.2025.12.002</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1016/j.gee.2025.12.002" target="_blank" rel="noopener noreferrer" aria-label="阅读 From photo-assisted to photo-rechargeable: Advancing Zn-Ion batteries with light-driven energy storage 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L11" aria-label="复制 L11 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L05" data-id="L05">
+ <div class="paper-index">
+<span>L05</span>
+<b>2025</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">研究论文</span>
+<span class="paper-material">V₂O₅ / VO₂</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1039/d5ta00517e" target="_blank" rel="noopener noreferrer">Controlled oxidation of V2O5/VO2hollow nanospheres as photocathodes for photo-rechargeable zinc ion batteries with an ultrahigh capacity enhancement</a>
+</h3>
+  <p class="paper-journal">Journal of Materials Chemistry A · 2025 · 13: 12216-12225</p>
+  <p class="paper-authors">Hongran Yang; Shilei Wu; Akesh Manimendra Badalge; et al.</p>
+  <p class="paper-summary">
+<strong>可控氧化构筑 V₂O₅/VO₂ 空心光正极</strong>以可控氧化形成 V₂O₅/VO₂ 空心纳米球，利用表面光电压研究其光响应，为混合价态钒氧化物与界面构筑提供案例。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>将表面光电压与电化学结果结合阅读；容量增益需要结合光照和倍率条件。</p>
+<p>完整作者：Hongran Yang; Shilei Wu; Akesh Manimendra Badalge; Xinyu Li; Qianjin Wang; Yu Lin Zhong; Ting Zhu</p>
+<a href="https://api.crossref.org/works/10.1039%2Fd5ta00517e" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1039/d5ta00517e</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1039/d5ta00517e" target="_blank" rel="noopener noreferrer" aria-label="阅读 Controlled oxidation of V2O5/VO2hollow nanospheres as photocathodes for photo-rechargeable zinc ion batteries with an ultrahigh capacity enhancement 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L05" aria-label="复制 L05 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L09" data-id="L09">
+ <div class="paper-index">
+<span>L09</span>
+<b>2025</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">综述</span>
+<span class="paper-material">光充电锌离子电池</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1016/j.jechem.2024.12.058" target="_blank" rel="noopener noreferrer">Principles, progress, and prospects of photo-rechargeable zinc-ion batteries</a>
+</h3>
+  <p class="paper-journal">Journal of Energy Chemistry · 2025 · 104: 382-396</p>
+  <p class="paper-authors">Kejun Jin; Yingjian Yu</p>
+  <p class="paper-summary">
+<strong>设计综述：能带、载流子与光热效应</strong>围绕能带调控、载流子分离、复合抑制和光热效应，整理光充电锌离子电池的设计原则与挑战。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>适合按设计策略组织阅读，并回到原始研究核查具体实验条件。</p>
+<p>完整作者：Kejun Jin; Yingjian Yu</p>
+<a href="https://api.crossref.org/works/10.1016%2Fj.jechem.2024.12.058" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1016/j.jechem.2024.12.058</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1016/j.jechem.2024.12.058" target="_blank" rel="noopener noreferrer" aria-label="阅读 Principles, progress, and prospects of photo-rechargeable zinc-ion batteries 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L09" aria-label="复制 L09 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L10" data-id="L10">
+ <div class="paper-index">
+<span>L10</span>
+<b>2025</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">综述</span>
+<span class="paper-material">光电极材料与器件</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1016/j.jpowsour.2024.235854" target="_blank" rel="noopener noreferrer">The photoelectrode of photo-rechargeable zinc-ion batteries: Design, progress</a>
+</h3>
+  <p class="paper-journal">Journal of Power Sources · 2025 · 628: 235854</p>
+  <p class="paper-authors">Qianqian Cai; Guangran Di; Xiaojing Yin; et al.</p>
+  <p class="paper-summary">
+<strong>光电极综述：材料选择与结构设计</strong>梳理光充电锌离子电池的工作原理、光电极材料选择和结构设计，适合建立从材料到器件的阅读清单。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>期刊卷期年份为 2025；DOI 中的 2024 不代表卷期年份。</p>
+<p>完整作者：Qianqian Cai; Guangran Di; Xiaojing Yin; Ye Liu; Guoqiang Wang; Yubo Kuang; Xiaoqian Xiang; Kaixin Wang; Lei Zhang; Xing Chen; Xiaojun Lv</p>
+<a href="https://api.crossref.org/works/10.1016%2Fj.jpowsour.2024.235854" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1016/j.jpowsour.2024.235854</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1016/j.jpowsour.2024.235854" target="_blank" rel="noopener noreferrer" aria-label="阅读 The photoelectrode of photo-rechargeable zinc-ion batteries: Design, progress 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L10" aria-label="复制 L10 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L08" data-id="L08">
+ <div class="paper-index">
+<span>L08</span>
+<b>2024</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">综述</span>
+<span class="paper-material">跨金属电池体系</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1002/advs.202402448" target="_blank" rel="noopener noreferrer">Photo‐Assisted Rechargeable Metal Batteries: Principles, Progress, and Perspectives</a>
+</h3>
+  <p class="paper-journal">Advanced Science · 2024 · 11: 2402448</p>
+  <p class="paper-authors">Pengpeng Zhang; Meng Cai; Yixin Wei; et al.</p>
+  <p class="paper-summary">
+<strong>入门综述：光辅助可充金属电池的共同原理</strong>从电池与光电化学基础出发，梳理器件组成、工作原理和光电极设计，适合建立跨体系的概念框架。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>覆盖范围超出锌离子电池；阅读时注意各体系反应与器件构型的差异。</p>
+<p>完整作者：Pengpeng Zhang; Meng Cai; Yixin Wei; Jingbo Zhang; Kaizhen Li; Sembukuttiarachilage Ravi Pradip Silva; Guosheng Shao; Peng Zhang</p>
+<a href="https://api.crossref.org/works/10.1002%2Fadvs.202402448" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1002/advs.202402448</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1002/advs.202402448" target="_blank" rel="noopener noreferrer" aria-label="阅读 Photo‐Assisted Rechargeable Metal Batteries: Principles, Progress, and Perspectives 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L08" aria-label="复制 L08 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L02" data-id="L02">
+ <div class="paper-index">
+<span>L02</span>
+<b>2021</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">研究论文</span>
+<span class="paper-material">VO₂ / rGO</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1002/aenm.202100115" target="_blank" rel="noopener noreferrer">Vanadium Dioxide Cathodes for High‐Rate Photo‐Rechargeable Zinc‐Ion Batteries</a>
+</h3>
+  <p class="paper-journal">Advanced Energy Materials · 2021 · 11: 2100115</p>
+  <p class="paper-authors">Buddha Deka Boruah; Angus Mathieson; Sul Ki Park; et al.</p>
+  <p class="paper-summary">
+<strong>从 V₂O₅ 到 VO₂：关注高倍率储锌</strong>以 VO₂ 纳米棒与还原氧化石墨烯构建光正极，讨论光充电及光照下的倍率表现，为钒氧化物的材料选择提供对照。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>比较测试电流、光照条件与循环条件，避免只依据容量判断材料优劣。</p>
+<p>完整作者：Buddha Deka Boruah; Angus Mathieson; Sul Ki Park; Xiao Zhang; Bo Wen; Lifu Tan; Adam Boies; Michael De Volder</p>
+<a href="https://api.crossref.org/works/10.1002%2Faenm.202100115" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1002/aenm.202100115</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1002/aenm.202100115" target="_blank" rel="noopener noreferrer" aria-label="阅读 Vanadium Dioxide Cathodes for High‐Rate Photo‐Rechargeable Zinc‐Ion Batteries 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L02" aria-label="复制 L02 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L03" data-id="L03">
+ <div class="paper-index">
+<span>L03</span>
+<b>2021</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">研究论文</span>
+<span class="paper-material">VO₂ / ZnO</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1039/d1ta07572a" target="_blank" rel="noopener noreferrer">Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries</a>
+</h3>
+  <p class="paper-journal">Journal of Materials Chemistry A · 2021 · 9: 23199-23205</p>
+  <p class="paper-authors">Buddha Deka Boruah; Michael De Volder</p>
+  <p class="paper-summary">
+<strong>堆叠光正极：分离吸光与电荷传输功能</strong>通过 VO₂ 与 ZnO 的层状堆叠安排储能与电荷传输路径。可结合能带示意和光响应实验，理解界面设计为何影响光充电。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>重点关注 ZnO 的电子传输与空穴阻挡作用，以及层间接触。</p>
+<p>完整作者：Buddha Deka Boruah; Michael De Volder</p>
+<a href="https://api.crossref.org/works/10.1039%2Fd1ta07572a" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1039/d1ta07572a</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1039/d1ta07572a" target="_blank" rel="noopener noreferrer" aria-label="阅读 Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L03" aria-label="复制 L03 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L04" data-id="L04">
+ <div class="paper-index">
+<span>L04</span>
+<b>2021</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">研究论文</span>
+<span class="paper-material">MoS₂ / ZnO</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1021/acsnano.1c06372" target="_blank" rel="noopener noreferrer">Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries</a>
+</h3>
+  <p class="paper-journal">ACS Nano · 2021 · 15: 16616-16624</p>
+  <p class="paper-authors">Buddha Deka Boruah; Bo Wen; Michael De Volder</p>
+  <p class="paper-summary">
+<strong>MoS₂/ZnO：与钒氧化物体系交叉比较</strong>将 MoS₂ 与 ZnO 分层生长在集流体上，探索异质界面的光生电荷分离与光充电。适合作为钒基光电极之外的比较体系。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>阅读堆叠光探测器的零偏压响应，再与电池的充电过程对应。</p>
+<p>完整作者：Buddha Deka Boruah; Bo Wen; Michael De Volder</p>
+<a href="https://api.crossref.org/works/10.1021%2Facsnano.1c06372" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1021/acsnano.1c06372</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1021/acsnano.1c06372" target="_blank" rel="noopener noreferrer" aria-label="阅读 Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L04" aria-label="复制 L04 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L01" data-id="L01">
+ <div class="paper-index">
+<span>L01</span>
+<b>2020</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind ">研究论文</span>
+<span class="paper-material">V₂O₅ / P3HT / rGO</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1039/d0ee01392g" target="_blank" rel="noopener noreferrer">Photo-rechargeable zinc-ion batteries</a>
+</h3>
+  <p class="paper-journal">Energy &amp; Environmental Science · 2020 · 13: 2414-2421</p>
+  <p class="paper-authors">Buddha Deka Boruah; Angus Mathieson; Bo Wen; et al.</p>
+  <p class="paper-summary">
+<strong>光充电锌离子电池的代表性起点</strong>介绍将光吸收、载流子分离与锌离子存储整合在同一光电极中的设计，并展示直接光充电。适合用来理解光电极各组分的作用。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>重点阅读光充电后放电实验，并区分光照下容量增加与直接光充电。</p>
+<p>完整作者：Buddha Deka Boruah; Angus Mathieson; Bo Wen; Sascha Feldmann; Wesley M. Dose; Michael De Volder</p>
+<a href="https://api.crossref.org/works/10.1039%2Fd0ee01392g" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1039/d0ee01392g</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1039/d0ee01392g" target="_blank" rel="noopener noreferrer" aria-label="阅读 Photo-rechargeable zinc-ion batteries 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L01" aria-label="复制 L01 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L12" data-id="L12">
+ <div class="paper-index">
+<span>L12</span>
+<b>2020</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind related">关联器件</span>
+<span class="paper-material">g-C₃N₄ / 锌离子电容器</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1021/acs.nanolett.0c01958" target="_blank" rel="noopener noreferrer">Photo-Rechargeable Zinc-Ion Capacitor Using 2D Graphitic Carbon Nitride</a>
+</h3>
+  <p class="paper-journal">Nano Letters · 2020 · 20: 5967-5974</p>
+  <p class="paper-authors">Buddha Deka Boruah; Angus Mathieson; Bo Wen; et al.</p>
+  <p class="paper-summary">
+<strong>关联阅读：二维氮化碳光充电锌离子电容器</strong>展示二维石墨相氮化碳在光充电锌离子电容器中的应用，为光响应材料与能量存储整合提供另一种器件思路。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>这是锌离子电容器，比较时需要保留其与电池的储能机制和器件差别。</p>
+<p>完整作者：Buddha Deka Boruah; Angus Mathieson; Bo Wen; Changshin Jo; Felix Deschler; Michael De Volder</p>
+<a href="https://api.crossref.org/works/10.1021%2Facs.nanolett.0c01958" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1021/acs.nanolett.0c01958</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1021/acs.nanolett.0c01958" target="_blank" rel="noopener noreferrer" aria-label="阅读 Photo-Rechargeable Zinc-Ion Capacitor Using 2D Graphitic Carbon Nitride 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L12" aria-label="复制 L12 引文">复制引文</button>
+</div>
+</li>
+<li class="paper" id="paper-L13" data-id="L13">
+ <div class="paper-index">
+<span>L13</span>
+<b>2020</b>
+</div>
+ <div class="paper-body">
+  <div class="paper-flags">
+<span class="paper-kind related">关联器件</span>
+<span class="paper-material">V₂O₅ / 活性炭</span>
+</div>
+  <h3>
+<a href="https://doi.org/10.1021/acsenergylett.0c01528" target="_blank" rel="noopener noreferrer">Photo-rechargeable Zinc-Ion Capacitors using V2O5-Activated Carbon Electrodes</a>
+</h3>
+  <p class="paper-journal">ACS Energy Letters · 2020 · 5: 3132-3139</p>
+  <p class="paper-authors">Buddha Deka Boruah; Bo Wen; Satyawan Nagane; et al.</p>
+  <p class="paper-summary">
+<strong>关联阅读：V₂O₅–活性炭光充电电容器</strong>讨论 V₂O₅ 与活性炭电极构成的光充电锌离子电容器，可作为钒基光电极在不同储能架构中的对照。</p>
+  <details>
+<summary>阅读提示与书目信息</summary>
+<p>与锌离子电池分开理解；不能直接混用能量、功率及效率指标。</p>
+<p>完整作者：Buddha Deka Boruah; Bo Wen; Satyawan Nagane; Xiao Zhang; Samuel D. Stranks; Adam Boies; Michael De Volder</p>
+<a href="https://api.crossref.org/works/10.1021%2Facsenergylett.0c01528" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+</details>
+  <span class="paper-doi">DOI: 10.1021/acsenergylett.0c01528</span>
+ </div>
+ <div class="paper-actions">
+<a class="doi-link" href="https://doi.org/10.1021/acsenergylett.0c01528" target="_blank" rel="noopener noreferrer" aria-label="阅读 Photo-rechargeable Zinc-Ion Capacitors using V2O5-Activated Carbon Electrodes 原文">原文入口 <span aria-hidden="true">↗</span>
+</a>
+<button class="copy-citation" type="button" data-copy="L13" aria-label="复制 L13 引文">复制引文</button>
+</div>
+</li>
+</ol>
+ <div class="library-empty" id="library-empty" hidden>
+<strong>暂时没有匹配的文献</strong>
+<p>试试材料名称、作者姓氏或更短的关键词，也可以清除筛选重新浏览。</p>
+<button type="button" class="reset-filters" id="reset-empty">显示全部文献 →</button>
+</div>
+ <div class="library-footnote">
+<p>这是一份精选阅读清单，并非穷尽性检索，也不代表本站自有成果。书目信息通过 Crossref DOI 注册记录核对；中文导读为本站整理，具体实验条件与结论以原文为准。原文访问权限以期刊页面为准。</p>
+<a href="references.bib" download>下载完整 BibTeX 文献库 ↗</a>
+</div>
+</div>
+</section>
+<section class="reading section" id="reading-guide" aria-labelledby="reading-title">
+ <div class="section-heading">
+<div>
+<span class="kicker">A WAY INTO THE FIELD</span>
+<h2 id="reading-title">带着问题，<br/>开始下一次阅读</h2>
+</div>
+<p>先明确器件如何工作，再理解材料与界面如何改变它，最后回到可比较的实验和评价方法。</p>
+</div>
+ <div class="reading-grid">
+  <article class="reading-card">
+<span class="reading-step">01 / BUILD A FRAMEWORK</span>
+<h3>先厘清：光辅助还是光充电？</h3>
+<p>用综述建立运行模式与设计原则的框架，再读 2020 年的代表性器件，理解光吸收、载流子分离与储能功能怎样衔接。</p>
+<div class="reading-links">
+<a href="#paper-L11">L11 · 模式综述 ↗</a>
+<a href="#paper-L09">L09 · 设计原则 ↗</a>
+<a href="#paper-L01">L01 · 经典器件 ↗</a>
+</div>
+</article>
+  <article class="reading-card">
+<span class="reading-step">02 / FOLLOW THE INTERFACE</span>
+<h3>再追问：界面如何分离电荷？</h3>
+<p>从 VO₂ 的材料选择读到 VO₂/ZnO 堆叠设计，再比较 V₂O₅/VO₂ 的界面构筑。将能带、光响应与电化学结果放在一起看。</p>
+<div class="reading-links">
+<a href="#paper-L02">L02 · VO₂ ↗</a>
+<a href="#paper-L03">L03 · VO₂/ZnO ↗</a>
+<a href="#paper-L05">L05 · V₂O₅/VO₂ ↗</a>
+</div>
+</article>
+  <article class="reading-card">
+<span class="reading-step">03 / CHECK THE EVIDENCE</span>
+<h3>最后核实：光能到底储存了多少？</h3>
+<p>关注充电协议、后续暗态放电和能量收支；讨论光电与光热贡献时，回到匹配温度、光强和充放电条件的实验。</p>
+<div class="reading-links">
+<a href="#paper-L06">L06 · 充电模式评价 ↗</a>
+<a href="#paper-L07">L07 · 光电/光热协同 ↗</a>
+</div>
+</article>
+ </div>
+ <div class="evidence-note">
+<div>
+<h3>光辅助：关注电化学过程怎样改变</h3>
+<p>在外加电流或电压的充放电条件下，比较光照对容量、动力学、极化和能耗的影响。比较时需要记录光强、波长、温度、活性物质质量与电流密度。</p>
+</div>
+<div>
+<h3>光充电：关注净能量是否被储存</h3>
+<p>结合无外加电源的光照步骤、后续放电和能量收支判断；同时排查极化恢复、自充电及光热贡献。单独的开路电压回升不足以说明全部储能过程。</p>
+</div>
+</div>
+ <p class="section-source">延伸阅读：<a href="#paper-L11">运行模式综述 [L11]</a> · <a href="#paper-L06">充电协议与 OCV 评价 [L06]</a>
+</p>
+</section>
+<section class="contact section" id="contact">
+<div class="contact-glow" aria-hidden="true">
+</div>
+<span class="kicker">KEEP THE READING GOING</span>
+<h2>让每一次阅读，连接新的问题</h2>
+<p>发现值得补充的论文，或对文献信息有更正建议？欢迎在项目仓库中提供 DOI、研究主题与推荐理由，共同完善这份阅读清单。</p>
+<a class="button primary" href="https://github.com/terryliu0125-ship-it/photo-zinc-lab/issues" target="_blank" rel="noopener noreferrer">推荐文献 / 提出建议 <span>↗</span>
+</a>
+<small>通过 GitHub Issues 提交 · 需要登录 GitHub</small>
+</section>
+<footer>
+<a class="brand" href="#top">
+<span class="brand-mark">
+<i>
+</i>
+</span>
+<span>光锌能源实验室<small>PHOTO–ZINC LAB</small>
+</span>
+</a>
+<p>探索光能与电化学储能的协同边界</p>
+<span>© 2026 PHOTO–ZINC LAB</span>
+</footer>
+</main>
+<div class="copy-status" id="copy-status" role="status" aria-live="polite">
+</div>
+<script id="literature-data" type="application/json">[{"id":"L01","title":"Photo-rechargeable zinc-ion batteries","heading":"光充电锌离子电池的代表性起点","tags":["vanadium"],"kind":"研究论文","material":"V₂O₅ / P3HT / rGO","summary":"介绍将光吸收、载流子分离与锌离子存储整合在同一光电极中的设计，并展示直接光充电。适合用来理解光电极各组分的作用。","note":"重点阅读光充电后放电实验，并区分光照下容量增加与直接光充电。","authors":["Buddha Deka Boruah","Angus Mathieson","Bo Wen","Sascha Feldmann","Wesley M. Dose","Michael De Volder"],"citationAuthors":["Boruah, Buddha Deka","Mathieson, Angus","Wen, Bo","Feldmann, Sascha","Dose, Wesley M.","De Volder, Michael"],"journal":"Energy & Environmental Science","year":2020,"volume":"13","issue":"8","pages":"2414-2421","doi":"10.1039/d0ee01392g","url":"https://doi.org/10.1039/d0ee01392g","source":"https://api.crossref.org/works/10.1039%2Fd0ee01392g"},{"id":"L02","title":"Vanadium Dioxide Cathodes for High‐Rate Photo‐Rechargeable Zinc‐Ion Batteries","heading":"从 V₂O₅ 到 VO₂：关注高倍率储锌","tags":["vanadium"],"kind":"研究论文","material":"VO₂ / rGO","summary":"以 VO₂ 纳米棒与还原氧化石墨烯构建光正极，讨论光充电及光照下的倍率表现，为钒氧化物的材料选择提供对照。","note":"比较测试电流、光照条件与循环条件，避免只依据容量判断材料优劣。","authors":["Buddha Deka Boruah","Angus Mathieson","Sul Ki Park","Xiao Zhang","Bo Wen","Lifu Tan","Adam Boies","Michael De Volder"],"citationAuthors":["Deka Boruah, Buddha","Mathieson, Angus","Park, Sul Ki","Zhang, Xiao","Wen, Bo","Tan, Lifu","Boies, Adam","De Volder, Michael"],"journal":"Advanced Energy Materials","year":2021,"volume":"11","issue":"13","pages":"2100115","doi":"10.1002/aenm.202100115","url":"https://doi.org/10.1002/aenm.202100115","source":"https://api.crossref.org/works/10.1002%2Faenm.202100115"},{"id":"L03","title":"Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries","heading":"堆叠光正极：分离吸光与电荷传输功能","tags":["vanadium","heterojunction"],"kind":"研究论文","material":"VO₂ / ZnO","summary":"通过 VO₂ 与 ZnO 的层状堆叠安排储能与电荷传输路径。可结合能带示意和光响应实验，理解界面设计为何影响光充电。","note":"重点关注 ZnO 的电子传输与空穴阻挡作用，以及层间接触。","authors":["Buddha Deka Boruah","Michael De Volder"],"citationAuthors":["Deka Boruah, Buddha","De Volder, Michael"],"journal":"Journal of Materials Chemistry A","year":2021,"volume":"9","issue":"40","pages":"23199-23205","doi":"10.1039/d1ta07572a","url":"https://doi.org/10.1039/d1ta07572a","source":"https://api.crossref.org/works/10.1039%2Fd1ta07572a"},{"id":"L04","title":"Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries","heading":"MoS₂/ZnO：与钒氧化物体系交叉比较","tags":["heterojunction"],"kind":"研究论文","material":"MoS₂ / ZnO","summary":"将 MoS₂ 与 ZnO 分层生长在集流体上，探索异质界面的光生电荷分离与光充电。适合作为钒基光电极之外的比较体系。","note":"阅读堆叠光探测器的零偏压响应，再与电池的充电过程对应。","authors":["Buddha Deka Boruah","Bo Wen","Michael De Volder"],"citationAuthors":["Boruah, Buddha Deka","Wen, Bo","De Volder, Michael"],"journal":"ACS Nano","year":2021,"volume":"15","issue":"10","pages":"16616-16624","doi":"10.1021/acsnano.1c06372","url":"https://doi.org/10.1021/acsnano.1c06372","source":"https://api.crossref.org/works/10.1021%2Facsnano.1c06372"},{"id":"L05","title":"Controlled oxidation of V2O5/VO2hollow nanospheres as photocathodes for photo-rechargeable zinc ion batteries with an ultrahigh capacity enhancement","heading":"可控氧化构筑 V₂O₅/VO₂ 空心光正极","tags":["vanadium","heterojunction"],"kind":"研究论文","material":"V₂O₅ / VO₂","summary":"以可控氧化形成 V₂O₅/VO₂ 空心纳米球，利用表面光电压研究其光响应，为混合价态钒氧化物与界面构筑提供案例。","note":"将表面光电压与电化学结果结合阅读；容量增益需要结合光照和倍率条件。","authors":["Hongran Yang","Shilei Wu","Akesh Manimendra Badalge","Xinyu Li","Qianjin Wang","Yu Lin Zhong","Ting Zhu"],"citationAuthors":["Yang, Hongran","Wu, Shilei","Badalge, Akesh Manimendra","Li, Xinyu","Wang, Qianjin","Zhong, Yu Lin","Zhu, Ting"],"journal":"Journal of Materials Chemistry A","year":2025,"volume":"13","issue":"17","pages":"12216-12225","doi":"10.1039/d5ta00517e","url":"https://doi.org/10.1039/d5ta00517e","source":"https://api.crossref.org/works/10.1039%2Fd5ta00517e"},{"id":"L06","title":"Charging-Mode-Resolved Energy-Storage Mechanisms in TiO2/MoS2-Enabled Photorechargeable Zinc-Ion Batteries","heading":"评价方法：区分暗态、光辅助与纯光充电","tags":["heterojunction","mechanism"],"kind":"研究论文","material":"TiO₂ / MoS₂","summary":"对比三种充电协议，并结合电流—电压同步测量、界面过程和理论计算讨论储能机理，提出扣除自充电贡献的 OCV 评价方法。","note":"OCV 回升需要排查极化恢复和自充电，不能仅凭电压升高认定净能量存储。","authors":["Meng Wei","Guangyu Lin","Donghui Chen","Qiongzhi Gao","Xin Cai","Shengsen Zhang","Lixing Ding","Xiaosong Zhou","Guangqi Hu","Siyuan Yang"],"citationAuthors":["Wei, Meng","Lin, Guangyu","Chen, Donghui","Gao, Qiongzhi","Cai, Xin","Zhang, Shengsen","Ding, Lixing","Zhou, Xiaosong","Hu, Guangqi","Yang, Siyuan"],"journal":"JACS Au","year":2026,"volume":"6","issue":"7","pages":"3713-3725","doi":"10.1021/jacsau.6c00282","url":"https://doi.org/10.1021/jacsau.6c00282","source":"https://api.crossref.org/works/10.1021%2Fjacsau.6c00282"},{"id":"L07","title":"Photoelectric-photothermal synergistic enhanced photo-assisted zinc-ion batteries based on carbon-coated hydrated vanadium oxide","heading":"光电与光热协同：水合钒氧化物的新案例","tags":["vanadium","mechanism"],"kind":"研究论文","material":"碳包覆水合钒氧化物","summary":"讨论碳包覆水合钒氧化物中的光电荷转移与光致升温协同效应，关注低温条件下的光辅助储锌。","note":"比较光照组与温度匹配的暗态对照，辨析光热与光电贡献。","authors":["Jiaming Liu","Xinyu Gao","Jiayu Wang","Xinran Hu","Yunpeng Fang","Sha Zhao","Yuxin He","Dan Li","Zhitao Shao","Xuanyu Ren","Nan Sun","Wei Feng"],"citationAuthors":["Liu, Jiaming","Gao, Xinyu","Wang, Jiayu","Hu, Xinran","Fang, Yunpeng","Zhao, Sha","He, Yuxin","Li, Dan","Shao, Zhitao","Ren, Xuanyu","Sun, Nan","Feng, Wei"],"journal":"Journal of Materials Chemistry A","year":2026,"volume":"14","issue":"45","pages":"30746-30757","doi":"10.1039/d6ta03521c","url":"https://doi.org/10.1039/d6ta03521c","source":"https://api.crossref.org/works/10.1039%2Fd6ta03521c"},{"id":"L08","title":"Photo‐Assisted Rechargeable Metal Batteries: Principles, Progress, and Perspectives","heading":"入门综述：光辅助可充金属电池的共同原理","tags":["review"],"kind":"综述","material":"跨金属电池体系","summary":"从电池与光电化学基础出发，梳理器件组成、工作原理和光电极设计，适合建立跨体系的概念框架。","note":"覆盖范围超出锌离子电池；阅读时注意各体系反应与器件构型的差异。","authors":["Pengpeng Zhang","Meng Cai","Yixin Wei","Jingbo Zhang","Kaizhen Li","Sembukuttiarachilage Ravi Pradip Silva","Guosheng Shao","Peng Zhang"],"citationAuthors":["Zhang, Pengpeng","Cai, Meng","Wei, Yixin","Zhang, Jingbo","Li, Kaizhen","Silva, Sembukuttiarachilage Ravi Pradip","Shao, Guosheng","Zhang, Peng"],"journal":"Advanced Science","year":2024,"volume":"11","issue":"30","pages":"2402448","doi":"10.1002/advs.202402448","url":"https://doi.org/10.1002/advs.202402448","source":"https://api.crossref.org/works/10.1002%2Fadvs.202402448"},{"id":"L09","title":"Principles, progress, and prospects of photo-rechargeable zinc-ion batteries","heading":"设计综述：能带、载流子与光热效应","tags":["review","mechanism"],"kind":"综述","material":"光充电锌离子电池","summary":"围绕能带调控、载流子分离、复合抑制和光热效应，整理光充电锌离子电池的设计原则与挑战。","note":"适合按设计策略组织阅读，并回到原始研究核查具体实验条件。","authors":["Kejun Jin","Yingjian Yu"],"citationAuthors":["Jin, Kejun","Yu, Yingjian"],"journal":"Journal of Energy Chemistry","year":2025,"volume":"104","issue":"","pages":"382-396","doi":"10.1016/j.jechem.2024.12.058","url":"https://doi.org/10.1016/j.jechem.2024.12.058","source":"https://api.crossref.org/works/10.1016%2Fj.jechem.2024.12.058"},{"id":"L10","title":"The photoelectrode of photo-rechargeable zinc-ion batteries: Design, progress","heading":"光电极综述：材料选择与结构设计","tags":["review"],"kind":"综述","material":"光电极材料与器件","summary":"梳理光充电锌离子电池的工作原理、光电极材料选择和结构设计，适合建立从材料到器件的阅读清单。","note":"期刊卷期年份为 2025；DOI 中的 2024 不代表卷期年份。","authors":["Qianqian Cai","Guangran Di","Xiaojing Yin","Ye Liu","Guoqiang Wang","Yubo Kuang","Xiaoqian Xiang","Kaixin Wang","Lei Zhang","Xing Chen","Xiaojun Lv"],"citationAuthors":["Cai, Qianqian","Di, Guangran","Yin, Xiaojing","Liu, Ye","Wang, Guoqiang","Kuang, Yubo","Xiang, Xiaoqian","Wang, Kaixin","Zhang, Lei","Chen, Xing","Lv, Xiaojun"],"journal":"Journal of Power Sources","year":2025,"volume":"628","issue":"","pages":"235854","doi":"10.1016/j.jpowsour.2024.235854","url":"https://doi.org/10.1016/j.jpowsour.2024.235854","source":"https://api.crossref.org/works/10.1016%2Fj.jpowsour.2024.235854"},{"id":"L11","title":"From photo-assisted to photo-rechargeable: Advancing Zn-Ion batteries with light-driven energy storage","heading":"模式综述：从光辅助走向直接光充电","tags":["review","mechanism"],"kind":"综述","material":"PAZIB / PRZIB","summary":"对照光辅助与光充电两种运行模式，梳理材料整合与器件设计，适合先建立术语边界，再阅读具体光电极案例。","note":"性能提升与无外加电源的光充电应分别评价，不能互相替代。","authors":["Dan Yang","Chen Xin","Hua-Kun Liu","Yaoxin Zhang","Ting Xiong"],"citationAuthors":["Yang, Dan","Xin, Chen","Liu, Hua-Kun","Zhang, Yaoxin","Xiong, Ting"],"journal":"Green Energy & Environment","year":2026,"volume":"11","issue":"2","pages":"387-400","doi":"10.1016/j.gee.2025.12.002","url":"https://doi.org/10.1016/j.gee.2025.12.002","source":"https://api.crossref.org/works/10.1016%2Fj.gee.2025.12.002"},{"id":"L12","title":"Photo-Rechargeable Zinc-Ion Capacitor Using 2D Graphitic Carbon Nitride","heading":"关联阅读：二维氮化碳光充电锌离子电容器","tags":["capacitor"],"kind":"关联器件","material":"g-C₃N₄ / 锌离子电容器","summary":"展示二维石墨相氮化碳在光充电锌离子电容器中的应用，为光响应材料与能量存储整合提供另一种器件思路。","note":"这是锌离子电容器，比较时需要保留其与电池的储能机制和器件差别。","authors":["Buddha Deka Boruah","Angus Mathieson","Bo Wen","Changshin Jo","Felix Deschler","Michael De Volder"],"citationAuthors":["Boruah, Buddha Deka","Mathieson, Angus","Wen, Bo","Jo, Changshin","Deschler, Felix","De Volder, Michael"],"journal":"Nano Letters","year":2020,"volume":"20","issue":"8","pages":"5967-5974","doi":"10.1021/acs.nanolett.0c01958","url":"https://doi.org/10.1021/acs.nanolett.0c01958","source":"https://api.crossref.org/works/10.1021%2Facs.nanolett.0c01958"},{"id":"L13","title":"Photo-rechargeable Zinc-Ion Capacitors using V2O5-Activated Carbon Electrodes","heading":"关联阅读：V₂O₅–活性炭光充电电容器","tags":["capacitor","vanadium"],"kind":"关联器件","material":"V₂O₅ / 活性炭","summary":"讨论 V₂O₅ 与活性炭电极构成的光充电锌离子电容器，可作为钒基光电极在不同储能架构中的对照。","note":"与锌离子电池分开理解；不能直接混用能量、功率及效率指标。","authors":["Buddha Deka Boruah","Bo Wen","Satyawan Nagane","Xiao Zhang","Samuel D. Stranks","Adam Boies","Michael De Volder"],"citationAuthors":["Boruah, Buddha Deka","Wen, Bo","Nagane, Satyawan","Zhang, Xiao","Stranks, Samuel D.","Boies, Adam","De Volder, Michael"],"journal":"ACS Energy Letters","year":2020,"volume":"5","issue":"10","pages":"3132-3139","doi":"10.1021/acsenergylett.0c01528","url":"https://doi.org/10.1021/acsenergylett.0c01528","source":"https://api.crossref.org/works/10.1021%2Facsenergylett.0c01528"}]</script>
+<script src="literature.js" defer>
+</script>
+</body>
+</html>

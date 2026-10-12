@@ -1,0 +1,499 @@
+{
+  "updated": "2026-10-12",
+  "scope": "精选阅读清单，并非系统综述或穷尽性检索。文献来自领域研究者，不代表本站自有成果。",
+  "papers": [
+    {
+      "id": "L01",
+      "title": "Photo-rechargeable zinc-ion batteries",
+      "heading": "光充电锌离子电池的代表性起点",
+      "tags": [
+        "vanadium"
+      ],
+      "kind": "研究论文",
+      "material": "V₂O₅ / P3HT / rGO",
+      "summary": "介绍将光吸收、载流子分离与锌离子存储整合在同一光电极中的设计，并展示直接光充电。适合用来理解光电极各组分的作用。",
+      "note": "重点阅读光充电后放电实验，并区分光照下容量增加与直接光充电。",
+      "authors": [
+        "Buddha Deka Boruah",
+        "Angus Mathieson",
+        "Bo Wen",
+        "Sascha Feldmann",
+        "Wesley M. Dose",
+        "Michael De Volder"
+      ],
+      "citationAuthors": [
+        "Boruah, Buddha Deka",
+        "Mathieson, Angus",
+        "Wen, Bo",
+        "Feldmann, Sascha",
+        "Dose, Wesley M.",
+        "De Volder, Michael"
+      ],
+      "journal": "Energy & Environmental Science",
+      "year": 2020,
+      "volume": "13",
+      "issue": "8",
+      "pages": "2414-2421",
+      "doi": "10.1039/d0ee01392g",
+      "url": "https://doi.org/10.1039/d0ee01392g",
+      "source": "https://api.crossref.org/works/10.1039%2Fd0ee01392g"
+    },
+    {
+      "id": "L02",
+      "title": "Vanadium Dioxide Cathodes for High‐Rate Photo‐Rechargeable Zinc‐Ion Batteries",
+      "heading": "从 V₂O₅ 到 VO₂：关注高倍率储锌",
+      "tags": [
+        "vanadium"
+      ],
+      "kind": "研究论文",
+      "material": "VO₂ / rGO",
+      "summary": "以 VO₂ 纳米棒与还原氧化石墨烯构建光正极，讨论光充电及光照下的倍率表现，为钒氧化物的材料选择提供对照。",
+      "note": "比较测试电流、光照条件与循环条件，避免只依据容量判断材料优劣。",
+      "authors": [
+        "Buddha Deka Boruah",
+        "Angus Mathieson",
+        "Sul Ki Park",
+        "Xiao Zhang",
+        "Bo Wen",
+        "Lifu Tan",
+        "Adam Boies",
+        "Michael De Volder"
+      ],
+      "citationAuthors": [
+        "Deka Boruah, Buddha",
+        "Mathieson, Angus",
+        "Park, Sul Ki",
+        "Zhang, Xiao",
+        "Wen, Bo",
+        "Tan, Lifu",
+        "Boies, Adam",
+        "De Volder, Michael"
+      ],
+      "journal": "Advanced Energy Materials",
+      "year": 2021,
+      "volume": "11",
+      "issue": "13",
+      "pages": "2100115",
+      "doi": "10.1002/aenm.202100115",
+      "url": "https://doi.org/10.1002/aenm.202100115",
+      "source": "https://api.crossref.org/works/10.1002%2Faenm.202100115"
+    },
+    {
+      "id": "L03",
+      "title": "Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries",
+      "heading": "堆叠光正极：分离吸光与电荷传输功能",
+      "tags": [
+        "vanadium",
+        "heterojunction"
+      ],
+      "kind": "研究论文",
+      "material": "VO₂ / ZnO",
+      "summary": "通过 VO₂ 与 ZnO 的层状堆叠安排储能与电荷传输路径。可结合能带示意和光响应实验，理解界面设计为何影响光充电。",
+      "note": "重点关注 ZnO 的电子传输与空穴阻挡作用，以及层间接触。",
+      "authors": [
+        "Buddha Deka Boruah",
+        "Michael De Volder"
+      ],
+      "citationAuthors": [
+        "Deka Boruah, Buddha",
+        "De Volder, Michael"
+      ],
+      "journal": "Journal of Materials Chemistry A",
+      "year": 2021,
+      "volume": "9",
+      "issue": "40",
+      "pages": "23199-23205",
+      "doi": "10.1039/d1ta07572a",
+      "url": "https://doi.org/10.1039/d1ta07572a",
+      "source": "https://api.crossref.org/works/10.1039%2Fd1ta07572a"
+    },
+    {
+      "id": "L04",
+      "title": "Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries",
+      "heading": "MoS₂/ZnO：与钒氧化物体系交叉比较",
+      "tags": [
+        "heterojunction"
+      ],
+      "kind": "研究论文",
+      "material": "MoS₂ / ZnO",
+      "summary": "将 MoS₂ 与 ZnO 分层生长在集流体上，探索异质界面的光生电荷分离与光充电。适合作为钒基光电极之外的比较体系。",
+      "note": "阅读堆叠光探测器的零偏压响应，再与电池的充电过程对应。",
+      "authors": [
+        "Buddha Deka Boruah",
+        "Bo Wen",
+        "Michael De Volder"
+      ],
+      "citationAuthors": [
+        "Boruah, Buddha Deka",
+        "Wen, Bo",
+        "De Volder, Michael"
+      ],
+      "journal": "ACS Nano",
+      "year": 2021,
+      "volume": "15",
+      "issue": "10",
+      "pages": "16616-16624",
+      "doi": "10.1021/acsnano.1c06372",
+      "url": "https://doi.org/10.1021/acsnano.1c06372",
+      "source": "https://api.crossref.org/works/10.1021%2Facsnano.1c06372"
+    },
+    {
+      "id": "L05",
+      "title": "Controlled oxidation of V2O5/VO2hollow nanospheres as photocathodes for photo-rechargeable zinc ion batteries with an ultrahigh capacity enhancement",
+      "heading": "可控氧化构筑 V₂O₅/VO₂ 空心光正极",
+      "tags": [
+        "vanadium",
+        "heterojunction"
+      ],
+      "kind": "研究论文",
+      "material": "V₂O₅ / VO₂",
+      "summary": "以可控氧化形成 V₂O₅/VO₂ 空心纳米球，利用表面光电压研究其光响应，为混合价态钒氧化物与界面构筑提供案例。",
+      "note": "将表面光电压与电化学结果结合阅读；容量增益需要结合光照和倍率条件。",
+      "authors": [
+        "Hongran Yang",
+        "Shilei Wu",
+        "Akesh Manimendra Badalge",
+        "Xinyu Li",
+        "Qianjin Wang",
+        "Yu Lin Zhong",
+        "Ting Zhu"
+      ],
+      "citationAuthors": [
+        "Yang, Hongran",
+        "Wu, Shilei",
+        "Badalge, Akesh Manimendra",
+        "Li, Xinyu",
+        "Wang, Qianjin",
+        "Zhong, Yu Lin",
+        "Zhu, Ting"
+      ],
+      "journal": "Journal of Materials Chemistry A",
+      "year": 2025,
+      "volume": "13",
+      "issue": "17",
+      "pages": "12216-12225",
+      "doi": "10.1039/d5ta00517e",
+      "url": "https://doi.org/10.1039/d5ta00517e",
+      "source": "https://api.crossref.org/works/10.1039%2Fd5ta00517e"
+    },
+    {
+      "id": "L06",
+      "title": "Charging-Mode-Resolved Energy-Storage Mechanisms in TiO2/MoS2-Enabled Photorechargeable Zinc-Ion Batteries",
+      "heading": "评价方法：区分暗态、光辅助与纯光充电",
+      "tags": [
+        "heterojunction",
+        "mechanism"
+      ],
+      "kind": "研究论文",
+      "material": "TiO₂ / MoS₂",
+      "summary": "对比三种充电协议，并结合电流—电压同步测量、界面过程和理论计算讨论储能机理，提出扣除自充电贡献的 OCV 评价方法。",
+      "note": "OCV 回升需要排查极化恢复和自充电，不能仅凭电压升高认定净能量存储。",
+      "authors": [
+        "Meng Wei",
+        "Guangyu Lin",
+        "Donghui Chen",
+        "Qiongzhi Gao",
+        "Xin Cai",
+        "Shengsen Zhang",
+        "Lixing Ding",
+        "Xiaosong Zhou",
+        "Guangqi Hu",
+        "Siyuan Yang"
+      ],
+      "citationAuthors": [
+        "Wei, Meng",
+        "Lin, Guangyu",
+        "Chen, Donghui",
+        "Gao, Qiongzhi",
+        "Cai, Xin",
+        "Zhang, Shengsen",
+        "Ding, Lixing",
+        "Zhou, Xiaosong",
+        "Hu, Guangqi",
+        "Yang, Siyuan"
+      ],
+      "journal": "JACS Au",
+      "year": 2026,
+      "volume": "6",
+      "issue": "7",
+      "pages": "3713-3725",
+      "doi": "10.1021/jacsau.6c00282",
+      "url": "https://doi.org/10.1021/jacsau.6c00282",
+      "source": "https://api.crossref.org/works/10.1021%2Fjacsau.6c00282"
+    },
+    {
+      "id": "L07",
+      "title": "Photoelectric-photothermal synergistic enhanced photo-assisted zinc-ion batteries based on carbon-coated hydrated vanadium oxide",
+      "heading": "光电与光热协同：水合钒氧化物的新案例",
+      "tags": [
+        "vanadium",
+        "mechanism"
+      ],
+      "kind": "研究论文",
+      "material": "碳包覆水合钒氧化物",
+      "summary": "讨论碳包覆水合钒氧化物中的光电荷转移与光致升温协同效应，关注低温条件下的光辅助储锌。",
+      "note": "比较光照组与温度匹配的暗态对照，辨析光热与光电贡献。",
+      "authors": [
+        "Jiaming Liu",
+        "Xinyu Gao",
+        "Jiayu Wang",
+        "Xinran Hu",
+        "Yunpeng Fang",
+        "Sha Zhao",
+        "Yuxin He",
+        "Dan Li",
+        "Zhitao Shao",
+        "Xuanyu Ren",
+        "Nan Sun",
+        "Wei Feng"
+      ],
+      "citationAuthors": [
+        "Liu, Jiaming",
+        "Gao, Xinyu",
+        "Wang, Jiayu",
+        "Hu, Xinran",
+        "Fang, Yunpeng",
+        "Zhao, Sha",
+        "He, Yuxin",
+        "Li, Dan",
+        "Shao, Zhitao",
+        "Ren, Xuanyu",
+        "Sun, Nan",
+        "Feng, Wei"
+      ],
+      "journal": "Journal of Materials Chemistry A",
+      "year": 2026,
+      "volume": "14",
+      "issue": "45",
+      "pages": "30746-30757",
+      "doi": "10.1039/d6ta03521c",
+      "url": "https://doi.org/10.1039/d6ta03521c",
+      "source": "https://api.crossref.org/works/10.1039%2Fd6ta03521c"
+    },
+    {
+      "id": "L08",
+      "title": "Photo‐Assisted Rechargeable Metal Batteries: Principles, Progress, and Perspectives",
+      "heading": "入门综述：光辅助可充金属电池的共同原理",
+      "tags": [
+        "review"
+      ],
+      "kind": "综述",
+      "material": "跨金属电池体系",
+      "summary": "从电池与光电化学基础出发，梳理器件组成、工作原理和光电极设计，适合建立跨体系的概念框架。",
+      "note": "覆盖范围超出锌离子电池；阅读时注意各体系反应与器件构型的差异。",
+      "authors": [
+        "Pengpeng Zhang",
+        "Meng Cai",
+        "Yixin Wei",
+        "Jingbo Zhang",
+        "Kaizhen Li",
+        "Sembukuttiarachilage Ravi Pradip Silva",
+        "Guosheng Shao",
+        "Peng Zhang"
+      ],
+      "citationAuthors": [
+        "Zhang, Pengpeng",
+        "Cai, Meng",
+        "Wei, Yixin",
+        "Zhang, Jingbo",
+        "Li, Kaizhen",
+        "Silva, Sembukuttiarachilage Ravi Pradip",
+        "Shao, Guosheng",
+        "Zhang, Peng"
+      ],
+      "journal": "Advanced Science",
+      "year": 2024,
+      "volume": "11",
+      "issue": "30",
+      "pages": "2402448",
+      "doi": "10.1002/advs.202402448",
+      "url": "https://doi.org/10.1002/advs.202402448",
+      "source": "https://api.crossref.org/works/10.1002%2Fadvs.202402448"
+    },
+    {
+      "id": "L09",
+      "title": "Principles, progress, and prospects of photo-rechargeable zinc-ion batteries",
+      "heading": "设计综述：能带、载流子与光热效应",
+      "tags": [
+        "review",
+        "mechanism"
+      ],
+      "kind": "综述",
+      "material": "光充电锌离子电池",
+      "summary": "围绕能带调控、载流子分离、复合抑制和光热效应，整理光充电锌离子电池的设计原则与挑战。",
+      "note": "适合按设计策略组织阅读，并回到原始研究核查具体实验条件。",
+      "authors": [
+        "Kejun Jin",
+        "Yingjian Yu"
+      ],
+      "citationAuthors": [
+        "Jin, Kejun",
+        "Yu, Yingjian"
+      ],
+      "journal": "Journal of Energy Chemistry",
+      "year": 2025,
+      "volume": "104",
+      "issue": "",
+      "pages": "382-396",
+      "doi": "10.1016/j.jechem.2024.12.058",
+      "url": "https://doi.org/10.1016/j.jechem.2024.12.058",
+      "source": "https://api.crossref.org/works/10.1016%2Fj.jechem.2024.12.058"
+    },
+    {
+      "id": "L10",
+      "title": "The photoelectrode of photo-rechargeable zinc-ion batteries: Design, progress",
+      "heading": "光电极综述：材料选择与结构设计",
+      "tags": [
+        "review"
+      ],
+      "kind": "综述",
+      "material": "光电极材料与器件",
+      "summary": "梳理光充电锌离子电池的工作原理、光电极材料选择和结构设计，适合建立从材料到器件的阅读清单。",
+      "note": "期刊卷期年份为 2025；DOI 中的 2024 不代表卷期年份。",
+      "authors": [
+        "Qianqian Cai",
+        "Guangran Di",
+        "Xiaojing Yin",
+        "Ye Liu",
+        "Guoqiang Wang",
+        "Yubo Kuang",
+        "Xiaoqian Xiang",
+        "Kaixin Wang",
+        "Lei Zhang",
+        "Xing Chen",
+        "Xiaojun Lv"
+      ],
+      "citationAuthors": [
+        "Cai, Qianqian",
+        "Di, Guangran",
+        "Yin, Xiaojing",
+        "Liu, Ye",
+        "Wang, Guoqiang",
+        "Kuang, Yubo",
+        "Xiang, Xiaoqian",
+        "Wang, Kaixin",
+        "Zhang, Lei",
+        "Chen, Xing",
+        "Lv, Xiaojun"
+      ],
+      "journal": "Journal of Power Sources",
+      "year": 2025,
+      "volume": "628",
+      "issue": "",
+      "pages": "235854",
+      "doi": "10.1016/j.jpowsour.2024.235854",
+      "url": "https://doi.org/10.1016/j.jpowsour.2024.235854",
+      "source": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2024.235854"
+    },
+    {
+      "id": "L11",
+      "title": "From photo-assisted to photo-rechargeable: Advancing Zn-Ion batteries with light-driven energy storage",
+      "heading": "模式综述：从光辅助走向直接光充电",
+      "tags": [
+        "review",
+        "mechanism"
+      ],
+      "kind": "综述",
+      "material": "PAZIB / PRZIB",
+      "summary": "对照光辅助与光充电两种运行模式，梳理材料整合与器件设计，适合先建立术语边界，再阅读具体光电极案例。",
+      "note": "性能提升与无外加电源的光充电应分别评价，不能互相替代。",
+      "authors": [
+        "Dan Yang",
+        "Chen Xin",
+        "Hua-Kun Liu",
+        "Yaoxin Zhang",
+        "Ting Xiong"
+      ],
+      "citationAuthors": [
+        "Yang, Dan",
+        "Xin, Chen",
+        "Liu, Hua-Kun",
+        "Zhang, Yaoxin",
+        "Xiong, Ting"
+      ],
+      "journal": "Green Energy & Environment",
+      "year": 2026,
+      "volume": "11",
+      "issue": "2",
+      "pages": "387-400",
+      "doi": "10.1016/j.gee.2025.12.002",
+      "url": "https://doi.org/10.1016/j.gee.2025.12.002",
+      "source": "https://api.crossref.org/works/10.1016%2Fj.gee.2025.12.002"
+    },
+    {
+      "id": "L12",
+      "title": "Photo-Rechargeable Zinc-Ion Capacitor Using 2D Graphitic Carbon Nitride",
+      "heading": "关联阅读：二维氮化碳光充电锌离子电容器",
+      "tags": [
+        "capacitor"
+      ],
+      "kind": "关联器件",
+      "material": "g-C₃N₄ / 锌离子电容器",
+      "summary": "展示二维石墨相氮化碳在光充电锌离子电容器中的应用，为光响应材料与能量存储整合提供另一种器件思路。",
+      "note": "这是锌离子电容器，比较时需要保留其与电池的储能机制和器件差别。",
+      "authors": [
+        "Buddha Deka Boruah",
+        "Angus Mathieson",
+        "Bo Wen",
+        "Changshin Jo",
+        "Felix Deschler",
+        "Michael De Volder"
+      ],
+      "citationAuthors": [
+        "Boruah, Buddha Deka",
+        "Mathieson, Angus",
+        "Wen, Bo",
+        "Jo, Changshin",
+        "Deschler, Felix",
+        "De Volder, Michael"
+      ],
+      "journal": "Nano Letters",
+      "year": 2020,
+      "volume": "20",
+      "issue": "8",
+      "pages": "5967-5974",
+      "doi": "10.1021/acs.nanolett.0c01958",
+      "url": "https://doi.org/10.1021/acs.nanolett.0c01958",
+      "source": "https://api.crossref.org/works/10.1021%2Facs.nanolett.0c01958"
+    },
+    {
+      "id": "L13",
+      "title": "Photo-rechargeable Zinc-Ion Capacitors using V2O5-Activated Carbon Electrodes",
+      "heading": "关联阅读：V₂O₅–活性炭光充电电容器",
+      "tags": [
+        "capacitor",
+        "vanadium"
+      ],
+      "kind": "关联器件",
+      "material": "V₂O₅ / 活性炭",
+      "summary": "讨论 V₂O₅ 与活性炭电极构成的光充电锌离子电容器，可作为钒基光电极在不同储能架构中的对照。",
+      "note": "与锌离子电池分开理解；不能直接混用能量、功率及效率指标。",
+      "authors": [
+        "Buddha Deka Boruah",
+        "Bo Wen",
+        "Satyawan Nagane",
+        "Xiao Zhang",
+        "Samuel D. Stranks",
+        "Adam Boies",
+        "Michael De Volder"
+      ],
+      "citationAuthors": [
+        "Boruah, Buddha Deka",
+        "Wen, Bo",
+        "Nagane, Satyawan",
+        "Zhang, Xiao",
+        "Stranks, Samuel D.",
+        "Boies, Adam",
+        "De Volder, Michael"
+      ],
+      "journal": "ACS Energy Letters",
+      "year": 2020,
+      "volume": "5",
+      "issue": "10",
+      "pages": "3132-3139",
+      "doi": "10.1021/acsenergylett.0c01528",
+      "url": "https://doi.org/10.1021/acsenergylett.0c01528",
+      "source": "https://api.crossref.org/works/10.1021%2Facsenergylett.0c01528"
+    }
+  ]
+}
