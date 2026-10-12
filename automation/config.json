@@ -1,0 +1,16 @@
+{
+  "publication_lookback_days": 90,
+  "index_lookback_days": 14,
+  "candidates_per_query": 100,
+  "max_notifications": 10,
+  "notify_empty": true,
+  "site_url": "https://terryliu0125-ship-it.github.io/photo-zinc-lab/",
+  "queries": [
+    "photo assisted zinc ion battery",
+    "light assisted zinc ion battery",
+    "photo rechargeable zinc ion battery",
+    "photo charging zinc ion storage",
+    "photobattery zinc ion"
+  ],
+  "exclude_dois": []
+}
