@@ -1,0 +1,59 @@
+name: Daily literature site update
+
+on:
+  schedule:
+    # 00:17 UTC = 08:17 Asia/Shanghai; GitHub schedules may be delayed.
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-literature
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check update and delivery behavior
+        run: python -m unittest discover -s tests -v
+      - name: Discover recent literature and regenerate site
+        env:
+          CROSSREF_EMAIL: ${{ secrets.CROSSREF_EMAIL }}
+        run: python scripts/update_literature.py refresh --site-only
+      - name: Save website
+        id: save
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add literature.json index.html REFERENCES.md references.bib references.ris automation/monitor-state.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update daily literature'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Request GitHub Pages branch build
+        id: pages
+        continue-on-error: true
+        # This repository already publishes from main/root. GITHUB_TOKEN pushes
+        # alone do not trigger Pages, so explicitly request its documented build.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
+      - name: Report website build request failure
+        if: ${{ always() && steps.pages.outcome == 'failure' }}
+        run: |
+          echo '::error::GitHub Pages build request failed. Literature has been saved; check Pages and Actions permissions.'
+          exit 1
