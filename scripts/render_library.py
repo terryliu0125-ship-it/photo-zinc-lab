@@ -17,6 +17,8 @@ TOPICS = (
     ("organic", "有机/钙钛矿"), ("device", "器件与集成"), ("heterojunction", "异质结"),
     ("mechanism", "机理与评价"), ("capacitor", "锌离子电容器"),
 )
+SYSTEMS = (("all", "全部体系"), ("zinc", "锌基相关文献"),
+           ("other-metals", "其他金属离子电池"))
 
 
 def esc(value: object) -> str:
@@ -89,16 +91,18 @@ def card(p: dict) -> str:
     if p.get("article_subtype") == "观点文章":
         category_label = "综述 / 观点"
     related_flag = '<span class="paper-kind related">关联器件</span>' if related else ""
+    system_flag = ('<span class="paper-kind paper-system">其他金属离子电池</span>'
+                   if p.get("battery_category") == "other-metals" else "")
     chinese_title = p.get("title_zh") or ""
     primary_title = chinese_title or p["title"]
     original_title = (f'<p class="paper-title-original" lang="en">{esc(p["title"])}</p>'
                       if chinese_title else '<p class="paper-title-pending">中文标题待补充</p>')
     basis = f'<p>导读依据：{esc(p["reading_basis"])} · 书目核对：{esc(p["verified_on"])}</p>' if p.get("reading_basis") else ""
-    publisher = f'<a href="{esc(p["publisher_source"])}" target="_blank" rel="noopener noreferrer">查看期刊摘要与文章信息 ↗</a>' if p.get("publisher_source") else ""
+    publisher = f'<a href="{esc(p["publisher_source"])}" target="_blank" rel="noopener noreferrer">查看摘要与文章来源 ↗</a>' if p.get("publisher_source") else ""
     return f'''<li class="paper" id="paper-{esc(p['id'])}" data-id="{esc(p['id'])}">
  <div class="paper-index"><span>{esc(p['id'])}</span><b>{esc(p['year'])}</b></div>
  <div class="paper-body">
-  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{related_flag}{flag}<span class="paper-material">{esc(p['material'])}</span></div>
+  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{system_flag}{related_flag}{flag}<span class="paper-material">{esc(p['material'])}</span></div>
   <h3><a href="{esc(p['url'])}" target="_blank" rel="noopener noreferrer">{esc(primary_title)}</a></h3>
   {original_title}
   <p class="paper-journal">{esc(journal)}</p>
@@ -163,6 +167,19 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
             raise ValueError("无法插入文献类型筛选")
     else:
         page = replace_content(page, "select", "paper-type", type_options)
+    systems = "\n".join(
+        f'<button type="button" class="filter-chip system-chip" data-system="{key}" aria-pressed="{str(key == "all").lower()}">{label}<span>{len(papers) if key == "all" else sum(p.get("battery_category", "zinc") == key for p in papers)}</span></button>'
+        for key, label in SYSTEMS
+    )
+    if 'id="library-systems"' not in page:
+        control = ('<div class="library-systems" id="library-systems" role="group" '
+                   f'aria-label="按电池体系筛选">\n{systems}\n</div>\n')
+        page, inserted = re.subn(r'(?=<form\b[^>]*id="library-search-form")',
+                                lambda m: control, page)
+        if inserted != 1:
+            raise ValueError("无法插入电池体系筛选")
+    else:
+        page = replace_content(page, "div", "library-systems", "\n" + systems + "\n")
     chips = "\n".join(
         f'<button type="button" class="filter-chip" data-filter="{key}" aria-pressed="{str(key == "all").lower()}">{label}<span>{len(papers) if key == "all" else sum(key in p["tags"] for p in papers)}</span></button>'
         for key, label in TOPICS
@@ -186,7 +203,8 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
     refs = ["# 文献与来源", "", "精选条目含人工中文导读；标记为自动收录的条目仅经元数据与关键词筛选，尚未人工研读。", ""]
     for p in papers:
         label = {"research": "研究论文", "review": "综述/观点", "unclassified": "待分类"}[paper_type(p)]
-        refs.extend((f"## {p['id']} · {p.get('title_zh') or p['heading']}", "", f"文献类型：{label}", "",
+        system = "其他金属离子电池" if p.get("battery_category") == "other-metals" else "锌基相关文献"
+        refs.extend((f"## {p['id']} · {p.get('title_zh') or p['heading']}", "", f"电池分类：{system} · 文献类型：{label}", "",
                      f"{'; '.join(p['authors'])}. {p['title']}. *{p['journal']}*, {p['year']}. [DOI]({p['url']}) · [Crossref 元数据]({p['source']})",
                      "", p["summary"], "", "阅读提示：" + p["note"], ""))
     return {
