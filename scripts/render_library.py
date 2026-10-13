@@ -13,7 +13,8 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 TOPICS = (
     ("all", "全部"), ("auto", "自动收录"), ("review", "综述导读"),
-    ("vanadium", "钒基材料"), ("heterojunction", "异质结"),
+    ("vanadium", "钒基材料"), ("manganese", "锰基材料"),
+    ("organic", "有机/钙钛矿"), ("device", "器件与集成"), ("heterojunction", "异质结"),
     ("mechanism", "机理与评价"), ("capacitor", "锌离子电容器"),
 )
 
@@ -73,6 +74,8 @@ def card(p: dict) -> str:
     flag = '<span class="paper-kind automatic">自动收录 · 待研读</span>' if auto else ""
     abstract = f'<p class="paper-abstract" lang="en">{esc(p["abstract"])}</p>' if p.get("abstract") else ""
     related = " related" if p["kind"] == "关联器件" else ""
+    basis = f'<p>导读依据：{esc(p["reading_basis"])} · 书目核对：{esc(p["verified_on"])}</p>' if p.get("reading_basis") else ""
+    publisher = f'<a href="{esc(p["publisher_source"])}" target="_blank" rel="noopener noreferrer">查看期刊摘要与文章信息 ↗</a>' if p.get("publisher_source") else ""
     return f'''<li class="paper" id="paper-{esc(p['id'])}" data-id="{esc(p['id'])}">
  <div class="paper-index"><span>{esc(p['id'])}</span><b>{esc(p['year'])}</b></div>
  <div class="paper-body">
@@ -82,9 +85,10 @@ def card(p: dict) -> str:
   <p class="paper-authors">{esc(authors)}</p>
   <p class="paper-summary"><strong>{esc(p['heading'])}</strong>{esc(p['summary'])}</p>
   <details><summary>阅读提示与书目信息</summary>
-   <p>{esc(p['note'])}</p>{abstract}
+   <p>{esc(p['note'])}</p>{basis}{abstract}
    <p>完整作者：{esc('; '.join(p['authors']))}</p>
    <a href="{esc(p['source'])}" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
+   {publisher}
   </details>
   <span class="paper-doi">DOI: {esc(p['doi'])}</span>
  </div>
@@ -112,6 +116,8 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
     if any(not re.fullmatch(r"L\d+", item) for item in ids):
         raise ValueError("无效文献编号")
     page = (root / "index.html").read_text(encoding="utf-8")
+    page = re.sub(r'(精选文献 · 书目信息已核对 · )\d{4}-\d{2}-\d{2}',
+                  lambda m: m[1] + library.get("curated_checked_on", library["updated"]), page)
     page, counts = re.subn(r'(<strong data-paper-count>).*?(</strong>)',
                           lambda m: m[1] + str(len(papers)) + m[2], page, flags=re.S)
     if counts != 2:
