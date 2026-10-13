@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 TOPICS = (
-    ("all", "全部"), ("auto", "自动收录"), ("review", "综述导读"),
+    ("all", "全部主题"), ("auto", "自动收录"),
     ("vanadium", "钒基材料"), ("manganese", "锰基材料"),
     ("organic", "有机/钙钛矿"), ("device", "器件与集成"), ("heterojunction", "异质结"),
     ("mechanism", "机理与评价"), ("capacitor", "锌离子电容器"),
@@ -21,6 +21,16 @@ TOPICS = (
 
 def esc(value: object) -> str:
     return html.escape(str(value), quote=True)
+
+
+def paper_type(paper: dict) -> str:
+    if paper.get("article_type") in ("research", "review"):
+        return paper["article_type"]
+    if paper.get("kind") == "综述":
+        return "review"
+    if paper.get("kind") in ("研究论文", "关联器件"):
+        return "research"
+    return "unclassified"
 
 
 def bib_escape(value: object) -> str:
@@ -74,17 +84,28 @@ def card(p: dict) -> str:
     flag = '<span class="paper-kind automatic">自动收录 · 待研读</span>' if auto else ""
     abstract = f'<p class="paper-abstract" lang="en">{esc(p["abstract"])}</p>' if p.get("abstract") else ""
     related = " related" if p["kind"] == "关联器件" else ""
+    category = paper_type(p)
+    category_label = {"research": "研究论文", "review": "综述论文", "unclassified": "待分类"}[category]
+    if p.get("article_subtype") == "观点文章":
+        category_label = "综述 / 观点"
+    related_flag = '<span class="paper-kind related">关联器件</span>' if related else ""
+    chinese_title = p.get("title_zh") or ""
+    primary_title = chinese_title or p["title"]
+    original_title = (f'<p class="paper-title-original" lang="en">{esc(p["title"])}</p>'
+                      if chinese_title else '<p class="paper-title-pending">中文标题待补充</p>')
     basis = f'<p>导读依据：{esc(p["reading_basis"])} · 书目核对：{esc(p["verified_on"])}</p>' if p.get("reading_basis") else ""
     publisher = f'<a href="{esc(p["publisher_source"])}" target="_blank" rel="noopener noreferrer">查看期刊摘要与文章信息 ↗</a>' if p.get("publisher_source") else ""
     return f'''<li class="paper" id="paper-{esc(p['id'])}" data-id="{esc(p['id'])}">
  <div class="paper-index"><span>{esc(p['id'])}</span><b>{esc(p['year'])}</b></div>
  <div class="paper-body">
-  <div class="paper-flags">{flag}<span class="paper-kind{related}">{esc(p['kind'])}</span><span class="paper-material">{esc(p['material'])}</span></div>
-  <h3><a href="{esc(p['url'])}" target="_blank" rel="noopener noreferrer">{esc(p['title'])}</a></h3>
+  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{related_flag}{flag}<span class="paper-material">{esc(p['material'])}</span></div>
+  <h3><a href="{esc(p['url'])}" target="_blank" rel="noopener noreferrer">{esc(primary_title)}</a></h3>
+  {original_title}
   <p class="paper-journal">{esc(journal)}</p>
   <p class="paper-authors">{esc(authors)}</p>
-  <p class="paper-summary"><strong>{esc(p['heading'])}</strong>{esc(p['summary'])}</p>
+  <p class="paper-summary"><strong>中文简介</strong>{esc(p['summary'])}</p>
   <details><summary>阅读提示与书目信息</summary>
+   <p>阅读切入点：{esc(p['heading'])}</p>
    <p>{esc(p['note'])}</p>{basis}{abstract}
    <p>完整作者：{esc('; '.join(p['authors']))}</p>
    <a href="{esc(p['source'])}" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
@@ -128,6 +149,20 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
         f'<option value="{year}">{year}</option>' for year in sorted({p["year"] for p in papers}, reverse=True)
     )
     page = replace_content(page, "select", "paper-year", "\n" + options + "\n")
+    type_labels = (("research", "研究论文"), ("review", "综述类（含观点）"), ("unclassified", "待分类"))
+    type_options = f'<option value="all">全部类型 · {len(papers)} 篇</option>' + "".join(
+        f'<option value="{key}">{label} · {sum(paper_type(p) == key for p in papers)} 篇</option>'
+        for key, label in type_labels if key != "unclassified" or any(paper_type(p) == key for p in papers)
+    )
+    if 'id="paper-type"' not in page:
+        control = ('<label class="type-field"><span class="field-label">文献类型</span>'
+                   f'<select class="library-select" id="paper-type">{type_options}</select></label>\n')
+        page, inserted = re.subn(r'(?=<label>\s*<span class="field-label">发表年份</span>)',
+                                lambda m: control, page)
+        if inserted != 1:
+            raise ValueError("无法插入文献类型筛选")
+    else:
+        page = replace_content(page, "select", "paper-type", type_options)
     chips = "\n".join(
         f'<button type="button" class="filter-chip" data-filter="{key}" aria-pressed="{str(key == "all").lower()}">{label}<span>{len(papers) if key == "all" else sum(key in p["tags"] for p in papers)}</span></button>'
         for key, label in TOPICS
@@ -150,7 +185,8 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
     page = replace_content(page, "aside", "monitor-summary", panel)
     refs = ["# 文献与来源", "", "精选条目含人工中文导读；标记为自动收录的条目仅经元数据与关键词筛选，尚未人工研读。", ""]
     for p in papers:
-        refs.extend((f"## {p['id']} · {p['heading']}", "",
+        label = {"research": "研究论文", "review": "综述/观点", "unclassified": "待分类"}[paper_type(p)]
+        refs.extend((f"## {p['id']} · {p.get('title_zh') or p['heading']}", "", f"文献类型：{label}", "",
                      f"{'; '.join(p['authors'])}. {p['title']}. *{p['journal']}*, {p['year']}. [DOI]({p['url']}) · [Crossref 元数据]({p['source']})",
                      "", p["summary"], "", "阅读提示：" + p["note"], ""))
     return {
