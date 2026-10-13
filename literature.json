@@ -36,7 +36,9 @@
       "pages": "2414-2421",
       "doi": "10.1039/d0ee01392g",
       "url": "https://doi.org/10.1039/d0ee01392g",
-      "source": "https://api.crossref.org/works/10.1039%2Fd0ee01392g"
+      "source": "https://api.crossref.org/works/10.1039%2Fd0ee01392g",
+      "title_zh": "光充电锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L02",
@@ -76,7 +78,9 @@
       "pages": "2100115",
       "doi": "10.1002/aenm.202100115",
       "url": "https://doi.org/10.1002/aenm.202100115",
-      "source": "https://api.crossref.org/works/10.1002%2Faenm.202100115"
+      "source": "https://api.crossref.org/works/10.1002%2Faenm.202100115",
+      "title_zh": "用于高倍率光充电锌离子电池的二氧化钒正极",
+      "article_type": "research"
     },
     {
       "id": "L03",
@@ -105,7 +109,9 @@
       "pages": "23199-23205",
       "doi": "10.1039/d1ta07572a",
       "url": "https://doi.org/10.1039/d1ta07572a",
-      "source": "https://api.crossref.org/works/10.1039%2Fd1ta07572a"
+      "source": "https://api.crossref.org/works/10.1039%2Fd1ta07572a",
+      "title_zh": "用于光充电锌离子电池的二氧化钒–氧化锌堆叠光正极",
+      "article_type": "research"
     },
     {
       "id": "L04",
@@ -135,7 +141,9 @@
       "pages": "16616-16624",
       "doi": "10.1021/acsnano.1c06372",
       "url": "https://doi.org/10.1021/acsnano.1c06372",
-      "source": "https://api.crossref.org/works/10.1021%2Facsnano.1c06372"
+      "source": "https://api.crossref.org/works/10.1021%2Facsnano.1c06372",
+      "title_zh": "用于光充电锌离子电池的二硫化钼–氧化锌光正极",
+      "article_type": "research"
     },
     {
       "id": "L05",
@@ -174,7 +182,9 @@
       "pages": "12216-12225",
       "doi": "10.1039/d5ta00517e",
       "url": "https://doi.org/10.1039/d5ta00517e",
-      "source": "https://api.crossref.org/works/10.1039%2Fd5ta00517e"
+      "source": "https://api.crossref.org/works/10.1039%2Fd5ta00517e",
+      "title_zh": "通过可控氧化制备 V₂O₅/VO₂ 空心纳米球光正极，实现光充电锌离子电池的超高容量增益",
+      "article_type": "research"
     },
     {
       "id": "L06",
@@ -219,7 +229,9 @@
       "pages": "3713-3725",
       "doi": "10.1021/jacsau.6c00282",
       "url": "https://doi.org/10.1021/jacsau.6c00282",
-      "source": "https://api.crossref.org/works/10.1021%2Fjacsau.6c00282"
+      "source": "https://api.crossref.org/works/10.1021%2Fjacsau.6c00282",
+      "title_zh": "TiO₂/MoS₂ 光充电锌离子电池中不同充电模式下的储能机制",
+      "article_type": "research"
     },
     {
       "id": "L07",
@@ -268,7 +280,9 @@
       "pages": "30746-30757",
       "doi": "10.1039/d6ta03521c",
       "url": "https://doi.org/10.1039/d6ta03521c",
-      "source": "https://api.crossref.org/works/10.1039%2Fd6ta03521c"
+      "source": "https://api.crossref.org/works/10.1039%2Fd6ta03521c",
+      "title_zh": "基于碳包覆水合钒氧化物的光电–光热协同增强光辅助锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L08",
@@ -308,7 +322,9 @@
       "pages": "2402448",
       "doi": "10.1002/advs.202402448",
       "url": "https://doi.org/10.1002/advs.202402448",
-      "source": "https://api.crossref.org/works/10.1002%2Fadvs.202402448"
+      "source": "https://api.crossref.org/works/10.1002%2Fadvs.202402448",
+      "title_zh": "光辅助可充电金属电池：原理、进展与展望",
+      "article_type": "review"
     },
     {
       "id": "L09",
@@ -337,7 +353,9 @@
       "pages": "382-396",
       "doi": "10.1016/j.jechem.2024.12.058",
       "url": "https://doi.org/10.1016/j.jechem.2024.12.058",
-      "source": "https://api.crossref.org/works/10.1016%2Fj.jechem.2024.12.058"
+      "source": "https://api.crossref.org/works/10.1016%2Fj.jechem.2024.12.058",
+      "title_zh": "光充电锌离子电池的原理、进展与展望",
+      "article_type": "review"
     },
     {
       "id": "L10",
@@ -383,7 +401,9 @@
       "pages": "235854",
       "doi": "10.1016/j.jpowsour.2024.235854",
       "url": "https://doi.org/10.1016/j.jpowsour.2024.235854",
-      "source": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2024.235854"
+      "source": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2024.235854",
+      "title_zh": "光充电锌离子电池的光电极：设计与进展",
+      "article_type": "review"
     },
     {
       "id": "L11",
@@ -418,7 +438,9 @@
       "pages": "387-400",
       "doi": "10.1016/j.gee.2025.12.002",
       "url": "https://doi.org/10.1016/j.gee.2025.12.002",
-      "source": "https://api.crossref.org/works/10.1016%2Fj.gee.2025.12.002"
+      "source": "https://api.crossref.org/works/10.1016%2Fj.gee.2025.12.002",
+      "title_zh": "从光辅助到光充电：以光驱动储能推动锌离子电池发展",
+      "article_type": "review"
     },
     {
       "id": "L12",
@@ -454,7 +476,9 @@
       "pages": "5967-5974",
       "doi": "10.1021/acs.nanolett.0c01958",
       "url": "https://doi.org/10.1021/acs.nanolett.0c01958",
-      "source": "https://api.crossref.org/works/10.1021%2Facs.nanolett.0c01958"
+      "source": "https://api.crossref.org/works/10.1021%2Facs.nanolett.0c01958",
+      "title_zh": "采用二维石墨相氮化碳的光充电锌离子电容器",
+      "article_type": "research"
     },
     {
       "id": "L13",
@@ -493,18 +517,23 @@
       "pages": "3132-3139",
       "doi": "10.1021/acsenergylett.0c01528",
       "url": "https://doi.org/10.1021/acsenergylett.0c01528",
-      "source": "https://api.crossref.org/works/10.1021%2Facsenergylett.0c01528"
+      "source": "https://api.crossref.org/works/10.1021%2Facsenergylett.0c01528",
+      "title_zh": "采用 V₂O₅–活性炭电极的光充电锌离子电容器",
+      "article_type": "research"
     },
     {
       "title": "Voltage matching strategy to design efficient photo-rechargeable zinc-ion batteries",
-      "heading": "新近文献 · 待研读",
+      "heading": "器件电压匹配：减少光伏–电池耦合损失",
       "tags": [
-        "auto"
+        "auto",
+        "organic",
+        "device",
+        "mechanism"
       ],
-      "kind": "期刊文献",
-      "material": "请查阅原文材料体系",
-      "summary": "标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。",
-      "note": "请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。",
+      "kind": "研究论文",
+      "material": "钙钛矿太阳能电池 / 锌离子电池集成",
+      "summary": "研究钙钛矿太阳能电池与锌离子电池集成时的电压匹配原则，通过优化光伏输出与子电池配置降低系统能量损失，并演示离网定位设备供能。",
+      "note": "这是光伏与电池耦合系统，应与单一双功能光电极区分；阅读时关注最大功率点、电池充电电压与系统整体效率。",
       "authors": [
         "Wendong Zhu",
         "Zhenkun Zhu",
@@ -551,7 +580,12 @@
       "abstract": "",
       "review_status": "auto",
       "added": "2026-10-12",
-      "id": "L14"
+      "id": "L14",
+      "title_zh": "通过电压匹配策略设计高效光充电锌离子电池",
+      "article_type": "research",
+      "publisher_source": "https://www.sciencedirect.com/science/article/pii/S1385894726099055",
+      "reading_basis": "期刊公开摘要及研究文章标注",
+      "verified_on": "2026-10-13"
     },
     {
       "id": "L15",
@@ -590,11 +624,13 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "采用无铅钙钛矿光正极的高效光充电水系锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L16",
-      "title": "3D Hierarchical Sunflower‐Shaped MoS2/SnO2Photocathodes for Photo‐Rechargeable Zinc Ion Batteries",
+      "title": "3D Hierarchical Sunflower‐Shaped MoS2/SnO2 Photocathodes for Photo‐Rechargeable Zinc Ion Batteries",
       "heading": "三维捕光结构：MoS₂/SnO₂ 向日葵形光正极",
       "tags": [
         "heterojunction",
@@ -646,11 +682,13 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "用于光充电锌离子电池的三维层级向日葵形 MoS₂/SnO₂ 光正极",
+      "article_type": "research"
     },
     {
       "id": "L17",
-      "title": "Carbon Superstructure‐Supported Half‐Metallic V2O3Nanospheres for High‐Efficiency Photorechargeable Zinc Ion Batteries",
+      "title": "Carbon Superstructure‐Supported Half‐Metallic V2O3 Nanospheres for High‐Efficiency Photorechargeable Zinc Ion Batteries",
       "heading": "半金属 V₂O₃ 与碳超结构协同储能",
       "tags": [
         "vanadium"
@@ -693,7 +731,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "用于高效光充电锌离子电池的碳超结构支撑半金属 V₂O₃ 纳米球",
+      "article_type": "research"
     },
     {
       "id": "L18",
@@ -741,11 +781,13 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "通过调控光诱导质子转移实现高稳定性光辅助锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L19",
-      "title": "An optimized MnO2photocathode by doping engineering for high capacity and stability photo-assisted zinc-ion batteries",
+      "title": "An optimized MnO2 photocathode by doping engineering for high capacity and stability photo-assisted zinc-ion batteries",
       "heading": "Al 掺杂 MnO₂：能带与结构稳定性调控",
       "tags": [
         "manganese"
@@ -786,7 +828,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "通过掺杂工程优化 MnO₂ 光正极，实现高容量、高稳定性的光辅助锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L20",
@@ -836,7 +880,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "利用 K⁺ 嵌入水合钒氧化物光正极提升光辅助锌离子电池容量和循环稳定性",
+      "article_type": "research"
     },
     {
       "id": "L21",
@@ -884,7 +930,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "采用高度有序、垂直取向 C@VO₂/ZnO 微棒阵列的光充电锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L22",
@@ -926,7 +974,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "用于光充电锌离子电池的自支撑 BiOI@多壁碳纳米管光电极",
+      "article_type": "research"
     },
     {
       "id": "L23",
@@ -967,7 +1017,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "用于光增强可充电锌离子电池的光敏管状 MoS₂/C 复合正极设计",
+      "article_type": "research"
     },
     {
       "id": "L24",
@@ -1013,7 +1065,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "利用混合反射三维电极增强光捕获，实现高可用性的光充电锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L25",
@@ -1062,7 +1116,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "多功能核壳 MnO₂@PANI 纳米复合材料：连接光辅助锌离子电池与自供能可穿戴应变传感器",
+      "article_type": "research"
     },
     {
       "id": "L26",
@@ -1105,7 +1161,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "通过 II 型 Cu₂O@MOF 异质结正极促进光生载流子分离，实现光充电锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L27",
@@ -1157,7 +1215,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "用于高倍率光充电锌离子电池的 V₂O₅/CdS 异质结构",
+      "article_type": "research"
     },
     {
       "id": "L28",
@@ -1203,7 +1263,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "具有高充放电效率的光辅助化学自充电锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L29",
@@ -1262,7 +1324,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "用于提升光充电锌离子电池容量与循环寿命的混合价态钒氧化物光正极",
+      "article_type": "research"
     },
     {
       "id": "L30",
@@ -1305,11 +1369,13 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "用于高效光充电锌离子电池的氧化锡修饰共价有机框架光正极",
+      "article_type": "research"
     },
     {
       "id": "L31",
-      "title": "In‐Situ Study of Photo‐Rechargeable Aqueous Zinc‐Ion Batteries with the Bifunctional α‐MnO2Photoelectrodes",
+      "title": "In‐Situ Study of Photo‐Rechargeable Aqueous Zinc‐Ion Batteries with the Bifunctional α‐MnO2 Photoelectrodes",
       "heading": "原位观察 α-MnO₂ 的光电化学效应",
       "tags": [
         "manganese",
@@ -1357,7 +1423,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "采用双功能 α-MnO₂ 光电极的光充电水系锌离子电池原位研究",
+      "article_type": "research"
     },
     {
       "id": "L32",
@@ -1402,7 +1470,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "光诱导质子–阳离子级联促进光辅助锌离子电池中的离子嵌入动力学",
+      "article_type": "research"
     },
     {
       "id": "L33",
@@ -1457,7 +1527,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "通过 MoS₂/聚吡咯异维光正极界面工程实现高效光充电锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L34",
@@ -1509,7 +1581,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "构筑共价桥连纳米层结构，实现高性能光辅助锌离子存储",
+      "article_type": "research"
     },
     {
       "id": "L35",
@@ -1555,7 +1629,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "基于十二电子转移有机光正极的光自充电锌离子电池",
+      "article_type": "research"
     },
     {
       "id": "L36",
@@ -1612,7 +1688,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "面向低碳智能可穿戴设备的光供能一体化能量采集与存储纤维",
+      "article_type": "research"
     },
     {
       "id": "L37",
@@ -1658,7 +1736,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "基于 Janus 联接钙钛矿/Te 光正极的光充电水系锌–碲电池",
+      "article_type": "research"
     },
     {
       "id": "L38",
@@ -1706,7 +1786,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "光辅助充电水系锌–碘电池",
+      "article_type": "research"
     },
     {
       "id": "L39",
@@ -1760,7 +1842,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "采用钙钛矿光正极的光辅助可充电水系锌–碘电池",
+      "article_type": "research"
     },
     {
       "id": "L40",
@@ -1806,7 +1890,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "用于光加速锌离子电容器的多孔碳包覆 CdS 修饰 ZnO 纳米棒光正极",
+      "article_type": "research"
     },
     {
       "id": "L41",
@@ -1849,7 +1935,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "赋能未来：释放 MXene 基双功能光活性正极在光充电锌离子电容器中的潜力",
+      "article_type": "research"
     },
     {
       "id": "L42",
@@ -1897,7 +1985,10 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "面向太阳能直接转换与存储的新兴光集成可充电水系锌离子电池与电容器",
+      "article_type": "review",
+      "article_subtype": "观点文章"
     },
     {
       "id": "L43",
@@ -1937,7 +2028,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "先进光充电锂离子与锌离子电池：进展与展望",
+      "article_type": "review"
     },
     {
       "id": "L44",
@@ -1975,7 +2068,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "高性能直接光充电水系锌基储能技术的设计",
+      "article_type": "review"
     },
     {
       "id": "L45",
@@ -2019,7 +2114,9 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "title_zh": "改性 BiOI 光正极的光电化学效应实现 2.4 V 水系锌离子电池：突破水系电解液电化学窗口的限制",
+      "article_type": "research"
     }
   ],
   "curated_checked_on": "2026-10-13",
@@ -2029,5 +2126,6 @@
     "date": "2026-10-13",
     "added_count": 31,
     "previous_total": 14
-  }
+  },
+  "translation_updated": "2026-10-13"
 }
