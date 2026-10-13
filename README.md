@@ -20,7 +20,7 @@
 
 这是无需构建的静态网站。GitHub Pages 使用 `main` 分支根目录；提交后通过仓库的 Actions 查看部署结果。
 
-更新文献只需修改 `literature.json`（`title_zh` 为中文标题，`summary` 为中文简介，`article_type` 使用 `research` 或 `review`，`battery_category` 使用 `zinc` 或 `other-metals`，`metal_system` 记录具体金属体系，`battery_category` 使用 `zinc` 或 `other-metals`，`metal_system` 记录具体金属体系），然后运行 `python3 scripts/render_library.py`，同步 HTML、内嵌数据、年份与主题数量、BibTeX、RIS 及 `REFERENCES.md`。请核对新增 DOI 及期刊年份，保留器件类型与原始研究/综述的区别。
+更新文献只需修改 `literature.json`（`title_zh` 为中文标题，`summary` 为中文简介，`article_type` 使用 `research` 或 `review`，`battery_category` 使用 `zinc` 或 `other-metals`，`metal_system` 记录具体金属体系），然后运行 `python3 scripts/render_library.py`，同步 HTML、内嵌数据、年份与主题数量、BibTeX、RIS 及 `REFERENCES.md`。请核对新增 DOI 及期刊年份，保留器件类型与原始研究/综述的区别。
 
 修改 CSS/JavaScript 后，同时更新 HTML 中资源 URL 的 `v` 参数，避免 GitHub Pages 的浏览器缓存继续使用旧代码。
 
