@@ -9,15 +9,16 @@
  const type=document.getElementById('paper-type');
  const sort=document.getElementById('paper-sort');
  const chips=[...document.querySelectorAll('[data-filter]')];
+ const systems=[...document.querySelectorAll('[data-system]')];
  const exportButton=document.getElementById('export-filtered');
  const normalize=s=>s.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
  const searchable=new Map(papers.map(p=>[p.id,normalize([p.title,p.title_zh||'',p.heading,p.summary,p.material,p.journal,p.doi,...p.authors].join(' '))]));
  const paperType=p=>p.article_type|| (p.kind==='综述'?'review':['研究论文','关联器件'].includes(p.kind)?'research':'unclassified');
- let topic='all',visible=[...papers],noticeTimer;
+ let topic='all',system='all',visible=[...papers],noticeTimer;
  const notice=text=>{const node=document.getElementById('copy-status');node.textContent=text;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>node.textContent='',4000);};
  function render(){
   const terms=normalize(search.value).split(/\s+/).filter(Boolean);
-  visible=papers.filter(p=>(topic==='all'||p.tags.includes(topic))&&(type.value==='all'||paperType(p)===type.value)&&(year.value==='all'||String(p.year)===year.value)&&terms.every(t=>searchable.get(p.id).includes(t)));
+  visible=papers.filter(p=>(system==='all'||(p.battery_category||'zinc')===system)&&(topic==='all'||p.tags.includes(topic))&&(type.value==='all'||paperType(p)===type.value)&&(year.value==='all'||String(p.year)===year.value)&&terms.every(t=>searchable.get(p.id).includes(t)));
   const published=p=>p.publication_date||`${p.year}-01-01`;
   visible.sort((a,b)=>(sort.value==='oldest'?published(a).localeCompare(published(b)):sort.value==='newest'?published(b).localeCompare(published(a)):0)||a.id.localeCompare(b.id,undefined,{numeric:true}));
   const shown=new Set(visible.map(p=>p.id));
@@ -25,14 +26,16 @@
   const order=[...list.children].filter(node=>shown.has(node.dataset.id)).map(node=>node.dataset.id);
   if(visible.some((p,i)=>order[i]!==p.id))for(const p of visible)list.append(nodes.get(p.id));
   for(const chip of chips)chip.setAttribute('aria-pressed',String(chip.dataset.filter===topic));
+  for(const button of systems)button.setAttribute('aria-pressed',String(button.dataset.system===system));
   document.getElementById('paper-result-count').textContent=`显示 ${visible.length} / ${papers.length} 篇文献`;
   document.getElementById('library-empty').hidden=visible.length!==0;
   exportButton.disabled=visible.length===0;
  }
- function clear(){search.value='';year.value='all';type.value='all';topic='all';render();}
+ function clear(){search.value='';year.value='all';type.value='all';topic='all';system='all';render();}
  search.addEventListener('input',render);year.addEventListener('change',render);type.addEventListener('change',render);sort.addEventListener('change',render);
  document.getElementById('library-search-form').addEventListener('submit',event=>event.preventDefault());
  for(const chip of chips)chip.addEventListener('click',()=>{topic=chip.dataset.filter;render();});
+ for(const button of systems)button.addEventListener('click',()=>{system=button.dataset.system;render();});
  document.getElementById('clear-search').addEventListener('click',clear);
  document.getElementById('reset-empty').addEventListener('click',()=>{clear();search.focus();});
  const citation=p=>[p.authors.join('; '),p.title,[p.journal,p.year,[p.volume,p.pages].filter(Boolean).join(': ')].filter(Boolean).join(', '),p.url].filter(Boolean).join('. ');

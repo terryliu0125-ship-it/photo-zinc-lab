@@ -14,5 +14,8 @@
 .paper-type-research{background:#e2ecde;border-color:#7a9870;color:#2d542f}
 .paper-type-review{background:#e3e9ef;border-color:#8da2b4;color:#405f76}
 .paper-type-unclassified{color:#85653c;border-color:#b19d7790}
+.library-systems{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.system-chip{font-size:12px;padding:11px 17px;min-height:44px}
+.paper-system{background:#f0e9dc;color:#735831;border-color:#b29b71}
 @media(max-width:900px){.library-tools{grid-template-columns:repeat(3,minmax(0,1fr))}.search-field{grid-column:1/-1}.library-select{max-width:none;width:100%}}
 @media(max-width:560px){.library-tools{grid-template-columns:1fr 1fr}.library-tools>label:last-child{grid-column:1/-1}.paper-title-original{font-size:11px;line-height:1.7}}

@@ -1,14 +1,16 @@
 # photo-zinc-lab
 
-光锌能源实验室：光辅助与光充电水系锌离子电池的研究介绍和精选文献阅读入口。
+光锌能源实验室：以光辅助与光充电锌离子电池为核心，并拓展锂、钠、铝等金属离子光储能文献。
 
 [访问网站](https://terryliu0125-ship-it.github.io/photo-zinc-lab/)
 
 ## 文献资料
 
-截至 2026-10-13，文献库共 45 篇：44 篇精选条目和 1 篇自动收录条目，覆盖 2019—2026 年。这次补充 31 篇，扩展锰基光正极、有机框架、钙钛矿、质子–离子耦合及柔性纤维器件等方向。新增条目的 DOI、题目、作者与卷页通过 Crossref 注册记录核对；中文导读依据公开摘要与书目整理，具体实验结论以原文为准。文献不代表本站自有成果，也不是穷尽性检索。
+截至 2026-10-13，文献库共 86 篇（74 篇研究、12 篇综述/观点），覆盖 2015—2026 年。本轮新增 41 篇，统一归入“其他金属离子电池”，包括锂、钠、铝与跨体系综述；原有 45 篇列为“锌基相关文献”。每篇均有中文标题、简介、阅读提示及 DOI。中文标题为本站译名，英文原题用于标准引文导出。
 
-现有 45 篇均提供中文译名与中文简介，分为 38 篇研究论文、7 篇综述/观点文章。文献类型、研究主题与年份可交叉筛选，支持中英文标题、作者、材料和 DOI 搜索，年份排序、引文复制及 BibTeX/RIS 下载。英文原题用于标准引文导出，中文标题为本站译名。文献在 HTML 中完整呈现，关闭 JavaScript 仍可直接浏览。
+新增书目的 DOI、题目、作者、卷页及发表日期经 Crossref 核对，中文导读依据公开摘要与书目记录整理。锂/钠金属半电池、光热增强、转化型储能和光伏集成器件在导读中注明；跨体系综述可能涵盖金属空气或超级电容器，应按具体章节阅读。文献不是穷尽性检索，也不代表本站自有成果。
+
+电池体系、研究/综述类型、材料主题与年份可交叉筛选，支持中英文标题、作者、材料和 DOI 搜索、年份排序、引文复制及 BibTeX/RIS 下载。全部文献在 HTML 中完整呈现，关闭 JavaScript 仍可阅读。
 
 - `index.html`：首页和文献列表
 - `literature.css` / `literature.js`：文献库样式和交互
@@ -18,7 +20,7 @@
 
 这是无需构建的静态网站。GitHub Pages 使用 `main` 分支根目录；提交后通过仓库的 Actions 查看部署结果。
 
-更新文献只需修改 `literature.json`（`title_zh` 为中文标题，`summary` 为中文简介，`article_type` 使用 `research` 或 `review`），然后运行 `python3 scripts/render_library.py`，同步 HTML、内嵌数据、年份与主题数量、BibTeX、RIS 及 `REFERENCES.md`。请核对新增 DOI 及期刊年份，保留器件类型与原始研究/综述的区别。
+更新文献只需修改 `literature.json`（`title_zh` 为中文标题，`summary` 为中文简介，`article_type` 使用 `research` 或 `review`，`battery_category` 使用 `zinc` 或 `other-metals`，`metal_system` 记录具体金属体系，`battery_category` 使用 `zinc` 或 `other-metals`，`metal_system` 记录具体金属体系），然后运行 `python3 scripts/render_library.py`，同步 HTML、内嵌数据、年份与主题数量、BibTeX、RIS 及 `REFERENCES.md`。请核对新增 DOI 及期刊年份，保留器件类型与原始研究/综述的区别。
 
 修改 CSS/JavaScript 后，同时更新 HTML 中资源 URL 的 `v` 参数，避免 GitHub Pages 的浏览器缓存继续使用旧代码。
 
