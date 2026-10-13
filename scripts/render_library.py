@@ -140,13 +140,23 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
         raise ValueError("文献编号或 DOI 重复，停止生成")
     if any(not re.fullmatch(r"L\d+", item) for item in ids):
         raise ValueError("无效文献编号")
-    page = (root / "index.html").read_text(encoding="utf-8")
+    home = (root / "index.html").read_text(encoding="utf-8")
+    page = (root / "literature.html").read_text(encoding="utf-8")
     page = re.sub(r'(精选文献 · 书目信息已核对 · )\d{4}-\d{2}-\d{2}',
                   lambda m: m[1] + library.get("curated_checked_on", library["updated"]), page)
-    page, counts = re.subn(r'(<strong data-paper-count>).*?(</strong>)',
-                          lambda m: m[1] + str(len(papers)) + m[2], page, flags=re.S)
-    if counts != 2:
-        raise ValueError("文献数量生成区域应有两处")
+    def update_count(markup: str, attribute: str, count: int, label: str) -> str:
+        pattern = rf'(<strong\b[^>]*\b{attribute}[^>]*>).*?(</strong>)'
+        updated, matches = re.subn(pattern, lambda m: m[1] + str(count) + m[2], markup, flags=re.S)
+        if matches != 1:
+            raise ValueError(f"{label}数量生成区域应有一处")
+        return updated
+
+    home = update_count(home, r'data-paper-count(?=[\s>])', len(papers), "首页文献")
+    page = update_count(page, r'data-paper-count(?=[\s>])', len(papers), "文献页文献")
+    for key, label in SYSTEMS:
+        if key != "all":
+            total = sum(p.get("battery_category", "zinc") == key for p in papers)
+            home = update_count(home, f'data-system-count="{key}"', total, f"首页{label}")
     ordered = sorted(papers, key=lambda p: (p.get("publication_date") or f"{p['year']}-01-01", p["id"]), reverse=True)
     page = replace_content(page, "ol", "paper-list", "\n" + "\n".join(card(p) for p in ordered) + "\n")
     options = '<option value="all">全部年份</option>\n' + "\n".join(
@@ -208,7 +218,8 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
                      f"{'; '.join(p['authors'])}. {p['title']}. *{p['journal']}*, {p['year']}. [DOI]({p['url']}) · [Crossref 元数据]({p['source']})",
                      "", p["summary"], "", "阅读提示：" + p["note"], ""))
     return {
-        "index.html": page,
+        "index.html": home,
+        "literature.html": page,
         "references.bib": "\n\n".join(bib_entry(p) for p in papers) + "\n",
         "references.ris": "\n\n".join(ris_entry(p) for p in papers) + "\n",
         "REFERENCES.md": "\n".join(refs),
