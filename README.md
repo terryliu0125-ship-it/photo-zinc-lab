@@ -13,6 +13,7 @@
 电池体系、研究/综述类型、材料主题与年份可交叉筛选，支持中英文标题、作者、材料和 DOI 搜索、年份排序、引文复制及 BibTeX/RIS 下载。全部文献在 HTML 中完整呈现，关闭 JavaScript 仍可阅读。
 
 - `index.html`：首页和文献列表
+- `principles.css` / `principles.js`：光辅助定义、三种充电模式图解、机制与实验判断
 - `literature.css` / `literature.js`：文献库样式和交互
 - `literature.json`：结构化书目信息与中文导读
 - `references.bib` / `references.ris`：可导入 Zotero、EndNote 等工具的引文文件
