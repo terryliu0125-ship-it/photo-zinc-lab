@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>光辅助原理 · 光锌能源实验室</title><meta name="description" content="光辅助电池原理与精选文献，连接锌、锂、钠、铝等金属体系。"/><link rel="stylesheet" href="site.css?v=20261013-pages1"/><link rel="stylesheet" href="principles.css?v=20261013-pages1"/></head>
+<body><a class="skip-link" href="#main-content">跳转到主要内容</a><header class="site-header"><div class="header-inner"><a href="index.html" class="brand" aria-label="光锌能源实验室首页"><span class="brand-mark"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 5 13h6l-1 9 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span><span><strong>光锌能源实验室</strong><small>PHOTO–ZINC LAB</small></span></a><nav class="site-nav" aria-label="主导航"><a href="index.html">首页</a><a href="principles.html" aria-current="page">光辅助原理</a><a href="literature.html">文献库</a><a href="guide.html">阅读指南</a></nav></div></header><main class="page-shell" id="main-content"><div class="breadcrumb" aria-label="当前位置"><a href="index.html">首页</a><span aria-hidden="true">/</span><span>光辅助原理</span></div><section class="mechanism principles section" id="mechanism" aria-labelledby="principles-title">
+ <div class="principle-header">
+  <div><span class="kicker">LIGHT × ELECTROCHEMISTRY</span><h1 id="principles-title">到底什么是<br/>光辅助？</h1></div>
+  <div class="core-definition"><strong>在电池工作时引入光照，<br/>用光帮助电化学反应。</strong><p>光可能产生电子和空穴、改变界面电荷转移，或转化成热量，让反应更容易进行。能否充得更快、减少用电或直接光充电，要看具体材料与器件证据。</p><a href="literature.html#paper-L67">机制依据：光热与光电效应研究 [L67] ↗</a></div>
+ </div>
+ <div class="mode-intro"><span class="kicker">01 / 先看能量从哪里来</span><h3>光辅助、直接光充电、光伏集成</h3><p>“有没有外接电源”描述运行条件；“光照在哪里”描述器件构型。以下展示三种典型充电方式。</p></div>
+ <div class="mode-controls" id="mode-controls" role="group" aria-label="选择充电方式" hidden>
+  <button type="button" data-mode="assisted" aria-controls="mode-assisted" aria-pressed="true">① 光辅助充电</button>
+  <button type="button" data-mode="direct" aria-controls="mode-direct" aria-pressed="false">② 直接光充电</button>
+  <button type="button" data-mode="pv" aria-controls="mode-pv" aria-pressed="false">③ 光伏集成</button>
+ </div>
+ <p class="principle-sr-only" id="mode-status" role="status" aria-live="polite"></p>
+ <article class="principle-mode" id="mode-assisted" data-mode-panel="assisted" aria-labelledby="mode-assisted-title">
+  <div class="mode-heading"><h4 id="mode-assisted-title">光辅助充电：电源供电，光照帮忙</h4><span>外部电能 ＋ 光能</span></div>
+  <div class="energy-flow" aria-label="外接电源与光照共同输入光响应电池，促进充电并储存能量">
+   <div><b>外接电源 ＋ 光照</b><small>两种能量同时输入</small></div><span class="flow-arrow" aria-hidden="true"></span><div class="flow-focus"><b>光响应电池</b><small>光帮助电极反应与传输</small></div><span class="flow-arrow" aria-hidden="true"></span><div><b>电化学储能</b><small>后续通过放电取出</small></div>
+  </div>
+  <p>充电时仍接电源，同时照射光响应电极。例如，光照可能降低充电所需的电压、减小极化，或在同样条件下加快反应。改善程度随材料、温度和荷电状态变化。</p>
+  <p class="mode-question"><strong>判断重点</strong>在相同初始状态、温度与可回收放电能量下，比较光暗条件的充电时间和外部电输入；评价总效率时还需计入光能。</p>
+  <a href="literature.html#paper-L49">实例：锰酸锂的光辅助快速充电 [L49] ↗</a>
+ </article>
+ <article class="principle-mode" id="mode-direct" data-mode-panel="direct" aria-labelledby="mode-direct-title">
+  <div class="mode-heading"><h4 id="mode-direct-title">直接光充电：光活性电极把光能存进电池</h4><span>充电时无外接供电</span></div>
+  <div class="energy-flow" aria-label="光照被双功能光电极吸收，驱动电池充电并存储能量">
+   <div><b>光照</b><small>充电时的能量来源</small></div><span class="flow-arrow" aria-hidden="true"></span><div class="flow-focus"><b>双功能光电极</b><small>吸光与电池反应耦合</small></div><span class="flow-arrow" aria-hidden="true"></span><div><b>电化学储能</b><small>撤光后验证暗态放电</small></div>
+  </div>
+  <p>光活性材料吸光后产生并分离电荷，在合适的能级和电极配合下驱动充电反应。这里所说的“纯光充电”要求充电步骤不靠外接电源；并非每种光辅助电池都能做到。</p>
+  <p class="mode-question"><strong>判断重点</strong>从受控放电状态开始，只照光，再撤光放电；结合可回收能量、循环及反应产物，排查电压恢复、副反应和化学自充电。</p>
+  <a href="literature.html#paper-L01">锌体系实例 [L01] ↗</a><a href="literature.html#paper-L57">锂体系与石墨全电池实例 [L57] ↗</a>
+ </article>
+ <article class="principle-mode" id="mode-pv" data-mode-panel="pv" aria-labelledby="mode-pv-title">
+  <div class="mode-heading"><h4 id="mode-pv-title">光伏集成：先发电，再给电池充电</h4><span>光伏负责转换，电池负责存储</span></div>
+  <div class="energy-flow" aria-label="光照经过太阳能电池转成电能，再给储能电池充电">
+   <div><b>光照</b><small>太阳能输入</small></div><span class="flow-arrow" aria-hidden="true"></span><div class="flow-focus"><b>太阳能电池</b><small>先把光能变成电能</small></div><span class="flow-arrow" aria-hidden="true"></span><div><b>储能电池</b><small>再通过充电存下能量</small></div>
+  </div>
+  <p>用太阳能电池模块给储能电池供电，也可以共享电极、做进同一器件。整个系统可以只靠阳光运行；储能电极本身不必吸光，光伏输出与电池充电电压的匹配很关键。</p>
+  <p class="mode-question"><strong>判断重点</strong>分别核对光伏效率、电池效率与系统总体效率，确认功率管理、入射光面积及能量流向。</p>
+  <a href="literature.html#paper-L75">实例：钙钛矿光伏为磷酸铁锂／钛酸锂电池充电 [L75] ↗</a>
+ </article>
+ <aside class="discharge-note"><strong>光辅助放电又是什么？</strong><p>电池已经储有化学能，放电时继续照光，可能改变反应速度和输出。此时测试仪控制的是放电负载，并不代表它向电池供电。照光后放得更久，可能含有放电期间持续输入的光能，需与撤光后的储存容量分开评价。<a href="literature.html#paper-L58">单颗粒机制研究 [L58] ↗</a></p></aside>
+ <div class="mode-intro"><span class="kicker">02 / 再看光具体做了什么</span><h3>三条可能同时发生的路径</h3><p>以下是概念框架。光生电荷、界面过程与光热贡献可能重叠，主导机制也会随材料和工作电位改变。</p></div>
+ <div class="light-paths">
+  <article><span>光 → 电子／空穴 → 电极反应</span><h4>光生载流子</h4><p>光活性材料吸收合适波长的光，产生电子和空穴。“空穴”可以理解为缺少电子的位置。电荷有效分离后，可能参与氧化还原，促进离子嵌入或脱出；也可能先复合而损失。</p><a href="literature.html#paper-L57">异质结光电极 [L57] ↗</a></article>
+  <article><span>光照 → 界面电荷与传输变化</span><h4>界面与离子过程</h4><p>能级排列和界面结构影响电荷去向；光照也可能改变颗粒内离子分布及反应利用率。电容响应、电解液副反应同样可能改变测量信号，需要与可逆储能区分。</p><a href="literature.html#paper-L58">工况观察 [L58] ↗</a></article>
+  <article><span>光 → 热 → 传输与反应速度变化</span><h4>光热效应</h4><p>部分光能变成热量，改变离子迁移和电荷转移速度。照光后的性能提升可能含有升温贡献；要用同温暗态对照判断光生电荷是否还有额外作用。</p><a href="literature.html#paper-L63">光热增强实例 [L63] ↗</a><a href="literature.html#paper-L67">机制区分 [L67] ↗</a></article>
+ </div>
+ <details class="principle-detail"><summary>电池里，离子和电子分别走哪条路？</summary><p>以典型嵌入型电池为例：离子通过电解液并进入、离开电极，电子经外电路传递，正负极共同发生氧化还原。光可以影响其中的电荷与反应过程；离子的嵌入方向和具体反应，取决于充放电模式与电极体系。锌体系还可能有质子参与或溶解—沉积，不能把所有反应都简化成 Zn²⁺嵌入。</p><a href="literature.html#paper-L06">充电模式与储能机制 [L06] ↗</a></details>
+ <div class="principle-checks"><div><span class="kicker">03 / 怎样证明真的有效</span><h3>读论文时，问四个问题</h3></div><ol><li><b>光照在哪里？</b><span>电极、电解液还是独立光伏模块？波长、光强、面积与温度是否记录？</span></li><li><b>电源有没有参与？</b><span>区分有外接电源的光辅助充电、纯光充电和光辅助放电，先明确能量输入。</span></li><li><b>撤光后还能放出多少能量？</b><span>电压回升或光照下增容只是信号，还要看暗态放电、循环可逆性和材料变化。</span></li><li><b>比较条件与能量账是否一致？</b><span>匹配温度、初始荷电状态、质量与电流；报告电能输入和光能输入各自的口径。</span></li></ol></div>
+ <details class="principle-detail"><summary>为什么“减少用电”与“总效率提高”要分别看？</summary><p>外部电输入可由充电过程的电压 × 电流随时间累加得到。在稳定、均匀照射下，光能输入＝辐照度（W/m²）×实际受光面积（m²）×时间（s）；若已测得入射功率（W），直接乘时间即可。</p><p>光照下用电减少，并不能单独说明总能量效率提高。评估纯光充电的净光储能效率时，应比较“光充电带来的净增可回收放电能量／入射光能”，扣除初始储能、暗态自恢复等基线贡献，并写清光照范围与测量协议。</p></details>
+ <p class="principle-sources">概念依据与延伸：<a href="https://pubs.acs.org/doi/10.1021/acselectrochem.4c00212" target="_blank" rel="noopener noreferrer">光热／光电机制</a> · <a href="https://pubs.acs.org/doi/10.1021/acs.nanolett.3c01148" target="_blank" rel="noopener noreferrer">工况显微观察</a> · <a href="https://doi.org/10.1002/smll.202303319" target="_blank" rel="noopener noreferrer">直接光充电全电池</a> · <a href="https://www.nature.com/articles/ncomms9103" target="_blank" rel="noopener noreferrer">光伏集成</a>。示意图展示典型路径，具体机制以原文和实验条件为准。</p>
+</section>
+</main><footer class="site-footer"><span>© 2026 PHOTO–ZINC LAB · 光能与电化学储能</span><div class="footer-links"><a href="guide.html#research">研究范围</a><a href="https://github.com/terryliu0125-ship-it/photo-zinc-lab/issues" target="_blank" rel="noopener noreferrer">推荐文献 ↗</a><a href="https://github.com/terryliu0125-ship-it/photo-zinc-lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer><script src="site.js?v=20261013-pages1" defer></script><script src="principles.js?v=20261013-pages1" defer></script></body></html>

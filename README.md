@@ -10,9 +10,13 @@
 
 新增书目的 DOI、题目、作者、卷页及发表日期经 Crossref 核对，中文导读依据公开摘要与书目记录整理。锂/钠金属半电池、光热增强、转化型储能和光伏集成器件在导读中注明；跨体系综述可能涵盖金属空气或超级电容器，应按具体章节阅读。文献不是穷尽性检索，也不代表本站自有成果。
 
-电池体系、研究/综述类型、材料主题与年份可交叉筛选，支持中英文标题、作者、材料和 DOI 搜索、年份排序、引文复制及 BibTeX/RIS 下载。全部文献在 HTML 中完整呈现，关闭 JavaScript 仍可阅读。
+电池体系、研究/综述类型、材料主题与年份可交叉筛选，支持中英文标题、作者、材料和 DOI 搜索、年份排序、引文复制及 BibTeX/RIS 下载。全部文献在 `literature.html` 中完整呈现，启用 JavaScript 时分页浏览，关闭 JavaScript 仍可阅读全文。首页只展示入口，不加载论文列表。旧版 `#literature`、`#mechanism`、`#reading-guide` 与 `#paper-Lxx` 链接会自动转到对应新页面。
 
-- `index.html`：首页和文献列表
+- `index.html`：简洁首页与页面导航
+- `principles.html`：光辅助原理、充电模式与实验判断
+- `literature.html`：独立文献库、交叉筛选与每页 6 篇的卡片浏览
+- `guide.html`：阅读路线、研究范围和推荐文献入口
+- `site.css` / `site.js`：统一页面风格与旧锚点链接兼容
 - `principles.css` / `principles.js`：光辅助定义、三种充电模式图解、机制与实验判断
 - `literature.css` / `literature.js`：文献库样式和交互
 - `literature.json`：结构化书目信息与中文导读
@@ -21,7 +25,7 @@
 
 这是无需构建的静态网站。GitHub Pages 使用 `main` 分支根目录；提交后通过仓库的 Actions 查看部署结果。
 
-更新文献只需修改 `literature.json`（`title_zh` 为中文标题，`summary` 为中文简介，`article_type` 使用 `research` 或 `review`，`battery_category` 使用 `zinc` 或 `other-metals`，`metal_system` 记录具体金属体系），然后运行 `python3 scripts/render_library.py`，同步 HTML、内嵌数据、年份与主题数量、BibTeX、RIS 及 `REFERENCES.md`。请核对新增 DOI 及期刊年份，保留器件类型与原始研究/综述的区别。
+更新文献只需修改 `literature.json`（`title_zh` 为中文标题，`summary` 为中文简介，`article_type` 使用 `research` 或 `review`，`battery_category` 使用 `zinc` 或 `other-metals`，`metal_system` 记录具体金属体系），然后运行 `python3 scripts/render_library.py`，同步首页统计、文献页 HTML、内嵌数据、年份与主题数量、BibTeX、RIS 及 `REFERENCES.md`。请核对新增 DOI 及期刊年份，保留器件类型与原始研究/综述的区别。
 
 修改 CSS/JavaScript 后，同时更新 HTML 中资源 URL 的 `v` 参数，避免 GitHub Pages 的浏览器缓存继续使用旧代码。
 
