@@ -861,3 +861,63 @@ Ximan Dong; Xinyue Chen; Xin Jiang; Nianjun Yang. Light‐Assisted Energy Storag
 从电池与超级电容器基础出发，梳理光辅助储能器件的组成、工作原理、器件类型与应用，结合代表性案例讨论光能转换和电化学储能的协同，并总结效率与实际应用方面的瓶颈。
 
 阅读提示：这是涵盖电池和超级电容器的广义综述，归入跨金属体系阅读资料；不同储能机制与效率口径需分别辨认。
+
+## L87 · 水系钠离子电池走向实际应用的难题与挑战
+
+电池分类：其他金属离子电池 · 文献类型：综述/观点
+
+Ruohui Rao; Long Chen; Jing Su; Shiteng Cai; Sheng Wang; Zhongxue Chen. Issues and challenges facing aqueous sodium-ion batteries toward practical applications. *Battery Energy*, 2024. [DOI](https://doi.org/10.1002/bte2.20230036) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fbte2.20230036)
+
+以实际应用为线索，梳理水的电化学稳定窗口、电极选择、界面寿命和制造挑战，适合作为水系钠离子电池的阅读起点。
+
+阅读提示：水系钠离子电池与非水系钠离子、钠金属电池不是同一器件体系；比较性能时先核对电解液与全电池配置。
+
+## L88 · 层状 Na₃Fe₃(PO₄)₄ 负极在水系钠离子电池中的快速、耐久 Na⁺ 插层反应
+
+电池分类：其他金属离子电池 · 文献类型：研究论文
+
+Shen Qiu; Marcos Lucero; Xianyong Wu; Qi Wang; Maoyu Wang; Yan Wang; Widitha S. Samarakoon; Meilani R. Bolding; Zhenzhen Yang; Yaqin Huang; Zhichuan J. Xu; Meng Gu; Zhenxing Feng. Revealing the Fast and Durable Na+ Insertion Reactions in a Layered Na3Fe3(PO4)4 Anode for Aqueous Na-Ion Batteries. *ACS Materials Au*, 2022. [DOI](https://doi.org/10.1021/acsmaterialsau.1c00035) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsmaterialsau.1c00035)
+
+研究层状磷酸铁钠的可逆钠离子插层与倍率表现，为水系钠电负极材料选择提供案例。
+
+阅读提示：阅读电极电位、插层机理和全电池验证时，区分单电极容量与整电池能量密度。
+
+## L89 · 提升钠离子电池能量密度的水系双电解液全电池
+
+电池分类：其他金属离子电池 · 文献类型：研究论文
+
+Weishan Zhou; Yiran Zheng; Mahrab Zartashia; Yan Shan; Hadia Noor; Hongtao Lou; Xianhua Hou. Aqueous Dual-Electrolyte Full-Cell System for Improving Energy Density of Sodium-Ion Batteries. *ACS Applied Materials & Interfaces*, 2022. [DOI](https://doi.org/10.1021/acsami.2c06304) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsami.2c06304)
+
+将水系钠盐负极液和具有氧化还原活性的正极液用于 NASICON 负极—普鲁士蓝正极全电池，探索双电解液设计。
+
+阅读提示：比较单、双电解液结果时，注意正极液本身的氧化还原贡献以及容量计算基准。
+
+## L90 · 框架水提升水系钠离子电池普鲁士蓝类正极的能量密度与循环稳定性
+
+电池分类：其他金属离子电池 · 文献类型：研究论文
+
+Xingyu Guo; Zhenbin Wang; Zhi Deng; Xiangguo Li; Bo Wang; Xi Chen; Shyue Ping Ong. Water Contributes to Higher Energy Density and Cycling Stability of Prussian Blue Analogue Cathodes for Aqueous Sodium-Ion Batteries. *Chemistry of Materials*, 2019. [DOI](https://doi.org/10.1021/acs.chemmater.9b02269) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facs.chemmater.9b02269)
+
+通过第一性原理计算比较含水与无水普鲁士蓝类框架，讨论水与钠共嵌对结构变化和电压曲线的影响。
+
+阅读提示：文中的候选组分和性能趋势主要来自计算，应与实测全电池结果分开解读。
+
+## L91 · 采用高浓度水系电解液与三维结构电极的高能量钠离子电池
+
+电池分类：其他金属离子电池 · 文献类型：研究论文
+
+Zhiyin Yang; Ailun Huang; Cheng-Wei Lin; Bradley C. Kroes; Xueying Chang; Maher F. El-Kady; Yuzhang Li; Richard B. Kaner. High-Energy Aqueous Sodium-Ion Batteries Using Water-in-Salt Electrolytes and 3D Structured Electrodes. *ACS Applied Materials & Interfaces*, 2025. [DOI](https://doi.org/10.1021/acsami.4c15832) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsami.4c15832)
+
+结合高浓度水系钠盐电解液与三维结构电极，并与普鲁士蓝类正极组装全电池，考察器件表现。
+
+阅读提示：关注水系电解液稳定窗口、盐浓度，以及全电池容量和能量密度的计算口径。
+
+## L92 · 迈向高能量与长循环寿命的普鲁士蓝基水系钠离子电池
+
+电池分类：其他金属离子电池 · 文献类型：研究论文
+
+Xueqian Zhang; Yu Hong; Tianwen Zhang; Xiaohang Ma; Yiyong Wei; Zhenfa Zi; Zhiguo Hou. Toward High-Energy and Long-Cycle-Life Prussian Blue-Based Aqueous Sodium-Ion Batteries. *ACS Applied Nano Materials*, 2025. [DOI](https://doi.org/10.1021/acsanm.4c06180) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsanm.4c06180)
+
+以普鲁士蓝类材料组成水系钠电全电池，研究抑制析氢、析氧副反应与扩大工作电压窗口的关系。
+
+阅读提示：论文报告的电压、容量和循环次数需要结合测试条件、质量归一化范围与全电池配置阅读。
