@@ -109,7 +109,7 @@ class PipelineTests(unittest.TestCase):
         self.addCleanup(self.directory.cleanup)
         self.root = Path(self.directory.name)
         (self.root / "automation").mkdir()
-        for name in ("index.html", "literature.json", "REFERENCES.md", "references.bib", "references.ris",
+        for name in ("index.html", "literature.html", "literature.json", "REFERENCES.md", "references.bib", "references.ris",
                      "automation/config.json", "automation/monitor-state.json"):
             shutil.copyfile(ROOT / name, self.root / name)
         # Tests must be independent of the real monitor's most recent run.
@@ -144,7 +144,7 @@ class PipelineTests(unittest.TestCase):
     def test_refresh_keeps_html_data_and_exports_in_sync(self):
         self.refresh()
         library = json.loads((self.root / "literature.json").read_text())
-        page = (self.root / "index.html").read_text()
+        page = (self.root / "literature.html").read_text()
         embedded = json.loads(re.search(r'<script id="literature-data" type="application/json">(.*?)</script>', page, re.S)[1])
         self.assertEqual(embedded, library["papers"])
         self.assertEqual(len(library["papers"]), page.count('class="paper" id="paper-'))
@@ -152,10 +152,27 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(len(library["papers"]), (self.root / "references.ris").read_text().count("TY  - JOUR"))
         renderer.render(self.root, library, check=True)
 
+    def test_refresh_updates_home_counts_without_recreating_the_long_page(self):
+        another = {**self.paper, "doi": "10.1234/other-metal", "battery_category": "other-metals"}
+        with patch.object(monitor, "discover", return_value=[self.paper, another]):
+            monitor.refresh(self.root, NOW)
+        papers = json.loads((self.root / "literature.json").read_text())["papers"]
+        home = (self.root / "index.html").read_text()
+        total = re.search(r'<strong\b[^>]*data-paper-count[^>]*>(\d+)</strong>', home)
+        self.assertEqual(int(total[1]), len(papers))
+        for category in ("zinc", "other-metals"):
+            count = re.search(rf'<strong\b[^>]*data-system-count="{category}"[^>]*>(\d+)</strong>', home)
+            expected = sum(p.get("battery_category", "zinc") == category for p in papers)
+            self.assertEqual(int(count[1]), expected)
+        self.assertNotIn('class="paper" id="paper-', home)
+        self.assertNotIn('id="paper-list"', home)
+        self.assertNotIn('id="literature-data"', home)
+        renderer.render(self.root, json.loads((self.root / "literature.json").read_text()), check=True)
+
     def test_html_and_embedded_json_escape_external_metadata(self):
         self.paper["title"] = 'Photo-assisted zinc-ion battery </script><img src=x onerror="alert(1)">'
         self.refresh()
-        page = (self.root / "index.html").read_text()
+        page = (self.root / "literature.html").read_text()
         self.assertNotIn('<img src=x', page)
         self.assertIn(r'\u003c/script>', page)
 
