@@ -16,6 +16,7 @@ TOPICS = (
     ("vanadium", "钒基材料"), ("manganese", "锰基材料"),
     ("organic", "有机/钙钛矿"), ("device", "器件与集成"), ("heterojunction", "异质结"),
     ("mechanism", "机理与评价"), ("capacitor", "锌离子电容器"),
+    ("aqueous-sodium", "水系钠电"),
 )
 SYSTEMS = (("all", "全部体系"), ("zinc", "锌基相关文献"),
            ("other-metals", "其他金属离子电池"))
@@ -93,6 +94,8 @@ def card(p: dict) -> str:
     related_flag = '<span class="paper-kind related">关联器件</span>' if related else ""
     system_flag = ('<span class="paper-kind paper-system">其他金属离子电池</span>'
                    if p.get("battery_category") == "other-metals" else "")
+    sodium_flag = ('<span class="paper-kind paper-system">水系钠电</span>'
+                   if "aqueous-sodium" in p["tags"] else "")
     chinese_title = p.get("title_zh") or ""
     primary_title = chinese_title or p["title"]
     original_title = (f'<p class="paper-title-original" lang="en">{esc(p["title"])}</p>'
@@ -102,7 +105,7 @@ def card(p: dict) -> str:
     return f'''<li class="paper" id="paper-{esc(p['id'])}" data-id="{esc(p['id'])}">
  <div class="paper-index"><span>{esc(p['id'])}</span><b>{esc(p['year'])}</b></div>
  <div class="paper-body">
-  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{system_flag}{related_flag}{flag}<span class="paper-material">{esc(p['material'])}</span></div>
+  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{system_flag}{sodium_flag}{related_flag}{flag}<span class="paper-material">{esc(p['material'])}</span></div>
   <h3><a href="{esc(p['url'])}" target="_blank" rel="noopener noreferrer">{esc(primary_title)}</a></h3>
   {original_title}
   <p class="paper-journal">{esc(journal)}</p>
@@ -217,6 +220,7 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
         refs.extend((f"## {p['id']} · {p.get('title_zh') or p['heading']}", "", f"电池分类：{system} · 文献类型：{label}", "",
                      f"{'; '.join(p['authors'])}. {p['title']}. *{p['journal']}*, {p['year']}. [DOI]({p['url']}) · [Crossref 元数据]({p['source']})",
                      "", p["summary"], "", "阅读提示：" + p["note"], ""))
+    page = re.sub(r"(?m)[ \t]+$", "", page)
     return {
         "index.html": home,
         "literature.html": page,
@@ -233,7 +237,11 @@ def render(root: Path, library: dict, *, check: bool = False) -> None:
         raise ValueError("生成文件未同步：" + ", ".join(stale))
     if not check:
         for name in stale:
-            (root / name).write_text(files[name], encoding="utf-8")
+            target = root / name
+            original = target.read_bytes()
+            # Keep the repository's existing CRLF style in generated exports.
+            newline = "\r\n" if original.count(b"\r\n") > original.count(b"\n") / 2 else "\n"
+            target.write_bytes(files[name].replace("\n", newline).encode("utf-8"))
 
 
 if __name__ == "__main__":
