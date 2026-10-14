@@ -70,3 +70,45 @@
 @media(max-width:900px){.charge-layout{grid-template-columns:1fr}.band-diagram{min-height:390px}}
 @media(max-width:560px){.charge-steps{grid-template-columns:1fr}.band-diagram{grid-template-columns:62px 1fr;padding:18px 14px;min-height:380px}.band-line{flex-direction:column;gap:2px}.band-line small{text-align:left}.charge-steps li{padding:18px}.charge-conditions{margin-top:35px}}
 @media(max-width:560px){.principle-header{gap:18px;margin-bottom:29px}.principle-header h1{font-size:32px}.core-definition{padding:22px 23px}.core-definition>strong{font-size:20px}.mode-controls{gap:7px}.mode-controls button{font-size:12px;line-height:1.7;padding:12px 7px;min-height:49px}.principle-mode{padding:23px 21px}.mode-heading h4{font-size:19px}.mode-heading{gap:11px}.energy-flow{grid-template-columns:1fr;gap:8px;margin:22px 0}.energy-flow>div{padding:17px 12px;min-height:0}.flow-arrow:before{content:'↓'}.flow-arrow{font-size:22px;justify-self:center}.discharge-note{padding:21px 22px;margin-bottom:32px}.mode-intro{margin:31px 0 20px}.mode-intro h3{font-size:21px}.core-definition p,.mode-intro p{font-size:14px}.principle-detail{padding:18px 21px}.principle-checks{padding:24px 22px;gap:21px}.light-paths article{padding:23px 22px}.principle-sources{margin-top:22px}}
+
+/* Editorial treatment shared with the library and cover. */
+.principle-header { grid-template-columns:1.05fr .95fr; gap:32px; align-items:end; padding-bottom:37px; border-bottom:1px solid var(--ink); }
+.principle-header h1 { font-family:"Songti SC","Noto Serif CJK SC",Georgia,serif; font-size:clamp(43px,4.7vw,66px); line-height:1.22; }
+.core-definition { padding:28px 30px; border:0; border-left:3px solid #b8d778; border-radius:0; background:#e7ede5; }
+.core-definition>strong { color:var(--ink); font-family:"Songti SC","Noto Serif CJK SC",Georgia,serif; font-size:22px; }
+.principles a { color:var(--green); text-decoration-color:#a1bea6; font-weight:600; }
+.mode-intro { margin:58px 0 24px; }
+.mode-intro h3,.principle-checks h3 { font-family:"Songti SC","Noto Serif CJK SC",Georgia,serif; font-size:28px; }
+.mode-controls { gap:4px; margin-bottom:12px; }
+.mode-controls button { border-radius:3px; border-color:#cbd8ce; font-weight:600; }
+.mode-controls button[aria-pressed=true] { background:var(--ink); border-color:var(--ink); box-shadow:none; }
+.principle-mode { border-radius:3px; padding:32px; }
+.mode-heading h4 { color:var(--ink); }
+.mode-heading>span { border-radius:2px; background:#e6eee4; color:var(--green); }
+.energy-flow>div { border-radius:3px; background:#f2f4ed; }
+.energy-flow .flow-focus { background:#e7eee4; border-color:#a7c4ad; }
+.flow-arrow { color:#5c8a73; }
+.discharge-note { border-radius:3px; border-color:#cbd9ca; border-left-color:#a2c46f; background:#e7ede4; }
+.light-paths { gap:12px; }
+.light-paths article { padding:26px; border-radius:3px; }
+.light-paths article>span { color:#507661; font-weight:600; }
+.light-paths h4 { color:var(--ink); }
+.principle-detail { border-radius:3px; }
+.charge-conditions { border-top:1px solid var(--ink); padding-top:7px; }
+.band-diagram { border-radius:3px; border-color:#b9d0bb; background:radial-gradient(circle at 65% 40%,#e5efda,#f3f6ec 70%); }
+.band-line { border-top-color:#547f69; }
+.band-cb { border-top-color:#258e80; }
+.band-vb { border-top-color:#ba7451; }
+.band-photon { border-radius:3px; border-color:#bdd6ba; box-shadow:none; }
+.charge-steps li { border-radius:3px; border-top:3px solid #7fa485; }
+.charge-steps strong { color:var(--ink); }
+.principle-checks { border-radius:3px; border-color:#ceddcb; background:#e7eee6; }
+.principle-checks b { color:var(--ink); }
+@media(max-width:900px) { .principle-header { grid-template-columns:1fr; gap:20px; } }
+@media(max-width:560px) {
+  .principle-header h1 { font-size:40px; }
+  .core-definition { padding:23px; }
+  .principle-mode { padding:23px 21px; }
+  .mode-intro { margin-top:42px; }
+  .mode-intro h3,.principle-checks h3 { font-size:24px; }
+}
