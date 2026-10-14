@@ -232,5 +232,29 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(self.state()["pending"], [])
 
 
+class WebsiteContentTests(unittest.TestCase):
+    def test_aqueous_sodium_is_website_only_and_filterable(self):
+        library = json.loads((ROOT / "literature.json").read_text())
+        sodium = [p for p in library["papers"] if "aqueous-sodium" in p["tags"]]
+        self.assertEqual(len(sodium), 6)
+        self.assertEqual({p["id"] for p in sodium}, {f"L{i}" for i in range(87, 93)})
+        self.assertTrue(all(p["battery_category"] == "other-metals" for p in sodium))
+        self.assertTrue(all(p["metal_system"] == "sodium" for p in sodium))
+        self.assertIn(("aqueous-sodium", "水系钠电"), renderer.TOPICS)
+        self.assertFalse(monitor.relevant("Aqueous sodium-ion batteries"))
+
+    def test_photocharging_conditions_link_to_existing_papers(self):
+        page = (ROOT / "principles.html").read_text()
+        paper_ids = {p["id"] for p in json.loads((ROOT / "literature.json").read_text())["papers"]}
+        section = page.split('id="charge-conditions"', 1)[1].split('</section>', 1)[0]
+        self.assertIn("hν ≥ E<sub>g</sub>", section)
+        self.assertIn("导带 CB", section)
+        self.assertIn("价带 VB", section)
+        self.assertIn("非按比例绘制", section)
+        self.assertTrue({"L01", "L03", "L04", "L06"}.issubset(paper_ids))
+        for paper_id in ("L01", "L03", "L04", "L06"):
+            self.assertIn(f'paper-{paper_id}', section)
+
+
 if __name__ == "__main__":
     unittest.main()
