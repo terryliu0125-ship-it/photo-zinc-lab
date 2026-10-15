@@ -37,6 +37,33 @@ test('teacher collection preserves four distinct publications and perspective ty
  assert.deepEqual(ids(find({scopes:['teacher'],type:'review'})),['L115']);
  assert.deepEqual(ids(find({scopes:['teacher'],materials:['vanadium']})),['L113','L116']);
 });
+test('group collection includes every supplied DOI and the author-verified extra paper',()=>{
+ const supplied=['10.1016/j.nanoms.2026.06.007','10.1039/d6ta03521c','10.3390/nano15151167','10.1016/j.est.2025.117461','10.1039/d5ta03701h','10.1016/j.est.2024.114136','10.1002/smll.202405627','10.1016/j.jpowsour.2024.234204'];
+ const group=find({scopes:['group']});assert.equal(group.length,9);
+ for(const doi of supplied){assert.equal(group.filter(p=>p.doi.toLowerCase()===doi).length,1);}
+ assert(group.some(p=>p.doi==='10.1002/adsu.202501531'&&p.group_basis.orcid==='0000-0001-6902-0024'));
+ assert.equal(new Set(papers.map(p=>p.doi.toLowerCase())).size,papers.length);
+ assert.deepEqual(ids(find({scopes:['group'],materials:['vanadium']})),['L07','L117','L20']);
+});
+test('linked supercapacitor remains a related device and reviews retain their type',()=>{
+ const capacitor=papers.find(p=>p.id==='L119');assert.equal(capacitor.doi,'10.1016/j.est.2024.114136');
+ assert.equal(capacitor.publisher_pii,'S2352152X24037228');assert.deepEqual(ids(find({query:'https://www.sciencedirect.com/science/article/pii/S2352152X24037228'})),['L119']);
+ assert.equal(capacitor.battery_category,'related-devices');assert(!C.scopeKeys(capacitor).includes('photo'));
+ assert(!C.makeIndex(capacitor).full.includes('zincbattery'));
+ assert.deepEqual(ids(find({system:'related-devices',scopes:['group']})),['L119']);
+ assert(!ids(find({system:'other-metals'})).includes('L119'));
+ assert.deepEqual(ids(find({scopes:['group'],type:'review'})),['L117','L43']);
+ assert.equal(C.readState('?system=related-devices&scope=group').system,'related-devices');
+});
+test('group page, correction and metric conditions stay connected to their sources',()=>{
+ const page=fs.readFileSync(path.join(root,'group.html'),'utf8'),html=fs.readFileSync(path.join(root,'literature.html'),'utf8');
+ for(const p of find({scopes:['group']})){assert(page.includes('#paper-'+p.id));assert(p.title_zh&&p.summary&&p.source);assert(!/[<>]/.test(p.title));}
+ assert.match(page,/data-group-count>9</);assert(html.includes('https://doi.org/10.1016/j.est.2025.117613'));
+ assert.match(library.comparison_evidence.L118.capacity.value,/0\.1 A/);
+ assert.match(library.comparison_evidence.L120.capacity.value,/0\.2 A/);
+ assert.match(library.comparison_evidence.L120.cycling.value,/1 A/);
+ const groupBlock=html.match(/<fieldset class="facet-group"><legend>阅读范围<\/legend>([\s\S]*?)<\/fieldset>/)[1];assert.match(groupBlock,/data-value="group"[^>]*>课题组成果<span>9<\/span>/);
+});
 test('DOI URL search resolves the exact publication',()=>{
  assert.deepEqual(ids(find({query:'https://doi.org/10.1002/adma.75300'})),['L113']);
  assert.deepEqual(ids(find({query:'10.1021/acs.nanolett.6c02373'})),['L114']);
