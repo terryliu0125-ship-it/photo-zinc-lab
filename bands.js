@@ -217,5 +217,5 @@
       record.ph=Number(raw.ph);records.push(record);map.set(record.id,record);bId=record.id;overlays=overlays.filter(id=>id!==bId).slice(0,2);options();render();$('custom-band-status').textContent='已加入 B；仅保留在当前会话。请导出后再关闭或刷新。';
     } catch(error){$('custom-band-status').textContent=error.message || '请核对数值和参比。';}
   });
-  options();$('bands-app').hidden=false;$('catalog-controls').hidden=false;$('bands-load-message').hidden=true;$('bands-static-catalog').hidden=true;render();
+  options();$('bands-app').hidden=false;$('catalog-controls').hidden=false;$('custom-band-section').hidden=false;$('bands-load-message').hidden=true;$('bands-static-catalog').hidden=true;render();
 }());
