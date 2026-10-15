@@ -21,10 +21,10 @@ TOPICS = (
     ("aqueous-sodium", "水系钠电"),
 )
 SYSTEMS = (("all", "全部体系"), ("zinc", "锌基相关文献"),
-           ("other-metals", "其他金属离子电池"))
+           ("other-metals", "其他金属离子电池"), ("related-devices", "关联储能器件"))
 
 FACETS = (
-    ("scopes", "阅读范围", (("photo", "光辅助 / 光充电"), ("cathode-basics", "锌电正极基础"), ("aqueous-sodium", "水系钠电基础"), ("teacher", "老师分享"))),
+    ("scopes", "阅读范围", (("photo", "光辅助 / 光充电"), ("cathode-basics", "锌电正极基础"), ("aqueous-sodium", "水系钠电基础"), ("teacher", "老师分享"), ("group", "课题组成果"), ("related-storage", "关联储能器件"))),
     ("materials", "材料体系", (("vanadium", "钒基"), ("manganese", "锰基"), ("prussian-blue", "普鲁士蓝类"), ("organic", "有机材料"), ("perovskite", "钙钛矿"), ("sulfide", "硫化物"), ("other", "其他材料"))),
     ("directions", "研究方向", (("hydration", "结构水"), ("preintercalation", "离子预嵌入"), ("dissolution", "溶解与稳定性"), ("proton", "质子 / 多载流子"), ("heterojunction", "异质结与界面"), ("defect", "掺杂与缺陷"), ("photothermal", "光热与光电"), ("device", "器件与集成"), ("mechanism", "机理与评价"), ("voltage", "电压与配位场"))),
 )
@@ -33,8 +33,10 @@ FACETS = (
 def facet_keys(paper: dict, facet: str) -> list[str]:
     tags = paper.get("tags", [])
     if facet == "scopes":
-        base = "cathode-basics" if "cathode-basics" in tags else "aqueous-sodium" if "aqueous-sodium" in tags else "photo"
-        return [base] + (["teacher"] if "teacher" in tags else [])
+        allowed = dict(FACETS[0][2])
+        base = "cathode-basics" if "cathode-basics" in tags else "aqueous-sodium" if "aqueous-sodium" in tags else "related-storage" if paper.get("battery_category") == "related-devices" else "photo"
+        scopes = [key for key in paper["scope_groups"] if key in allowed] if isinstance(paper.get("scope_groups"), list) else [base]
+        return list(dict.fromkeys(scopes + (["teacher"] if "teacher" in tags else []) + (["group"] if paper.get("group_collection") is True else [])))
     if facet == "materials":
         if isinstance(paper.get("material_groups"), list):
             return paper["material_groups"]
@@ -127,6 +129,7 @@ def card(p: dict, performance: dict | None = None) -> str:
     foundation_flag = ('<span class="paper-kind paper-system">正极基础</span>'
                        if "cathode-basics" in p["tags"] else "")
     teacher_flag = '<span class="paper-kind paper-system">老师分享</span>' if "teacher" in p["tags"] else ""
+    group_flag = '<span class="paper-kind paper-system">课题组成果</span>' if p.get("group_collection") is True else ""
     performance_flag = '<span class="paper-evidence">已录入对比条件</span>' if performance else ""
     topic_labels = dict(FACETS[2][2])
     topic_text = " / ".join(topic_labels[k] for k in p.get("research_topics", []) if k in topic_labels)
@@ -137,10 +140,11 @@ def card(p: dict, performance: dict | None = None) -> str:
                       if chinese_title else '<p class="paper-title-pending">中文标题待补充</p>')
     basis = f'<p>导读依据：{esc(p["reading_basis"])} · 书目核对：{esc(p["verified_on"])}</p>' if p.get("reading_basis") else ""
     publisher = f'<a href="{esc(p["publisher_source"])}" target="_blank" rel="noopener noreferrer">查看摘要与文章来源 ↗</a>' if p.get("publisher_source") else ""
+    notices = "".join(f'<p class="paper-notice">{esc(n["label"])} <a href="{esc(n["url"])}" target="_blank" rel="noopener noreferrer">查看出版社更正 ↗</a></p>' for n in p.get("related_notices", []))
     return f'''<li class="paper" id="paper-{esc(p['id'])}" data-id="{esc(p['id'])}">
  <div class="paper-index"><span>{esc(p['id'])}</span><b>{esc(p['year'])}</b></div>
  <div class="paper-body">
-  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{system_flag}{sodium_flag}{foundation_flag}{teacher_flag}{related_flag}{flag}{performance_flag}<span class="paper-material">{esc(p['material'])}</span></div>
+  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{system_flag}{sodium_flag}{foundation_flag}{teacher_flag}{group_flag}{related_flag}{flag}{performance_flag}<span class="paper-material">{esc(p['material'])}</span></div>
   <h3><a href="{esc(p['url'])}" target="_blank" rel="noopener noreferrer">{esc(primary_title)}</a></h3>
   {original_title}
   <p class="paper-journal">{esc(journal)}</p>
@@ -149,7 +153,7 @@ def card(p: dict, performance: dict | None = None) -> str:
   {topic_line}
   <details><summary>阅读提示与书目信息</summary>
    <p>阅读切入点：{esc(p['heading'])}</p>
-   <p>{esc(p['note'])}</p>{basis}{abstract}
+   <p>{esc(p['note'])}</p>{basis}{abstract}{notices}
    <p>完整作者：{esc('; '.join(p['authors']))}</p>
    <a href="{esc(p['source'])}" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
    {publisher}
@@ -266,18 +270,35 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
     refs = ["# 文献与来源", "", "精选条目含人工中文导读；标记为自动收录的条目仅经元数据与关键词筛选，尚未人工研读。", ""]
     for p in papers:
         label = {"research": "研究论文", "review": "综述/观点", "unclassified": "待分类"}[paper_type(p)]
-        system = "其他金属离子电池" if p.get("battery_category") == "other-metals" else "锌基相关文献"
+        system = dict(SYSTEMS).get(p.get("battery_category", "zinc"), "锌基相关文献")
         refs.extend((f"## {p['id']} · {p.get('title_zh') or p['heading']}", "", f"电池分类：{system} · 文献类型：{label}", "",
                      f"{'; '.join(p['authors'])}. {p['title']}. *{p['journal']}*, {p['year']}. [DOI]({p['url']}) · [Crossref 元数据]({p['source']})",
                      "", p["summary"], "", "阅读提示：" + p["note"], ""))
     page = re.sub(r"(?m)[ \t]+$", "", page)
-    return {
+    outputs = {
         "index.html": home,
         "literature.html": page,
         "references.bib": "\n\n".join(bib_entry(p) for p in papers) + "\n",
         "references.ris": "\n\n".join(ris_entry(p) for p in papers) + "\n",
         "REFERENCES.md": "\n".join(refs),
     }
+    if (root / "group.html").is_file():
+        group = (root / "group.html").read_text(encoding="utf-8")
+        members = [p for p in papers if p.get("group_collection") is True]
+        group = update_count(group, "data-group-count(?=[\\s>])", len(members), "课题组")
+        for section, selected in (
+            ("group-photo", [p for p in members if paper_type(p) == "research" and p.get("battery_category") != "related-devices"]),
+            ("group-reviews", [p for p in members if paper_type(p) == "review"]),
+            ("group-related", [p for p in members if p.get("battery_category") == "related-devices"]),
+        ):
+            cards = []
+            for p in sorted(selected, key=lambda p: (p.get("publication_date") or str(p["year"]), p["id"]), reverse=True):
+                label = "关联器件" if p.get("battery_category") == "related-devices" else "综述" if paper_type(p) == "review" else "研究论文"
+                notice = '<p>该论文另有出版社更正，阅读导读时可查看更正入口。</p>' if p.get("related_notices") else ""
+                cards.append(f'<a class="topic-paper" href="literature.html?scope=group#paper-{esc(p["id"])}"><small>{esc(p["journal"])} · {esc(p["year"])} · {label} · {esc(p["id"])}</small><strong>{esc(p["title_zh"])}</strong><p lang="en">{esc(p["title"])}</p><p>{esc(p["summary"])}</p>{notice}<span>查看中文导读、DOI 与原文 →</span></a>')
+            group = replace_content(group, "div", section, "\n" + "\n".join(cards) + "\n")
+        outputs["group.html"] = group
+    return outputs
 
 
 def render(root: Path, library: dict, *, check: bool = False) -> None:
