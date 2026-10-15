@@ -1161,3 +1161,43 @@ Keyi Chen; Quan Zong; Haoran Yuan; Qiaoling Kang; Qilong Zhang; Guoying Wei; Shu
 以咪唑鎓阳离子为层间调控单元，结合同步辐射谱学和理论计算，研究 BMIM⁺ 预嵌入对钒氧八面体局部配位场及电子态的影响。论文将工作电压提升与 V 3d 能级变化联系起来，并在其他层状钒氧化物中验证策略。
 
 阅读提示：区分开路电位、平均工作电位与电池能量密度；“普适”应按文中实际验证的材料范围理解。505 mAh g⁻¹（0.1 A g⁻¹）与 15000 次循环（8 A g⁻¹）并非同一测试条件。
+
+## L117 · VO₂ 在电化学储能中的应用：最新进展
+
+电池分类：锌基相关文献 · 文献类型：综述/观点
+
+Yuxin He; Xinyu Gao; Jiaming Liu; Junxin Zhou; Jiayu Wang; Dan Li; Sha Zhao; Wei Feng. Recent Advances in the Application of VO2 for Electrochemical Energy Storage. *Nanomaterials*, 2025. [DOI](https://doi.org/10.3390/nano15151167) · [Crossref 元数据](https://api.crossref.org/works/10.3390%2Fnano15151167)
+
+综述 VO₂ 的晶体结构、合成路线和电化学储能应用，覆盖锂离子电池、锌离子电池、光辅助电池及超级电容器。可用于梳理晶相、掺杂和复合结构如何影响电荷转移与结构稳定性，并为光响应电极设计提供背景。
+
+阅读提示：这是一篇跨储能体系的小型综述，光辅助电池是其中一部分；综述汇总的性能属于所引用的原始研究，应回到对应论文核对工况。
+
+## L118 · 借助 SnO₂ 电子传输层构建高效 MnO₂ 光正极，用于光加速锌离子电池
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Xinyu Gao; Dongyue Tian; Zhengguang Shi; Nana Zhang; Ruyu Sun; Jiaming Liu; Hsu‐Sheng Tsai; Xingde Xiang; Wei Feng. An Efficient MnO2 Photocathode with an Excellent SnO2 Electron Transport Layer for Photo‐Accelerated Zinc Ion Batteries. *Small*, 2024. [DOI](https://doi.org/10.1002/smll.202405627) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fsmll.202405627)
+
+将 SnO₂ 电子传输组分与 MnO₂ 的储能和光吸收能力结合，构建双功能异质结光正极。公开摘要报告光照下在 0.1 A g⁻¹ 时约 598 mAh g⁻¹，并结合实验与理论计算，将性能改善联系到载流子分离、导电性和界面电荷转移。
+
+阅读提示：摘要报告的容量与光电转换效率采用不同指标口径；比较其他光正极前，应进一步核对光照功率、光谱、质量归一化方式及效率定义。
+
+## L119 · 面向柔性超级电容器的超长循环寿命纳米晶氧化铁纤维纱线电极
+
+电池分类：关联储能器件 · 文献类型：研究论文
+
+Ruyu Sun; Xin Liu; Nana Zhang; Xinyu Gao; Zhitao Shao; Jiaming Liu; Yunhe Zhao; Wei Feng. Nanocrystal‑iron oxide fiber yarn electrodes with ultralong cycling life for flexible supercapacitors. *Journal of Energy Storage*, 2024. [DOI](https://doi.org/10.1016/j.est.2024.114136) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.est.2024.114136)
+
+该研究以纳米晶氧化铁纤维纱线电极为对象，面向柔性超级电容器的循环寿命与器件设计。当前简介依据题名和已核实书目，具体制备路线、储能指标及循环测试条件尚待进一步核对。
+
+阅读提示：归入关联储能器件。现有书目没有提供光辅助实验依据；不将电容器性能按锌离子电池容量进行比较。用户给出的 PII S2352152X24037228 与本 DOI 在 Crossref alternative-id 中精确对应。
+
+## L120 · 用于高容量光辅助锌离子电池的 ZnO@MnO₂ 异质结光正极
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Ruyu Sun; Xinyu Gao; Jiaming Liu; Nana Zhang; Zhitao Shao; Yuan Zhang; Junxin Zhou; Yuxin He; Nan Sun; Wei Feng. ZnO@MnO2 Heterojunction Photocathode for High‐Capacity Photo‐Assisted Zinc‐Ion Battery. *Advanced Sustainable Systems*, 2026. [DOI](https://doi.org/10.1002/adsu.202501531) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fadsu.202501531)
+
+构建 ZnO@MnO₂ 异质结以改善载流子分离、导电性和反应动力学。公开摘要报告光照下在 0.2 A g⁻¹ 时约 545 mAh g⁻¹，比暗态提高 92.58%；非原位表征将储能反应与 MnO₂ / ZnMn₂O₄ 的可逆转化联系起来。
+
+阅读提示：容量测试为 0.2 A g⁻¹；80.28% 保持率对应 1 A g⁻¹ 下 200 次光照循环，两项结果应分开比较。本文通过与已核实作者 ORCID 和单位交叉检索补录。

@@ -27,7 +27,7 @@
  function activeFilters(){
   const tokens=[];
   if(state.query)tokens.push(['query','',`搜索：${state.query}`]);
-  if(state.system!=='all')tokens.push(['system','',state.system==='zinc'?'锌基相关文献':'其他金属离子电池']);
+  if(state.system!=='all')tokens.push(['system','',{'zinc':'锌基相关文献','other-metals':'其他金属离子电池','related-devices':'关联储能器件'}[state.system]]);
   for(const key of ['materials','directions','scopes'])for(const value of state[key])tokens.push([key,value,C.labels[value]]);
   if(state.type!=='all')tokens.push(['type','',state.type==='research'?'研究论文':state.type==='review'?'综述 / 观点':'待分类']);
   if(state.year!=='all')tokens.push(['year','',state.year+' 年']);

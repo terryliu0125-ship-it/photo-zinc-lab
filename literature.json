@@ -330,7 +330,13 @@
         "hydration",
         "photothermal",
         "mechanism"
-      ]
+      ],
+      "group_collection": true,
+      "group_basis": {
+        "kind": "user-confirmed",
+        "source": "用户提供的课题组论文清单",
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "L08",
@@ -956,7 +962,13 @@
       ],
       "research_topics": [
         "defect"
-      ]
+      ],
+      "group_collection": true,
+      "group_basis": {
+        "kind": "user-confirmed",
+        "source": "用户提供的课题组论文清单",
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "L20",
@@ -1016,6 +1028,20 @@
       "research_topics": [
         "hydration",
         "preintercalation"
+      ],
+      "group_collection": true,
+      "group_basis": {
+        "kind": "user-confirmed",
+        "source": "用户提供的课题组论文清单",
+        "checked_on": "2026-10-15"
+      },
+      "related_notices": [
+        {
+          "label": "出版社另有 Corrigendum，更正内容请与原文一并核对。",
+          "doi": "10.1016/j.est.2025.117613",
+          "url": "https://doi.org/10.1016/j.est.2025.117613",
+          "verified_on": "2026-10-15"
+        }
       ]
     },
     {
@@ -1824,7 +1850,13 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "group_collection": true,
+      "group_basis": {
+        "kind": "user-confirmed",
+        "source": "用户提供的课题组论文清单",
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "L35",
@@ -2335,7 +2367,13 @@
       "material_groups": [
         "other"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "group_collection": true,
+      "group_basis": {
+        "kind": "user-confirmed",
+        "source": "用户提供的课题组论文清单",
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "L44",
@@ -6571,6 +6609,282 @@
       "reading_basis": "用户提供的论文正文、摘要与图注；Crossref 核对书目，未据补充信息推定缺失条件",
       "verified_on": "2026-10-15",
       "added_on": "2026-10-15"
+    },
+    {
+      "id": "L117",
+      "title_zh": "VO₂ 在电化学储能中的应用：最新进展",
+      "heading": "从晶相与合成方法，读到储锂、储锌和光辅助应用",
+      "kind": "综述",
+      "article_type": "review",
+      "article_subtype": "小型综述",
+      "battery_category": "zinc",
+      "metal_system": "multiple",
+      "tags": [
+        "vanadium",
+        "review",
+        "cathode-basics"
+      ],
+      "scope_groups": [
+        "photo",
+        "cathode-basics"
+      ],
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "defect",
+        "mechanism"
+      ],
+      "material": "VO₂ 多晶相 / 钒基储能材料",
+      "summary": "综述 VO₂ 的晶体结构、合成路线和电化学储能应用，覆盖锂离子电池、锌离子电池、光辅助电池及超级电容器。可用于梳理晶相、掺杂和复合结构如何影响电荷转移与结构稳定性，并为光响应电极设计提供背景。",
+      "note": "这是一篇跨储能体系的小型综述，光辅助电池是其中一部分；综述汇总的性能属于所引用的原始研究，应回到对应论文核对工况。",
+      "reading_basis": "出版社沉积的公开摘要；Crossref 核对书目及作者单位",
+      "title": "Recent Advances in the Application of VO2 for Electrochemical Energy Storage",
+      "doi": "10.3390/nano15151167",
+      "url": "https://doi.org/10.3390/nano15151167",
+      "authors": [
+        "Yuxin He",
+        "Xinyu Gao",
+        "Jiaming Liu",
+        "Junxin Zhou",
+        "Jiayu Wang",
+        "Dan Li",
+        "Sha Zhao",
+        "Wei Feng"
+      ],
+      "citationAuthors": [
+        "He, Yuxin",
+        "Gao, Xinyu",
+        "Liu, Jiaming",
+        "Zhou, Junxin",
+        "Wang, Jiayu",
+        "Li, Dan",
+        "Zhao, Sha",
+        "Feng, Wei"
+      ],
+      "journal": "Nanomaterials",
+      "year": 2025,
+      "publication_date": "2025-07-28",
+      "volume": "15",
+      "issue": "15",
+      "pages": "1167",
+      "source": "https://api.crossref.org/works/10.3390%2Fnano15151167",
+      "publisher_source": "https://www.mdpi.com/2079-4991/15/15/1167",
+      "verified_on": "2026-10-15",
+      "added_on": "2026-10-15",
+      "review_status": "curated",
+      "group_collection": true,
+      "group_basis": {
+        "kind": "user-confirmed",
+        "source": "用户提供的课题组论文清单",
+        "checked_on": "2026-10-15"
+      }
+    },
+    {
+      "id": "L118",
+      "title_zh": "借助 SnO₂ 电子传输层构建高效 MnO₂ 光正极，用于光加速锌离子电池",
+      "heading": "SnO₂@MnO₂ 异质结如何促进电子输运与光生载流子分离",
+      "kind": "研究论文",
+      "article_type": "research",
+      "battery_category": "zinc",
+      "metal_system": "zinc",
+      "tags": [
+        "manganese",
+        "heterojunction",
+        "mechanism"
+      ],
+      "material_groups": [
+        "manganese"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "mechanism"
+      ],
+      "material": "SnO₂@MnO₂ 异质结光正极",
+      "summary": "将 SnO₂ 电子传输组分与 MnO₂ 的储能和光吸收能力结合，构建双功能异质结光正极。公开摘要报告光照下在 0.1 A g⁻¹ 时约 598 mAh g⁻¹，并结合实验与理论计算，将性能改善联系到载流子分离、导电性和界面电荷转移。",
+      "note": "摘要报告的容量与光电转换效率采用不同指标口径；比较其他光正极前，应进一步核对光照功率、光谱、质量归一化方式及效率定义。",
+      "reading_basis": "出版社公开摘要与作者信息；Crossref 核对书目",
+      "title": "An Efficient MnO2 Photocathode with an Excellent SnO2 Electron Transport Layer for Photo‐Accelerated Zinc Ion Batteries",
+      "doi": "10.1002/smll.202405627",
+      "url": "https://doi.org/10.1002/smll.202405627",
+      "authors": [
+        "Xinyu Gao",
+        "Dongyue Tian",
+        "Zhengguang Shi",
+        "Nana Zhang",
+        "Ruyu Sun",
+        "Jiaming Liu",
+        "Hsu‐Sheng Tsai",
+        "Xingde Xiang",
+        "Wei Feng"
+      ],
+      "citationAuthors": [
+        "Gao, Xinyu",
+        "Tian, Dongyue",
+        "Shi, Zhengguang",
+        "Zhang, Nana",
+        "Sun, Ruyu",
+        "Liu, Jiaming",
+        "Tsai, Hsu‐Sheng",
+        "Xiang, Xingde",
+        "Feng, Wei"
+      ],
+      "journal": "Small",
+      "year": 2024,
+      "publication_date": "2024-08-13",
+      "volume": "20",
+      "issue": "47",
+      "pages": "2405627",
+      "source": "https://api.crossref.org/works/10.1002%2Fsmll.202405627",
+      "publisher_source": "https://onlinelibrary.wiley.com/doi/10.1002/smll.202405627",
+      "verified_on": "2026-10-15",
+      "added_on": "2026-10-15",
+      "review_status": "curated",
+      "group_collection": true,
+      "group_basis": {
+        "kind": "user-confirmed",
+        "source": "用户提供的课题组论文清单",
+        "checked_on": "2026-10-15"
+      }
+    },
+    {
+      "id": "L119",
+      "title_zh": "面向柔性超级电容器的超长循环寿命纳米晶氧化铁纤维纱线电极",
+      "heading": "柔性纤维纱线电极与循环寿命设计",
+      "kind": "关联器件",
+      "article_type": "research",
+      "battery_category": "related-devices",
+      "metal_system": "not-applicable",
+      "tags": [
+        "capacitor",
+        "device"
+      ],
+      "scope_groups": [
+        "related-storage"
+      ],
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device"
+      ],
+      "material": "纳米晶氧化铁纤维纱线电极 / 柔性超级电容器",
+      "summary": "该研究以纳米晶氧化铁纤维纱线电极为对象，面向柔性超级电容器的循环寿命与器件设计。当前简介依据题名和已核实书目，具体制备路线、储能指标及循环测试条件尚待进一步核对。",
+      "note": "归入关联储能器件。现有书目没有提供光辅助实验依据；不将电容器性能按锌离子电池容量进行比较。用户给出的 PII S2352152X24037228 与本 DOI 在 Crossref alternative-id 中精确对应。",
+      "reading_basis": "仅核对题名、作者、期刊及 PII/DOI 对应关系；尚未据全文编写导读",
+      "title": "Nanocrystal‑iron oxide fiber yarn electrodes with ultralong cycling life for flexible supercapacitors",
+      "publisher_pii": "S2352152X24037228",
+      "doi": "10.1016/j.est.2024.114136",
+      "url": "https://doi.org/10.1016/j.est.2024.114136",
+      "authors": [
+        "Ruyu Sun",
+        "Xin Liu",
+        "Nana Zhang",
+        "Xinyu Gao",
+        "Zhitao Shao",
+        "Jiaming Liu",
+        "Yunhe Zhao",
+        "Wei Feng"
+      ],
+      "citationAuthors": [
+        "Sun, Ruyu",
+        "Liu, Xin",
+        "Zhang, Nana",
+        "Gao, Xinyu",
+        "Shao, Zhitao",
+        "Liu, Jiaming",
+        "Zhao, Yunhe",
+        "Feng, Wei"
+      ],
+      "journal": "Journal of Energy Storage",
+      "year": 2024,
+      "publication_date": "2024-12",
+      "volume": "103",
+      "issue": "",
+      "pages": "114136",
+      "source": "https://api.crossref.org/works/10.1016%2Fj.est.2024.114136",
+      "publisher_source": "https://linkinghub.elsevier.com/retrieve/pii/S2352152X24037228",
+      "verified_on": "2026-10-15",
+      "added_on": "2026-10-15",
+      "review_status": "curated",
+      "group_collection": true,
+      "group_basis": {
+        "kind": "user-confirmed",
+        "source": "用户提供的课题组论文清单",
+        "checked_on": "2026-10-15"
+      }
+    },
+    {
+      "id": "L120",
+      "title_zh": "用于高容量光辅助锌离子电池的 ZnO@MnO₂ 异质结光正极",
+      "heading": "ZnO/MnO₂ 界面中的载流子分离与可逆储锌反应",
+      "kind": "研究论文",
+      "article_type": "research",
+      "battery_category": "zinc",
+      "metal_system": "zinc",
+      "tags": [
+        "manganese",
+        "heterojunction",
+        "mechanism"
+      ],
+      "material_groups": [
+        "manganese"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "mechanism"
+      ],
+      "material": "ZnO@MnO₂ 异质结光正极",
+      "summary": "构建 ZnO@MnO₂ 异质结以改善载流子分离、导电性和反应动力学。公开摘要报告光照下在 0.2 A g⁻¹ 时约 545 mAh g⁻¹，比暗态提高 92.58%；非原位表征将储能反应与 MnO₂ / ZnMn₂O₄ 的可逆转化联系起来。",
+      "note": "容量测试为 0.2 A g⁻¹；80.28% 保持率对应 1 A g⁻¹ 下 200 次光照循环，两项结果应分开比较。本文通过与已核实作者 ORCID 和单位交叉检索补录。",
+      "reading_basis": "出版社公开摘要与作者单位；Crossref 核对书目及 ORCID",
+      "title": "ZnO@MnO2 Heterojunction Photocathode for High‐Capacity Photo‐Assisted Zinc‐Ion Battery",
+      "doi": "10.1002/adsu.202501531",
+      "url": "https://doi.org/10.1002/adsu.202501531",
+      "authors": [
+        "Ruyu Sun",
+        "Xinyu Gao",
+        "Jiaming Liu",
+        "Nana Zhang",
+        "Zhitao Shao",
+        "Yuan Zhang",
+        "Junxin Zhou",
+        "Yuxin He",
+        "Nan Sun",
+        "Wei Feng"
+      ],
+      "citationAuthors": [
+        "Sun, Ruyu",
+        "Gao, Xinyu",
+        "Liu, Jiaming",
+        "Zhang, Nana",
+        "Shao, Zhitao",
+        "Zhang, Yuan",
+        "Zhou, Junxin",
+        "He, Yuxin",
+        "Sun, Nan",
+        "Feng, Wei"
+      ],
+      "journal": "Advanced Sustainable Systems",
+      "year": 2026,
+      "publication_date": "2026-02-08",
+      "volume": "10",
+      "issue": "2",
+      "pages": "e01531",
+      "source": "https://api.crossref.org/works/10.1002%2Fadsu.202501531",
+      "publisher_source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adsu.202501531",
+      "verified_on": "2026-10-15",
+      "added_on": "2026-10-15",
+      "review_status": "curated",
+      "group_collection": true,
+      "group_basis": {
+        "kind": "author-verified",
+        "source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adsu.202501531",
+        "orcid": "0000-0001-6902-0024",
+        "institution": "Northeast Forestry University",
+        "checked_on": "2026-10-15"
+      }
     }
   ],
   "curated_checked_on": "2026-10-15",
@@ -6724,6 +7038,54 @@
         "context": "与低电流容量测试分开记录",
         "checked_on": "2026-10-15"
       }
+    },
+    "L118": {
+      "capacity": {
+        "value": "约 598 mAh g⁻¹；0.1 A g⁻¹；光照",
+        "context": "SnO₂@MnO₂ 正极；光照功率、光谱与载量尚未核实",
+        "source": "https://onlinelibrary.wiley.com/doi/10.1002/smll.202405627",
+        "locator": "出版社公开摘要",
+        "checked_on": "2026-10-15"
+      }
+    },
+    "L120": {
+      "capacity": {
+        "value": "约 545 mAh g⁻¹；0.2 A g⁻¹；光照",
+        "context": "ZnO@MnO₂ 正极；摘要报告相对暗态提高 92.58%",
+        "source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adsu.202501531",
+        "locator": "出版社公开摘要",
+        "checked_on": "2026-10-15"
+      },
+      "cycling": {
+        "value": "80.28% 保持率；200 次；1 A g⁻¹；光照",
+        "context": "与 0.2 A g⁻¹ 的容量测试分开记录",
+        "source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adsu.202501531",
+        "locator": "出版社公开摘要",
+        "checked_on": "2026-10-15"
+      }
     }
+  },
+  "group_expansion": {
+    "checked_on": "2026-10-15",
+    "user_supplied": [
+      "10.1016/j.nanoms.2026.06.007",
+      "10.1039/d6ta03521c",
+      "10.3390/nano15151167",
+      "10.1016/j.est.2025.117461",
+      "10.1039/d5ta03701h",
+      "10.1016/j.est.2024.114136",
+      "10.1002/smll.202405627",
+      "10.1016/j.jpowsour.2024.234204"
+    ],
+    "additional_dois": [
+      "10.1002/adsu.202501531"
+    ],
+    "new_ids": [
+      "L117",
+      "L118",
+      "L119",
+      "L120"
+    ],
+    "note": "5条已有记录保留，补录4条并建立课题组入口；更正不作为独立研究计数。"
   }
 }

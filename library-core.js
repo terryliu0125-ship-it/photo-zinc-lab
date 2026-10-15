@@ -6,10 +6,10 @@
 })(typeof globalThis!=='undefined'?globalThis:this,function(){
  const materials=[['vanadium','钒基'],['manganese','锰基'],['prussian-blue','普鲁士蓝类'],['organic','有机材料'],['perovskite','钙钛矿'],['sulfide','硫化物'],['other','其他材料']];
  const directions=[['hydration','结构水'],['preintercalation','离子预嵌入'],['dissolution','溶解与稳定性'],['proton','质子 / 多载流子'],['heterojunction','异质结与界面'],['defect','掺杂与缺陷'],['photothermal','光热与光电'],['device','器件与集成'],['mechanism','机理与评价'],['voltage','电压与配位场']];
- const scopes=[['photo','光辅助 / 光充电'],['cathode-basics','锌电正极基础'],['aqueous-sodium','水系钠电基础'],['teacher','老师分享']];
+ const scopes=[['photo','光辅助 / 光充电'],['cathode-basics','锌电正极基础'],['aqueous-sodium','水系钠电基础'],['teacher','老师分享'],['group','课题组成果'],['related-storage','关联储能器件']];
  const statuses=[['all','全部阅读状态'],['unmarked','未标记'],['todo','待读'],['reading','在读'],['read','已读']];
  const labels=Object.fromEntries([...materials,...directions,...scopes]);
- const clean=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[‐‑‒–—−]/g,'-').replace(/https?:\/\/(?:dx\.)?doi\.org\//g,'').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+ const clean=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[‐‑‒–—−]/g,'-').replace(/https?:\/\/(?:dx\.)?doi\.org\//g,'').replace(/https?:\/\/(?:www\.)?sciencedirect\.com\/science\/article\/(?:abs\/)?pii\//g,'').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
  const aliasGroups=[
   ['zincbattery',/水系锌离子电池|锌离子电池|锌电池|锌电|锌基|zinc[ -]?ion batteries|zinc[ -]?ion battery|zn[ -]?ion batteries|zn[ -]?ion battery|zinc batteries|zinc battery/gi],
   ['lithiumbattery',/锂离子电池|锂电池|锂电|lithium[ -]?ion batteries|lithium[ -]?ion battery|li[ -]?ion batteries|li[ -]?ion battery/gi],
@@ -41,13 +41,13 @@
   return out.length?out:['other'];
  }
  function directionKeys(p){return Array.isArray(p.research_topics)?p.research_topics:(p.tags||[]).filter(t=>directions.some(([key])=>key===t));}
- function scopeKeys(p){const tags=p.tags||[],out=[];if(tags.includes('cathode-basics'))out.push('cathode-basics');else if(tags.includes('aqueous-sodium'))out.push('aqueous-sodium');else out.push('photo');if(tags.includes('teacher'))out.push('teacher');return out;}
+ function scopeKeys(p){const tags=p.tags||[],out=Array.isArray(p.scope_groups)?p.scope_groups.filter(k=>scopes.some(([key])=>key===k)):[];if(!Array.isArray(p.scope_groups)){if(tags.includes('cathode-basics'))out.push('cathode-basics');else if(tags.includes('aqueous-sodium'))out.push('aqueous-sodium');else if(p.battery_category==='related-devices')out.push('related-storage');else out.push('photo');}if(tags.includes('teacher'))out.push('teacher');if(p.group_collection===true)out.push('group');return [...new Set(out)];}
  const typeKey=p=>['research','review'].includes(p.article_type)?p.article_type:p.kind==='综述'?'review':['研究论文','关联器件'].includes(p.kind)?'research':'unclassified';
  const published=p=>p.publication_date||`${p.year}-01-01`;
  function makeIndex(p){
   const facets=[...materialKeys(p),...directionKeys(p),...scopeKeys(p)].map(k=>`${k} ${labels[k]||k}`).join(' ');
-  const battery=p.battery_category==='other-metals'?'': 'zincbattery';
-  const full=[p.title,p.title_zh,p.heading,p.summary,p.material,p.journal,p.doi,...(p.authors||[]),facets,typeKey(p),battery,p.metal_system==='sodium'?'sodiumbattery':'',p.metal_system==='lithium'?'lithiumbattery':''].join(' ');
+  const battery=(p.battery_category||'zinc')==='zinc'?'zincbattery':'';
+  const full=[p.title,p.title_zh,p.heading,p.summary,p.material,p.journal,p.doi,p.publisher_pii||'',...(p.authors||[]),facets,typeKey(p),battery,p.metal_system==='sodium'?'sodiumbattery':'',p.metal_system==='lithium'?'lithiumbattery':''].join(' ');
   return {full:canonical(full),title:canonical([p.title,p.title_zh].join(' ')),material:canonical(p.material),doi:clean(p.doi)};
  }
  function termMatch(text,term){return text.includes(term);}
@@ -79,7 +79,7 @@
   const u=new URLSearchParams(search),state=initialState();
   const valid=(value,options)=>options.some(([key])=>key===value);
   state.query=(u.get('q')||'').slice(0,300);
-  if(['all','zinc','other-metals'].includes(u.get('system')))state.system=u.get('system');
+  if(['all','zinc','other-metals','related-devices'].includes(u.get('system')))state.system=u.get('system');
   for(const [param,key,options]of [['materials','materials',materials],['directions','directions',directions],['scope','scopes',scopes]])state[key]=[...new Set((u.get(param)||'').split(',').filter(v=>valid(v,options)))];
   if(['research','review','unclassified'].includes(u.get('type')))state.type=u.get('type');
   if(/^\d{4}$/.test(u.get('year')||''))state.year=u.get('year');
