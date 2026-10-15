@@ -43,6 +43,7 @@
 .charge-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:38px;align-items:start}
 .band-diagram{display:block;min-height:0;padding:15px 10px 0;border:0;border-radius:4px;background:#edf2e4;margin:0;overflow:hidden}
 .band-diagram figcaption{font-size:10px;line-height:1.85;margin:0 10px;padding:15px 0 18px;border-top:1px solid #ccd8bf;color:#7b8b71}
+.band-formula{display:block;margin-bottom:6px;color:#8d7b40;font-size:12px;font-weight:600}
 .charge-steps{gap:13px 24px}
 .charge-steps li{padding:17px 0;border:0;border-top:1px solid #aabe97;border-radius:0;background:none}
 .charge-steps strong{font-family:"Songti SC","Noto Serif CJK SC",Georgia,serif;font-size:17px}
