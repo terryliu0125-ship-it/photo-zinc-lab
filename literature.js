@@ -17,7 +17,7 @@
  const pageLabels=[...document.querySelectorAll('[data-page-status]')];
  const pageSize=6;
  const normalize=s=>s.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
- const searchable=new Map(papers.map(p=>[p.id,normalize([p.title,p.title_zh||'',p.heading,p.summary,p.material,p.journal,p.doi,...p.authors,...(p.tags.includes('aqueous-sodium')?['水系钠电','水系钠离子电池']:[])].join(' '))]));
+ const searchable=new Map(papers.map(p=>[p.id,normalize([p.title,p.title_zh||'',p.heading,p.summary,p.material,p.journal,p.doi,...p.authors,...(p.tags.includes('aqueous-sodium')?['水系钠电','水系钠离子电池']:[]),...(p.tags.includes('cathode-basics')?['锌电正极基础','正极材料','常规储锌']:[]),...(p.tags.includes('prussian-blue')?['普鲁士蓝','普鲁士蓝类似物','PBA']:[])].join(' '))]));
  const paperType=p=>p.article_type|| (p.kind==='综述'?'review':['研究论文','关联器件'].includes(p.kind)?'research':'unclassified');
  let topic='all',system='all',visible=[...papers],pageIndex=1,noticeTimer;
  const notice=text=>{const node=document.getElementById('copy-status');node.textContent=text;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>node.textContent='',4000);};

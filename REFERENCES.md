@@ -921,3 +921,203 @@ Xueqian Zhang; Yu Hong; Tianwen Zhang; Xiaohang Ma; Yiyong Wei; Zhenfa Zi; Zhigu
 以普鲁士蓝类材料组成水系钠电全电池，研究抑制析氢、析氧副反应与扩大工作电压窗口的关系。
 
 阅读提示：论文报告的电压、容量和循环次数需要结合测试条件、质量归一化范围与全电池配置阅读。
+
+## L93 · 采用金属氧化物嵌入正极的高容量、长寿命水系可充电锌电池
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Dipan Kundu; Brian D. Adams; Victor Duffort; Shahrzad Hosseini Vajargah; Linda F. Nazar. A high-capacity and long-life aqueous rechargeable zinc battery using a metal oxide intercalation cathode. *Nature Energy*, 2016. [DOI](https://doi.org/10.1038/nenergy.2016.119) · [Crossref 元数据](https://api.crossref.org/works/10.1038%2Fnenergy.2016.119)
+
+以层间 Zn²⁺ 和水分子支撑的钒氧化物青铜为正极，研究水系锌电池中的可逆嵌入储能。适合了解层状钒基骨架、层间支柱与循环稳定性的联系，是阅读水合钒氧化物光正极前的基础材料文献。
+
+阅读提示：先辨认预嵌入的支柱离子与充放电中迁移的载流子；性能比较需核对质量归一化口径。本文作为常规正极基础阅读收录。
+
+## L94 · V₂O₅·nH₂O 中的水润滑嵌入：实现高容量、高倍率水系可充电锌电池
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Mengyu Yan; Pan He; Ying Chen; Shanyu Wang; Qiulong Wei; Kangning Zhao; Xu Xu; Qinyou An; Yi Shuang; Yuyan Shao; Karl T. Mueller; Liqiang Mai; Jun Liu; Jihui Yang. Water-Lubricated Intercalation in V2O5·nH2O for High-Capacity and High-Rate Aqueous Rechargeable Zinc Batteries. *Advanced Materials*, 2018. [DOI](https://doi.org/10.1002/adma.201703725) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fadma.201703725)
+
+研究双层水合 V₂O₅ 中结构水对 Zn²⁺ 嵌入的作用。作者提出，水合离子与骨架间的静电相互作用得到减弱，从而促进离子扩散，为理解水合钒氧化物的倍率性能提供机理线索。
+
+阅读提示：区分结构水、表面吸附水和电解液中的水。正式卷期为 2018 年，首次在线发表为 2017 年；本文作为常规正极基础阅读收录。
+
+## L95 · 采用层状钙钒氧化物青铜正极实现高稳定性水系储锌
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Chuan Xia; Jing Guo; Peng Li; Xixiang Zhang; Husam N. Alshareef. Highly Stable Aqueous Zinc‐Ion Storage Using a Layered Calcium Vanadium Oxide Bronze Cathode. *Angewandte Chemie International Edition*, 2018. [DOI](https://doi.org/10.1002/anie.201713291) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fanie.201713291)
+
+将层状钙钒氧化物青铜用于水系锌电池正极，结合储锌过程与电化学动力学分析讨论其容量和循环表现。适合与锌离子预嵌入的钒氧化物对照，理解支柱离子的选择怎样影响宿主结构。
+
+阅读提示：材料含钙并不意味着它是钙离子电池；这里按锌金属负极与储锌用途归入锌基文献。本文作为常规正极基础阅读收录。
+
+## L96 · 钒酸锂中的电化学嵌锌：一种高容量锌离子电池正极
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Muhammad H. Alfaruqi; Vinod Mathew; Jinju Song; Sungjin Kim; Saiful Islam; Duong Tung Pham; Jeonggeun Jo; Seokhun Kim; Joseph Paul Baboo; Zhiliang Xiu; Kug-Seung Lee; Yang-Kook Sun; Jaekook Kim. Electrochemical Zinc Intercalation in Lithium Vanadium Oxide: A High-Capacity Zinc-Ion Battery Cathode. *Chemistry of Materials*, 2017. [DOI](https://doi.org/10.1021/acs.chemmater.6b05092) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facs.chemmater.6b05092)
+
+以层状 LiV₃O₈ 为储锌正极，通过电化学、原位 XRD 和模拟分析 Zn²⁺ 嵌入时的相演变，讨论化学计量相与固溶体区域。适合训练如何把充放电曲线与结构证据对应起来。
+
+阅读提示：LiV₃O₈ 是正极宿主，本文研究的是嵌锌而非普通锂离子电池。注意区分原位结构证据与仅由容量推断的反应路径。
+
+## L97 · 双载流子同步嵌入提升水系可充电锌／钒酸钠电池性能
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Fang Wan; Linlin Zhang; Xi Dai; Xinyu Wang; Zhiqiang Niu; Jun Chen. Aqueous rechargeable zinc/sodium vanadate batteries with enhanced performance from simultaneous insertion of dual carriers. *Nature Communications*, 2018. [DOI](https://doi.org/10.1038/s41467-018-04060-8) · [Crossref 元数据](https://api.crossref.org/works/10.1038%2Fs41467-018-04060-8)
+
+采用水合钒酸钠纳米带正极和含硫酸钠添加剂的硫酸锌电解液，研究 H⁺ 与 Zn²⁺ 同步嵌入／脱出的储能过程，并演示准固态器件。帮助理解水系锌电池容量可能来自多种载流子。
+
+阅读提示：标题中的钒酸钠指正极材料，不能据此把器件归为钠离子电池。阅读时追踪 H⁺ 与 Zn²⁺ 的独立证据。
+
+## L98 · 锂离子预嵌入水合 V₂O₅：以扩大层间距和快速离子扩散构筑水系锌电正极
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Yongqiang Yang; Yan Tang; Guozhao Fang; Lutong Shan; Jiasheng Guo; Wenyu Zhang; Chao Wang; Liangbing Wang; Jiang Zhou; Shuquan Liang. Li+ intercalated V2O5·nH2O with enlarged layer spacing and fast ion diffusion as an aqueous zinc-ion battery cathode. *Energy & Environmental Science*, 2018. [DOI](https://doi.org/10.1039/c8ee01651h) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fc8ee01651h)
+
+通过化学预嵌入 Li⁺ 调节 V₂O₅·nH₂O 的层间结构，研究扩大层间距与 Zn²⁺ 扩散、倍率及循环性能的联系。适合与未预嵌入材料对照，建立层间工程的基本阅读框架。
+
+阅读提示：这是含锂支柱的锌电正极研究；不要把层间距扩大直接等同于所有性能必然提高，应同时考察结构稳定性和活性物质占比。
+
+## L99 · 用于水系锌离子电池正极的层状 VS₂ 纳米片
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Pan He; Mengyu Yan; Guobin Zhang; Ruimin Sun; Lineng Chen; Qinyou An; Liqiang Mai. Layered VS2 Nanosheet-Based Aqueous Zn Ion Battery Cathode. *Advanced Energy Materials*, 2017. [DOI](https://doi.org/10.1002/aenm.201601920) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Faenm.201601920)
+
+设计由 VS₂ 正极、锌负极和温和硫酸锌电解液组成的水系电池，讨论层间空间和导电性对可逆 Zn²⁺ 嵌入／脱出的作用。为比较钒氧化物与硫化物正极提供基础案例。
+
+阅读提示：材料含钒不代表其行为与 V₂O₅ 相同；比较时应核对晶体结构、电位窗口和循环中的相变化。本文作为常规正极基础阅读收录。
+
+## L100 · 非晶有机杂化钒氧化物实现近无势垒超快充水系锌离子电池
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Mingzhuang Liu; Xinghua Li; Mengxia Cui; Feiyu Chen; Jiaxing Li; Weijian Shi; Yu Liu; Xiaowei Li; Yan Wang; Wei Zhang; Changlu Shao; Yichun Liu. Amorphous organic-hybrid vanadium oxide for near-barrier-free ultrafast-charging aqueous zinc-ion battery. *Nature Communications*, 2024. [DOI](https://doi.org/10.1038/s41467-024-55000-8) · [Crossref 元数据](https://api.crossref.org/works/10.1038%2Fs41467-024-55000-8)
+
+构筑由无序一维链及原子／分子尺度孔隙组成的有机杂化钒氧化物，结合结构表征和动力学分析研究降低 Zn²⁺ 迁移障碍的途径，并展示 Ah 级软包电池。适合进一步阅读非晶化和有机／无机杂化设计。
+
+阅读提示：“近无势垒”是论文对其特定测试体系的表述，不等同于零能耗；应分别核对固相扩散、界面过程与软包测试条件。
+
+## L101 · 抑制水系锌离子电池中钒基正极的溶解
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Yuhang Dai; Chengyi Zhang; Jianwei Li; Xuan Gao; Ping Hu; Chumei Ye; Hongzhen He; Jiexin Zhu; Wei Zhang; Ruwei Chen; Wei Zong; Fei Guo; Ivan P. Parkin; Dan J. L. Brett; Paul R. Shearing; Liqiang Mai; Guanjie He. Inhibition of Vanadium Cathodes Dissolution in Aqueous Zn‐Ion Batteries. *Advanced Materials*, 2024. [DOI](https://doi.org/10.1002/adma.202310645) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fadma.202310645)
+
+针对低电流密度下钒正极溶解更显著的问题，结合 DFT 与人工界面设计，利用疏水性及限制溶解钒离子外迁来改善稳定性。提醒读者同时考察循环次数与累计运行时间。
+
+阅读提示：高倍率数千次循环与低倍率长时间稳定性不能直接等同；优先查看界面层、溶解证据及相同工况下的对照。
+
+## L102 · 水系锌电层状钒氧化物的结构工程：超越单纯扩大层间距
+
+电池分类：锌基相关文献 · 文献类型：综述/观点
+
+Yue Guo; Hanmei Jiang; Binbin Liu; Xingyang Wang; Yifu Zhang; Jianguo Sun; John Wang. Better engineering layered vanadium oxides for aqueous zinc‐ion batteries: Going beyond widening the interlayer spacing. *SmartMat*, 2024. [DOI](https://doi.org/10.1002/smm2.1231) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fsmm2.1231)
+
+综述层状钒氧化物正极的阳离子预嵌入、结构水优化、缺陷和多尺度结构调控，强调层间距之外的因素同样影响容量、倍率与寿命。适合在阅读具体改性论文前建立比较维度。
+
+阅读提示：正式卷期为 2024 年，首次在线发表为 2023 年；用于正极基础导读，不据此宣称材料具有光辅助功能。
+
+## L103 · 层状钒氧化物正极预嵌入机制：从层间空间精准调控到电化学性能
+
+电池分类：锌基相关文献 · 文献类型：综述/观点
+
+Zhangxiang Hao; Jian Wang; Junrun Feng; Yameng Fan; Jian Peng; Jiazhao Wang; Shixue Dou. Insight Into Pre‐Intercalation of Layered Vanadium Oxide Cathodes: From Precise Control of the Interspace to Related Electrochemical Performance and Beyond. *Carbon Energy*, 2025. [DOI](https://doi.org/10.1002/cey2.681) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fcey2.681)
+
+梳理不同离子和分子预嵌入钒氧化物的作用，比较层间空间、容量、倍率与循环保持率，讨论扩大层间距可能伴随的稳定性代价。适合设计对照实验及筛选合适的预嵌入策略。
+
+阅读提示：综述中的跨论文比较受电解液、载量和测试电流影响，不能把某一层间距视为所有钒基正极的通用最佳值。
+
+## L104 · 通过转化反应实现可逆水系锌／锰氧化物储能
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Huilin Pan; Yuyan Shao; Pengfei Yan; Yingwen Cheng; Kee Sung Han; Zimin Nie; Chongmin Wang; Jihui Yang; Xiaolin Li; Priyanka Bhattacharya; Karl T. Mueller; Jun Liu. Reversible aqueous zinc/manganese oxide energy storage from conversion reactions. *Nature Energy*, 2016. [DOI](https://doi.org/10.1038/nenergy.2016.39) · [Crossref 元数据](https://api.crossref.org/works/10.1038%2Fnenergy.2016.39)
+
+研究温和水系电解液中的 Zn／α-MnO₂ 可逆储能，通过形貌和结构演变探讨转化反应。作者将主要储能过程与 H⁺ 参与的反应联系起来，是理解锰基正极机理差异的重要案例。
+
+阅读提示：归入锌基电池正极基础，但不是只由 Zn²⁺ 往返嵌入的简单模型。应对照不同电解液及 pH 条件下的机理证据。
+
+## L105 · 具有高能量与高功率密度的可充电水系锌–二氧化锰电池
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Ning Zhang; Fangyi Cheng; Junxiang Liu; Liubin Wang; Xinghui Long; Xiaosong Liu; Fujun Li; Jun Chen. Rechargeable aqueous zinc-manganese dioxide batteries with high energy and power densities. *Nature Communications*, 2017. [DOI](https://doi.org/10.1038/s41467-017-00467-x) · [Crossref 元数据](https://api.crossref.org/works/10.1038%2Fs41467-017-00467-x)
+
+在温和酸性的三氟甲磺酸盐电解液中研究锌–二氧化锰电池，分析隧道型 MnO₂ 首次放电转为层状 zinc-buserite 结构及后续储锌过程，并演示软包电池。展示正极相变与电解液协同设计。
+
+阅读提示：不要将该特定电解液中的机理直接套用于所有 MnO₂ 电池；留意首次循环、后续循环以及软包能量密度的质量口径。
+
+## L106 · 基于六氰合铁酸铜的水系锌离子电池
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Rafael Trócoli; Fabio La Mantia. An Aqueous Zinc‐Ion Battery Based on Copper Hexacyanoferrate. *ChemSusChem*, 2015. [DOI](https://doi.org/10.1002/cssc.201403143) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fcssc.201403143)
+
+以六氰合铁酸铜正极、锌箔负极和稀硫酸锌电解液构建水系电池，讨论 Zn²⁺ 嵌入与析氢导致的局部 pH 变化对性能的影响。适合了解开放框架储锌和正负极反应的相互关联。
+
+阅读提示：正式卷期为 2015 年，首次在线发表为 2014 年；评价正极表现时也需考虑锌负极、析氢及电解液条件。
+
+## L107 · 水系锌电池中的普鲁士蓝类似物：失效机制、稳定化路径与实用性能
+
+电池分类：锌基相关文献 · 文献类型：综述/观点
+
+Edlind Lushaj; Giorgia Zampardi; Fabio La Mantia. Prussian Blue Analogues in Aqueous Zinc-Ion Batteries: Mechanisms of Failure, Pathways to Stabilization, and Routes to Practical Performance. *ACS Electrochemistry*, 2026. [DOI](https://doi.org/10.1021/acselectrochem.6c00024) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facselectrochem.6c00024)
+
+评述普鲁士蓝类似物的空位、水合状态、离子取代和结构稳定性，整理溶解、结构变化等失效路径，并讨论电解液协同设计和统一报告标准。适合在阅读单篇性能论文后审视可重复性与实用条件。
+
+阅读提示：出版社页面标为 Review，摘要与正文采用 perspective 体裁；本站归入“综述 / 观点”。不将材料层面结果直接等同于实用全电池性能。
+
+## L108 · 水系锌电有机正极：调控独特相演变以实现稳定循环
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Dipan Kundu; Pascal Oberholzer; Christos Glaros; Assil Bouzid; Elena Tervoort; Alfredo Pasquarello; Markus Niederberger. Organic Cathode for Aqueous Zn-Ion Batteries: Taming a Unique Phase Evolution toward Stable Electrochemical Cycling. *Chemistry of Materials*, 2018. [DOI](https://doi.org/10.1021/acs.chemmater.8b01317) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facs.chemmater.8b01317)
+
+采用四氯对苯醌有机正极，结合 DFT、工况 XRD 与电化学表征研究 Zn²⁺ 存储、分子排列变化及固液边界处的相演变。为比较无机刚性骨架与有机柔性晶体提供基础案例。
+
+阅读提示：同时查看活性物质相变与溶解／再生长过程，不宜只凭初始分子结构解释全部循环行为。本文作为常规有机正极基础阅读收录。
+
+## L109 · 用于可充电水系锌–有机电池的高容量小分子醌正极
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Zirui Lin; Hua-Yu Shi; Lu Lin; Xianpeng Yang; Wanlong Wu; Xiaoqi Sun. A high capacity small molecule quinone cathode for rechargeable aqueous zinc-organic batteries. *Nature Communications*, 2021. [DOI](https://doi.org/10.1038/s41467-021-24701-9) · [Crossref 元数据](https://api.crossref.org/works/10.1038%2Fs41467-021-24701-9)
+
+设计四氨基对苯醌小分子正极，利用羰基与氨基形成的氢键网络促进质子传导。研究表明，弱酸性锌电解液中的正极反应以质子嵌入为主，说明锌金属电池中的正极载流子未必只有 Zn²⁺。
+
+阅读提示：必须区分器件类别与正极实际载流子；不要将 TABQ 的质子主导机制泛化为所有醌类正极的机制。
+
+## L110 · 配位化学增强高容量有机正极，构筑高能量水系锌–有机电池
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Guanzhong Ma; Zhengyu Ju; Yutong Chen; Runmo Wang; Zihao Yuan; Huiping Du; Mian Cai; Meng Gao; Yaqun Wang; Guihua Yu. High-capacity organic cathode boosted by coordination chemistry for energy-dense aqueous zinc-organic batteries. *Chemical Science*, 2025. [DOI](https://doi.org/10.1039/d5sc00311c) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd5sc00311c)
+
+构筑含亚胺和醌基团的共轭有机正极，利用准原位光谱与计算解析 Zn²⁺ 配位及随后 H⁺／Zn²⁺ 协同储存的过程。适合学习如何把分子结构、配位稳定化与多电子反应连接起来。
+
+阅读提示：多电子转移数需结合反应位点与实测容量判断；同时考察导电复合组分、载量和电流条件。本文作为常规有机正极基础阅读收录。
+
+## L111 · 水系锌离子电池正极材料研究进展
+
+电池分类：锌基相关文献 · 文献类型：综述/观点
+
+Zengyuan Fan; Jiawei Wang; Yunpeng Wu; Xuedong Yan; Dongmei Dai; Xing-Long Wu. Research progresses on cathode materials of aqueous zinc-ion batteries. *Journal of Energy Chemistry*, 2024. [DOI](https://doi.org/10.1016/j.jechem.2024.05.033) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.jechem.2024.05.033)
+
+综述水系锌电池的储锌机制及主要正极材料，比较锰基、钒基和普鲁士蓝类似物的结构特点、优势与局限，并梳理离子掺杂、缺陷及材料复合等优化策略。适合作为正极材料专题的入门总览。
+
+阅读提示：综述是建立问题框架的入口，具体性能与机理应进一步追溯其引用的研究论文；不将常规储锌改性视为已实现光辅助。
+
+## L112 · 水系可充电锌离子电池正极材料的近期进展与挑战
+
+电池分类：锌基相关文献 · 文献类型：综述/观点
+
+Yihui Zou; Jin Sun; Yulong Chi; Xueyan Cheng; Dongjiang Yang. Recent advances and challenges of cathode materials in aqueous rechargeable zinc‐ion batteries. *EcoEnergy*, 2024. [DOI](https://doi.org/10.1002/ece2.61) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fece2.61)
+
+梳理锰基、钒基、镍／钴基及预嵌入化合物等正极，讨论结构调控、纳米工程、掺杂和导电复合对电化学表现的影响。可与总览综述交叉阅读，归纳不同材料共通的设计问题。
+
+阅读提示：各类正极的电位窗口和储能反应不同，跨材料比较需要统一电解液、载量与容量计算基准。本文作为正极基础综述收录。
