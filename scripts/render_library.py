@@ -174,11 +174,31 @@ def card(p: dict, performance: dict | None = None) -> str:
 
 
 def replace_content(page: str, tag: str, element_id: str, content: str) -> str:
-    pattern = rf'(<{tag}\b[^>]*\bid="{re.escape(element_id)}"[^>]*>).*?(</{tag}>)'
-    updated, count = re.subn(pattern, lambda m: m[1] + content + m[2], page, flags=re.S)
-    if count != 1:
+    openings = list(re.finditer(rf'<{tag}\b[^>]*\bid="{re.escape(element_id)}"[^>]*>', page))
+    if len(openings) != 1:
         raise ValueError(f"页面缺少或重复生成区域：{element_id}")
-    return updated
+    opening = openings[0]
+    depth = 1
+    for token in re.finditer(rf'<(/?){tag}\b[^>]*>', page[opening.end():]):
+        depth += -1 if token[1] else 1
+        if depth == 0:
+            end = opening.end() + token.start()
+            return page[:opening.end()] + content + page[end:]
+    raise ValueError(f"生成区域缺少结束标签：{element_id}")
+
+
+def toc_figure(paper: dict, record: dict) -> str:
+    if record.get("doi", "").casefold() != paper["doi"].casefold():
+        raise ValueError(f"TOC 与论文 DOI 不匹配：{paper['id']}")
+    source = esc(record["source"])
+    label = esc(record.get("source_label", "期刊来源"))
+    if not record.get("image"):
+        return f'<figure class="publication-toc"><div class="toc-pending"><b>TOC</b><span>原图待补充</span></div><figcaption><a href="{source}" target="_blank" rel="noopener noreferrer">在期刊页查看 ↗</a></figcaption></figure>'
+    image = esc(record["image"])
+    title = esc(paper["title_zh"])
+    credit = esc(record.get("credit", ""))
+    license_link = (f' · <a href="{esc(record["license"])}" target="_blank" rel="noopener noreferrer">授权说明</a>' if record.get("license") else "")
+    return f'''<figure class="publication-toc"><a class="toc-open" href="{image}" data-toc-open data-toc-title="{title}" data-toc-source="{source}" data-toc-credit="{credit}" aria-label="放大 {esc(paper['id'])} TOC：{title}"><img src="{image}" alt="{esc(record['alt'])}" loading="lazy" decoding="async"/><span class="toc-zoom" aria-hidden="true">TOC · 放大 ↗</span></a><figcaption><a href="{source}" target="_blank" rel="noopener noreferrer">{label} ↗</a><span class="toc-credit">{credit}{license_link}</span></figcaption></figure>'''
 
 
 def generated_files(root: Path, library: dict) -> dict[str, str]:
@@ -286,6 +306,12 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
         group = (root / "group.html").read_text(encoding="utf-8")
         members = [p for p in papers if p.get("group_collection") is True]
         group = update_count(group, "data-group-count(?=[\\s>])", len(members), "课题组")
+        toc_path = root / "group-toc.json"
+        toc_records = json.loads(toc_path.read_text(encoding="utf-8"))["papers"] if toc_path.is_file() else {}
+        if set(toc_records) - {p["id"] for p in members}:
+            raise ValueError("TOC 包含不属于课题组的论文")
+        if "data-toc-count" in group:
+            group = re.sub(r'(<span\b[^>]*\bdata-toc-count[^>]*>).*?(</span>)', lambda m: m[1] + f'已收录 {sum(bool(r.get("image")) for r in toc_records.values())} / {len(members)} 篇 TOC' + m[2], group, flags=re.S)
         for section, selected in (
             ("group-photo", [p for p in members if paper_type(p) == "research" and p.get("battery_category") != "related-devices"]),
             ("group-reviews", [p for p in members if paper_type(p) == "review"]),
@@ -295,7 +321,10 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
             for p in sorted(selected, key=lambda p: (p.get("publication_date") or str(p["year"]), p["id"]), reverse=True):
                 label = "关联器件" if p.get("battery_category") == "related-devices" else "综述" if paper_type(p) == "review" else "研究论文"
                 notice = '<p>该论文另有出版社更正，阅读导读时可查看更正入口。</p>' if p.get("related_notices") else ""
-                cards.append(f'<a class="topic-paper" href="literature.html?scope=group#paper-{esc(p["id"])}"><small>{esc(p["journal"])} · {esc(p["year"])} · {label} · {esc(p["id"])}</small><strong>{esc(p["title_zh"])}</strong><p lang="en">{esc(p["title"])}</p><p>{esc(p["summary"])}</p>{notice}<span>查看中文导读、DOI 与原文 →</span></a>')
+                toc = toc_figure(p, toc_records[p["id"]]) if p["id"] in toc_records else ""
+                has_toc = bool(toc_records.get(p["id"], {}).get("image"))
+                copy = f'<div class="topic-paper-copy"><small>{esc(p["journal"])} · {esc(p["year"])} · {label} · {esc(p["id"])}</small><h3><a href="literature.html?scope=group#paper-{esc(p["id"])}">{esc(p["title_zh"])}</a></h3><p lang="en">{esc(p["title"])}</p><p>{esc(p["summary"])}</p>{notice}<a class="group-reading-link" href="literature.html?scope=group#paper-{esc(p["id"])}">查看中文导读、DOI 与原文 →</a></div>'
+                cards.append(f'<article class="topic-paper group-publication {"has-toc" if has_toc else "toc-awaiting"}" id="group-{esc(p["id"])}">{toc + copy if has_toc else copy + toc}</article>')
             group = replace_content(group, "div", section, "\n" + "\n".join(cards) + "\n")
         outputs["group.html"] = group
     return outputs
