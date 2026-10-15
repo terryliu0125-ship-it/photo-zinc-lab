@@ -88,6 +88,12 @@
   if(compare){const result=C.toggleCompare(selected,compare.dataset.compare,[...byId.keys()]);if(result.error)return notice(result.error);selected=result.selected;saveCompare();renderTray();updateReaderControls();}
   if(copy){const p=byId.get(copy.dataset.copy);try{await navigator.clipboard.writeText(citation(p));notice(`${p.id} 引文已复制`);}catch{let area=nodes.get(p.id).querySelector('.citation-manual');if(!area){area=document.createElement('textarea');area.className='citation-manual';area.readOnly=true;area.setAttribute('aria-label',p.id+' 引文，可手动复制');nodes.get(p.id).querySelector('.paper-body').append(area);}area.value=citation(p);area.focus();area.select();notice('请复制已选中的引文');}}
  });
+ list.addEventListener('input',e=>{
+  const note=e.target.closest('[data-note]');if(!note)return;
+  const p=byId.get(note.dataset.note);
+  books=C.updateBook(books,p.doi,{note:note.value.slice(0,2000)});saveBooks();
+  $('shelf-count').textContent=String(Object.keys(books).length);
+ });
  list.addEventListener('change',e=>{
   const select=e.target.closest('[data-reading-status]'),note=e.target.closest('[data-note]');if(!select&&!note)return;
   const p=byId.get((select||note).dataset.readingStatus||(select||note).dataset.note);
