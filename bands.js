@@ -67,7 +67,7 @@
       if(tick>bottom)break;
       html += '<path d="M' + left + ' ' + y(tick) + 'H' + right + '" stroke="#d6dfca" stroke-width="1"/><text x="70" y="' + (y(tick)+5) + '" text-anchor="end" font-size="15" fill="#7b8e70">' + signed(tick) + '</text><text x="638" y="' + (y(tick)+5) + '" font-size="13" fill="#9aa58a">' + num(core.toVacuum(tick)) + '</text>';
     }
-    html += '<path d="M' + left + ' ' + y(-0.76) + 'H' + right + '" stroke="#b9a067" stroke-width="1.2" stroke-dasharray="5 6"/><text x="' + left + '" y="' + (y(-0.76)-8) + '" font-size="11" fill="#9a8552">Zn²⁺/Zn −0.76 V · 标准态示意</text>';
+    html += '<path d="M' + left + ' ' + y(-0.76) + 'H' + right + '" stroke="#b9a067" stroke-width="1.2" stroke-dasharray="5 6"/><text x="' + (right-4) + '" y="' + (y(-0.76)-8) + '" text-anchor="end" font-size="11" fill="#9a8552">Zn²⁺/Zn −0.76 V · 标准态示意</text>';
     rows.forEach(({record,n},i) => {
       const width = Math.min(97,plotWidth/rows.length-34), x = left + plotWidth/rows.length*(i+.5);
       const color = colors[i], dash = isEstimate(record) ? ' stroke-dasharray="7 5"' : '';
