@@ -212,3 +212,7 @@ section[id],article[id],li[id] { scroll-margin-top:105px; }
 
 .home-stats{grid-template-columns:repeat(4,minmax(0,1fr))}.home-group-link{margin:0 0 30px;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--green)}.group-total{font-size:14px!important}.group-total strong{font:600 28px Georgia,serif}.paper-notice{border-left:2px solid var(--green);padding-left:10px}
 @media(max-width:600px){.home-stats{grid-template-columns:repeat(2,1fr);gap:20px}.home-stats div:nth-child(3){border-left:0;padding-left:0}}
+
+/* Seven-page navigation: keep every destination reachable on narrow screens. */
+.site-nav{gap:26px}
+@media(max-width:1000px){.site-nav{gap:16px}}
