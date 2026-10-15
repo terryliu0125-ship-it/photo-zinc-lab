@@ -13,7 +13,9 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 TOPICS = (
     ("all", "全部主题"), ("auto", "自动收录"),
+    ("cathode-basics", "锌电正极基础"),
     ("vanadium", "钒基材料"), ("manganese", "锰基材料"),
+    ("prussian-blue", "普鲁士蓝类"),
     ("organic", "有机/钙钛矿"), ("device", "器件与集成"), ("heterojunction", "异质结"),
     ("mechanism", "机理与评价"), ("capacitor", "锌离子电容器"),
     ("aqueous-sodium", "水系钠电"),
@@ -96,6 +98,8 @@ def card(p: dict) -> str:
                    if p.get("battery_category") == "other-metals" else "")
     sodium_flag = ('<span class="paper-kind paper-system">水系钠电</span>'
                    if "aqueous-sodium" in p["tags"] else "")
+    foundation_flag = ('<span class="paper-kind paper-system">正极基础</span>'
+                       if "cathode-basics" in p["tags"] else "")
     chinese_title = p.get("title_zh") or ""
     primary_title = chinese_title or p["title"]
     original_title = (f'<p class="paper-title-original" lang="en">{esc(p["title"])}</p>'
@@ -105,7 +109,7 @@ def card(p: dict) -> str:
     return f'''<li class="paper" id="paper-{esc(p['id'])}" data-id="{esc(p['id'])}">
  <div class="paper-index"><span>{esc(p['id'])}</span><b>{esc(p['year'])}</b></div>
  <div class="paper-body">
-  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{system_flag}{sodium_flag}{related_flag}{flag}<span class="paper-material">{esc(p['material'])}</span></div>
+  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{system_flag}{sodium_flag}{foundation_flag}{related_flag}{flag}<span class="paper-material">{esc(p['material'])}</span></div>
   <h3><a href="{esc(p['url'])}" target="_blank" rel="noopener noreferrer">{esc(primary_title)}</a></h3>
   {original_title}
   <p class="paper-journal">{esc(journal)}</p>
