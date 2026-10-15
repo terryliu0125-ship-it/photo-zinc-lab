@@ -35,6 +35,21 @@ class BandDataTests(unittest.TestCase):
         self.assertIsNone(byid['V-KVOH-2025']['gap_eV'])
         self.assertIsNone(byid['V-V2O5-VO2-2025']['cb'])
         self.assertIsNone(byid['P-SNO2-QD-AS2024']['cb'])
+    def test_each_sample_has_separate_band_and_synthesis_sources(self):
+        for r in self.data['records']:
+            s=r['source'];syn=r['synthesis']
+            for key in ['title_zh','reference','authors','journal','year']: self.assertTrue(s[key],(r['id'],key))
+            self.assertIn(s['doi'],s['reference'])
+            self.assertIn(s['title'],s['reference'])
+            self.assertIn(syn['status'],['verified_summary','partial','unavailable'])
+            for key in ['route','locator','phase_check','missing']: self.assertTrue(syn[key],(r['id'],key))
+            if syn['status']=='verified_summary': self.assertTrue(syn['conditions'])
+            self.assertNotEqual(s['locator'],syn['locator'])
+            self.assertNotIn('xwechat_files',json.dumps(syn))
+        byid={r['id']:r for r in self.data['records']}
+        self.assertIn('520 min',' '.join(byid['V-VO2B-2021-rGO']['synthesis']['conditions']))
+        self.assertEqual(byid['V-VO2B-2021-ZnO']['synthesis']['conditions'],[])
+        self.assertNotEqual(byid['T-VOH-2026']['synthesis']['precursors'],byid['T-BMIMVOH-2026']['synthesis']['precursors'])
     def test_generated_catalog_matches_and_is_script_safe(self):
         page=(ROOT/'bands.html').read_text(encoding='utf8')
         self.assertEqual(page,renderer.render(page,self.data))
