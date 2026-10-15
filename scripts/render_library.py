@@ -164,7 +164,7 @@ def card(p: dict, performance: dict | None = None) -> str:
  </div>
  <div class="paper-reader" data-interactive hidden>
   <label>阅读状态<select data-reading-status="{esc(p['id'])}" aria-label="{esc(p['id'])} 阅读状态"><option value="">未标记</option><option value="todo">待读</option><option value="reading">在读</option><option value="read">已读</option></select></label>
-  <details><summary>我的阅读笔记</summary><textarea data-note="{esc(p['id'])}" aria-label="{esc(p['id'])} 阅读笔记" maxlength="2000" placeholder="记下想解决的问题、实验思路或待核对的条件…"></textarea><small>仅保存在当前浏览器；离开输入框时保存。</small></details>
+  <details><summary>我的阅读笔记</summary><textarea data-note="{esc(p['id'])}" aria-label="{esc(p['id'])} 阅读笔记" maxlength="2000" placeholder="记下想解决的问题、实验思路或待核对的条件…"></textarea><small>仅保存在当前浏览器；输入时自动保存。</small></details>
  </div>
 </li>'''
 
