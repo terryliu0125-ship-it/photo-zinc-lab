@@ -1,0 +1,66 @@
+{
+  "checked_on": "2026-10-15",
+  "papers": {
+    "L07": {
+      "doi": "10.1039/d6ta03521c",
+      "image": "assets/toc/L07.png",
+      "source": "https://pubs.rsc.org/ta/article-abstract/14/45/30746/1266727/Photoelectric-photothermal-synergistic-enhanced?redirectedFrom=fulltext",
+      "source_label": "RSC · Visual Abstract",
+      "alt": "碳包覆水合钒氧化物光正极的光电与光热协同图文摘要",
+      "credit": "© 2026 The Author(s), Royal Society of Chemistry"
+    },
+    "L19": {
+      "doi": "10.1039/d5ta03701h",
+      "image": "assets/toc/L19.png",
+      "source": "https://pubs.rsc.org/ta/article-abstract/13/27/22057/914837/An-optimized-MnO2-photocathode-by-doping?redirectedFrom=fulltext",
+      "source_label": "RSC · Visual Abstract",
+      "alt": "Al 掺杂 MnO₂ 光正极的结构、载流子传输与储锌性能图文摘要",
+      "credit": "© 2025 The Author(s), Royal Society of Chemistry"
+    },
+    "L20": {
+      "doi": "10.1016/j.est.2025.117461",
+      "source": "https://linkinghub.elsevier.com/retrieve/pii/S2352152X25021747",
+      "source_label": "出版社原文",
+      "status": "pending"
+    },
+    "L34": {
+      "doi": "10.1016/j.nanoms.2026.06.007",
+      "source": "https://linkinghub.elsevier.com/retrieve/pii/S258996512600108X",
+      "source_label": "出版社原文",
+      "status": "pending"
+    },
+    "L43": {
+      "doi": "10.1016/j.jpowsour.2024.234204",
+      "source": "https://linkinghub.elsevier.com/retrieve/pii/S0378775324001551",
+      "source_label": "出版社原文",
+      "status": "pending"
+    },
+    "L117": {
+      "doi": "10.3390/nano15151167",
+      "image": "assets/toc/L117.jpg",
+      "source": "https://www.mdpi.com/2079-4991/15/15/1167",
+      "source_label": "MDPI · Graphical Abstract",
+      "alt": "VO₂ 在锂离子电池、锌离子电池、光辅助电池与超级电容器中的应用图文摘要",
+      "credit": "© 2025 He et al. · CC BY 4.0",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "L118": {
+      "doi": "10.1002/smll.202405627",
+      "source": "https://onlinelibrary.wiley.com/doi/10.1002/smll.202405627",
+      "source_label": "出版社原文",
+      "status": "pending"
+    },
+    "L119": {
+      "doi": "10.1016/j.est.2024.114136",
+      "source": "https://linkinghub.elsevier.com/retrieve/pii/S2352152X24037228",
+      "source_label": "出版社原文",
+      "status": "pending"
+    },
+    "L120": {
+      "doi": "10.1002/adsu.202501531",
+      "source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adsu.202501531",
+      "source_label": "出版社原文",
+      "status": "pending"
+    }
+  }
+}
