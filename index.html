@@ -7,6 +7,7 @@
   <title>首页 · 光锌能源实验室</title>
   <meta name="description" content="光辅助电池原理与精选文献，连接锌、锂、钠、铝等金属体系。"/>
   <link rel="stylesheet" href="site.css?v=20261015-group1"/>
+  <link rel="stylesheet" href="home-mechanism.css?v=20261015-diagram1"/>
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳转到主要内容</a>
@@ -37,28 +38,50 @@
         </div>
         <div class="hero-index"><span>01 / DISCOVER</span><span>02 / UNDERSTAND</span><span>03 / EVALUATE</span></div>
       </div>
-      <div class="hero-visual">
-        <div class="visual-topline"><span>ENERGY TRANSFER / 01</span><span>概念示意 · 非按比例</span></div>
-        <svg viewBox="0 0 490 465" role="img" aria-label="光子照射到光响应电极，能量进入电池并形成可储存的电化学能的概念示意">
+      <figure class="hero-visual mechanism-figure" aria-labelledby="mechanism-heading">
+        <div class="mechanism-heading"><div><span class="mechanism-eyebrow">LIGHT × ELECTROCHEMISTRY</span><h2 id="mechanism-heading">光，如何参与储锌？</h2></div><a class="mechanism-link" href="principles.html" aria-label="查看光辅助工作原理">↗</a></div>
+        <svg class="mechanism-art" viewBox="0 0 520 350" role="img" aria-labelledby="mechanism-title mechanism-description">
+          <title id="mechanism-title">光辅助锌离子电池的界面反应示意</title>
+          <desc id="mechanism-description">光照激发光响应正极中的电子与空穴。分离后的载流子参与界面反应，锌离子在正极与电解液之间可逆迁移；正极通过外电路与锌负极相连。箭头表示概念过程，具体电荷路径随材料和充放电状态变化。</desc>
           <defs>
-            <radialGradient id="hero-glow"><stop stop-color="#d7ed84" stop-opacity=".25"/><stop offset="1" stop-color="#d7ed84" stop-opacity="0"/></radialGradient>
-            <linearGradient id="hero-surface" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#79b4a3" stop-opacity=".75"/><stop offset="1" stop-color="#163d3c" stop-opacity=".9"/></linearGradient>
+            <radialGradient id="light-halo"><stop stop-color="#e5cd73" stop-opacity=".3"/><stop offset="1" stop-color="#e5cd73" stop-opacity="0"/></radialGradient>
+            <linearGradient id="cathode-face" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5a8d70"/><stop offset="1" stop-color="#214f43"/></linearGradient>
+            <linearGradient id="zinc-face" x1="0" x2="1"><stop stop-color="#d4dfdc"/><stop offset=".6" stop-color="#b1c5be"/><stop offset="1" stop-color="#93ada3"/></linearGradient>
+            <linearGradient id="electrolyte-fill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d6e7de" stop-opacity=".25"/><stop offset="1" stop-color="#d6e7de" stop-opacity=".75"/></linearGradient>
+            <marker id="light-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7" fill="none" stroke="#b29643" stroke-width="1.4" stroke-linejoin="round"/></marker>
+            <marker id="ion-arrow" markerWidth="7" markerHeight="7" refX="5.5" refY="3" orient="auto-start-reverse"><path d="M0 0 6 3 0 6" fill="none" stroke="#4b7c68" stroke-width="1.3" stroke-linejoin="round"/></marker>
           </defs>
-          <circle cx="247" cy="239" r="205" fill="url(#hero-glow)"/>
-          <g fill="none" stroke="#759c91" stroke-opacity=".25"><circle cx="247" cy="239" r="184"/><circle cx="247" cy="239" r="148"/><circle cx="247" cy="239" r="111"/><path d="M247 27v425M34 239h426"/></g>
-          <g fill="#cde899"><circle cx="136" cy="103" r="3"/><circle cx="351" cy="73" r="2"/><circle cx="404" cy="167" r="2"/><circle cx="73" cy="300" r="2"/></g>
-          <circle cx="112" cy="151" r="39" fill="#d4e981"/>
-          <circle cx="112" cy="151" r="56" fill="none" stroke="#d4e981" stroke-opacity=".38"/>
-          <path d="M148 175 193 205M138 201l43 31M166 154l46 33" fill="none" stroke="#d5ec8c" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="m188 202 7 4-8 1m-10 22 7 4-8 1m31-49 7 2-7 3" fill="none" stroke="#d5ec8c" stroke-width="2"/>
-          <g transform="translate(185 168)"><path d="M0 31 91 0l105 36-98 34Z" fill="url(#hero-surface)" stroke="#a4d2be" stroke-width="1.5"/><path d="M0 31v112l98 37V70Z" fill="#2b5f59" stroke="#90bcae" stroke-width="1.5"/><path d="M98 70v110l98-38V36Z" fill="#193e3d" stroke="#90bcae" stroke-width="1.5"/><path d="m22 72 56 21m-56 24 56 21M117 95l59-22m-59 66 59-22" stroke="#94bbab" stroke-opacity=".45" stroke-width="2"/><path d="M99 83v84" stroke="#d6ed92" stroke-width="3"/><circle cx="99" cy="107" r="6" fill="#d6ed92"/><circle cx="99" cy="139" r="6" fill="#d6ed92"/></g>
-          <path d="M291 158v-58h84" fill="none" stroke="#92bdae" stroke-width="1.5"/><circle cx="375" cy="100" r="4" fill="#d6ed92"/>
-          <path d="M278 342v43H165" fill="none" stroke="#92bdae" stroke-width="1.5"/><circle cx="165" cy="385" r="4" fill="#d6ed92"/>
-          <g fill="#cce4d5" font-family="Arial, sans-serif" font-size="11" letter-spacing="1"><text x="47" y="80">PHOTON</text><text x="329" y="91">CHARGE</text><text x="56" y="388">STORAGE</text></g>
-          <g fill="#cde899" font-family="Arial, sans-serif" font-size="12"><text x="356" y="119">e⁻</text><text x="98" y="408">Zn²⁺</text></g>
+          <ellipse cx="277" cy="280" rx="199" ry="16" fill="#1b443b" opacity=".055"/>
+          <path d="M176 135V86H435V143" fill="none" stroke="#668c7a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="326" y="70" text-anchor="middle" fill="#6c8072" font-size="14">外电路</text>
+          <g transform="translate(283 86)"><circle r="15" fill="#254f43"/><text text-anchor="middle" y="5.5" fill="#f8f9f0" font-size="19">e⁻</text></g>
+          <circle cx="73" cy="63" r="61" fill="url(#light-halo)"/>
+          <circle cx="73" cy="63" r="24" fill="#e4ce81"/>
+          <circle cx="73" cy="63" r="31" fill="none" stroke="#c9b166" stroke-width=".8" opacity=".55"/>
+          <g fill="none" stroke="#bfa454" stroke-width="1.5" stroke-linecap="round"><path d="M73 21v-7M73 105v7M31 63h-7M115 63h7M43 33l-5-5M103 93l5 5M43 93l-5 5M103 33l5-5"/></g>
+          <text x="119" y="42" fill="#9b8039" font-family="Georgia,serif" font-style="italic" font-size="25">hν</text>
+          <g fill="none" stroke="#b29643" stroke-width="1.7" stroke-linecap="round" marker-end="url(#light-arrow)"><path d="M101 91l48 47"/><path d="M81 110l45 44"/><path d="M120 73l52 48"/></g>
+          <path d="M262 146Q319 138 378 146V266Q322 278 262 266Z" fill="url(#electrolyte-fill)" stroke="#bfd1c4" stroke-width="1"/>
+          <path d="M262 146Q319 155 378 146" fill="none" stroke="#bfd1c4" stroke-width="1"/>
+          <g fill="#fff" opacity=".75"><circle cx="279" cy="164" r="2.4"/><circle cx="346" cy="183" r="2.5"/><circle cx="352" cy="254" r="2"/><circle cx="274" cy="246" r="2"/><circle cx="330" cy="151" r="2"/></g>
+          <g stroke="#eff3e8" stroke-width="1.1" stroke-linejoin="round">
+            <path d="m87 220 99-31 63 34-100 31Z" fill="#315e4d"/><path d="M87 220v9l62 34v-9Z" fill="#254c40"/><path d="m149 254 100-31v9l-100 31Z" fill="#739580"/>
+            <path d="m87 193 99-31 63 34-100 31Z" fill="#6e9678"/><path d="M87 193v9l62 34v-9Z" fill="#446c56"/><path d="m149 227 100-31v9l-100 31Z" fill="#9bb394"/>
+            <path d="m87 166 99-31 63 34-100 31Z" fill="url(#cathode-face)"/><path d="M87 166v9l62 34v-9Z" fill="#416b53"/><path d="m149 200 100-31v9l-100 31Z" fill="#8ea981"/>
+          </g>
+          <g fill="#dce7b0"><circle cx="150" cy="173" r="4"/><circle cx="180" cy="164" r="4"/><circle cx="210" cy="174" r="4"/><circle cx="158" cy="215" r="3.5"/><circle cx="192" cy="205" r="3.5"/></g>
+          <path d="M198 159q13-12 17-29" fill="none" stroke="#54725d" stroke-width="1.3" stroke-dasharray="3 4"/>
+          <g transform="translate(201 172)"><circle r="17" fill="#e4cd81" stroke="#f6edcf" stroke-width="2"/><text text-anchor="middle" y="6" fill="#6a5724" font-size="21">h⁺</text></g>
+          <g transform="translate(304 193)"><circle r="23" fill="#f7faf3" stroke="#9fbca8" stroke-width="1.3"/><text text-anchor="middle" y="6" fill="#38634e" font-size="18">Zn²⁺</text></g>
+          <g transform="translate(340 244)"><circle r="18" fill="#e9f0dc" stroke="#afc4a2" stroke-width="1"/><text text-anchor="middle" y="5" fill="#497044" font-size="15">Zn²⁺</text></g>
+          <path d="M235 230q23 18 48 0" fill="none" stroke="#4b7c68" stroke-width="1.6" stroke-linecap="round" marker-start="url(#ion-arrow)" marker-end="url(#ion-arrow)"/>
+          <path d="m418 148 24-8 17 10-24 8Z" fill="#e7ede8" stroke="#a2b7ad" stroke-width="1"/><path d="M418 148v115l17 11V158Z" fill="url(#zinc-face)" stroke="#9cb3a7" stroke-width="1"/><path d="m435 158 24-8v115l-24 9Z" fill="#819f90" stroke="#759483" stroke-width="1"/>
+          <g fill="none" stroke="#f0f4ed" stroke-width="1" opacity=".7"><path d="m424 174 6 4m-6 16 6 4m-6 16 6 4m-6 16 6 4m-6 16 6 4"/></g>
+          <g fill="#254c40" font-size="17" font-weight="600" text-anchor="middle"><text x="170" y="306">光响应正极</text><text x="321" y="306">电解液</text><text x="439" y="306">锌负极</text></g>
+          <g fill="#7a8e7d" font-size="11" letter-spacing="1.4" text-anchor="middle"><text x="170" y="325">PHOTOCATHODE</text><text x="321" y="325">ELECTROLYTE</text><text x="439" y="325">Zn</text></g>
         </svg>
-        <div class="visual-caption"><span>光输入 <b>→</b> 电荷分离 <b>→</b> 储能反应</span><small>Mechanism depends on the material system</small></div>
-      </div>
+        <figcaption class="mechanism-caption"><ol class="mechanism-steps"><li><span>01</span><div><strong>光吸收</strong><small>激发电子与空穴</small></div></li><li><span>02</span><div><strong>电荷分离</strong><small>减少载流子复合</small></div></li><li><span>03</span><div><strong>界面反应</strong><small>促进可逆储锌</small></div></li></ol><p>概念示意 · 具体电荷路径随材料与充放电状态变化</p></figcaption>
+      </figure>
     </section>
     <section class="home-metrics" aria-label="文献库概览">
       <div class="metric-intro"><span class="kicker">THE COLLECTION</span><strong>以论文为坐标，<br/>持续更新这张研究地图。</strong></div>
@@ -68,7 +91,7 @@
       <div class="entry-heading"><div><span class="kicker">START EXPLORING</span><h2 id="entry-title">从问题出发，<br/>找到你的阅读路径。</h2></div><p>概念、证据与书目互相连接。<br/>选择一个入口，开始探索。</p></div>
       <div class="entry-grid">
         <a class="entry-card" href="principles.html"><div class="entry-card-top"><span>01 / PRINCIPLES</span><span aria-hidden="true">↗</span></div><div class="entry-icon" aria-hidden="true">hν</div><h3>光辅助原理</h3><p>从能量输入与能带位置，理解光怎样参与电化学反应。</p><span class="entry-link">理解工作机制 <span aria-hidden="true">→</span></span></a>
-        <a class="entry-card" href="literature.html"><div class="entry-card-top"><span>02 / LITERATURE</span><span aria-hidden="true">↗</span></div><div class="entry-icon" aria-hidden="true">92</div><h3>文献资料库</h3><p>按电池体系、主题和论文类型筛选，查阅简介与 DOI。</p><span class="entry-link">查找相关论文 <span aria-hidden="true">→</span></span></a>
+        <a class="entry-card" href="literature.html"><div class="entry-card-top"><span>02 / LITERATURE</span><span aria-hidden="true">↗</span></div><div class="entry-icon" aria-hidden="true">DOI</div><h3>文献资料库</h3><p>按电池体系、主题和论文类型筛选，查阅简介与 DOI。</p><span class="entry-link">查找相关论文 <span aria-hidden="true">→</span></span></a>
         <a class="entry-card" href="guide.html"><div class="entry-card-top"><span>03 / READING GUIDE</span><span aria-hidden="true">↗</span></div><div class="entry-icon" aria-hidden="true">↗</div><h3>阅读指南</h3><p>由框架到界面，再到能量收支，循序核实研究证据。</p><span class="entry-link">规划阅读路线 <span aria-hidden="true">→</span></span></a>
       </div>
     </section>

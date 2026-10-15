@@ -1,0 +1,18 @@
+/* An editorial, vector schematic for the home cover. */
+.mechanism-figure{background:#f1f3e9;border:1px solid #e1e7d6;border-radius:6px;color:#254c40;isolation:isolate}
+.mechanism-figure:before{display:none}
+.mechanism-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:26px 28px 0;position:relative;z-index:1}
+.mechanism-eyebrow{display:block;color:#7b8d75;font:700 9px/1.5 Arial,sans-serif;letter-spacing:.18em}
+.mechanism-heading h2{margin-top:8px;font-family:"Songti SC","Noto Serif CJK SC",Georgia,serif;font-weight:600;font-size:25px;letter-spacing:-.04em}
+.mechanism-link{display:grid;place-items:center;flex:none;width:35px;height:35px;border:1px solid #bccdb7;border-radius:50%;color:#466b50;font-size:19px;line-height:1}
+.mechanism-link:hover{background:#e1e9d7;border-color:#8eab84;transform:translate(2px,-2px);color:#254c40}
+.mechanism-figure .mechanism-art{width:100%;max-width:540px;height:auto;max-height:none;flex:none;margin:auto;display:block;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif}
+.mechanism-caption{padding:0 26px 20px;margin-top:auto}
+.mechanism-steps{list-style:none;margin:0;padding:18px 0 0;border-top:1px solid #cfdac5;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.mechanism-steps li{display:flex;align-items:start;gap:9px}
+.mechanism-steps li>span{font:italic 16px/1.4 Georgia,serif;color:#91a27a}
+.mechanism-steps strong{display:block;font-size:12px;font-weight:650;line-height:1.7;letter-spacing:.03em}
+.mechanism-steps small{display:block;color:#75856f;font-size:10px;line-height:1.8;white-space:nowrap}
+.mechanism-caption>p{margin-top:16px;color:#899480;font-size:9px;line-height:1.7}
+@media(max-width:760px){.home-hero .mechanism-figure{min-height:0;margin:0 10px 10px}.mechanism-heading{padding:24px 25px 0}.mechanism-heading h2{font-size:25px}.mechanism-figure .mechanism-art{height:auto;max-width:530px;margin:8px auto 0}.mechanism-caption{padding:0 25px 20px}}
+@media(max-width:520px){.mechanism-heading{padding:21px 18px 0}.mechanism-heading h2{font-size:22px}.mechanism-eyebrow{font-size:8px}.mechanism-link{width:31px;height:31px}.mechanism-caption{padding:0 17px 17px}.mechanism-steps{gap:7px;padding-top:15px}.mechanism-steps li{gap:5px}.mechanism-steps li>span{font-size:13px}.mechanism-steps strong{font-size:11px}.mechanism-steps small{font-size:9px;white-space:normal}.mechanism-caption>p{margin-top:13px;font-size:8px}}
