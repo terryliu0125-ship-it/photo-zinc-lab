@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "updated": "2026-10-15",
   "scope": "钒基正极优先 · 逐论文样品记录",
   "conventions": {
@@ -25,7 +25,21 @@
         "doi": "10.1039/d0ee01392g",
         "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/85b148d4-4d3e-43b2-85d3-5c8c9e6ba1eb/content",
         "title": "Photo-rechargeable zinc-ion batteries",
-        "locator": "PDF 第2页（期刊2415页），Fig. 1a 能级示意、Fig. 1c UV–vis、Fig. 1d XRD；仅光照充电：PDF p.5 Fig.4b及p.6 Experimental measurements（记录OCV后放电）"
+        "locator": "PDF 第2页（期刊2415页），Fig. 1a 能级示意、Fig. 1c UV–vis、Fig. 1d XRD；仅光照充电：PDF p.5 Fig.4b及p.6 Experimental measurements（记录OCV后放电）",
+        "authors": [
+          "Buddha Deka Boruah",
+          "Angus Mathieson",
+          "Bo Wen",
+          "Sascha Feldmann",
+          "Wesley M. Dose",
+          "Michael De Volder"
+        ],
+        "journal": "Energy & Environmental Science",
+        "year": 2020,
+        "title_zh": "光充电锌离子电池",
+        "library_id": "L01",
+        "reference": "Buddha Deka Boruah, Angus Mathieson, Bo Wen, et al. Photo-rechargeable zinc-ion batteries. Energy & Environmental Science, 2020, 13(8): 2414-2421. DOI: 10.1039/d0ee01392g",
+        "access_label": "公开全文核验版本"
       },
       "notes": [
         "示意值；缺少带边测量参比与pH；只供机理图对照",
@@ -43,7 +57,34 @@
       "uncertainty_eV": null,
       "electrolyte": null,
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "商业V2O5粉体在NaCl水溶液中室温搅拌，通过溶解—重结晶形成V2O5纳米纤维；洗涤离心后真空干燥。rGO由GO热还原另行制备。",
+        "precursors": [
+          "商业V2O5粉体（Sigma-Aldrich），3 g",
+          "2 M NaCl水溶液，100 mL",
+          "rGO辅助组分前驱体：GO（Graphenea）"
+        ],
+        "conditions": [
+          "V2O5纳米纤维：室温、300 rpm搅拌72 h。",
+          "去离子水和乙醇洗涤、离心；约80 °C真空干燥12 h。",
+          "rGO另行制备：GO在H2/He气氛中约350 °C处理约3 h；两种气流各约100 sccm。"
+        ],
+        "phase_check": "正文Fig.1d XRD确认V2O5纳米纤维为正交Pmmn(59)相；Fig.1b SEM/TEM显示纤维形貌；正文另指向SI Figs.S12/S13的EDS/Raman。",
+        "locator": "原文PDF第6页 Experimental section / Material synthesis and characterization；同页Preparation of electrodes为电极配方；Fig.1在PDF第2页。",
+        "fulltext_url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/85b148d4-4d3e-43b2-85d3-5c8c9e6ba1eb/content",
+        "supplement_url": null,
+        "missing": [
+          "本轮未取得SI正文；原料纯度、洗涤次数和离心参数在所读方法段未完整给出。"
+        ],
+        "notes": [
+          "原文第6页已提取且目视复核，可据此定位原始方法；摘要不代替原文完整实验说明。",
+          "V2O5/P3HT/rGO/PVDF=93/1/1/5是电极制备质量配方，不是V2O5纳米纤维的合成计量比。",
+          "能带记录中的V2O5带边为作者示意值，按此路线合成不保证获得相同绝对带边。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "V-VO2B-2021-rGO",
@@ -61,7 +102,23 @@
         "doi": "10.1002/aenm.202100115",
         "url": "https://d-nb.info/1228577064/34",
         "title": "Vanadium Dioxide Cathodes for High-Rate Photo-Rechargeable Zinc-Ion Batteries",
-        "locator": "PDF 第2页 Fig. 1e,f（XRD/UV–vis）；第3页 Fig. 2e（−3.8/−6.1 eV）和第一段（SI定位）"
+        "locator": "PDF 第2页 Fig. 1e,f（XRD/UV–vis）；第3页 Fig. 2e（−3.8/−6.1 eV）和第一段（SI定位）",
+        "authors": [
+          "Buddha Deka Boruah",
+          "Angus Mathieson",
+          "Sul Ki Park",
+          "Xiao Zhang",
+          "Bo Wen",
+          "Lifu Tan",
+          "Adam Boies",
+          "Michael De Volder"
+        ],
+        "journal": "Advanced Energy Materials",
+        "year": 2021,
+        "title_zh": "用于高倍率光充电锌离子电池的二氧化钒正极",
+        "library_id": "L02",
+        "reference": "Buddha Deka Boruah, Angus Mathieson, Sul Ki Park, et al. Vanadium Dioxide Cathodes for High-Rate Photo-Rechargeable Zinc-Ion Batteries. Advanced Energy Materials, 2021, 11(13): 2100115. DOI: 10.1002/aenm.202100115",
+        "access_label": "开放原文PDF"
       },
       "notes": [
         "VO2(B)专属样品；不能套用于VO2(M/R)；带边参比待SI补核",
@@ -79,7 +136,35 @@
       "uncertainty_eV": null,
       "electrolyte": null,
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "NH4VO3水分散体系加入甲酸，搅拌后转入聚四氟乙烯内衬微波反应器制备VO2纳米棒，洗涤并干燥。",
+        "precursors": [
+          "NH4VO3，0.7 g",
+          "去离子水，60 mL",
+          "甲酸，4.8 mL（所读段未给浓度）"
+        ],
+        "conditions": [
+          "加甲酸后继续磁力搅拌1 h。",
+          "微波反应器200 °C维持520 min；数值按原文排版目视复核，非5–20 min。",
+          "所得纳米棒用乙醇和去离子水洗涤，然后60 °C干燥；该段未给干燥时长。"
+        ],
+        "phase_check": "正文Fig.1e XRD确认单斜VO2(B)、C2/m；Fig.1b,c SEM/TEM展示纳米棒及约0.35 nm的(110)晶面间距。",
+        "locator": "原文PDF第7页 §2 Experimental Section / Material Synthesis and Photocathode Preparation；晶相及形貌Fig.1见PDF第2页。",
+        "fulltext_url": "https://d-nb.info/1228577064/34",
+        "supplement_url": "https://advanced.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Faenm.202100115&file=aenm202100115-sup-0001-SuppMat.pdf",
+        "missing": [
+          "SI入口已在出版社页面核实，但内容请求403，未取得SI Fig.S4/TableS1能带标定细节。",
+          "甲酸浓度、微波功率、反应器容积/装液率、洗涤次数及干燥时长在所读方法段未完整给出。"
+        ],
+        "notes": [
+          "原文第7页已提取且目视复核；520 min为原文所载，实验采用前仍应与作者/完整设备程序核对。",
+          "VO2/rGO/PVDF=91/4/5 mg、NMP 4 mL并120 °C真空干燥属于后续光正极制备，不是VO2纳米棒合成投料。",
+          "此路线对应VO2(B)，不能用于证明VO2(M/R)的能带与光响应。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "V-VO2B-2021-ZnO",
@@ -97,7 +182,17 @@
         "doi": "10.1039/d1ta07572a",
         "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/186691ed-7ee0-4cb0-ad47-0bc911e34256/content",
         "title": "Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries",
-        "locator": "PDF 第2页 Fig. 1c,e,f；第3页 Fig. 2c；SoC变化的Eg见SI Fig. S5/Table S1"
+        "locator": "PDF 第2页 Fig. 1c,e,f；第3页 Fig. 2c；SoC变化的Eg见SI Fig. S5/Table S1",
+        "authors": [
+          "Buddha Deka Boruah",
+          "Michael De Volder"
+        ],
+        "journal": "Journal of Materials Chemistry A",
+        "year": 2021,
+        "title_zh": "用于光充电锌离子电池的二氧化钒–氧化锌堆叠光正极",
+        "library_id": "L03",
+        "reference": "Buddha Deka Boruah, Michael De Volder. Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries. Journal of Materials Chemistry A, 2021, 9(40): 23199-23205. DOI: 10.1039/d1ta07572a",
+        "access_label": "公开全文核验版本"
       },
       "notes": [
         "只有Eg进入定量比较；能级图参考与符号需人工确认",
@@ -115,7 +210,27 @@
       "uncertainty_eV": null,
       "electrolyte": null,
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "partial",
+        "route": "先在碳纤维集流体上涂覆ZnO电子传输/空穴阻挡层，再在该ZnO层上直接生长VO2，构成CF/ZnO/VO2堆叠正极。",
+        "precursors": [],
+        "conditions": [],
+        "phase_check": "正文Fig.1c TEM约0.35 nm晶面间距对应VO2(B)(110)；Fig.1f XRD确认单斜VO2(B)；ZnO涂层前后的SEM/XRD在SI Fig.S1。",
+        "locator": "原文PDF第1页Introduction的先ZnO后VO2工艺概述；第2页Fig.1；第1页脚注明确Experimental section在ESI。",
+        "fulltext_url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/186691ed-7ee0-4cb0-ad47-0bc911e34256/content",
+        "supplement_url": null,
+        "missing": [
+          "完整实验方法在ESI，本轮未取得；具体ZnO前驱体、涂覆溶剂与浓度、热处理程序、VO2生长原料/温度/时间均待补。",
+          "仅凭正文工艺概述不足以复现实验。"
+        ],
+        "notes": [
+          "不能借用前一篇VO2/rGO论文的200 °C/520 min配方作为本堆叠样品的已核合成条件。",
+          "正文明确直接生长的界面不同于VO2与rGO/PVDF物理混合；保留为独立样品。",
+          "SI在出版社landing页列为可下载，但未取得真实文件URL及内容，故不造链接。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "V-V2O5-VO2-2025",
@@ -133,7 +248,22 @@
         "doi": "10.1039/d5ta00517e",
         "url": "https://pubs.rsc.org/en/content/articlehtml/2025/ta/d5ta00517e",
         "title": "Controlled oxidation of V2O5/VO2 hollow nanospheres as photocathodes for photo-rechargeable zinc ion batteries with an ultrahigh capacity enhancement",
-        "locator": "Results/Discussion：光学性能段（SI Fig. S6）；DOS讨论段 Fig. 1e–g"
+        "locator": "Results/Discussion：光学性能段（SI Fig. S6）；DOS讨论段 Fig. 1e–g",
+        "authors": [
+          "Hongran Yang",
+          "Shilei Wu",
+          "Akesh Manimendra Badalge",
+          "Xinyu Li",
+          "Qianjin Wang",
+          "Yu Lin Zhong",
+          "Ting Zhu"
+        ],
+        "journal": "Journal of Materials Chemistry A",
+        "year": 2025,
+        "title_zh": "通过可控氧化制备 V₂O₅/VO₂ 空心纳米球光正极，实现光充电锌离子电池的超高容量增益",
+        "library_id": "L05",
+        "reference": "Hongran Yang, Shilei Wu, Akesh Manimendra Badalge, et al. Controlled oxidation of V2O5/VO2 hollow nanospheres as photocathodes for photo-rechargeable zinc ion batteries with an ultrahigh capacity enhancement. Journal of Materials Chemistry A, 2025, 13(17): 12216-12225. DOI: 10.1039/d5ta00517e",
+        "access_label": "期刊页面"
       },
       "notes": [
         "仅光学Eg；相和绝对带边待补；不能自动判定异质结类型",
@@ -151,7 +281,28 @@
       "uncertainty_eV": null,
       "electrolyte": null,
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "partial",
+        "route": "原文可读结果讨论描述对VO2中间体进行退火受控氧化，使外侧更易接触空气并形成V2O5/VO2空心纳米球异质结构；这里只提供流程概要。",
+        "precursors": [
+          "该论文VO2中间体（其完整制备原料未核实）"
+        ],
+        "conditions": [],
+        "phase_check": "可读原文在外层HRTEM中识别V2O5(101)/(200)，晶面间距4.09/5.76 Å（Fig.2e）；外侧纳米片Fig.2f可见V2O5(101)。VO2具体多晶型与完整双相确认待原文图表补核。",
+        "locator": "正文Results/Discussion：退火氧化、空心球外层结构讨论（Fig.2e,f）；完整合成操作应查Experimental section及ESI，本轮未取得该部分。",
+        "fulltext_url": "https://pubs.rsc.org/en/content/articlehtml/2025/ta/d5ta00517e",
+        "supplement_url": null,
+        "missing": [
+          "前驱物配方、VO2中间体成球方法、退火温度/时间/气流、升温速度及各对照样品工艺未取得。",
+          "出版社直接PDF请求403后停止，公开索引仅核到以上讨论概要，不是完整实验配方。"
+        ],
+        "notes": [
+          "1.75 eV为该文复合样品光学带隙，不能把某个单相合成路线配上该复合带隙。",
+          "未验证的合成参数不由别篇V2O5或VO2论文填补。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "V-V6O13-2025",
@@ -169,7 +320,29 @@
         "doi": "10.1016/j.ensm.2025.104532",
         "url": "https://www.sciencedirect.com/science/article/abs/pii/S2405829725005306",
         "title": "Mixed-valence vanadium oxides based photocathodes for photo-rechargeable zinc-ion batteries with enhanced capacity and cycle life",
-        "locator": "正文2.1 Design and mechanism of PRZIBs；SI Figs. S6,S7 and Table S1；充电模式SI Fig. S9"
+        "locator": "正文2.1 Design and mechanism of PRZIBs；SI Figs. S6,S7 and Table S1；充电模式SI Fig. S9",
+        "authors": [
+          "Jie Huang",
+          "Jinghao Li",
+          "Youwei Jiang",
+          "Bin Gao",
+          "Tan Qiu",
+          "Jiao He",
+          "Fujun Deng",
+          "Yongxue Wang",
+          "Rui Guo",
+          "Qinyou An",
+          "Xiong Li",
+          "Jing Guo",
+          "Yue Ming",
+          "Yaoguang Rong"
+        ],
+        "journal": "Energy Storage Materials",
+        "year": 2025,
+        "title_zh": "用于提升光充电锌离子电池容量与循环寿命的混合价态钒氧化物光正极",
+        "library_id": "L29",
+        "reference": "Jie Huang, Jinghao Li, Youwei Jiang, et al. Mixed-valence vanadium oxides based photocathodes for photo-rechargeable zinc-ion batteries with enhanced capacity and cycle life. Energy Storage Materials, 2025, 81: 104532. DOI: 10.1016/j.ensm.2025.104532",
+        "access_label": "期刊页面"
       },
       "notes": [
         "带边参比换算未补全；不用于给出确定的光充电可行性结论",
@@ -187,7 +360,26 @@
       "uncertainty_eV": null,
       "electrolyte": null,
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "partial",
+        "route": "原文正文2.1节明确采用水热法制备V6O13，得到由纳米片组装的纳米花；详细操作指向实验部分与SI Fig.S1。",
+        "precursors": [],
+        "conditions": [],
+        "phase_check": "正文2.1节：SEM为纳米片组装、数十微米直径的纳米花（SI Fig.S2a）；XRD匹配V6O13标准PDF#78-0983（SI Fig.S3）；Raman/EDS用于进一步确认。",
+        "locator": "正文§2.1 Design and mechanism of PRZIBs首段；详细流程为Experimental section和SI Fig.S1，形貌/相参见SI Figs.S2–S4。",
+        "fulltext_url": "https://www.sciencedirect.com/science/article/abs/pii/S2405829725005306",
+        "supplement_url": null,
+        "missing": [
+          "水热原料、溶剂、用量、温度、保温时长、后处理及SI正文未取得。",
+          "出版社公开索引可读正文，全文直接请求403后停止；不能当作已取得完整合成步骤。"
+        ],
+        "notes": [
+          "V6O13/碳浆=7:3滴涂钛网是后续光正极制备质量比，不是V6O13合成投料。",
+          "此样品不等于老师分享论文中UPS功函数为4.55 eV的V6O13对照；不能混用合成和能带。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "V-KVOH-2025",
@@ -205,7 +397,25 @@
         "doi": "10.1016/j.est.2025.117461",
         "url": "https://www.sciencedirect.com/science/article/pii/S2352152X25021747",
         "title": "Boosted energy capacity and cycling stability of photo-assisted zinc-ion batteries by K+ intercalated hydrated vanadium oxide-based photocathodes",
-        "locator": "Abstract/Highlights及Results片段Fig. 1a；相关勘误10.1016/j.est.2025.117613"
+        "locator": "Abstract/Highlights及Results片段Fig. 1a；相关勘误10.1016/j.est.2025.117613",
+        "authors": [
+          "Jiaming Liu",
+          "Xinyu Gao",
+          "Yuan Zhang",
+          "Nana Zhang",
+          "Zhitao Shao",
+          "Ruyu Sun",
+          "Junxin Zhou",
+          "Dan Li",
+          "Xingde Xiang",
+          "Wei Feng"
+        ],
+        "journal": "Journal of Energy Storage",
+        "year": 2025,
+        "title_zh": "利用 K⁺ 嵌入水合钒氧化物光正极提升光辅助锌离子电池容量和循环稳定性",
+        "library_id": "L20",
+        "reference": "Jiaming Liu, Xinyu Gao, Yuan Zhang, et al. Boosted energy capacity and cycling stability of photo-assisted zinc-ion batteries by K+ intercalated hydrated vanadium oxide-based photocathodes. Journal of Energy Storage, 2025, 130: 117461. DOI: 10.1016/j.est.2025.117461",
+        "access_label": "期刊页面"
       },
       "notes": [
         "数值待补；优先请求本组原文/补充信息中的UV–vis、M–S或UPS图",
@@ -223,7 +433,27 @@
       "uncertainty_eV": null,
       "electrolyte": null,
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "partial",
+        "route": "公开摘要与正文片段确认以K+预嵌入水合V2O5制备KVOH光正极；本轮未取得可复现实验配方。",
+        "precursors": [],
+        "conditions": [],
+        "phase_check": "公开结果片段Fig.1a称VOH为双层结构，XRD对应V2O5·1.6H2O（JCPDS#40-1296）；KVOH主要峰与VOH接近。K含量、水含量及结构精修未核实。",
+        "locator": "出版社Abstract/Highlights与Results片段Fig.1a；完整合成应查原文Experimental/SI。另有相关勘误DOI 10.1016/j.est.2025.117613，内容本轮未重新核验。",
+        "fulltext_url": "https://www.sciencedirect.com/science/article/pii/S2352152X25021747",
+        "supplement_url": null,
+        "missing": [
+          "钒源/钾源的具体化学品及用量、溶剂、温度、时间、洗涤干燥流程、K与晶格水含量、SI正文未取得。",
+          "SSRN5197777作者预印本下载请求403后停止。",
+          "能带数值同样未取得，需要对应样品的原文/补充信息。"
+        ],
+        "notes": [
+          "不能用同作者碳包覆C-KVOH专利的配方或2.41 eV带隙填充这篇KVOH论文；那是不同样品。",
+          "此文研究光辅助充放电；合成参考本身不构成无外电源光充电证明。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "P-ZNO-ACS2021",
@@ -242,7 +472,18 @@
         "url": "https://www.repository.cam.ac.uk/items/ac3e0422-091e-4ac5-9e7c-e2fde6f4dcdb",
         "fulltextUrl": "https://www.repository.cam.ac.uk/bitstreams/21acd122-656f-4932-ac3c-4a9ed4914c88/download",
         "title": "Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries",
-        "locator": "Accepted manuscript p. 4 Fig. 1e；p. 5 Results and Discussion；p. 6 Fig. 2d 交叉显示同一数值"
+        "locator": "Accepted manuscript p. 4 Fig. 1e；p. 5 Results and Discussion；p. 6 Fig. 2d 交叉显示同一数值",
+        "authors": [
+          "Buddha Deka Boruah",
+          "Bo Wen",
+          "Michael De Volder"
+        ],
+        "journal": "ACS Nano",
+        "year": 2021,
+        "title_zh": "用于光充电锌离子电池的二硫化钼–氧化锌光正极",
+        "library_id": "L04",
+        "reference": "Buddha Deka Boruah, Bo Wen, Michael De Volder. Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries. ACS Nano, 2021, 15(10): 16616-16624. DOI: 10.1021/acsnano.1c06372",
+        "access_label": "作者稿仓库记录"
       },
       "notes": [
         "本数据来自 MoS2/ZnO 光电池样品，不能冒充 VO2/ZnO 特定样品的实测能带。",
@@ -259,7 +500,39 @@
       "uncertainty_eV": null,
       "electrolyte": null,
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "在预处理的 CF 碳基集流体上，浸涂乙酸锌/DMF 溶液并逐次干燥，最后空气热处理形成 ZnO 电子传输层；此文不是直接采购 ZnO 粉末作为该层。",
+        "precursors": [
+          "乙酸锌，100 mg，Sigma-Aldrich；作者存稿原文写 zinc acetate dehydrate，准确水合态应按试剂原文/SI 再核对",
+          "N,N-二甲基甲酰胺（DMF），5 mL",
+          "CF 集流体：Sigracet GDL 39 AA carbon graphite paper，SGL Carbon"
+        ],
+        "conditions": [
+          "CF 在涂覆前进行 UV/臭氧处理 1 h。",
+          "乙酸锌溶于 5 mL DMF 并搅拌；对 CF 浸涂后于 120 °C 干燥。",
+          "浸涂与干燥过程重复 4 次，以获得均匀层。",
+          "最终在空气中于 320 °C 处理；该方法段没有给出此步持续时间。",
+          "后续在 ZnO/CF 上水热生长 MoS2，构成原论文的堆叠正极。"
+        ],
+        "phase_check": "原文对电极开展 XRD（Bruker D8 Advance，Cu Kα）；ZnO/CF 的 XRD 定位为 SI Fig. S2。该 SI 未在本轮取得，不据此进一步断言该 ZnO 的具体相纯度或缺陷含量。",
+        "locator": "DOI 10.1021/acsnano.1c06372；剑桥作者接受稿 PDF 第14页，METHODS / Photocathode Preparation and Characterization 第一段；第16页 Associated Content 指出 SI Fig. S1/S2。",
+        "fulltext_url": "https://www.repository.cam.ac.uk/bitstreams/21acd122-656f-4932-ac3c-4a9ed4914c88/download",
+        "supplement_url": null,
+        "missing": [
+          "320 °C 最终空气处理的保温时间与升温速率。",
+          "每次浸涂时长、提拉速度及 120 °C 干燥时间。",
+          "乙酸锌准确水合态与试剂货号。",
+          "SI 原始文件链接与 ZnO/CF XRD 相纯度核验。"
+        ],
+        "notes": [
+          "概述对应产生本记录能带图的 MoS2/ZnO 样品，不能替代 VO2/ZnO 论文的配方。",
+          "正文关键步骤已核实，但上述缺项使其不是一份独立、完整的复现操作规程。",
+          "这是实际光充电锌电池的电子传输组分；将其与钒基材料重新组合仍需独立验证。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "P-MOS2-2H-ACS2021",
@@ -278,7 +551,18 @@
         "url": "https://www.repository.cam.ac.uk/items/ac3e0422-091e-4ac5-9e7c-e2fde6f4dcdb",
         "fulltextUrl": "https://www.repository.cam.ac.uk/bitstreams/21acd122-656f-4932-ac3c-4a9ed4914c88/download",
         "title": "Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries",
-        "locator": "Accepted manuscript p. 4 Fig. 1e–g；p. 5 Results and Discussion"
+        "locator": "Accepted manuscript p. 4 Fig. 1e–g；p. 5 Results and Discussion",
+        "authors": [
+          "Buddha Deka Boruah",
+          "Bo Wen",
+          "Michael De Volder"
+        ],
+        "journal": "ACS Nano",
+        "year": 2021,
+        "title_zh": "用于光充电锌离子电池的二硫化钼–氧化锌光正极",
+        "library_id": "L04",
+        "reference": "Buddha Deka Boruah, Bo Wen, Michael De Volder. Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries. ACS Nano, 2021, 15(10): 16616-16624. DOI: 10.1021/acsnano.1c06372",
+        "access_label": "作者稿仓库记录"
       },
       "notes": [
         "这是作为储锌兼吸光正极的 MoS2；将其作为钒基异质结候选只是一项待验证设计。",
@@ -295,7 +579,39 @@
       "uncertainty_eV": null,
       "electrolyte": null,
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "将前一步得到的 ZnO/CF 放入钼源/硫脲水溶液中水热生长 MoS2 纳米片，清洗、干燥后直接作为电极。",
+        "precursors": [
+          "四水合钼酸铵，0.076 g，Sigma-Aldrich（原文 ammonium molybdate tetrahydrate）",
+          "硫脲，1 g，Sigma-Aldrich",
+          "去离子水，30 mL",
+          "按同篇论文前一步制备的 ZnO/CF"
+        ],
+        "conditions": [
+          "将钼酸铵和硫脲加入 30 mL 去离子水作为 MoS2 生长溶液。",
+          "ZnO/CF 与溶液一起转入水热反应釜。",
+          "180 °C 保持 15 h。",
+          "用乙醇和去离子水清洗，之后在 70 °C 干燥。",
+          "按器件需要裁切后直接测试；原文该制备采用在集流体上直接生长的方式。"
+        ],
+        "phase_check": "正文以 Raman（Fig. 1g）确认 2H-MoS2；接受稿第5页明确将约 1.9 eV 直接带隙和 Raman 对应到 2H 相。XRD 进一步定位为 SI Fig. S1/S2，未在本轮读取该 SI。",
+        "locator": "DOI 10.1021/acsnano.1c06372；剑桥作者接受稿 PDF 第14页，METHODS / Photocathode Preparation and Characterization 第二段；相鉴定：第4页 Fig. 1g 与第5页对应讨论。",
+        "fulltext_url": "https://www.repository.cam.ac.uk/bitstreams/21acd122-656f-4932-ac3c-4a9ed4914c88/download",
+        "supplement_url": null,
+        "missing": [
+          "反应釜容积、填充率、基底尺寸/放置方向及升温、降温程序。",
+          "清洗次数和 70 °C 干燥时长。",
+          "SI 原始链接及纳米片厚度/相纯度的补充证据。"
+        ],
+        "notes": [
+          "此记录为该篇论文 2H 纳米片，不能套用于另篇 1T/2H 混相或不同层数样品。",
+          "原器件为 MoS2/ZnO 储锌光正极，不是与钒基正极复合后已经验证的配方。",
+          "方法概述帮助定位和比较路线，完整复现仍应核对原文/SI 与实验室设备条件。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "P-SNO2-QD-AS2024",
@@ -313,7 +629,27 @@
         "doi": "10.1002/advs.202309555",
         "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202309555",
         "title": "3D Hierarchical Sunflower-Shaped MoS2/SnO2 Photocathodes for Photo-Rechargeable Zinc Ion Batteries",
-        "locator": "2.1 Synthesis and Characterization；Fig. 1b、Fig. 2a/f；Supporting Information Fig. S2"
+        "locator": "2.1 Synthesis and Characterization；Fig. 1b、Fig. 2a/f；Supporting Information Fig. S2",
+        "authors": [
+          "Xinyang Wen",
+          "Yaotang Zhong",
+          "Shuai Chen",
+          "Zhengchi Yang",
+          "Pengyu Dong",
+          "Yuqi Wang",
+          "Linghai Zhang",
+          "Zhen Wang",
+          "Yue Jiang",
+          "Guofu Zhou",
+          "Junming Liu",
+          "Jinwei Gao"
+        ],
+        "journal": "Advanced Science",
+        "year": 2024,
+        "title_zh": "用于光充电锌离子电池的三维层级向日葵形 MoS₂/SnO₂ 光正极",
+        "library_id": "L16",
+        "reference": "Xinyang Wen, Yaotang Zhong, Shuai Chen, et al. 3D Hierarchical Sunflower-Shaped MoS2/SnO2 Photocathodes for Photo-Rechargeable Zinc Ion Batteries. Advanced Science, 2024, 11(21): 2309555. DOI: 10.1002/advs.202309555",
+        "access_label": "期刊页面"
       },
       "notes": [
         "正文给出该组分光学带隙 3.5 eV；复合样品光学带隙 2.1 eV 不是 SnO2 的带隙。",
@@ -331,7 +667,35 @@
       "uncertainty_eV": null,
       "electrolyte": null,
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "partial",
+        "route": "已核实的论文路线为：先制备透明偏黄色的 SnO2 量子点胶体，再以碳布浸渍/物理吸附形成 SnO2 QDs@CC，随后水热生长葵花状 MoS2。量子点的实际前驱体配方与处理条件没有取得，不能作为可复现 recipe。",
+        "precursors": [
+          "碳布集流体（CC）",
+          "SnO2 量子点胶体溶液；其锡源、溶剂和配比尚未核实"
+        ],
+        "conditions": [
+          "步骤顺序仅确认：量子点胶体 → 碳布浸渍/吸附 → 水热生长 MoS2。",
+          "该样品 TEM 粒径约 0.98 ± 0.19 nm 是产物表征结果，不是合成条件。"
+        ],
+        "phase_check": "已读正文 2.1 给出 SnO2 XRD 与 JCPDS 41-1445 匹配；Fig. 2c 的约 0.33 nm 晶面间距归属 (110)。本轮未取得支持完整复现的实验段或 SI。",
+        "locator": "DOI 10.1002/advs.202309555；2.1 Synthesis and Characterization of MoS2/SnO2 QDs@CC，Fig. 1a、Fig. 2a/c；粒径定位 SI Fig. S1b/c。",
+        "fulltext_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202309555",
+        "supplement_url": null,
+        "missing": [
+          "SnO2 量子点的锡源、配比、溶剂、pH、温度和处理时长。",
+          "碳布预处理、浸渍时长、量子点负载量及干燥条件。",
+          "后续 MoS2 水热反应的完整配方与温度、时长。",
+          "可核验的 SI 实际文件链接及实验段全文。"
+        ],
+        "notes": [
+          "此前已读公开索引中的原文 2.1，仅足够确认路线顺序；本地 bands-advs.html 实为访问验证页，未把它当方法证据。",
+          "未重试受限出版社源，也未用其他 SnO2 文献的配方补缺。",
+          "原样品是 MoS2/SnO2 光电池，不是钒基配对的实验验证。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "P-TIO2-ANATASE-NANO2024",
@@ -350,7 +714,21 @@
         "url": "https://www.mdpi.com/2079-4991/14/22/1802",
         "fulltextUrl": "https://pdfs.semanticscholar.org/beba/c3cd8932cf3f67362cd82657869300f22dbd.pdf",
         "title": "Synthesis of TiO2-ZnO n-n Heterojunction with Excellent Visible Light-Driven Photodegradation of Tetracycline",
-        "locator": "3.5.3 Band Structures；Fig. 10；原文 PDF p. 9 of 12"
+        "locator": "3.5.3 Band Structures；Fig. 10；原文 PDF p. 9 of 12",
+        "authors": [
+          "Ying Zhang",
+          "Xinkang Bo",
+          "Tao Zhu",
+          "Wei Zhao",
+          "Yumin Cui",
+          "Jianguo Chang"
+        ],
+        "journal": "Nanomaterials",
+        "year": 2024,
+        "title_zh": "具有优异可见光四环素降解性能的 TiO₂–ZnO n–n 异质结的合成",
+        "library_id": null,
+        "reference": "Ying Zhang, Xinkang Bo, Tao Zhu, et al. Synthesis of TiO2-ZnO n-n Heterojunction with Excellent Visible Light-Driven Photodegradation of Tetracycline. Nanomaterials, 2024, 14(22): 1802. DOI: 10.3390/nano14221802",
+        "access_label": "期刊页面"
       },
       "notes": [
         "原研究为污染物光催化，不是钒基电池/直接光充电验证。",
@@ -368,7 +746,31 @@
       "uncertainty_eV": null,
       "electrolyte": null,
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "partial",
+        "route": "公开原文索引提示，TiO2 空心球的单独合成在该文实验 §2.2 回引参考文献 7；本轮没有取得该回引配方，因此不提供前驱体或具体单独制备条件。",
+        "precursors": [],
+        "conditions": [],
+        "phase_check": "既有能带记录和原文 3.5.3 明确指向该研究的 anatase TiO2 对照样品；相纯度、制备相关 XRD 具体图节仍需原实验部分补核。",
+        "locator": "DOI 10.3390/nano14221802；Experimental §2.2 回引原文参考文献 7；能带定位为 §3.5.3 Band Structures / Fig. 10。",
+        "fulltext_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11597633/",
+        "supplement_url": null,
+        "missing": [
+          "原文参考文献 7 的完整配方和与当前 TiO2 空心球样品的对应关系。",
+          "单独 TiO2 的前驱体、溶剂、用量、反应和热处理程序。",
+          "是否使用商业 TiO2，以及如为商业材料时的厂商、货号。",
+          "与纯 anatase 对照对应的相纯度和形貌详细证据；SI 实际文件链接。"
+        ],
+        "notes": [
+          "公开原文索引中的 140 °C/4 h 是与 ZnO 复合的条件，不能当作本记录单独 TiO2 的合成条件。",
+          "本地 bands-tio2.html 为网站访问验证页，PMC 直接访问也要求验证码；均未重试或绕过验证。",
+          "全文链接定位到官方 PMC 收录页，但本轮未读到完整实验内容，也没有把 SI 链接标成已读。",
+          "未从其他 TiO2/ZnO 论文借用配方，也不把金红石或 P25 配方移植为本锐钛矿样品。",
+          "该原研究是四环素光催化，不是锌电池或钒基光充电配对验证。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "P-GCN-CM2026",
@@ -386,7 +788,25 @@
         "doi": "10.1038/s43246-026-01189-8",
         "url": "https://www.nature.com/articles/s43246-026-01189-8",
         "title": "Bias-free photoelectrochemical co-production of formate from CO2 and biomass-derived plastic precursors",
-        "locator": "Results and discussion / Catalyst design for a bias-free PEC system；Fig. 1a；SI S7、S13–S16；Methods / Synthesis of g-C3N4 and WO3"
+        "locator": "Results and discussion / Catalyst design for a bias-free PEC system；Fig. 1a；SI S7、S13–S16；Methods / Synthesis of g-C3N4 and WO3",
+        "authors": [
+          "Madasamy Thangamuthu",
+          "Emerson C. Kohlrausch",
+          "Sylvanus Lilonfe",
+          "Tara M. Lemercier",
+          "Tom Burwell",
+          "Matthew Young",
+          "Ioanna Dimitriou",
+          "Vincenzo Taresco",
+          "Jesum Alves Fernandes",
+          "Andrei N. Khlobystov"
+        ],
+        "journal": "Communications Materials",
+        "year": 2026,
+        "title_zh": "由 CO₂ 与生物质来源塑料前驱体协同制备甲酸盐的无偏压光电化学体系",
+        "library_id": null,
+        "reference": "Madasamy Thangamuthu, Emerson C. Kohlrausch, Sylvanus Lilonfe, et al. Bias-free photoelectrochemical co-production of formate from CO2 and biomass-derived plastic precursors. Communications Materials, 2026, 7: 136. DOI: 10.1038/s43246-026-01189-8",
+        "access_label": "期刊页面"
       },
       "notes": [
         "这是一项 PEC CO2/生物质氧化研究，不是锌电池；作为待验证的钒基复合候选。",
@@ -403,7 +823,37 @@
       "uncertainty_eV": null,
       "electrolyte": "0.5 M Na2SO4（Mott–Schottky）",
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "三聚氰胺分阶段热缩聚得到 bulk-C3N4，再通过空气中二次退火得到该文用于能带测试的 g-C3N4。",
+        "precursors": [
+          "三聚氰胺（melamine），10 g",
+          "石英坩埚；空气气氛"
+        ],
+        "conditions": [
+          "以 5 °C/min 升温至 360 °C，保持 30 min。",
+          "随后在空气中于 600 °C 加热 3 h。",
+          "在炉内冷却至室温，研磨并通过 250 μm 筛，得到 bulk-C3N4。",
+          "将 bulk-C3N4 在空气中于 550 °C 再退火 2 h，得到 g-C3N4。"
+        ],
+        "phase_check": "正文 Results / Catalyst design 给出 XRD（SI Fig. S4）和 FTIR（SI Fig. S5）确认两组分结构共存；纯样品 optical Eg 及带边分别定位 SI S7、S13/S15。这些相鉴定的详细曲线未在本轮另行读取。",
+        "locator": "DOI 10.1038/s43246-026-01189-8；Methods / Synthesis of g-C3N4 and WO3；Methods / Synthesis of g-C3N4/WO3 hybrid material；主文 PDF 对应第8页。",
+        "fulltext_url": "https://www.nature.com/articles/s43246-026-01189-8",
+        "supplement_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs43246-026-01189-8/MediaObjects/43246_2026_1189_MOESM2_ESM.pdf",
+        "missing": [
+          "600 °C 和二次 550 °C 阶段的升温程序未在该段逐项写出。",
+          "坩埚容积/是否加盖、炉内样品装填与退火后的收率。",
+          "SI 文件正文及具体谱图的独立复核。"
+        ],
+        "notes": [
+          "补充材料 URL 来自已保存出版社完整 HTML 中 MOESM2 的实际 href，未根据命名规律猜测；本轮未另行下载 SI 内容。",
+          "原文为光电催化 CO2 还原/生物质氧化，能带条件 pH 7；并未验证该 g-C3N4 与钒基正极直接光充电。",
+          "这是特定热处理样品；缺陷、质子化、厚度与后续复合会改变带边，不能把该制备视为通用 g-C3N4 常数的保证。",
+          "同文异质结段使用bulk-C₃N₄作为前驱体；不要把纯组分二次退火与复合物工艺混为一条已验证路线。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "P-WO3-MONO-CM2026",
@@ -421,7 +871,25 @@
         "doi": "10.1038/s43246-026-01189-8",
         "url": "https://www.nature.com/articles/s43246-026-01189-8",
         "title": "Bias-free photoelectrochemical co-production of formate from CO2 and biomass-derived plastic precursors",
-        "locator": "Results and discussion / Catalyst design for a bias-free PEC system；Fig. 1a；SI S7、S13–S16；Methods / Synthesis of g-C3N4 and WO3"
+        "locator": "Results and discussion / Catalyst design for a bias-free PEC system；Fig. 1a；SI S7、S13–S16；Methods / Synthesis of g-C3N4 and WO3",
+        "authors": [
+          "Madasamy Thangamuthu",
+          "Emerson C. Kohlrausch",
+          "Sylvanus Lilonfe",
+          "Tara M. Lemercier",
+          "Tom Burwell",
+          "Matthew Young",
+          "Ioanna Dimitriou",
+          "Vincenzo Taresco",
+          "Jesum Alves Fernandes",
+          "Andrei N. Khlobystov"
+        ],
+        "journal": "Communications Materials",
+        "year": 2026,
+        "title_zh": "由 CO₂ 与生物质来源塑料前驱体协同制备甲酸盐的无偏压光电化学体系",
+        "library_id": null,
+        "reference": "Madasamy Thangamuthu, Emerson C. Kohlrausch, Sylvanus Lilonfe, et al. Bias-free photoelectrochemical co-production of formate from CO2 and biomass-derived plastic precursors. Communications Materials, 2026, 7: 136. DOI: 10.1038/s43246-026-01189-8",
+        "access_label": "期刊页面"
       },
       "notes": [
         "原研究的 WO3 在 Z-scheme PEC 氧化一侧发挥作用；不能仅凭形成异质结就认定有能力还原 Zn2+。",
@@ -438,7 +906,41 @@
       "uncertainty_eV": null,
       "electrolyte": "0.5 M Na2SO4（Mott–Schottky）",
       "soc": null,
-      "temperature_K": null
+      "temperature_K": null,
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "钨酸钠水溶液在盐酸酸化下室温沉淀，离心洗涤、干燥后于 400 °C 退火，得到该论文的单斜 WO3。该段未明确最终退火气氛，不自行补为空气。",
+        "precursors": [
+          "二水合钨酸钠 Na2WO4·2H2O，0.8 g",
+          "去离子水，20 mL",
+          "浓盐酸，12 M，2 mL",
+          "洗涤用水和乙醇"
+        ],
+        "conditions": [
+          "将 0.8 g Na2WO4·2H2O 溶于 20 mL 去离子水，室温搅拌 5 min。",
+          "保持搅拌，滴加 2 mL 12 M 盐酸，随后继续搅拌 1 h。",
+          "以 8000 rpm 离心 5 min 收集沉淀。",
+          "用水和乙醇离心洗涤，直至上清液达到中性 pH。",
+          "70 °C 过夜干燥，随后研磨。",
+          "以 10 °C/min 升温至 400 °C，退火 2 h，得到单斜 WO3。"
+        ],
+        "phase_check": "Methods 明确 400 °C/2 h 处理得到 monoclinic WO3；主文 Results 将 XRD 定位为 SI Fig. S4、WO3 微片形貌定位为 SI Fig. S11。SI 谱图未在本轮另行读取。",
+        "locator": "DOI 10.1038/s43246-026-01189-8；Methods / Synthesis of g-C3N4 and WO3 的第二段；主文 PDF 对应第8页。",
+        "fulltext_url": "https://www.nature.com/articles/s43246-026-01189-8",
+        "supplement_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs43246-026-01189-8/MediaObjects/43246_2026_1189_MOESM2_ESM.pdf",
+        "missing": [
+          "滴酸速度、洗涤轮数、离心转子半径/相对离心力。",
+          "干燥‘过夜’的精确时长、煅烧冷却程序、坩埚装填与最终收率。",
+          "SI 相纯度谱图的独立复核。",
+          "WO3 最终 400 °C 退火的气氛，该方法段未明确写出。"
+        ],
+        "notes": [
+          "补充材料 URL 是已保存出版社完整 HTML 的真实 MOESM2 链接；本轮没有另行读取 SI 内容。",
+          "原研究是 WO3/g-C3N4 PEC 体系；该单斜 WO3 不是经钒基锌电配对验证的样品。",
+          "不得将此合成与能带数据套给 WO3−x、W18O49 或水合 WO3。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "T-V6O13-2026",
@@ -463,7 +965,22 @@
         "doi": "10.1002/adma.75300",
         "url": "https://doi.org/10.1002/adma.75300",
         "title": "Pre-Intercalated Cation Optimizing Proton Topochemistry for High-Performance Aqueous Zinc-Ion Batteries",
-        "locator": "正文p.2 §2.1，Fig.1e（p.3）；UPS引用SI Fig.S12"
+        "locator": "正文p.2 §2.1，Fig.1e（p.3）；UPS引用SI Fig.S12",
+        "authors": [
+          "Wenhao Liang",
+          "Yecheng Qiu",
+          "Manman Li",
+          "Fushan Geng",
+          "Bingwen Hu",
+          "Tao Chen",
+          "Wai‐Yeung Wong"
+        ],
+        "journal": "Advanced Materials",
+        "year": 2026,
+        "title_zh": "预嵌入阳离子优化质子拓扑化学，实现高性能水系锌离子电池",
+        "library_id": "L113",
+        "reference": "Wenhao Liang, Yecheng Qiu, Manman Li, et al. Pre-Intercalated Cation Optimizing Proton Topochemistry for High-Performance Aqueous Zinc-Ion Batteries. Advanced Materials, 2026: e75300. DOI: 10.1002/adma.75300",
+        "access_label": "期刊页面"
       },
       "edge_label": "仅功函数 Φ · 缺CB/VB",
       "edge_basis": "work_function_only",
@@ -472,7 +989,26 @@
       "notes": [
         "功函数可定位费米能级，但无法单独确定CB、VB或光充电能力。",
         "VO与KVO是该文独立样品，不能与光正极V₆O₁₃纳米花合并。"
-      ]
+      ],
+      "synthesis": {
+        "status": "partial",
+        "route": "该文以微波水热法制备 VO（V₆O₁₃）及 KVO（K₀.₅V₆O₁₃）对照系列；主要合成细节指向补充信息，不能按化学式反推投料。",
+        "precursors": [],
+        "conditions": [],
+        "phase_check": "原文p.2 §2.1及Fig.1a,b：单斜C2/m；TG指出两个初始样品均无晶格水，循环中才发生水插入。",
+        "locator": "用户提供的出版稿PDF p.2 §2.1，合成流程指向SI Fig.S1；末页列补充文件 adma75300-sup-0001-SuppMat.docx（本轮未读）。",
+        "fulltext_url": "https://doi.org/10.1002/adma.75300",
+        "supplement_url": null,
+        "missing": [
+          "原始SI文件未取得。",
+          "钒源、钾源、溶剂、用量、微波水热温度/时间/功率和后处理待补。"
+        ],
+        "notes": [
+          "本记录仅有UPS功函数，缺少CB/VB；合成出处不补足光充电证据。",
+          "VO与KVO的准确对照配方须分别回到SI，不能用其他V₆O₁₃或KVOH文献代替。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "T-K05V6O13-2026",
@@ -497,7 +1033,22 @@
         "doi": "10.1002/adma.75300",
         "url": "https://doi.org/10.1002/adma.75300",
         "title": "Pre-Intercalated Cation Optimizing Proton Topochemistry for High-Performance Aqueous Zinc-Ion Batteries",
-        "locator": "正文p.2 §2.1，Fig.1e（p.3）；UPS引用SI Fig.S12"
+        "locator": "正文p.2 §2.1，Fig.1e（p.3）；UPS引用SI Fig.S12",
+        "authors": [
+          "Wenhao Liang",
+          "Yecheng Qiu",
+          "Manman Li",
+          "Fushan Geng",
+          "Bingwen Hu",
+          "Tao Chen",
+          "Wai‐Yeung Wong"
+        ],
+        "journal": "Advanced Materials",
+        "year": 2026,
+        "title_zh": "预嵌入阳离子优化质子拓扑化学，实现高性能水系锌离子电池",
+        "library_id": "L113",
+        "reference": "Wenhao Liang, Yecheng Qiu, Manman Li, et al. Pre-Intercalated Cation Optimizing Proton Topochemistry for High-Performance Aqueous Zinc-Ion Batteries. Advanced Materials, 2026: e75300. DOI: 10.1002/adma.75300",
+        "access_label": "期刊页面"
       },
       "edge_label": "仅功函数 Φ · 缺CB/VB",
       "edge_basis": "work_function_only",
@@ -506,7 +1057,26 @@
       "notes": [
         "功函数可定位费米能级，但无法单独确定CB、VB或光充电能力。",
         "VO与KVO是该文独立样品，不能与光正极V₆O₁₃纳米花合并。"
-      ]
+      ],
+      "synthesis": {
+        "status": "partial",
+        "route": "该文以微波水热法制备 VO（V₆O₁₃）及 KVO（K₀.₅V₆O₁₃）对照系列；主要合成细节指向补充信息，不能按化学式反推投料。",
+        "precursors": [],
+        "conditions": [],
+        "phase_check": "原文p.2 §2.1及Fig.1a,b：单斜C2/m；TG指出两个初始样品均无晶格水，循环中才发生水插入。",
+        "locator": "用户提供的出版稿PDF p.2 §2.1，合成流程指向SI Fig.S1；末页列补充文件 adma75300-sup-0001-SuppMat.docx（本轮未读）。",
+        "fulltext_url": "https://doi.org/10.1002/adma.75300",
+        "supplement_url": null,
+        "missing": [
+          "原始SI文件未取得。",
+          "钒源、钾源、溶剂、用量、微波水热温度/时间/功率和后处理待补。"
+        ],
+        "notes": [
+          "本记录仅有UPS功函数，缺少CB/VB；合成出处不补足光充电证据。",
+          "VO与KVO的准确对照配方须分别回到SI，不能用其他V₆O₁₃或KVOH文献代替。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "T-VOH-2026",
@@ -531,7 +1101,25 @@
         "doi": "10.1021/acsnano.6c15858",
         "url": "https://doi.org/10.1021/acsnano.6c15858",
         "title": "Universal Ligand-Field Engineering of Layered Vanadium-Based Cathodes for High-Voltage Aqueous Zinc Ion Batteries",
-        "locator": "Fig.5a,b（PDF p.8），正文PDF p.9（期刊页I）DOS讨论"
+        "locator": "Fig.5a,b（PDF p.8），正文PDF p.9（期刊页I）DOS讨论",
+        "authors": [
+          "Keyi Chen",
+          "Quan Zong",
+          "Haoran Yuan",
+          "Qiaoling Kang",
+          "Qilong Zhang",
+          "Guoying Wei",
+          "Shuang Zhou",
+          "Chengbin Jin",
+          "Anqiang Pan",
+          "Guozhong Cao"
+        ],
+        "journal": "ACS Nano",
+        "year": 2026,
+        "title_zh": "层状钒基正极的普适配位场工程：构筑高电压水系锌离子电池",
+        "library_id": "L116",
+        "reference": "Keyi Chen, Quan Zong, Haoran Yuan, et al. Universal Ligand-Field Engineering of Layered Vanadium-Based Cathodes for High-Voltage Aqueous Zinc Ion Batteries. ACS Nano, 2026. DOI: 10.1021/acsnano.6c15858",
+        "access_label": "期刊页面"
       },
       "edge_label": "仅d带中心 · 缺CB/VB",
       "edge_basis": "d_center_only",
@@ -540,7 +1128,36 @@
       "notes": [
         "d带中心反映该计算的局部电子态变化，不能当作导带底、价带顶或电化学氧化还原电位。",
         "本文讨论工作电位提升，未由此给出光充电验证。"
-      ]
+      ],
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "在预处理碳布上水热生长水合钒氧化物；不加入任何咪唑鎓盐，作为VOH对照。",
+        "precursors": [
+          "V₂O₅，2 mmol",
+          "去离子水，80 mL",
+          "30 wt% H₂O₂，2 mL",
+          "预处理碳布，1 cm × 1 cm"
+        ],
+        "conditions": [
+          "V₂O₅分散于水中搅拌，滴加H₂O₂后室温搅拌30 min。",
+          "该VOH对照按同文相同条件制备，但不加入咪唑鎓盐。",
+          "混合液与碳布置于100 mL聚四氟乙烯内衬反应釜；120 °C反应6 h。",
+          "取出碳布，用去离子水及乙醇充分洗涤；60 °C真空干燥12 h。"
+        ],
+        "phase_check": "原文层状VOH/BMIM–VOH对照；按该文XRD、FTIR、TG–DSC与XPS等核对结构、插层及组成。不要与同页BMIM–V₆O₁₃/BMIM–KV₃O₈路线混用。",
+        "locator": "用户提供的出版稿PDF p.10（期刊页J），Experimental Section / Synthesis of Imidazolium Cations Preintercalated V₂O₅·nH₂O (VOH)。",
+        "fulltext_url": "https://doi.org/10.1021/acsnano.6c15858",
+        "supplement_url": "https://pubs.acs.org/doi/suppl/10.1021/acsnano.6c15858/suppl_file/nn6c15858_si_001.pdf",
+        "missing": [
+          "碳布预处理操作、洗涤次数及冷却程序在该主文方法段未完整给出。",
+          "SI真实入口来自原PDF链接，SI内容尚未核验。"
+        ],
+        "notes": [
+          "此处是原文路线摘要，完整操作仍应回原文/SI核对。",
+          "此记录的电子结构量是DFT d带中心，不能理解为这条合成路线已得到已测CB/VB或已验证光充电。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     },
     {
       "id": "T-BMIMVOH-2026",
@@ -565,7 +1182,25 @@
         "doi": "10.1021/acsnano.6c15858",
         "url": "https://doi.org/10.1021/acsnano.6c15858",
         "title": "Universal Ligand-Field Engineering of Layered Vanadium-Based Cathodes for High-Voltage Aqueous Zinc Ion Batteries",
-        "locator": "Fig.5a,b（PDF p.8），正文PDF p.9（期刊页I）DOS讨论"
+        "locator": "Fig.5a,b（PDF p.8），正文PDF p.9（期刊页I）DOS讨论",
+        "authors": [
+          "Keyi Chen",
+          "Quan Zong",
+          "Haoran Yuan",
+          "Qiaoling Kang",
+          "Qilong Zhang",
+          "Guoying Wei",
+          "Shuang Zhou",
+          "Chengbin Jin",
+          "Anqiang Pan",
+          "Guozhong Cao"
+        ],
+        "journal": "ACS Nano",
+        "year": 2026,
+        "title_zh": "层状钒基正极的普适配位场工程：构筑高电压水系锌离子电池",
+        "library_id": "L116",
+        "reference": "Keyi Chen, Quan Zong, Haoran Yuan, et al. Universal Ligand-Field Engineering of Layered Vanadium-Based Cathodes for High-Voltage Aqueous Zinc Ion Batteries. ACS Nano, 2026. DOI: 10.1021/acsnano.6c15858",
+        "access_label": "期刊页面"
       },
       "edge_label": "仅d带中心 · 缺CB/VB",
       "edge_basis": "d_center_only",
@@ -574,7 +1209,37 @@
       "notes": [
         "d带中心反映该计算的局部电子态变化，不能当作导带底、价带顶或电化学氧化还原电位。",
         "本文讨论工作电位提升，未由此给出光充电验证。"
-      ]
+      ],
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "在预处理碳布上水热生长水合钒氧化物；加入BMIMCl得到BMIM⁺预嵌入样品。",
+        "precursors": [
+          "V₂O₅，2 mmol",
+          "去离子水，80 mL",
+          "30 wt% H₂O₂，2 mL",
+          "预处理碳布，1 cm × 1 cm",
+          "BMIMCl（1-丁基-3-甲基咪唑氯盐），1 mmol"
+        ],
+        "conditions": [
+          "V₂O₅分散于水中搅拌，滴加H₂O₂后室温搅拌30 min。",
+          "加入BMIMCl后再搅拌15 min。",
+          "混合液与碳布置于100 mL聚四氟乙烯内衬反应釜；120 °C反应6 h。",
+          "取出碳布，用去离子水及乙醇充分洗涤；60 °C真空干燥12 h。"
+        ],
+        "phase_check": "原文层状VOH/BMIM–VOH对照；按该文XRD、FTIR、TG–DSC与XPS等核对结构、插层及组成。不要与同页BMIM–V₆O₁₃/BMIM–KV₃O₈路线混用。",
+        "locator": "用户提供的出版稿PDF p.10（期刊页J），Experimental Section / Synthesis of Imidazolium Cations Preintercalated V₂O₅·nH₂O (VOH)。",
+        "fulltext_url": "https://doi.org/10.1021/acsnano.6c15858",
+        "supplement_url": "https://pubs.acs.org/doi/suppl/10.1021/acsnano.6c15858/suppl_file/nn6c15858_si_001.pdf",
+        "missing": [
+          "碳布预处理操作、洗涤次数及冷却程序在该主文方法段未完整给出。",
+          "SI真实入口来自原PDF链接，SI内容尚未核验。"
+        ],
+        "notes": [
+          "此处是原文路线摘要，完整操作仍应回原文/SI核对。",
+          "此记录的电子结构量是DFT d带中心，不能理解为这条合成路线已得到已测CB/VB或已验证光充电。"
+        ],
+        "checked_on": "2026-10-15"
+      }
     }
   ],
   "method_sources": [

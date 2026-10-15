@@ -7,7 +7,7 @@
   const num = (value, digits = 2) => finite(value) ? value.toFixed(digits).replace(/\.00$/, '').replace(/(\.\d)0$/, '$1') : '待核实';
   const signed = value => finite(value) ? (value > 0 ? '+' : '') + num(value) : '待核实';
   const colors = ['#2d6a50','#ae8b3c','#5a7d98','#9b6e85'];
-  const safeUrl = value => { try { const u = new URL(value, location.href); return ['https:', 'http:'].includes(u.protocol) ? u.href : ''; } catch (_) { return ''; } };
+  const safeUrl = value => { if(typeof value!=='string'||!value.trim())return '';try { const u = new URL(value, location.href); return ['https:', 'http:'].includes(u.protocol) ? u.href : ''; } catch (_) { return ''; } };
   let payload, records, core;
   try {
     payload = JSON.parse($('bands-data').textContent);
@@ -38,6 +38,49 @@
   const isEstimate = record => /图|示意|估|近似|待核|未核/.test(String(record.edge_label || '') + String(record.method || ''));
   const allNotes = record => Array.isArray(record.notes) ? record.notes : record.notes ? [record.notes] : [];
   const diagramCaption = $('band-chart-caption').textContent;
+  const list = value => Array.isArray(value) ? value : [];
+  const synthesisStatus = value => ({verified_summary:'主要步骤已核 · 非完整复现',partial:'仅部分信息',unavailable:'方法待补'}[value] || '方法待补');
+  let openRecordId = null;
+  function sourceBrief(record) {
+    const source=record.source || {},first=list(source.authors)[0];
+    const author=typeof first==='string'?first:(first&&typeof first.name==='string'?first.name:'');
+    return [author,source.journal,source.year].filter(Boolean).join(' · ') || (publishedIds.has(record.id)?'完整引文见详情':'本组会话输入，无公开合成出处');
+  }
+  function citationText(record) {
+    const source=record.source || {};
+    return typeof source.reference==='string'&&source.reference.trim()?source.reference.trim():[source.title,source.doi?'DOI: '+source.doi:''].filter(Boolean).join('. ');
+  }
+  function sourceLinks(record) {
+    const source=record.source || {},syn=record.synthesis || {},doi=source.doi?safeUrl('https://doi.org/'+source.doi):'',version=safeUrl(source.url),full=safeUrl(syn.fulltext_url),supp=safeUrl(syn.supplement_url);
+    const links=[];
+    if(citationText(record)&&publishedIds.has(record.id))links.push('<button type="button" data-copy-citation="'+esc(record.id)+'">复制完整引文</button>');
+    if(doi)links.push('<a href="'+esc(doi)+'" target="_blank" rel="noopener noreferrer">DOI 入口 ↗</a>');
+    if(version)links.push('<a href="'+esc(version)+'" target="_blank" rel="noopener noreferrer">'+esc(source.access_label || '原文核验版本')+' ↗</a>');
+    if(full&&full!==version&&full!==doi)links.push('<a href="'+esc(full)+'" target="_blank" rel="noopener noreferrer">合成原文入口 ↗</a>');
+    if(supp)links.push('<a href="'+esc(supp)+'" target="_blank" rel="noopener noreferrer">SI / 补充材料 · 内容待核 ↗</a>');
+    else if(publishedIds.has(record.id))links.push('<span>SI 实际链接待补</span>');
+    return links.length?'<div class="reference-actions">'+links.join('')+'</div>':'';
+  }
+  function synthesisDetails(record) {
+    const syn=record.synthesis;
+    if(!syn||typeof syn!=='object')return '<section class="synthesis-reading"><div class="synthesis-heading"><h4>合成方法</h4><span>本组会话输入，无公开合成出处</span></div><p>当前仅作为本组测量加入比较。合成和能带标定请保留在本组实验记录中，不会上传至本站。</p></section>';
+    const listHtml=(items,empty)=>list(items).length?'<ul>'+list(items).map(item=>'<li>'+esc(item)+'</li>').join('')+'</ul>':'<p class="synthesis-empty">'+esc(empty)+'</p>';
+    const notes=list(syn.notes);
+    return '<section class="synthesis-reading"><div class="synthesis-heading"><h4>对应样品的合成方法</h4><span>'+esc(synthesisStatus(syn.status))+'</span></div><p class="synthesis-route">'+esc(syn.route || '尚缺对应样品的合成路线，不移植其他论文配方。')+'</p><div class="synthesis-columns"><div><h5>原料与前驱体</h5>'+listHtml(syn.precursors,'原料未核实，不猜配方。')+'</div><div><h5>已核实的关键条件</h5>'+listHtml(syn.conditions,'当前没有核实到具体条件。')+'</div></div><div class="synthesis-locator"><span>相鉴定与样品对应</span><p>'+esc(syn.phase_check || '相鉴定的具体证据待补。')+'</p><span>合成方法定位</span><p>'+esc(syn.locator || '合成实验节 / SI 具体定位待补。')+'</p></div>'+((list(syn.missing).length||notes.length)?'<details class="synthesis-gaps"><summary>复现前还需核对 · '+list(syn.missing).length+' 项缺失条件</summary>'+(list(syn.missing).length?'<h5>缺失条件</h5>'+listHtml(syn.missing,''):'')+(notes.length?'<h5>阅读边界</h5>'+listHtml(notes,''):'')+'</details>':'')+'</section>';
+  }
+  function hashRecordId() {
+    try {const hash=decodeURIComponent(location.hash.slice(1));return hash.startsWith('band-')&&map.has(hash.slice(5))?hash.slice(5):null;}catch(_){return null;}
+  }
+  function openRecord(id,updateHash=true) {
+    if(!map.has(id))return;
+    openRecordId=id;
+    $('band-search').value='';$('band-role-filter').value='all';$('band-complete-filter').value='all';
+    renderCatalog();
+    const card=document.getElementById('band-'+id),detail=card&&card.querySelector('.record-details');
+    if(detail)detail.open=true;
+    if(updateHash&&publishedIds.has(id)){const url=new URL(location.href);url.hash='band-'+id;history.replaceState(null,'',url.pathname+url.search+url.hash);}
+    if(card&&typeof card.scrollIntoView==='function')card.scrollIntoView({behavior:'smooth',block:'start'});
+  }
 
   function options() {
     const html = records.map(record => '<option value="' + esc(record.id) + '">' + esc(label(record)) + ' · ' + esc(record.id) + (missing(record) ? ' · 缺带边' : '') + '</option>').join('');
@@ -50,7 +93,7 @@
   }
   function renderSelected() {
     $('selection-status').textContent = '主比较 2 个样品 · 共 ' + selected().length + ' 条叠图';
-    $('selected-records').innerHTML = selected().map((record,i) => '<div class="selected-record" style="--record-color:' + colors[i] + '"><span class="record-key"><i class="record-color"></i>' + (record.id === aId ? 'A / 主比较' : record.id === bId ? 'B / 主比较' : '叠图 / 不参与判断') + '</span><h4>' + esc(label(record)) + '</h4><p>' + esc(phase(record)) + '</p><p>' + esc(record.edge_label || (missing(record) ? '带边待核实' : '详见方法与来源')) + '</p>' + (overlays.includes(record.id) ? '<button class="remove-overlay" type="button" data-remove="' + esc(record.id) + '" aria-label="移除叠图 ' + esc(label(record)) + '">×</button>' : '') + '</div>').join('');
+    $('selected-records').innerHTML = selected().map((record,i) => '<div class="selected-record" style="--record-color:' + colors[i] + '"><span class="record-key"><i class="record-color"></i>' + (record.id === aId ? 'A / 主比较' : record.id === bId ? 'B / 主比较' : '叠图 / 不参与判断') + '</span><h4>' + esc(label(record)) + '</h4><p>' + esc(phase(record)) + '</p><p>' + esc(record.edge_label || (missing(record) ? '带边待核实' : '详见方法与来源')) + '</p><p class="selected-doi">'+esc(record.source&&record.source.doi?'DOI '+record.source.doi:'本组会话输入，无公开合成出处')+'</p><a class="selected-reading" href="#band-'+esc(record.id)+'" data-read-record="'+esc(record.id)+'">读能带与合成方法 →</a>' + (overlays.includes(record.id) ? '<button class="remove-overlay" type="button" data-remove="' + esc(record.id) + '" aria-label="移除叠图 ' + esc(label(record)) + '">×</button>' : '') + '</div>').join('');
   }
   function renderDiagram() {
     const rows = selected().map(record => ({record,n:normalized(record)}));
@@ -143,20 +186,21 @@
     } catch (_) { target.innerHTML='<p class="headroom-note">请填写有效、有限的反应电位数值。</p>'; }
   }
   function details(record) {
-    const source=record.source || {},url=safeUrl(source.url || (source.doi?'https://doi.org/'+source.doi:''));
+    const source=record.source || {};
     const pH=finite(record.ph)?String(record.ph):'待核实';
-    return '<details class="record-details"><summary>样品、方法与原始出处</summary><div class="record-detail-grid"><div><span>具体样品</span><p>'+esc(record.sample || '待核实')+'</p></div><div><span>测量 / 估计方法</span><p>'+esc(record.method || '待核实')+'</p></div><div><span>原始带边与参比</span><p>CB '+esc(signed(record.cb))+' / VB '+esc(signed(record.vb))+' · '+esc(scaleLabel(record))+'；pH '+esc(pH)+'</p></div><div><span>证据与充电模式</span><p>'+esc(record.edge_label || '见原文方法')+'；'+esc(record.charge_label || '是否直接光充电须回到原文器件验证')+'</p></div>'+((finite(record.work_function_eV)||finite(record.d_band_center_eV))?'<div class="detail-full"><span>其他电子结构量（不绘入 CB/VB 图）</span><p>功函数：'+esc(finite(record.work_function_eV)?num(record.work_function_eV,3)+' eV':'待核实')+'；d 带中心：'+esc(finite(record.d_band_center_eV)?num(record.d_band_center_eV,3)+' eV':'待核实')+'。两者不是带边，参比和意义须单独核对。</p></div>':'')+'<div class="detail-full"><span>原始出处</span><p>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(source.title || source.doi || '打开原始出处')+' ↗</a>':esc(source.title || '本组会话测量，尚无公开出处'))+(source.doi?'<br/>DOI '+esc(source.doi):'')+'<br/>'+esc(source.locator || '具体页图待核实')+'</p></div>'+(allNotes(record).length?'<div class="detail-full"><span>阅读边界与缺失项</span><ul>'+allNotes(record).map(note=>'<li>'+esc(note)+'</li>').join('')+'</ul></div>':'')+'</div></details>';
+    return '<details class="record-details"'+(openRecordId===record.id?' open':'')+'><summary>能带参考文献与合成方法</summary><div class="reference-citation"><span class="kicker">THE SOURCE / 本条能带的参考文献</span><h4>'+esc(source.title_zh || source.title || '本组会话输入，无公开合成出处')+'</h4><p class="full-reference">'+esc(citationText(record) || '本组会话输入，无公开文献引文。')+'</p>'+sourceLinks(record)+'<span class="citation-status" data-citation-status="'+esc(record.id)+'" role="status" aria-live="polite"></span></div><div class="record-detail-grid"><div><span>具体样品</span><p>'+esc(record.sample || '待核实')+'</p></div><div><span>测量 / 估计方法</span><p>'+esc(record.method || '待核实')+'</p></div><div><span>原始带边与参比</span><p>CB '+esc(signed(record.cb))+' / VB '+esc(signed(record.vb))+' · '+esc(scaleLabel(record))+'；pH '+esc(pH)+'</p></div><div><span>证据与充电模式</span><p>'+esc(record.edge_label || '见原文方法')+'；'+esc(record.charge_label || '是否直接光充电须回到原文器件验证')+'</p></div><div class="detail-full band-locator"><span>能带图 / 电子结构原文定位</span><p>'+esc(source.locator || '本组会话输入，原始标定记录由本组保留。')+'</p></div>'+((finite(record.work_function_eV)||finite(record.d_band_center_eV))?'<div class="detail-full"><span>其他电子结构量（不绘入 CB/VB 图）</span><p>功函数：'+esc(finite(record.work_function_eV)?num(record.work_function_eV,3)+' eV':'待核实')+'；d 带中心：'+esc(finite(record.d_band_center_eV)?num(record.d_band_center_eV,3)+' eV':'待核实')+'。两者不是带边，参比和意义须单独核对。</p></div>':'')+'</div>'+synthesisDetails(record)+(allNotes(record).length?'<details class="source-reading-notes"><summary>能带与器件阅读边界</summary><ul>'+allNotes(record).map(note=>'<li>'+esc(note)+'</li>').join('')+'</ul></details>':'')+'</details>';
   }
   function renderCatalog() {
     const q=$('band-search').value.trim().toLowerCase(),role=$('band-role-filter').value,complete=$('band-complete-filter').value,picked=new Set(selected().map(r=>r.id));
     const found=records.filter(record=>{
-      const text=[record.id,record.material,record.formula,record.phase,record.method,record.sample,record.source&&record.source.doi,record.source&&record.source.title,...allNotes(record)].join(' ').toLowerCase();
+      const source=record.source||{},syn=record.synthesis||{};
+      const text=[record.id,record.material,record.formula,record.phase,record.method,record.sample,source.doi,source.title,source.title_zh,source.reference,source.journal,...list(source.authors),syn.route,...list(syn.precursors),...list(syn.conditions),...allNotes(record)].join(' ').toLowerCase();
       return (!q||text.includes(q))&&(role==='all'||record.role===role)&&(complete==='all'||(complete==='complete'?!missing(record):missing(record)));
     });
     $('catalog-count').textContent=found.length+' / '+records.length+' 条样品';
     $('band-catalog-live').innerHTML=found.length?found.map(record=>{
       const isPicked=picked.has(record.id),source=record.source||{},url=safeUrl(source.url || (source.doi?'https://doi.org/'+source.doi:'')),n=normalized(record);
-      return '<article class="band-record-card" id="band-'+esc(record.id)+'"><div><div class="record-eyebrow"><span>'+esc(record.id)+'</span><span>'+esc(record.role==='cathode'?'钒基正极':record.role==='partner'?'异质结候选':'研究上下文')+'</span><span>'+esc(publishedIds.has(record.id)?'文献样品':'本组会话数据')+'</span></div><h3>'+esc(label(record))+'</h3><p class="record-phase">'+esc(phase(record))+'</p><div class="record-values"><span>Eg<b>'+esc(finite(record.gap_eV)?num(record.gap_eV)+' eV':'待核实')+'</b></span><span>CB<b>'+esc(signed(record.cb))+'</b></span><span>VB<b>'+esc(signed(record.vb))+'</b></span></div><p class="record-state">'+esc(scaleLabel(record))+' · '+esc(record.edge_label || (n.ok?'带边可转换，方法见详情':'带边不齐或标尺待核实'))+'</p></div><div class="record-actions"><button type="button" data-add="'+esc(record.id)+'"'+(isPicked?' disabled':'')+'>'+(isPicked?'已在比较':'＋ 加入叠图')+'</button>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">原始出处 ↗</a>':'')+'</div>'+details(record)+'</article>';
+      return '<article class="band-record-card" id="band-'+esc(record.id)+'"><div><div class="record-eyebrow"><span>'+esc(record.id)+'</span><span>'+esc(record.role==='cathode'?'钒基正极':record.role==='partner'?'异质结候选':'研究上下文')+'</span><span>'+esc(publishedIds.has(record.id)?'文献样品':'本组会话数据')+'</span></div><h3>'+esc(label(record))+'</h3><p class="record-phase">'+esc(phase(record))+'</p><div class="record-values"><span>Eg<b>'+esc(finite(record.gap_eV)?num(record.gap_eV)+' eV':'待核实')+'</b></span><span>CB<b>'+esc(signed(record.cb))+'</b></span><span>VB<b>'+esc(signed(record.vb))+'</b></span></div><p class="record-state">'+esc(scaleLabel(record))+' · '+esc(record.edge_label || (n.ok?'带边可转换，方法见详情':'带边不齐或标尺待核实'))+'</p><div class="record-source-brief"><p>'+esc(source.title_zh || source.title || '本组会话输入，无公开合成出处')+'</p><span>'+esc(sourceBrief(record))+'</span></div></div><div class="record-actions"><button type="button" data-add="'+esc(record.id)+'"'+(isPicked?' disabled':'')+'>'+(isPicked?'已在比较':'＋ 加入叠图')+'</button><button type="button" data-read-record="'+esc(record.id)+'">读合成方法</button>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(source.access_label || '原始出处')+' ↗</a>':'')+'</div>'+details(record)+'</article>';
     }).join(''):'<p class="catalog-empty">没有匹配样品。试试化学式、晶相或 DOI，也可以清除筛选。</p>';
   }
   function syncUrl() {
@@ -183,8 +227,23 @@
   }
   $('band-select-a').addEventListener('change',()=>changeMain('a'));
   $('band-select-b').addEventListener('change',()=>changeMain('b'));
-  $('selected-records').addEventListener('click',event=>{const button=event.target.closest('[data-remove]');if(button){overlays=overlays.filter(id=>id!==button.dataset.remove);render();}});
-  $('band-catalog-live').addEventListener('click',event=>{const button=event.target.closest('[data-add]');if(button)addOverlay(button.dataset.add);});
+  $('selected-records').addEventListener('click',event=>{
+    const read=event.target.closest('[data-read-record]');if(read){event.preventDefault();openRecord(read.dataset.readRecord);return;}
+    const button=event.target.closest('[data-remove]');if(button){overlays=overlays.filter(id=>id!==button.dataset.remove);render();}
+  });
+  $('band-catalog-live').addEventListener('click',async event=>{
+    const read=event.target.closest('[data-read-record]');if(read){event.preventDefault();openRecord(read.dataset.readRecord);return;}
+    const copy=event.target.closest('[data-copy-citation]');
+    if(copy){
+      const record=map.get(copy.dataset.copyCitation);if(!record)return;
+      const card=document.getElementById('band-'+record.id),status=card&&card.querySelector('[data-citation-status]');
+      try{await navigator.clipboard.writeText(citationText(record));if(status)status.textContent='已复制完整引文，可粘贴到阅读或合成记录。';}
+      catch(_){if(status)status.textContent='浏览器未允许复制，请选择上方完整引文手动复制。';}
+      return;
+    }
+    const button=event.target.closest('[data-add]');if(button)addOverlay(button.dataset.add);
+  });
+  window.addEventListener('hashchange',()=>{const id=hashRecordId();if(id)openRecord(id,false);});
   ['band-search','band-role-filter','band-complete-filter'].forEach(id=>$(id).addEventListener(id==='band-search'?'input':'change',renderCatalog));
   $('photon-wavelength').addEventListener('input',renderPhoton);
   ['redox-model','redox-cathode','redox-zinc'].forEach(id=>$(id).addEventListener('input',renderHeadroom));
@@ -195,9 +254,9 @@
   });
   $('export-bands-json').addEventListener('click',()=>download(JSON.stringify(exportSnapshot(),null,2),'application/json;charset=utf-8','photo-zinc-band-comparison.json'));
   $('export-bands-csv').addEventListener('click',()=>{
-    const headers=['selection','id','material','formula','phase','sample','gap_eV','gap_basis','cb_original','vb_original','scale','pH','cb_SHE_V','vb_SHE_V','edge_label','charge_label','work_function_eV','d_band_center_eV','method','doi','source_url','locator','notes'];
+    const headers=['selection','id','material','formula','phase','sample','gap_eV','gap_basis','cb_original','vb_original','scale','pH','cb_SHE_V','vb_SHE_V','edge_label','charge_label','work_function_eV','d_band_center_eV','method','doi','source_url','locator','reference','title_zh','synthesis_status','synthesis_route','synthesis_precursors','synthesis_conditions','synthesis_phase_check','synthesis_locator','synthesis_missing','synthesis_fulltext_url','synthesis_supplement_url','notes'];
     const quote=value=>{let text=String(value==null?'':value);if(typeof value!=='number'&&/^[\s]*[=+\-@]/.test(text))text="'"+text;return '"'+text.replace(/"/g,'""')+'"';};
-    const rows=selected().map(r=>{const n=normalized(r),s=r.source||{};return [r.id===aId?'A':r.id===bId?'B':'overlay',r.id,label(r),r.formula,r.phase,r.sample,r.gap_eV,r.gap_basis,r.cb,r.vb,r.scale,r.ph,n.ok?n.cb:null,n.ok?n.vb:null,r.edge_label,r.charge_label,r.work_function_eV,r.d_band_center_eV,r.method,s.doi,s.url,s.locator,allNotes(r).join('；')];});
+    const rows=selected().map(r=>{const n=normalized(r),s=r.source||{},syn=r.synthesis||{};return [r.id===aId?'A':r.id===bId?'B':'overlay',r.id,label(r),r.formula,r.phase,r.sample,r.gap_eV,r.gap_basis,r.cb,r.vb,r.scale,r.ph,n.ok?n.cb:null,n.ok?n.vb:null,r.edge_label,r.charge_label,r.work_function_eV,r.d_band_center_eV,r.method,s.doi,safeUrl(s.url),s.locator,citationText(r),s.title_zh,syn.status,syn.route,list(syn.precursors).join('；'),list(syn.conditions).join('；'),syn.phase_check,syn.locator,list(syn.missing).join('；'),safeUrl(syn.fulltext_url),safeUrl(syn.supplement_url),allNotes(r).join('；')];});
     download('\uFEFF'+[headers,...rows].map(row=>row.map(quote).join(',')).join('\r\n'),'text/csv;charset=utf-8','photo-zinc-band-comparison.csv');
   });
   $('custom-scale').addEventListener('change',()=>{
@@ -218,4 +277,5 @@
     } catch(error){$('custom-band-status').textContent=error.message || '请核对数值和参比。';}
   });
   options();$('bands-app').hidden=false;$('catalog-controls').hidden=false;$('custom-band-section').hidden=false;$('bands-load-message').hidden=true;$('bands-static-catalog').hidden=true;render();
+  const initialRecord=hashRecordId();if(initialRecord)openRecord(initialRecord,false);
 }());
