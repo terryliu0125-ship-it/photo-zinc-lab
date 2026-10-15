@@ -21,6 +21,10 @@ jobs:
           node-version: '22'
       - run: python -m unittest discover -s tests -v
       - run: python scripts/render_library.py --check
+      - run: python scripts/render_bands.py --check
       - run: node --check literature.js
       - run: node --check library-core.js
       - run: node --test tests/library-core.test.cjs
+      - run: node --check bands.js
+      - run: node --check band-core.js
+      - run: node --test tests/band-core.test.cjs
