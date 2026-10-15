@@ -205,3 +205,7 @@ section[id],article[id],li[id] { scroll-margin-top:105px; }
   .site-footer { flex-direction:column; gap:12px; }
 }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*:before,*:after { transition:none!important; animation:none!important; } }
+
+/* Five destinations remain readable in the existing mobile navigation. */
+@media(max-width:760px){.site-nav{gap:20px;width:100%;justify-content:space-between}.site-nav a{font-size:12px}}
+@media(max-width:390px){.site-nav{gap:10px}.site-nav a{font-size:11px}}

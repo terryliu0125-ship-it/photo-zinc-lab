@@ -6,7 +6,7 @@
 
 ## 文献资料
 
-截至 2026-10-15，文献库共 112 篇（94 篇研究、18 篇综述/观点），覆盖 2015—2026 年。本次新增 20 篇锌电正极基础文献：11 篇钒基专题、2 篇锰基、2 篇普鲁士蓝类、3 篇有机正极及 2 篇总览综述，归入“锌基相关文献”，可用“锌电正极基础”主题筛选；其中 15 篇研究、5 篇综述/观点。它们作为常规电化学背景阅读，不代表已实现光辅助。原有 6 篇水系钠电基础文献仍归入“其他金属离子电池”，可用“水系钠电”筛选。新增基础条目仅加入网站文献库，不改变每日光辅助锌电邮件检索范围。每篇均有中文标题、简介、阅读提示及 DOI。中文标题为本站译名，英文原题用于标准引文导出。
+截至 2026-10-15，文献库共 116 篇（97 篇研究、19 篇综述/观点），保留中文标题、简介、阅读提示和 DOI。锌基相关文献 69 篇，其他金属离子电池 47 篇。新增老师分享的 4 篇论文，标记“老师分享”；其中 3 篇研究、1 篇 Perspective。公众号仅保留用户提供的原始链接，内容尚未核对，与学术论文分开呈现。
 
 新增书目的 DOI、题目、作者、卷页及发表日期经 Crossref 核对，中文导读依据公开摘要与书目记录整理。锂/钠金属半电池、光热增强、转化型储能和光伏集成器件在导读中注明；跨体系综述可能涵盖金属空气或超级电容器，应按具体章节阅读。文献不是穷尽性检索，也不代表本站自有成果。
 
@@ -28,6 +28,16 @@
 更新文献只需修改 `literature.json`（`title_zh` 为中文标题，`summary` 为中文简介，`article_type` 使用 `research` 或 `review`，`battery_category` 使用 `zinc` 或 `other-metals`，`metal_system` 记录具体金属体系），然后运行 `python3 scripts/render_library.py`，同步首页统计、文献页 HTML、内嵌数据、年份与主题数量、BibTeX、RIS 及 `REFERENCES.md`。请核对新增 DOI 及期刊年份，保留器件类型与原始研究/综述的区别。
 
 修改 CSS/JavaScript 后，同时更新 HTML 中资源 URL 的 `v` 参数，避免 GitHub Pages 的浏览器缓存继续使用旧代码。
+
+## 检索、书架与对比
+
+- 电池体系、材料体系、阅读范围、研究方向与类型/年份可组合筛选。同一组多选采用 OR，不同组采用 AND；已选条件可单独移除，并通过 URL 恢复。
+- 搜索支持化学式 NFKC 规范化、中英文同义词及相关度排序。无结果时提供 Google Scholar/Crossref 的站外检索链接，不声称站内覆盖所有论文。
+- vanadium.html 提供从综述、结构水、预嵌入与质子到稳定性及光辅助的阅读路线。
+- 收藏、待读/在读/已读、个人笔记以 DOI 为键保存在当前浏览器。支持 JSON 导出与合并导入；清除浏览器站点数据会移除本地记录，请自行保存备份。
+- 可跨分页选择 2–4 篇论文对比，并导出带出处的 CSV 或复制公开对比链接。数值单元格列出对应条件和定位；空白表示本库尚未录入已核实数据，不代表原文未报告。不会对不同工况的容量自动排名。
+- library-core.js 负责搜索、筛选、URL 状态与阅读记录校验；literature.js 负责页面交互；research-tools.css 延续原编辑式视觉风格。
+- literature.json 中 material_groups、research_topics 为人工整理的检索标签；comparison_evidence 为逐字段的值、工况、来源与定位。自动新增条目使用已有标签回退，未核实的性能数据留空。
 
 ## 每日文献更新与邮件日报
 
@@ -61,6 +71,7 @@
 python3 -m unittest discover -s tests -v
 python3 scripts/render_library.py --check
 node --check literature.js
+node --test tests/library-core.test.cjs
 python3 scripts/update_literature.py refresh --dry-run
 ```
 

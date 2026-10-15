@@ -39,7 +39,11 @@
       "source": "https://api.crossref.org/works/10.1039%2Fd0ee01392g",
       "title_zh": "光充电锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": []
     },
     {
       "id": "L02",
@@ -82,7 +86,11 @@
       "source": "https://api.crossref.org/works/10.1002%2Faenm.202100115",
       "title_zh": "用于高倍率光充电锌离子电池的二氧化钒正极",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": []
     },
     {
       "id": "L03",
@@ -114,7 +122,13 @@
       "source": "https://api.crossref.org/works/10.1039%2Fd1ta07572a",
       "title_zh": "用于光充电锌离子电池的二氧化钒–氧化锌堆叠光正极",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L04",
@@ -147,7 +161,13 @@
       "source": "https://api.crossref.org/works/10.1021%2Facsnano.1c06372",
       "title_zh": "用于光充电锌离子电池的二硫化钼–氧化锌光正极",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "sulfide"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L05",
@@ -189,7 +209,13 @@
       "source": "https://api.crossref.org/works/10.1039%2Fd5ta00517e",
       "title_zh": "通过可控氧化制备 V₂O₅/VO₂ 空心纳米球光正极，实现光充电锌离子电池的超高容量增益",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L06",
@@ -237,7 +263,14 @@
       "source": "https://api.crossref.org/works/10.1021%2Fjacsau.6c00282",
       "title_zh": "TiO₂/MoS₂ 光充电锌离子电池中不同充电模式下的储能机制",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "sulfide"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "mechanism"
+      ]
     },
     {
       "id": "L07",
@@ -289,7 +322,15 @@
       "source": "https://api.crossref.org/works/10.1039%2Fd6ta03521c",
       "title_zh": "基于碳包覆水合钒氧化物的光电–光热协同增强光辅助锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "hydration",
+        "photothermal",
+        "mechanism"
+      ]
     },
     {
       "id": "L08",
@@ -332,7 +373,11 @@
       "source": "https://api.crossref.org/works/10.1002%2Fadvs.202402448",
       "title_zh": "光辅助可充电金属电池：原理、进展与展望",
       "article_type": "review",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": []
     },
     {
       "id": "L09",
@@ -364,7 +409,14 @@
       "source": "https://api.crossref.org/works/10.1016%2Fj.jechem.2024.12.058",
       "title_zh": "光充电锌离子电池的原理、进展与展望",
       "article_type": "review",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "photothermal",
+        "mechanism"
+      ]
     },
     {
       "id": "L10",
@@ -413,7 +465,11 @@
       "source": "https://api.crossref.org/works/10.1016%2Fj.jpowsour.2024.235854",
       "title_zh": "光充电锌离子电池的光电极：设计与进展",
       "article_type": "review",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": []
     },
     {
       "id": "L11",
@@ -451,7 +507,13 @@
       "source": "https://api.crossref.org/works/10.1016%2Fj.gee.2025.12.002",
       "title_zh": "从光辅助到光充电：以光驱动储能推动锌离子电池发展",
       "article_type": "review",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L12",
@@ -490,7 +552,11 @@
       "source": "https://api.crossref.org/works/10.1021%2Facs.nanolett.0c01958",
       "title_zh": "采用二维石墨相氮化碳的光充电锌离子电容器",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": []
     },
     {
       "id": "L13",
@@ -532,7 +598,11 @@
       "source": "https://api.crossref.org/works/10.1021%2Facsenergylett.0c01528",
       "title_zh": "采用 V₂O₅–活性炭电极的光充电锌离子电容器",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": []
     },
     {
       "title": "Voltage matching strategy to design efficient photo-rechargeable zinc-ion batteries",
@@ -599,7 +669,15 @@
       "publisher_source": "https://www.sciencedirect.com/science/article/pii/S1385894726099055",
       "reading_basis": "期刊公开摘要及研究文章标注",
       "verified_on": "2026-10-13",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "perovskite"
+      ],
+      "research_topics": [
+        "voltage",
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L15",
@@ -641,7 +719,11 @@
       "verified_on": "2026-10-13",
       "title_zh": "采用无铅钙钛矿光正极的高效光充电水系锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "perovskite"
+      ],
+      "research_topics": []
     },
     {
       "id": "L16",
@@ -700,7 +782,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "用于光充电锌离子电池的三维层级向日葵形 MoS₂/SnO₂ 光正极",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "sulfide"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "device"
+      ]
     },
     {
       "id": "L17",
@@ -750,7 +839,11 @@
       "verified_on": "2026-10-13",
       "title_zh": "用于高效光充电锌离子电池的碳超结构支撑半金属 V₂O₃ 纳米球",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": []
     },
     {
       "id": "L18",
@@ -801,7 +894,15 @@
       "verified_on": "2026-10-13",
       "title_zh": "通过调控光诱导质子转移实现高稳定性光辅助锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "dissolution",
+        "proton",
+        "mechanism"
+      ]
     },
     {
       "id": "L19",
@@ -849,7 +950,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "通过掺杂工程优化 MnO₂ 光正极，实现高容量、高稳定性的光辅助锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "manganese"
+      ],
+      "research_topics": [
+        "defect"
+      ]
     },
     {
       "id": "L20",
@@ -902,7 +1009,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "利用 K⁺ 嵌入水合钒氧化物光正极提升光辅助锌离子电池容量和循环稳定性",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "hydration",
+        "preintercalation"
+      ]
     },
     {
       "id": "L21",
@@ -953,7 +1067,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "采用高度有序、垂直取向 C@VO₂/ZnO 微棒阵列的光充电锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "device"
+      ]
     },
     {
       "id": "L22",
@@ -998,7 +1119,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "用于光充电锌离子电池的自支撑 BiOI@多壁碳纳米管光电极",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L23",
@@ -1042,7 +1169,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "用于光增强可充电锌离子电池的光敏管状 MoS₂/C 复合正极设计",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "sulfide"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L24",
@@ -1091,7 +1224,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "利用混合反射三维电极增强光捕获，实现高可用性的光充电锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L25",
@@ -1143,7 +1282,15 @@
       "verified_on": "2026-10-13",
       "title_zh": "多功能核壳 MnO₂@PANI 纳米复合材料：连接光辅助锌离子电池与自供能可穿戴应变传感器",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "manganese",
+        "organic"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "device"
+      ]
     },
     {
       "id": "L26",
@@ -1189,7 +1336,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "通过 II 型 Cu₂O@MOF 异质结正极促进光生载流子分离，实现光充电锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L27",
@@ -1244,7 +1397,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "用于高倍率光充电锌离子电池的 V₂O₅/CdS 异质结构",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L28",
@@ -1293,7 +1452,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "具有高充放电效率的光辅助化学自充电锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "sulfide"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "mechanism"
+      ]
     },
     {
       "id": "L29",
@@ -1355,7 +1521,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "用于提升光充电锌离子电池容量与循环寿命的混合价态钒氧化物光正极",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "proton",
+        "mechanism"
+      ]
     },
     {
       "id": "L30",
@@ -1401,7 +1574,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "用于高效光充电锌离子电池的氧化锡修饰共价有机框架光正极",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L31",
@@ -1456,7 +1635,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "采用双功能 α-MnO₂ 光电极的光充电水系锌离子电池原位研究",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "manganese"
+      ],
+      "research_topics": [
+        "dissolution",
+        "mechanism"
+      ]
     },
     {
       "id": "L32",
@@ -1504,7 +1690,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "光诱导质子–阳离子级联促进光辅助锌离子电池中的离子嵌入动力学",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "proton",
+        "mechanism"
+      ]
     },
     {
       "id": "L33",
@@ -1562,7 +1755,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "通过 MoS₂/聚吡咯异维光正极界面工程实现高效光充电锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "organic",
+        "sulfide"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L34",
@@ -1617,7 +1817,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "构筑共价桥连纳米层结构，实现高性能光辅助锌离子存储",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "manganese",
+        "organic"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L35",
@@ -1666,7 +1873,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "基于十二电子转移有机光正极的光自充电锌离子电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "proton",
+        "mechanism"
+      ]
     },
     {
       "id": "L36",
@@ -1726,7 +1940,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "面向低碳智能可穿戴设备的光供能一体化能量采集与存储纤维",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "sulfide"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "device"
+      ]
     },
     {
       "id": "L37",
@@ -1775,7 +1996,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "基于 Janus 联接钙钛矿/Te 光正极的光充电水系锌–碲电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "perovskite"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L38",
@@ -1826,7 +2053,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "光辅助充电水系锌–碘电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L39",
@@ -1883,7 +2117,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "采用钙钛矿光正极的光辅助可充电水系锌–碘电池",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "perovskite"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L40",
@@ -1932,7 +2172,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "用于光加速锌离子电容器的多孔碳包覆 CdS 修饰 ZnO 纳米棒光正极",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "sulfide"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L41",
@@ -1978,7 +2224,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "赋能未来：释放 MXene 基双功能光活性正极在光充电锌离子电容器中的潜力",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "photothermal"
+      ]
     },
     {
       "id": "L42",
@@ -2030,7 +2282,13 @@
       "title_zh": "面向太阳能直接转换与存储的新兴光集成可充电水系锌离子电池与电容器",
       "article_type": "review",
       "article_subtype": "观点文章",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L43",
@@ -2073,7 +2331,11 @@
       "verified_on": "2026-10-13",
       "title_zh": "先进光充电锂离子与锌离子电池：进展与展望",
       "article_type": "review",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": []
     },
     {
       "id": "L44",
@@ -2114,7 +2376,13 @@
       "verified_on": "2026-10-13",
       "title_zh": "高性能直接光充电水系锌基储能技术的设计",
       "article_type": "review",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L45",
@@ -2161,7 +2429,14 @@
       "verified_on": "2026-10-13",
       "title_zh": "改性 BiOI 光正极的光电化学效应实现 2.4 V 水系锌离子电池：突破水系电解液电化学窗口的限制",
       "article_type": "research",
-      "battery_category": "zinc"
+      "battery_category": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L46",
@@ -2235,7 +2510,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2017-04-10"
+      "online_date": "2017-04-10",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L47",
@@ -2282,7 +2564,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2017"
+      "online_date": "2017",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L48",
@@ -2328,7 +2616,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2018-02-09"
+      "online_date": "2018-02-09",
+      "material_groups": [
+        "perovskite"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L49",
@@ -2388,7 +2682,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2019-10-30"
+      "online_date": "2019-10-30",
+      "material_groups": [
+        "manganese"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L50",
@@ -2450,7 +2750,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2021-01-08"
+      "online_date": "2021-01-08",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L51",
@@ -2492,7 +2798,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2021-04-15"
+      "online_date": "2021-04-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L52",
@@ -2542,7 +2854,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2021-10-08"
+      "online_date": "2021-10-08",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "mechanism"
+      ]
     },
     {
       "id": "L53",
@@ -2590,7 +2909,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2021-11-16"
+      "online_date": "2021-11-16",
+      "material_groups": [
+        "sulfide"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "mechanism"
+      ]
     },
     {
       "id": "L54",
@@ -2634,7 +2960,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2022-01-11"
+      "online_date": "2022-01-11",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L55",
@@ -2692,7 +3024,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2022-09-09"
+      "online_date": "2022-09-09",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L56",
@@ -2732,7 +3070,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2023-04-27"
+      "online_date": "2023-04-27",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L57",
@@ -2783,7 +3128,15 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2023-05-17"
+      "online_date": "2023-05-17",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L58",
@@ -2829,7 +3182,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2023-08-08"
+      "online_date": "2023-08-08",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L59",
@@ -2884,7 +3243,14 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "mechanism"
+      ]
     },
     {
       "id": "L60",
@@ -2939,7 +3305,13 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "heterojunction"
+      ]
     },
     {
       "id": "L61",
@@ -2994,7 +3366,14 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "device"
+      ]
     },
     {
       "id": "L62",
@@ -3041,7 +3420,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2024"
+      "online_date": "2024",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "device"
+      ]
     },
     {
       "id": "L63",
@@ -3089,7 +3475,15 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2024-07-19"
+      "online_date": "2024-07-19",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "photothermal",
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L64",
@@ -3157,7 +3551,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2024-11-27"
+      "online_date": "2024-11-27",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "mechanism"
+      ]
     },
     {
       "id": "L65",
@@ -3209,7 +3610,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2025"
+      "online_date": "2025",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L66",
@@ -3261,7 +3668,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2025-06-12"
+      "online_date": "2025-06-12",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L67",
@@ -3308,7 +3722,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2025-02-07"
+      "online_date": "2025-02-07",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "photothermal",
+        "mechanism"
+      ]
     },
     {
       "id": "L68",
@@ -3360,7 +3781,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2025-07-28"
+      "online_date": "2025-07-28",
+      "material_groups": [
+        "perovskite"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L69",
@@ -3423,7 +3851,17 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2026-06-07"
+      "online_date": "2026-06-07",
+      "material_groups": [
+        "perovskite"
+      ],
+      "research_topics": [
+        "dissolution",
+        "defect",
+        "heterojunction",
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L70",
@@ -3473,7 +3911,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2026-03-30"
+      "online_date": "2026-03-30",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L71",
@@ -3519,7 +3964,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2020-09-09"
+      "online_date": "2020-09-09",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L72",
@@ -3567,7 +4019,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2022-06-20"
+      "online_date": "2022-06-20",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L73",
@@ -3621,7 +4080,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2025-07-29"
+      "online_date": "2025-07-29",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L74",
@@ -3663,7 +4129,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2021-06-16"
+      "online_date": "2021-06-16",
+      "material_groups": [
+        "perovskite"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L75",
@@ -3704,7 +4177,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2015-08-27"
+      "online_date": "2015-08-27",
+      "material_groups": [
+        "perovskite"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L76",
@@ -3769,7 +4248,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2025-01-15"
+      "online_date": "2025-01-15",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L77",
@@ -3823,7 +4308,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2026-07-06"
+      "online_date": "2026-07-06",
+      "material_groups": [
+        "sulfide"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "mechanism"
+      ]
     },
     {
       "id": "L78",
@@ -3882,7 +4374,13 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L79",
@@ -3934,7 +4432,13 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L80",
@@ -3990,7 +4494,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2024-10-08"
+      "online_date": "2024-10-08",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L81",
@@ -4045,7 +4555,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2019-06-12"
+      "online_date": "2019-06-12",
+      "material_groups": [
+        "perovskite"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L82",
@@ -4092,7 +4608,13 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "material_groups": [
+        "manganese"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L83",
@@ -4146,7 +4668,13 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2020-12-17"
+      "online_date": "2020-12-17",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "device"
+      ]
     },
     {
       "id": "L84",
@@ -4204,7 +4732,13 @@
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
       "online_date": "2017-07-03",
-      "evidence_note": "已读 Wiley 向 Crossref 登记的完整原始摘要；期刊落地页访问返回 403，未声称阅读全文。"
+      "evidence_note": "已读 Wiley 向 Crossref 登记的完整原始摘要；期刊落地页访问返回 403，未声称阅读全文。",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L85",
@@ -4253,7 +4787,14 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-13",
-      "verified_on": "2026-10-13"
+      "verified_on": "2026-10-13",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L86",
@@ -4297,7 +4838,14 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "online_date": "2023-08-18"
+      "online_date": "2023-08-18",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "device",
+        "mechanism"
+      ]
     },
     {
       "id": "L87",
@@ -4343,7 +4891,11 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-14",
-      "verified_on": "2026-10-14"
+      "verified_on": "2026-10-14",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": []
     },
     {
       "id": "L88",
@@ -4403,7 +4955,13 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-14",
-      "verified_on": "2026-10-14"
+      "verified_on": "2026-10-14",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L89",
@@ -4450,7 +5008,11 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-14",
-      "verified_on": "2026-10-14"
+      "verified_on": "2026-10-14",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": []
     },
     {
       "id": "L90",
@@ -4498,7 +5060,13 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-14",
-      "verified_on": "2026-10-14"
+      "verified_on": "2026-10-14",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L91",
@@ -4547,7 +5115,11 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-14",
-      "verified_on": "2026-10-14"
+      "verified_on": "2026-10-14",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": []
     },
     {
       "id": "L92",
@@ -4594,7 +5166,11 @@
       "reading_basis": "公开摘要与书目记录",
       "review_status": "curated",
       "added": "2026-10-14",
-      "verified_on": "2026-10-14"
+      "verified_on": "2026-10-14",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": []
     },
     {
       "id": "L93",
@@ -4639,7 +5215,14 @@
       "url": "https://doi.org/10.1038/nenergy.2016.119",
       "source": "https://api.crossref.org/works/10.1038%2Fnenergy.2016.119",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "hydration",
+        "mechanism"
+      ]
     },
     {
       "id": "L94",
@@ -4702,7 +5285,14 @@
       "source": "https://api.crossref.org/works/10.1002%2Fadma.201703725",
       "publisher_source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.201703725",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "hydration",
+        "mechanism"
+      ]
     },
     {
       "id": "L95",
@@ -4747,7 +5337,15 @@
       "source": "https://api.crossref.org/works/10.1002%2Fanie.201713291",
       "publisher_source": "https://onlinelibrary.wiley.com/doi/10.1002/anie.201713291",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "hydration",
+        "preintercalation",
+        "mechanism"
+      ]
     },
     {
       "id": "L96",
@@ -4808,7 +5406,13 @@
       "source": "https://api.crossref.org/works/10.1021%2Facs.chemmater.6b05092",
       "publisher_source": "https://pubs.acs.org/doi/10.1021/acs.chemmater.6b05092",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L97",
@@ -4855,7 +5459,15 @@
       "source": "https://api.crossref.org/works/10.1038%2Fs41467-018-04060-8",
       "publisher_source": "https://www.nature.com/articles/s41467-018-04060-8",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "hydration",
+        "proton",
+        "mechanism"
+      ]
     },
     {
       "id": "L98",
@@ -4910,7 +5522,14 @@
       "url": "https://doi.org/10.1039/c8ee01651h",
       "source": "https://api.crossref.org/works/10.1039%2Fc8ee01651h",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "preintercalation",
+        "mechanism"
+      ]
     },
     {
       "id": "L99",
@@ -4959,7 +5578,14 @@
       "source": "https://api.crossref.org/works/10.1002%2Faenm.201601920",
       "publisher_source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.201601920",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium",
+        "sulfide"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L100",
@@ -5018,7 +5644,13 @@
       "source": "https://api.crossref.org/works/10.1038%2Fs41467-024-55000-8",
       "publisher_source": "https://www.nature.com/articles/s41467-024-55000-8",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L101",
@@ -5087,7 +5719,14 @@
       "source": "https://api.crossref.org/works/10.1002%2Fadma.202310645",
       "publisher_source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202310645",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "dissolution",
+        "mechanism"
+      ]
     },
     {
       "id": "L102",
@@ -5137,7 +5776,16 @@
       "source": "https://api.crossref.org/works/10.1002%2Fsmm2.1231",
       "publisher_source": "https://onlinelibrary.wiley.com/doi/10.1002/smm2.1231",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "hydration",
+        "preintercalation",
+        "defect",
+        "mechanism"
+      ]
     },
     {
       "id": "L103",
@@ -5187,7 +5835,14 @@
       "source": "https://api.crossref.org/works/10.1002%2Fcey2.681",
       "publisher_source": "https://onlinelibrary.wiley.com/doi/10.1002/cey2.681",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "preintercalation",
+        "mechanism"
+      ]
     },
     {
       "id": "L104",
@@ -5247,7 +5902,14 @@
       "pages": "16039",
       "url": "https://doi.org/10.1038/nenergy.2016.39",
       "source": "https://api.crossref.org/works/10.1038%2Fnenergy.2016.39",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "manganese"
+      ],
+      "research_topics": [
+        "proton",
+        "mechanism"
+      ]
     },
     {
       "id": "L105",
@@ -5298,7 +5960,13 @@
       "source": "https://api.crossref.org/works/10.1038%2Fs41467-017-00467-x",
       "publisher_source": "https://www.nature.com/articles/s41467-017-00467-x",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "manganese"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L106",
@@ -5337,7 +6005,13 @@
       "source": "https://api.crossref.org/works/10.1002%2Fcssc.201403143",
       "publisher_source": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cssc.201403143",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "prussian-blue"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L107",
@@ -5380,7 +6054,16 @@
       "source": "https://api.crossref.org/works/10.1021%2Facselectrochem.6c00024",
       "publisher_source": "https://pubs.acs.org/doi/10.1021/acselectrochem.6c00024",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "prussian-blue"
+      ],
+      "research_topics": [
+        "hydration",
+        "dissolution",
+        "defect",
+        "mechanism"
+      ]
     },
     {
       "id": "L108",
@@ -5429,7 +6112,13 @@
       "source": "https://api.crossref.org/works/10.1021%2Facs.chemmater.8b01317",
       "publisher_source": "https://pubs.acs.org/doi/10.1021/acs.chemmater.8b01317",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "mechanism"
+      ]
     },
     {
       "id": "L109",
@@ -5476,7 +6165,14 @@
       "source": "https://api.crossref.org/works/10.1038%2Fs41467-021-24701-9",
       "publisher_source": "https://www.nature.com/articles/s41467-021-24701-9",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "proton",
+        "mechanism"
+      ]
     },
     {
       "id": "L110",
@@ -5531,7 +6227,14 @@
       "url": "https://doi.org/10.1039/d5sc00311c",
       "source": "https://api.crossref.org/works/10.1039%2Fd5sc00311c",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "organic"
+      ],
+      "research_topics": [
+        "proton",
+        "mechanism"
+      ]
     },
     {
       "id": "L111",
@@ -5577,7 +6280,14 @@
       "url": "https://doi.org/10.1016/j.jechem.2024.05.033",
       "source": "https://api.crossref.org/works/10.1016%2Fj.jechem.2024.05.033",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "defect",
+        "mechanism"
+      ]
     },
     {
       "id": "L112",
@@ -5622,7 +6332,245 @@
       "source": "https://api.crossref.org/works/10.1002%2Fece2.61",
       "publisher_source": "https://onlinelibrary.wiley.com/doi/10.1002/ece2.61",
       "reading_basis": "出版社公开摘要与 Crossref 书目记录；中文标题为本站译名",
-      "verified_on": "2026-10-15"
+      "verified_on": "2026-10-15",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "preintercalation",
+        "defect",
+        "mechanism"
+      ]
+    },
+    {
+      "id": "L113",
+      "title": "Pre‐Intercalated Cation Optimizing Proton Topochemistry for High‐Performance Aqueous Zinc‐Ion Batteries",
+      "doi": "10.1002/adma.75300",
+      "title_zh": "预嵌入阳离子优化质子拓扑化学，实现高性能水系锌离子电池",
+      "tags": [
+        "teacher",
+        "cathode-basics",
+        "vanadium",
+        "mechanism"
+      ],
+      "material": "K₀.₅V₆O₁₃（KVO）/ K⁺ 预嵌入",
+      "heading": "预嵌入怎样改变晶格水氢键网络与质子输运",
+      "summary": "研究 K⁺ 预嵌入 K₀.₅V₆O₁₃ 对钒氧骨架和受限晶格水氢键网络的双重作用，结合固体核磁、同位素对照与电化学表征分析质子输运。除低载量测试外，还给出高载量软包结果，适合把预嵌入设计与实际评价条件连接起来。",
+      "note": "重点对照 H₂O／D₂O 电解液与质子、Zn²⁺ 贡献的拆分。462.9 mAh g⁻¹（0.2 A g⁻¹）和 20000 次循环（20 A g⁻¹）属于不同工况；软包载量与小电池性能也应分开比较。",
+      "article_type": "research",
+      "kind": "研究论文",
+      "battery_category": "zinc",
+      "metal_system": "zinc",
+      "material_groups": [
+        "vanadium"
+      ],
+      "research_topics": [
+        "preintercalation",
+        "hydration",
+        "proton",
+        "mechanism"
+      ],
+      "authors": [
+        "Wenhao Liang",
+        "Yecheng Qiu",
+        "Manman Li",
+        "Fushan Geng",
+        "Bingwen Hu",
+        "Tao Chen",
+        "Wai‐Yeung Wong"
+      ],
+      "citationAuthors": [
+        "Liang, Wenhao",
+        "Qiu, Yecheng",
+        "Li, Manman",
+        "Geng, Fushan",
+        "Hu, Bingwen",
+        "Chen, Tao",
+        "Wong, Wai‐Yeung"
+      ],
+      "journal": "Advanced Materials",
+      "year": 2026,
+      "publication_date": "2026-10-12",
+      "volume": "",
+      "issue": "",
+      "pages": "e75300",
+      "url": "https://doi.org/10.1002/adma.75300",
+      "source": "https://api.crossref.org/works/10.1002%2Fadma.75300",
+      "publisher_source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.75300",
+      "reading_basis": "用户提供的论文正文、摘要与图注；Crossref 核对书目，未据补充信息推定缺失条件",
+      "verified_on": "2026-10-15",
+      "added_on": "2026-10-15"
+    },
+    {
+      "id": "L114",
+      "title": "Photobattery Architectures to Suppress Charge Recombination",
+      "doi": "10.1021/acs.nanolett.6c02373",
+      "title_zh": "抑制电荷复合的光电池架构设计",
+      "tags": [
+        "teacher",
+        "manganese",
+        "device",
+        "mechanism"
+      ],
+      "material": "染料敏化 TiO₂ / 固态 DSSC / 尖晶石锌锰氧化物",
+      "heading": "从混合、双功能薄膜到逐层堆叠，追踪光电压损失",
+      "summary": "比较随机混合、双功能薄膜和逐层堆叠光电池架构，研究界面组织与电荷输运对复合损失的影响。逐层结构将固态染料敏化单元与锌锰氧化物正极耦合，在 1 sun 下获得约 1 V 光电压，为光电极结构设计提供直接对照。",
+      "note": "光电压提升不等于已证明无偏压完成全电池充电。结合图 3 的电位测量构型、外加 1.2 V 条件和后续暗态放电，判断光辅助贡献；不要只凭 OCV 回升推断储能效率。",
+      "article_type": "research",
+      "kind": "研究论文",
+      "battery_category": "zinc",
+      "metal_system": "zinc",
+      "material_groups": [
+        "manganese"
+      ],
+      "research_topics": [
+        "heterojunction",
+        "device",
+        "mechanism",
+        "photothermal"
+      ],
+      "authors": [
+        "Kohei Shimokawa",
+        "Byung-Man Kim",
+        "Arvind Pujari",
+        "Hooman Abbasi",
+        "Tetsu Ichitsubo",
+        "Michael De Volder"
+      ],
+      "citationAuthors": [
+        "Shimokawa, Kohei",
+        "Kim, Byung-Man",
+        "Pujari, Arvind",
+        "Abbasi, Hooman",
+        "Ichitsubo, Tetsu",
+        "De Volder, Michael"
+      ],
+      "journal": "Nano Letters",
+      "year": 2026,
+      "publication_date": "2026-10-13",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "url": "https://doi.org/10.1021/acs.nanolett.6c02373",
+      "source": "https://api.crossref.org/works/10.1021%2Facs.nanolett.6c02373",
+      "publisher_source": "https://pubs.acs.org/nalefd/article/doi/10.1021/acs.nanolett.6c02373/5449469/Photobattery-Architectures-to-Suppress-Charge",
+      "reading_basis": "用户提供的论文正文、摘要与图注；Crossref 核对书目，未据补充信息推定缺失条件",
+      "verified_on": "2026-10-15",
+      "added_on": "2026-10-15"
+    },
+    {
+      "id": "L115",
+      "title": "Rational Performance Testing and Mechanistic Analysis Toward Practical Aqueous Zinc‐Ion Batteries",
+      "doi": "10.1002/smll.76243",
+      "title_zh": "面向实用水系锌离子电池的合理性能测试与机理分析",
+      "tags": [
+        "teacher",
+        "cathode-basics",
+        "review",
+        "mechanism"
+      ],
+      "material": "锌负极、电解液与正极的评价方法",
+      "heading": "把实验室高性能与实用工况的证据分开",
+      "summary": "观点文章围绕锌负极、电解液和正极的测试方式，评议不合理的实验条件与机理推断，并提出更接近实际运行条件的评价思路。适合在比较容量、循环寿命及添加剂效果前阅读，建立工况、对照和证据完整性的检查清单。",
+      "note": "本文是 Perspective，归入综述／观点。关注对称电池与全电池的区别、真实载量及锌用量、电解液条件和机理证据；不能用单项漂亮指标替代完整评价。",
+      "article_type": "review",
+      "article_subtype": "观点文章",
+      "kind": "综述",
+      "battery_category": "zinc",
+      "metal_system": "zinc",
+      "material_groups": [
+        "other"
+      ],
+      "research_topics": [
+        "mechanism"
+      ],
+      "authors": [
+        "Mengyao Shi",
+        "Tianjiang Sun",
+        "Zhanliang Tao"
+      ],
+      "citationAuthors": [
+        "Shi, Mengyao",
+        "Sun, Tianjiang",
+        "Tao, Zhanliang"
+      ],
+      "journal": "Small",
+      "year": 2026,
+      "publication_date": "2026-10-13",
+      "volume": "",
+      "issue": "",
+      "pages": "e76243",
+      "url": "https://doi.org/10.1002/smll.76243",
+      "source": "https://api.crossref.org/works/10.1002%2Fsmll.76243",
+      "publisher_source": "https://onlinelibrary.wiley.com/doi/10.1002/smll.76243",
+      "reading_basis": "用户提供的论文正文、摘要与图注；Crossref 核对书目，未据补充信息推定缺失条件",
+      "verified_on": "2026-10-15",
+      "added_on": "2026-10-15"
+    },
+    {
+      "id": "L116",
+      "title": "Universal Ligand-Field Engineering of Layered Vanadium-Based Cathodes for High-Voltage Aqueous Zinc Ion Batteries",
+      "doi": "10.1021/acsnano.6c15858",
+      "title_zh": "层状钒基正极的普适配位场工程：构筑高电压水系锌离子电池",
+      "tags": [
+        "teacher",
+        "cathode-basics",
+        "vanadium",
+        "mechanism"
+      ],
+      "material": "BMIM⁺ 预嵌入层状钒氧化物 / 配位场调控",
+      "heading": "层间有机离子如何通过局部配位环境改变工作电压",
+      "summary": "以咪唑鎓阳离子为层间调控单元，结合同步辐射谱学和理论计算，研究 BMIM⁺ 预嵌入对钒氧八面体局部配位场及电子态的影响。论文将工作电压提升与 V 3d 能级变化联系起来，并在其他层状钒氧化物中验证策略。",
+      "note": "区分开路电位、平均工作电位与电池能量密度；“普适”应按文中实际验证的材料范围理解。505 mAh g⁻¹（0.1 A g⁻¹）与 15000 次循环（8 A g⁻¹）并非同一测试条件。",
+      "article_type": "research",
+      "kind": "研究论文",
+      "battery_category": "zinc",
+      "metal_system": "zinc",
+      "material_groups": [
+        "vanadium",
+        "organic"
+      ],
+      "research_topics": [
+        "preintercalation",
+        "voltage",
+        "mechanism"
+      ],
+      "authors": [
+        "Keyi Chen",
+        "Quan Zong",
+        "Haoran Yuan",
+        "Qiaoling Kang",
+        "Qilong Zhang",
+        "Guoying Wei",
+        "Shuang Zhou",
+        "Chengbin Jin",
+        "Anqiang Pan",
+        "Guozhong Cao"
+      ],
+      "citationAuthors": [
+        "Chen, Keyi",
+        "Zong, Quan",
+        "Yuan, Haoran",
+        "Kang, Qiaoling",
+        "Zhang, Qilong",
+        "Wei, Guoying",
+        "Zhou, Shuang",
+        "Jin, Chengbin",
+        "Pan, Anqiang",
+        "Cao, Guozhong"
+      ],
+      "journal": "ACS Nano",
+      "year": 2026,
+      "publication_date": "2026-10-09",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "url": "https://doi.org/10.1021/acsnano.6c15858",
+      "source": "https://api.crossref.org/works/10.1021%2Facsnano.6c15858",
+      "publisher_source": "https://pubs.acs.org/ancac3/article/doi/10.1021/acsnano.6c15858/5448078/Universal-Ligand-Field-Engineering-of-Layered",
+      "reading_basis": "用户提供的论文正文、摘要与图注；Crossref 核对书目，未据补充信息推定缺失条件",
+      "verified_on": "2026-10-15",
+      "added_on": "2026-10-15"
     }
   ],
   "curated_checked_on": "2026-10-15",
@@ -5655,5 +6603,127 @@
     "previous_total": 92,
     "scope": "常规水系锌电池正极基础阅读，优先钒基；与光辅助研究分开标注",
     "website_only": true
+  },
+  "teacher_shared_expansion": {
+    "date": "2026-10-15",
+    "added_count": 4,
+    "source": "用户提供的老师分享论文",
+    "website_only": true
+  },
+  "shared_readings": [
+    {
+      "id": "wechat-20261015",
+      "title": "老师分享的公众号文章",
+      "url": "https://mp.weixin.qq.com/s/czu5BmE3LxwChaqcbSy_Ag",
+      "kind": "公众号补充阅读",
+      "verification": "仅保留用户提供的原始链接；页面内容尚未核对",
+      "added_on": "2026-10-15"
+    }
+  ],
+  "comparison_evidence": {
+    "L95": {
+      "capacity": {
+        "value": "340 mAh g⁻¹；0.2 C",
+        "source": "https://onlinelibrary.wiley.com/doi/10.1002/anie.201713291",
+        "locator": "公开摘要",
+        "context": "C 倍率定义需回到正文核对",
+        "checked_on": "2026-10-15"
+      },
+      "cycling": {
+        "value": "96% 保持率；3000 次；80 C",
+        "source": "https://onlinelibrary.wiley.com/doi/10.1002/anie.201713291",
+        "locator": "公开摘要",
+        "context": "与 0.2 C 容量测试分开记录",
+        "checked_on": "2026-10-15"
+      }
+    },
+    "L97": {
+      "capacity": {
+        "value": "380 mAh g⁻¹；0.05 A g⁻¹；首次循环",
+        "source": "https://www.nature.com/articles/s41467-018-04060-8",
+        "locator": "正文 Fig. 2a 与相邻段落",
+        "context": "按 NVO 质量；1 M ZnSO₄，未加入 Na₂SO₄ 的初始测试",
+        "checked_on": "2026-10-15"
+      },
+      "electrolyte": {
+        "value": "1 M ZnSO₄ + 1 M Na₂SO₄（长循环条件）",
+        "source": "https://www.nature.com/articles/s41467-018-04060-8",
+        "locator": "Fig. 3 图注",
+        "context": "不同于 Fig. 2a 初始容量条件",
+        "checked_on": "2026-10-15"
+      },
+      "cycling": {
+        "value": "82% 保持率；1000 次；4 A g⁻¹",
+        "source": "https://www.nature.com/articles/s41467-018-04060-8",
+        "locator": "Fig. 3c 与正文",
+        "context": "添加 Na₂SO₄ 的电解液",
+        "checked_on": "2026-10-15"
+      },
+      "source_notice": "出版社列有 2024 年作者更正，请结合页面更新版本阅读。"
+    },
+    "L109": {
+      "capacity": {
+        "value": "303 mAh g⁻¹；0.1 A g⁻¹",
+        "source": "https://www.nature.com/articles/s41467-021-24701-9",
+        "locator": "公开摘要",
+        "context": "TABQ 有机正极",
+        "checked_on": "2026-10-15"
+      },
+      "cycling": {
+        "value": "5 A g⁻¹ 下稳定循环 1000 次",
+        "source": "https://www.nature.com/articles/s41467-021-24701-9",
+        "locator": "公开摘要",
+        "context": "摘要未给出此处循环保持率，未推定该数值",
+        "checked_on": "2026-10-15"
+      }
+    },
+    "L113": {
+      "capacity": {
+        "value": "462.9 mAh g⁻¹；0.2 A g⁻¹",
+        "source": "https://doi.org/10.1002/adma.75300",
+        "locator": "PDF 第 1 页摘要",
+        "context": "KVO 正极，小电池性能",
+        "checked_on": "2026-10-15"
+      },
+      "cycling": {
+        "value": "82.3% 保持率；20000 次；20 A g⁻¹",
+        "source": "https://doi.org/10.1002/adma.75300",
+        "locator": "PDF 第 1 页摘要",
+        "context": "不要与 0.2 A g⁻¹ 容量合并成同一工况",
+        "checked_on": "2026-10-15"
+      },
+      "loading": {
+        "value": "19.2 mg cm⁻²（软包）；539.2 mAh；>300 次；0.5 A g⁻¹",
+        "source": "https://doi.org/10.1002/adma.75300",
+        "locator": "PDF 第 1 页摘要",
+        "context": "软包结果单列，不能作为前述小电池载量",
+        "checked_on": "2026-10-15"
+      }
+    },
+    "L114": {
+      "light": {
+        "value": "1 sun；逐层结构约 1 V 光电压",
+        "source": "https://doi.org/10.1021/acs.nanolett.6c02373",
+        "locator": "PDF 第 1 页摘要；Fig. 3",
+        "context": "光电压不是全电池暗态放电电压；图 3 中光辅助充电另有 1.2 V 外加偏压",
+        "checked_on": "2026-10-15"
+      }
+    },
+    "L116": {
+      "capacity": {
+        "value": "505 mAh g⁻¹；0.1 A g⁻¹",
+        "source": "https://doi.org/10.1021/acsnano.6c15858",
+        "locator": "PDF 第 1 页摘要",
+        "context": "BMIM⁺ 预嵌入正极",
+        "checked_on": "2026-10-15"
+      },
+      "cycling": {
+        "value": "94% 保持率；15000 次；8 A g⁻¹",
+        "source": "https://doi.org/10.1021/acsnano.6c15858",
+        "locator": "PDF 第 1 页摘要",
+        "context": "与低电流容量测试分开记录",
+        "checked_on": "2026-10-15"
+      }
+    }
   }
 }

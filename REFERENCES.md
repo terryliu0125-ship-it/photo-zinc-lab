@@ -1121,3 +1121,43 @@ Yihui Zou; Jin Sun; Yulong Chi; Xueyan Cheng; Dongjiang Yang. Recent advances an
 梳理锰基、钒基、镍／钴基及预嵌入化合物等正极，讨论结构调控、纳米工程、掺杂和导电复合对电化学表现的影响。可与总览综述交叉阅读，归纳不同材料共通的设计问题。
 
 阅读提示：各类正极的电位窗口和储能反应不同，跨材料比较需要统一电解液、载量与容量计算基准。本文作为正极基础综述收录。
+
+## L113 · 预嵌入阳离子优化质子拓扑化学，实现高性能水系锌离子电池
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Wenhao Liang; Yecheng Qiu; Manman Li; Fushan Geng; Bingwen Hu; Tao Chen; Wai‐Yeung Wong. Pre‐Intercalated Cation Optimizing Proton Topochemistry for High‐Performance Aqueous Zinc‐Ion Batteries. *Advanced Materials*, 2026. [DOI](https://doi.org/10.1002/adma.75300) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fadma.75300)
+
+研究 K⁺ 预嵌入 K₀.₅V₆O₁₃ 对钒氧骨架和受限晶格水氢键网络的双重作用，结合固体核磁、同位素对照与电化学表征分析质子输运。除低载量测试外，还给出高载量软包结果，适合把预嵌入设计与实际评价条件连接起来。
+
+阅读提示：重点对照 H₂O／D₂O 电解液与质子、Zn²⁺ 贡献的拆分。462.9 mAh g⁻¹（0.2 A g⁻¹）和 20000 次循环（20 A g⁻¹）属于不同工况；软包载量与小电池性能也应分开比较。
+
+## L114 · 抑制电荷复合的光电池架构设计
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Kohei Shimokawa; Byung-Man Kim; Arvind Pujari; Hooman Abbasi; Tetsu Ichitsubo; Michael De Volder. Photobattery Architectures to Suppress Charge Recombination. *Nano Letters*, 2026. [DOI](https://doi.org/10.1021/acs.nanolett.6c02373) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facs.nanolett.6c02373)
+
+比较随机混合、双功能薄膜和逐层堆叠光电池架构，研究界面组织与电荷输运对复合损失的影响。逐层结构将固态染料敏化单元与锌锰氧化物正极耦合，在 1 sun 下获得约 1 V 光电压，为光电极结构设计提供直接对照。
+
+阅读提示：光电压提升不等于已证明无偏压完成全电池充电。结合图 3 的电位测量构型、外加 1.2 V 条件和后续暗态放电，判断光辅助贡献；不要只凭 OCV 回升推断储能效率。
+
+## L115 · 面向实用水系锌离子电池的合理性能测试与机理分析
+
+电池分类：锌基相关文献 · 文献类型：综述/观点
+
+Mengyao Shi; Tianjiang Sun; Zhanliang Tao. Rational Performance Testing and Mechanistic Analysis Toward Practical Aqueous Zinc‐Ion Batteries. *Small*, 2026. [DOI](https://doi.org/10.1002/smll.76243) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fsmll.76243)
+
+观点文章围绕锌负极、电解液和正极的测试方式，评议不合理的实验条件与机理推断，并提出更接近实际运行条件的评价思路。适合在比较容量、循环寿命及添加剂效果前阅读，建立工况、对照和证据完整性的检查清单。
+
+阅读提示：本文是 Perspective，归入综述／观点。关注对称电池与全电池的区别、真实载量及锌用量、电解液条件和机理证据；不能用单项漂亮指标替代完整评价。
+
+## L116 · 层状钒基正极的普适配位场工程：构筑高电压水系锌离子电池
+
+电池分类：锌基相关文献 · 文献类型：研究论文
+
+Keyi Chen; Quan Zong; Haoran Yuan; Qiaoling Kang; Qilong Zhang; Guoying Wei; Shuang Zhou; Chengbin Jin; Anqiang Pan; Guozhong Cao. Universal Ligand-Field Engineering of Layered Vanadium-Based Cathodes for High-Voltage Aqueous Zinc Ion Batteries. *ACS Nano*, 2026. [DOI](https://doi.org/10.1021/acsnano.6c15858) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsnano.6c15858)
+
+以咪唑鎓阳离子为层间调控单元，结合同步辐射谱学和理论计算，研究 BMIM⁺ 预嵌入对钒氧八面体局部配位场及电子态的影响。论文将工作电压提升与 V 3d 能级变化联系起来，并在其他层状钒氧化物中验证策略。
+
+阅读提示：区分开路电位、平均工作电位与电池能量密度；“普适”应按文中实际验证的材料范围理解。505 mAh g⁻¹（0.1 A g⁻¹）与 15000 次循环（8 A g⁻¹）并非同一测试条件。
