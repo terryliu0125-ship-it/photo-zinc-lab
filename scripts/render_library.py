@@ -23,6 +23,32 @@ TOPICS = (
 SYSTEMS = (("all", "全部体系"), ("zinc", "锌基相关文献"),
            ("other-metals", "其他金属离子电池"))
 
+FACETS = (
+    ("scopes", "阅读范围", (("photo", "光辅助 / 光充电"), ("cathode-basics", "锌电正极基础"), ("aqueous-sodium", "水系钠电基础"), ("teacher", "老师分享"))),
+    ("materials", "材料体系", (("vanadium", "钒基"), ("manganese", "锰基"), ("prussian-blue", "普鲁士蓝类"), ("organic", "有机材料"), ("perovskite", "钙钛矿"), ("sulfide", "硫化物"), ("other", "其他材料"))),
+    ("directions", "研究方向", (("hydration", "结构水"), ("preintercalation", "离子预嵌入"), ("dissolution", "溶解与稳定性"), ("proton", "质子 / 多载流子"), ("heterojunction", "异质结与界面"), ("defect", "掺杂与缺陷"), ("photothermal", "光热与光电"), ("device", "器件与集成"), ("mechanism", "机理与评价"), ("voltage", "电压与配位场"))),
+)
+
+
+def facet_keys(paper: dict, facet: str) -> list[str]:
+    tags = paper.get("tags", [])
+    if facet == "scopes":
+        base = "cathode-basics" if "cathode-basics" in tags else "aqueous-sodium" if "aqueous-sodium" in tags else "photo"
+        return [base] + (["teacher"] if "teacher" in tags else [])
+    if facet == "materials":
+        if isinstance(paper.get("material_groups"), list):
+            return paper["material_groups"]
+        found = [key for key in ("vanadium", "manganese", "prussian-blue") if key in tags]
+        text = (paper.get("material", "") + " " + paper.get("title", "")).casefold()
+        if "perovskite" in text or "钙钛矿" in text:
+            found.append("perovskite")
+        elif "organic" in tags:
+            found.append("organic")
+        if re.search(r"sulfide|硫化|mos[₂2]|vs[₂2]|sns[₂2]", text):
+            found.append("sulfide")
+        return found or ["other"]
+    return paper.get("research_topics", [key for key in ("heterojunction", "device", "mechanism") if key in tags])
+
 
 def esc(value: object) -> str:
     return html.escape(str(value), quote=True)
@@ -80,7 +106,7 @@ def ris_entry(paper: dict) -> str:
     return "\n".join(lines)
 
 
-def card(p: dict) -> str:
+def card(p: dict, performance: dict | None = None) -> str:
     authors = "; ".join(p["authors"][:3]) + ("; et al." if len(p["authors"]) > 3 else "")
     journal = " · ".join(str(value) for value in (p["journal"], p.get("publication_date") or p["year"]) if value)
     if p.get("volume") or p.get("pages"):
@@ -100,6 +126,11 @@ def card(p: dict) -> str:
                    if "aqueous-sodium" in p["tags"] else "")
     foundation_flag = ('<span class="paper-kind paper-system">正极基础</span>'
                        if "cathode-basics" in p["tags"] else "")
+    teacher_flag = '<span class="paper-kind paper-system">老师分享</span>' if "teacher" in p["tags"] else ""
+    performance_flag = '<span class="paper-evidence">已录入对比条件</span>' if performance else ""
+    topic_labels = dict(FACETS[2][2])
+    topic_text = " / ".join(topic_labels[k] for k in p.get("research_topics", []) if k in topic_labels)
+    topic_line = f'<p class="paper-topics">研究线索：{esc(topic_text)}</p>' if topic_text else ""
     chinese_title = p.get("title_zh") or ""
     primary_title = chinese_title or p["title"]
     original_title = (f'<p class="paper-title-original" lang="en">{esc(p["title"])}</p>'
@@ -109,12 +140,13 @@ def card(p: dict) -> str:
     return f'''<li class="paper" id="paper-{esc(p['id'])}" data-id="{esc(p['id'])}">
  <div class="paper-index"><span>{esc(p['id'])}</span><b>{esc(p['year'])}</b></div>
  <div class="paper-body">
-  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{system_flag}{sodium_flag}{foundation_flag}{related_flag}{flag}<span class="paper-material">{esc(p['material'])}</span></div>
+  <div class="paper-flags"><span class="paper-kind paper-type-{category}">{category_label}</span>{system_flag}{sodium_flag}{foundation_flag}{teacher_flag}{related_flag}{flag}{performance_flag}<span class="paper-material">{esc(p['material'])}</span></div>
   <h3><a href="{esc(p['url'])}" target="_blank" rel="noopener noreferrer">{esc(primary_title)}</a></h3>
   {original_title}
   <p class="paper-journal">{esc(journal)}</p>
   <p class="paper-authors">{esc(authors)}</p>
   <p class="paper-summary"><strong>中文简介</strong>{esc(p['summary'])}</p>
+  {topic_line}
   <details><summary>阅读提示与书目信息</summary>
    <p>阅读切入点：{esc(p['heading'])}</p>
    <p>{esc(p['note'])}</p>{basis}{abstract}
@@ -127,6 +159,12 @@ def card(p: dict) -> str:
  <div class="paper-actions">
   <a class="doi-link" href="{esc(p['url'])}" target="_blank" rel="noopener noreferrer" aria-label="阅读 {esc(p['title'])} 原文">原文入口 <span aria-hidden="true">↗</span></a>
   <button class="copy-citation" type="button" data-copy="{esc(p['id'])}" aria-label="复制 {esc(p['id'])} 引文">复制引文</button>
+  <button class="reader-button" type="button" data-favorite="{esc(p['id'])}" aria-label="收藏 {esc(p['id'])}" aria-pressed="false" data-interactive hidden>☆ 收藏</button>
+  <button class="reader-button" type="button" data-compare="{esc(p['id'])}" aria-label="对比 {esc(p['id'])}" aria-pressed="false" data-interactive hidden>＋ 加入对比</button>
+ </div>
+ <div class="paper-reader" data-interactive hidden>
+  <label>阅读状态<select data-reading-status="{esc(p['id'])}" aria-label="{esc(p['id'])} 阅读状态"><option value="">未标记</option><option value="todo">待读</option><option value="reading">在读</option><option value="read">已读</option></select></label>
+  <details><summary>我的阅读笔记</summary><textarea data-note="{esc(p['id'])}" aria-label="{esc(p['id'])} 阅读笔记" maxlength="2000" placeholder="记下想解决的问题、实验思路或待核对的条件…"></textarea><small>仅保存在当前浏览器；离开输入框时保存。</small></details>
  </div>
 </li>'''
 
@@ -165,7 +203,7 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
             total = sum(p.get("battery_category", "zinc") == key for p in papers)
             home = update_count(home, f'data-system-count="{key}"', total, f"首页{label}")
     ordered = sorted(papers, key=lambda p: (p.get("publication_date") or f"{p['year']}-01-01", p["id"]), reverse=True)
-    page = replace_content(page, "ol", "paper-list", "\n" + "\n".join(card(p) for p in ordered) + "\n")
+    page = replace_content(page, "ol", "paper-list", "\n" + "\n".join(card(p, library.get("comparison_evidence", {}).get(p["id"])) for p in ordered) + "\n")
     options = '<option value="all">全部年份</option>\n' + "\n".join(
         f'<option value="{year}">{year}</option>' for year in sorted({p["year"] for p in papers}, reverse=True)
     )
@@ -197,14 +235,22 @@ def generated_files(root: Path, library: dict) -> dict[str, str]:
             raise ValueError("无法插入电池体系筛选")
     else:
         page = replace_content(page, "div", "library-systems", "\n" + systems + "\n")
-    chips = "\n".join(
-        f'<button type="button" class="filter-chip" data-filter="{key}" aria-pressed="{str(key == "all").lower()}">{label}<span>{len(papers) if key == "all" else sum(key in p["tags"] for p in papers)}</span></button>'
-        for key, label in TOPICS
-    )
-    page = replace_content(page, "div", "library-filters", "\n" + chips + "\n")
+    facet_markup = []
+    for facet, label, options in FACETS:
+        buttons = "\n".join(
+            f'<button type="button" class="filter-chip" data-facet="{facet}" data-value="{key}" aria-pressed="false">{esc(name)}<span>{sum(key in facet_keys(p, facet) for p in papers)}</span></button>'
+            for key, name in options
+        )
+        fieldset = f'<fieldset class="facet-group"><legend>{label}</legend>{buttons}</fieldset>'
+        if facet == "directions":
+            fieldset = f'<details class="more-directions" id="more-directions"><summary>按研究方向进一步筛选</summary>{fieldset}</details>'
+        facet_markup.append(fieldset)
+    page = replace_content(page, "div", "library-filters", "\n" + "\n".join(facet_markup) + "\n")
     page = replace_content(page, "p", "paper-result-count", f"显示 {len(papers)} / {len(papers)} 篇文献")
     payload = json.dumps(papers, ensure_ascii=False, separators=(",", ":")).replace("<", r"\u003c").replace("&", r"\u0026")
     page = replace_content(page, "script", "literature-data", payload)
+    comparison = json.dumps(library.get("comparison_evidence", {}), ensure_ascii=False, separators=(",", ":")).replace("<", r"\u003c").replace("&", r"\u0026")
+    page = replace_content(page, "script", "comparison-data", comparison)
     checked = library.get("last_checked_at")
     if checked:
         stamp = datetime.fromisoformat(checked).astimezone(ZoneInfo("Asia/Shanghai"))
