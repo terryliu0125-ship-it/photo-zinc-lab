@@ -40,6 +40,88 @@ test('Ag/AgCl and SCE require an explicit condition-specific reference offset', 
   close(C.toSHE(0, 'AgAgCl', { reference_offset_V: 0 }), 0);
 });
 
+test('Zn conversion blocks an unknown reference instead of silently assuming standard zinc', () => {
+  for (const reference_offset_V of [undefined, null, '', ' ']) {
+    assert.throws(() => C.toSHE(1, 'Zn', { reference_offset_V }), /Zn参比/);
+    assert.throws(() => C.fromSHE(0.24, 'Zn', { reference_offset_V }), /Zn参比/);
+    assert.equal(sample({ cb: 0.1, vb: 2, scale: 'Zn', reference_offset_V }).ok, false);
+  }
+  assert.throws(() => C.toSHE(1, 'Zn', { zinc_reference_mode: 'standard' }), /显式选择/);
+  assert.throws(() => C.validateCustom({ cb: 0, vb: 2, scale: 'Zn' }), /Zn参比/);
+});
+
+test('explicit standard Zn approximation has the correct sign and a strong provenance warning', () => {
+  const options = { zinc_reference_mode: 'standard_approximation' };
+  close(C.toSHE(1, 'Zn', options), 0.24);
+  close(C.fromSHE(0.24, 'Zn', options), 1);
+  close(C.toSHE(0, 'Zn', options), -0.76);
+  close(C.fromSHE(-0.76, 'Zn', options), 0);
+  const n = sample({ cb: 0, vb: 2, scale: 'Zn', ...options });
+  assert.equal(n.ok, true); close(n.cb, -0.76); close(n.vb, 1.24);
+  assert(n.warnings.some(message => message.includes('标准态近似') && message.includes('非实际Zn电极')));
+  const custom = C.validateCustom({ cb: '0', vb: '2', scale: 'Zn', zinc_reference_mode: ' standard_approximation ' });
+  assert.equal(custom.zinc_reference_mode, 'standard_approximation'); assert.equal(C.normalize(custom).ok, true);
+});
+
+test('measured Zn offsets take priority while conflicting standard modes remain visible', () => {
+  const options = { reference_offset_V: -0.81, zinc_reference_mode: 'standard_approximation' };
+  close(C.toSHE(1, 'Zn', options), 0.19);
+  close(C.fromSHE(0.19, 'Zn', options), 1);
+  const n = sample({ cb: 0, vb: 2, scale: 'Zn', ...options });
+  assert.equal(n.ok, true); close(n.cb, -0.81); close(n.vb, 1.19);
+  assert(n.warnings.some(message => message.includes('模式冲突') && message.includes('优先')));
+  close(C.toSHE(1, 'Zn', { reference_offset_V: 0 }), 1);
+  for (const reference_offset_V of [false, NaN, Infinity, 'not measured']) {
+    assert.throws(() => C.toSHE(1, 'Zn', { ...options, reference_offset_V }));
+    assert.throws(() => C.fromSHE(1, 'Zn', { ...options, reference_offset_V }));
+    assert.equal(sample({ scale: 'Zn', ...options, reference_offset_V }).ok, false);
+  }
+});
+
+test('inverse conversion round-trips every supported scale using the same conditions', () => {
+  const cases = [
+    ['vacuum', {}], ['SHE', {}], ['NHE', {}], ['RHE', { ph: 7 }],
+    ['AgAgCl', { reference_offset_V: 0.197 }], ['SCE', { reference_offset_V: 0.241 }],
+    ['Zn', { reference_offset_V: -0.82 }], ['Zn', { zinc_reference_mode: 'standard_approximation' }]
+  ];
+  for (const [scale, options] of cases) {
+    for (const potential of [-1.5, -0.76, 0, 0.24, 2]) {
+      close(C.toSHE(C.fromSHE(potential, scale, options), scale, options), potential);
+      close(C.fromSHE(C.toSHE(potential, scale, options), scale, options), potential);
+    }
+  }
+  close(C.fromSHE(0, 'vacuum'), -4.44);
+  close(C.fromSHE(-0.44, 'vacuum'), -4);
+  close(C.fromSHE(0.5858845522065321, 'RHE', { ph: 7 }), 1);
+});
+
+test('inverse conversion strictly blocks empty potentials, pH and reference offsets', () => {
+  for (const bad of ['', ' ', null, undefined, true, false, [], {}, '0x10', 'Infinity', Infinity, NaN, '1 V']) {
+    assert.throws(() => C.fromSHE(bad, 'SHE'));
+    assert.throws(() => C.fromSHE(1, 'RHE', { ph: bad }));
+    assert.throws(() => C.toSHE(1, 'RHE', { ph: bad }));
+    for (const scale of ['AgAgCl', 'SCE', 'Zn']) {
+      assert.throws(() => C.fromSHE(1, scale, { reference_offset_V: bad }));
+      assert.throws(() => C.toSHE(1, scale, { reference_offset_V: bad }));
+    }
+  }
+  assert.throws(() => C.fromSHE(1, 'unknown'));
+  assert.throws(() => C.fromSHE(1, 'SHE', null));
+  assert.throws(() => C.fromSHE(1, 'SHE', []));
+});
+
+test('cathode reaction potentials and band edges use the same Zn reference without double subtraction', () => {
+  const options = { reference_offset_V: -0.8 };
+  const e = C.toSHE(-0.2, 'Zn', options), h = C.toSHE(2, 'Zn', options);
+  const cathode = C.toSHE(1, 'Zn', options), zinc = C.toSHE(0, 'Zn', options);
+  close(e, -1); close(h, 1.2); close(cathode, 0.2); close(zinc, -0.8);
+  const margins = C.headroom(e, h, cathode, zinc);
+  close(margins.zinc, 0.2); close(margins.cathode, 1);
+  close(C.fromSHE(cathode, 'Zn', options), 1);
+  const incomplete = C.normalize({ scale: 'Zn', plateau_V: 1, reference_offset_V: -0.8 });
+  assert.equal(incomplete.ok, false); assert.equal(incomplete.cb, null); assert.equal(incomplete.vb, null);
+});
+
 test('zero is numeric while blanks, booleans, arrays, hex, infinity and NaN are rejected', () => {
   close(C.toSHE('0', 'SHE'), 0);
   close(C.toSHE('−0.8', 'SHE'), -0.8);
