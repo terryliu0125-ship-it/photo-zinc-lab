@@ -4,7 +4,7 @@
   const $ = id => document.getElementById(id);
   const esc = value => String(value == null ? '' : value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const finite = value => typeof value === 'number' && Number.isFinite(value);
-  const num = (value, digits = 2) => finite(value) ? value.toFixed(digits).replace(/\.00$/, '').replace(/(\.\d)0$/, '$1') : '待核实';
+  const num = (value, digits = 3) => finite(value) ? value.toFixed(digits).replace(/(\.\d*?[1-9])0+$|\.0+$/, '$1') : '待核实';
   const signed = value => finite(value) ? (value > 0 ? '+' : '') + num(value) : '待核实';
   const colors = ['#2d6a50','#ae8b3c','#5a7d98','#9b6e85'];
   const safeUrl = value => { if(typeof value!=='string'||!value.trim())return '';try { const u = new URL(value, location.href); return ['https:', 'http:'].includes(u.protocol) ? u.href : ''; } catch (_) { return ''; } };
@@ -20,22 +20,37 @@
   }
   const publishedIds = new Set(records.map(record => record.id));
   const map = new Map(records.map(record => [record.id, record]));
-  const defaults = ['V-VO2B-2021-rGO','P-ZNO-ACS2021'];
+  const defaults = ['V-VO2B-2021-ZnO','P-ZNO-D1TA2021'];
   const urlIds = new URL(location.href).searchParams.get('ids');
   const requested = urlIds ? Array.from(new Set(urlIds.split(',').filter(id => map.has(id)))).slice(0,4) : [];
   let aId = requested[0] || (map.has(defaults[0]) ? defaults[0] : records[0].id);
   let bId = requested[1] || (map.has(defaults[1]) ? defaults[1] : (records.find(record => record.id !== aId) || records[0]).id);
   let overlays = requested.slice(2).filter(id => id !== aId && id !== bId);
   let customIndex = 0;
-  const normalized = record => core.normalize(record);
+  const contextOnly = record => record && record.band_data_status === 'context_only';
+  const normalized = record => contextOnly(record) ? {ok:false,cb:null,vb:null,warnings:[],reason:'电子参数参考记录；功函数或d带中心不作为半导体CB/VB。'} : core.normalize(record);
   const getA = () => map.get(aId);
   const getB = () => map.get(bId);
   const selected = () => Array.from(new Set([aId,bId,...overlays])).map(id => map.get(id)).filter(Boolean);
-  const missing = record => !normalized(record).ok;
+  const missing = record => !contextOnly(record) && !normalized(record).ok;
   const label = record => record.material || record.formula || record.id;
   const phase = record => record.phase || '晶相待核实';
-  const scaleLabel = record => ({vacuum:'eV vs vacuum',SHE:'V vs SHE',NHE:'V vs NHE',RHE:'V vs RHE',AgAgCl:'V vs Ag/AgCl',SCE:'V vs SCE'}[record.scale] || record.scale || '标尺待核实');
-  const isEstimate = record => /图|示意|估|近似|待核|未核/.test(String(record.edge_label || '') + String(record.method || ''));
+  const scaleLabel = record => ({vacuum:'真空电子能量 / eV（带符号）',SHE:'V vs SHE',NHE:'V vs NHE',RHE:'V vs RHE',AgAgCl:'V vs Ag/AgCl',SCE:'V vs SCE',Zn:'V vs Zn'}[record.scale] || record.scale || '标尺待核实');
+  const standardZn = {zinc_reference_mode:'standard_approximation'};
+  const convertedValues = record => {
+    const n=normalized(record);
+    return {n,vacuum_cb:n.ok?core.fromSHE(n.cb,'vacuum'):null,vacuum_vb:n.ok?core.fromSHE(n.vb,'vacuum'):null,zn_cb:n.ok?core.fromSHE(n.cb,'Zn',standardZn):null,zn_vb:n.ok?core.fromSHE(n.vb,'Zn',standardZn):null};
+  };
+  function conversionBasis(record) {
+    const n=normalized(record);
+    return n.ok?'原始 '+scaleLabel(record)+' → V vs SHE；真空采用4.44 V约定；vs Zn°采用−0.76 V标准态近似，非实际Zn电极；'+n.warnings.join('；'):n.reason;
+  }
+  function conversionTable(record) {
+    if(contextOnly(record))return '<p class="conversion-note">电子参数参考：功函数、d带中心不换算成CB/VB，也不计入半导体带边完整率。</p>';
+    const v=convertedValues(record),cell=value=>esc(finite(value)?signed(value):'待核实');
+    return '<div class="band-conversion-table"><table><caption>同一条样品的统一换算 · 保留原始参比条件</caption><thead><tr><th scope="col">标尺</th><th scope="col">CB</th><th scope="col">VB</th></tr></thead><tbody><tr><th scope="row">V vs SHE（主显示）</th><td>'+cell(v.n.cb)+'</td><td>'+cell(v.n.vb)+'</td></tr><tr><th scope="row">真空电子能量 / eV</th><td>'+cell(v.vacuum_cb)+'</td><td>'+cell(v.vacuum_vb)+'</td></tr><tr><th scope="row">V vs Zn°（标准态近似）</th><td>'+cell(v.zn_cb)+'</td><td>'+cell(v.zn_vb)+'</td></tr></tbody></table><p class="conversion-note">真空采用4.44 V约定；Zn°按−0.76 V vs SHE估算，非实际Zn电极。坐标统一不消除pH、电解液、晶相与荷电状态差异。'+(!v.n.ok?' '+esc(v.n.reason):'')+'</p></div>';
+  }
+  const isEstimate = record => record.derived === true || record.estimated === true || /图|示意|估|近似|推导|待核|未核/.test(String(record.edge_label || '') + String(record.method || ''));
   const allNotes = record => Array.isArray(record.notes) ? record.notes : record.notes ? [record.notes] : [];
   const diagramCaption = $('band-chart-caption').textContent;
   const list = value => Array.isArray(value) ? value : [];
@@ -57,7 +72,7 @@
     if(doi)links.push('<a href="'+esc(doi)+'" target="_blank" rel="noopener noreferrer">DOI 入口 ↗</a>');
     if(version)links.push('<a href="'+esc(version)+'" target="_blank" rel="noopener noreferrer">'+esc(source.access_label || '原文核验版本')+' ↗</a>');
     if(full&&full!==version&&full!==doi)links.push('<a href="'+esc(full)+'" target="_blank" rel="noopener noreferrer">合成原文入口 ↗</a>');
-    if(supp)links.push('<a href="'+esc(supp)+'" target="_blank" rel="noopener noreferrer">SI / 补充材料 · 内容待核 ↗</a>');
+    if(supp)links.push('<a href="'+esc(supp)+'" target="_blank" rel="noopener noreferrer">SI / 补充材料 · '+(syn.supplement_checked===true?'已核读':'内容待核')+' ↗</a>');
     else if(publishedIds.has(record.id))links.push('<span>SI 实际链接待补</span>');
     return links.length?'<div class="reference-actions">'+links.join('')+'</div>':'';
   }
@@ -83,7 +98,7 @@
   }
 
   function options() {
-    const html = records.map(record => '<option value="' + esc(record.id) + '">' + esc(label(record)) + ' · ' + esc(record.id) + (missing(record) ? ' · 缺带边' : '') + '</option>').join('');
+    const html = records.map(record => '<option value="' + esc(record.id) + '">' + esc(label(record)) + ' · ' + esc(record.id) + (contextOnly(record)?' · 电子参数参考':missing(record) ? ' · 缺带边' : '') + '</option>').join('');
     $('band-select-a').innerHTML = html; $('band-select-b').innerHTML = html;
     $('band-select-a').value = aId; $('band-select-b').value = bId;
   }
@@ -121,7 +136,7 @@
         const gap = finite(record.gap_eV) ? num(record.gap_eV) + ' eV' : '待核实';
         html += '<text x="' + x + '" y="' + ((cy+vy)/2+5) + '" text-anchor="middle" fill="' + color + '" font-size="15">Eg ' + gap + '</text>';
       } else {
-        html += '<path d="M' + x + ' 145V295" stroke="#b7c2aa" stroke-width="1.5" stroke-dasharray="3 6"/><circle cx="' + x + '" cy="220" r="16" fill="#edf0e4" stroke="#a6b79a"/><text x="' + x + '" y="225" text-anchor="middle" font-size="18" fill="#98a58b">?</text><text x="' + x + '" y="322" text-anchor="middle" font-size="13" fill="#8c9a7d">缺失带边</text><text x="' + x + '" y="344" text-anchor="middle" font-size="12" fill="#9aa68b">不参与对齐</text>';
+        html += '<path d="M' + x + ' 145V295" stroke="#b7c2aa" stroke-width="1.5" stroke-dasharray="3 6"/><circle cx="' + x + '" cy="220" r="16" fill="#edf0e4" stroke="#a6b79a"/><text x="' + x + '" y="225" text-anchor="middle" font-size="18" fill="#98a58b">?</text><text x="' + x + '" y="322" text-anchor="middle" font-size="13" fill="#8c9a7d">'+(contextOnly(record)?'电子参数参考':'缺失带边')+'</text><text x="' + x + '" y="344" text-anchor="middle" font-size="12" fill="#9aa68b">不参与对齐</text>';
       }
       html += '<circle cx="' + x + '" cy="426" r="12" fill="' + color + '"/><text x="' + x + '" y="430" text-anchor="middle" font-size="11" fill="#fff">' + key + '</text><text x="' + x + '" y="457" text-anchor="middle" fill="#5e7753" font-size="' + (rows.length>2 ? 12 : 14) + '">' + esc(record.formula || label(record).slice(0,15)) + '</text><text x="' + x + '" y="480" text-anchor="middle" fill="#8c9b7d" font-size="10">' + esc(record.id.length>24 ? record.id.slice(0,23)+'…' : record.id) + '</text>';
     });
@@ -166,13 +181,13 @@
       if (!value.trim()) throw new Error();
       const energy=core.photonEnergy(Number(value));
       $('photon-output').textContent=num(energy)+' eV';
-      const results=selected().filter(r=>finite(r.gap_eV)).map(r=>label(r)+'：'+(energy>=r.gap_eV?'光子能量达到所列 Eg':'光子能量低于所列 Eg'));
+      const results=selected().filter(r=>!contextOnly(r)&&finite(r.gap_eV)).map(r=>label(r)+'：'+(energy>=r.gap_eV?'光子能量达到所列 Eg':'光子能量低于所列 Eg'));
       $('photon-note').textContent=results.length?results.join('；')+'。仅按单一带隙筛选，不代表吸收强度或量子效率。':'光子能量筛选需先核实样品带隙。';
     } catch (_) { $('photon-output').textContent='请输入正波长';$('photon-note').textContent='单色光的能量筛选，不代表吸收强度。'; }
   }
   function renderHeadroom() {
-    const target=$('headroom-results'),rawCathode=$('redox-cathode').value.trim(),rawZinc=$('redox-zinc').value.trim();
-    if (!rawCathode || !rawZinc) { target.innerHTML='<p class="headroom-note">填写相同 SHE 标尺下的正极氧化电位后，显示电子还原锌与空穴氧化正极的两侧余量。</p>';return; }
+    const target=$('headroom-results'),rawCathode=$('redox-cathode').value.trim();
+    if (!rawCathode) { target.innerHTML='<p class="headroom-note">填写正极氧化电位并选择原始参比后，统一到 SHE 再计算两侧余量。</p>';return; }
     const model=$('redox-model').value,a=normalized(getA()),b=normalized(getB());
     let e,h;
     if (model==='typeII') {
@@ -181,26 +196,36 @@
       e=c.electron;h=c.hole;
     } else { const n=model==='b'?b:a;if(!n.ok){target.innerHTML='<p class="headroom-note">此样品缺完整带边，暂不计算反应余量。</p>';return;}e=n.cb;h=n.vb; }
     try {
-      const result=core.headroom(e,h,Number(rawCathode),Number(rawZinc));
+      const mode=$('redox-zinc-mode').value;
+      if(!mode)throw new Error('请明确选择Zn参比：实测电位或标准态近似。');
+      const opts=mode==='standard_approximation'?standardZn:{reference_offset_V:$('redox-zinc').value.trim()};
+      const zinc=core.toSHE(0,'Zn',opts),cathode=core.toSHE(rawCathode,$('redox-scale').value,opts);
+      const result=core.headroom(e,h,cathode,zinc);
+      const basis=mode==='standard_approximation'?'Zn参比使用标准态近似−0.76 V，非实际Zn电极。':'Zn参比采用所填测量条件下的电位。';
+      $('redox-zinc-note').textContent=basis+' 正极换算为 '+signed(cathode)+' V vs SHE；Zn参比为 '+signed(zinc)+' V vs SHE。';
       target.innerHTML='<div class="headroom-grid"><div class="headroom-value"><b>'+signed(result.zinc)+' V</b><span>电子还原锌余量<br/>U(Zn²⁺/Zn) − U(电子)</span></div><div class="headroom-value"><b>'+signed(result.cathode)+' V</b><span>空穴氧化正极余量<br/>U(空穴) − U(正极氧化)</span></div></div><p class="headroom-note"><strong>这是以 CB/VB 代替光照准费米能级的乐观上限，仅用于无外加偏压的理想初筛。</strong>正值表示此模型下的方向性余量，负值表示此模型中的缺口；未计入过电位、欧姆损失和复合，不代表器件结论，也不否定外加偏压下的光辅助。</p>';
-    } catch (_) { target.innerHTML='<p class="headroom-note">请填写有效、有限的反应电位数值。</p>'; }
+    } catch (error) { target.innerHTML='<p class="headroom-note">'+esc(error.message || '请填写有效反应电位与Zn参比。')+'</p>';$('redox-zinc-note').textContent='正极电位与Zn参比必须使用同一套测量条件。'; }
   }
   function details(record) {
     const source=record.source || {};
     const pH=finite(record.ph)?String(record.ph):'待核实';
-    return '<details class="record-details"'+(openRecordId===record.id?' open':'')+'><summary>能带参考文献与合成方法</summary><div class="reference-citation"><span class="kicker">THE SOURCE / 本条能带的参考文献</span><h4>'+esc(source.title_zh || source.title || '本组会话输入，无公开合成出处')+'</h4><p class="full-reference">'+esc(citationText(record) || '本组会话输入，无公开文献引文。')+'</p>'+sourceLinks(record)+'<span class="citation-status" data-citation-status="'+esc(record.id)+'" role="status" aria-live="polite"></span></div><div class="record-detail-grid"><div><span>具体样品</span><p>'+esc(record.sample || '待核实')+'</p></div><div><span>测量 / 估计方法</span><p>'+esc(record.method || '待核实')+'</p></div><div><span>原始带边与参比</span><p>CB '+esc(signed(record.cb))+' / VB '+esc(signed(record.vb))+' · '+esc(scaleLabel(record))+'；pH '+esc(pH)+'</p></div><div><span>证据与充电模式</span><p>'+esc(record.edge_label || '见原文方法')+'；'+esc(record.charge_label || '是否直接光充电须回到原文器件验证')+'</p></div><div class="detail-full band-locator"><span>能带图 / 电子结构原文定位</span><p>'+esc(source.locator || '本组会话输入，原始标定记录由本组保留。')+'</p></div>'+((finite(record.work_function_eV)||finite(record.d_band_center_eV))?'<div class="detail-full"><span>其他电子结构量（不绘入 CB/VB 图）</span><p>功函数：'+esc(finite(record.work_function_eV)?num(record.work_function_eV,3)+' eV':'待核实')+'；d 带中心：'+esc(finite(record.d_band_center_eV)?num(record.d_band_center_eV,3)+' eV':'待核实')+'。两者不是带边，参比和意义须单独核对。</p></div>':'')+'</div>'+synthesisDetails(record)+(allNotes(record).length?'<details class="source-reading-notes"><summary>能带与器件阅读边界</summary><ul>'+allNotes(record).map(note=>'<li>'+esc(note)+'</li>').join('')+'</ul></details>':'')+'</details>';
+    return '<details class="record-details"'+(openRecordId===record.id?' open':'')+'><summary>能带参考文献与合成方法</summary><div class="reference-citation"><span class="kicker">THE SOURCE / 本条能带的参考文献</span><h4>'+esc(source.title_zh || source.title || '本组会话输入，无公开合成出处')+'</h4><p class="full-reference">'+esc(citationText(record) || '本组会话输入，无公开文献引文。')+'</p>'+sourceLinks(record)+'<span class="citation-status" data-citation-status="'+esc(record.id)+'" role="status" aria-live="polite"></span></div><div class="record-detail-grid"><div><span>具体样品</span><p>'+esc(record.sample || '待核实')+'</p></div><div><span>测量 / 估计方法</span><p>'+esc(record.method || '待核实')+'</p></div><div><span>原始带边与参比</span><p>CB '+esc(signed(record.cb))+' / VB '+esc(signed(record.vb))+' · '+esc(scaleLabel(record))+'；pH '+esc(pH)+'</p></div><div><span>证据与充电模式</span><p>'+esc(record.edge_label || '见原文方法')+'；'+esc(record.charge_label || '是否直接光充电须回到原文器件验证')+'</p></div><div class="detail-full band-locator"><span>能带图 / 电子结构原文定位</span><p>'+esc(source.locator || '本组会话输入，原始标定记录由本组保留。')+'</p></div>'+((finite(record.work_function_eV)||finite(record.d_band_center_eV))?'<div class="detail-full"><span>其他电子结构量（不绘入 CB/VB 图）</span><p>功函数：'+esc(finite(record.work_function_eV)?num(record.work_function_eV,3)+' eV':'待核实')+'；d 带中心：'+esc(finite(record.d_band_center_eV)?num(record.d_band_center_eV,3)+' eV':'待核实')+'。两者不是带边，参比和意义须单独核对。</p></div>':'')+'</div>'+conversionTable(record)+synthesisDetails(record)+(allNotes(record).length?'<details class="source-reading-notes"><summary>能带与器件阅读边界</summary><ul>'+allNotes(record).map(note=>'<li>'+esc(note)+'</li>').join('')+'</ul></details>':'')+'</details>';
   }
   function renderCatalog() {
     const q=$('band-search').value.trim().toLowerCase(),role=$('band-role-filter').value,complete=$('band-complete-filter').value,picked=new Set(selected().map(r=>r.id));
     const found=records.filter(record=>{
       const source=record.source||{},syn=record.synthesis||{};
       const text=[record.id,record.material,record.formula,record.phase,record.method,record.sample,source.doi,source.title,source.title_zh,source.reference,source.journal,...list(source.authors),syn.route,...list(syn.precursors),...list(syn.conditions),...allNotes(record)].join(' ').toLowerCase();
-      return (!q||text.includes(q))&&(role==='all'||record.role===role)&&(complete==='all'||(complete==='complete'?!missing(record):missing(record)));
+      return (!q||text.includes(q))&&(role==='all'||record.role===role)&&(complete==='all'||(complete==='context'?contextOnly(record):complete==='complete'?!contextOnly(record)&&!missing(record):missing(record)));
     });
-    $('catalog-count').textContent=found.length+' / '+records.length+' 条样品';
+    $('catalog-count').textContent=found.length+' / '+records.length+' 条记录';
+    const semiconductor=records.filter(r=>!contextOnly(r)),completeCount=semiconductor.filter(r=>!missing(r)).length;
+    $('record-total').textContent=records.length;
+    $('band-coverage-stat').textContent=semiconductor.length+' 条半导体样品：'+completeCount+' 条可换算带边、'+(semiconductor.length-completeCount)+' 条待核；另有 '+(records.length-semiconductor.length)+' 条电子参数参考，不计入带边完整率。';
     $('band-catalog-live').innerHTML=found.length?found.map(record=>{
       const isPicked=picked.has(record.id),source=record.source||{},url=safeUrl(source.url || (source.doi?'https://doi.org/'+source.doi:'')),n=normalized(record);
-      return '<article class="band-record-card" id="band-'+esc(record.id)+'"><div><div class="record-eyebrow"><span>'+esc(record.id)+'</span><span>'+esc(record.role==='cathode'?'钒基正极':record.role==='partner'?'异质结候选':'研究上下文')+'</span><span>'+esc(publishedIds.has(record.id)?'文献样品':'本组会话数据')+'</span></div><h3>'+esc(label(record))+'</h3><p class="record-phase">'+esc(phase(record))+'</p><div class="record-values"><span>Eg<b>'+esc(finite(record.gap_eV)?num(record.gap_eV)+' eV':'待核实')+'</b></span><span>CB<b>'+esc(signed(record.cb))+'</b></span><span>VB<b>'+esc(signed(record.vb))+'</b></span></div><p class="record-state">'+esc(scaleLabel(record))+' · '+esc(record.edge_label || (n.ok?'带边可转换，方法见详情':'带边不齐或标尺待核实'))+'</p><div class="record-source-brief"><p>'+esc(source.title_zh || source.title || '本组会话输入，无公开合成出处')+'</p><span>'+esc(sourceBrief(record))+'</span></div></div><div class="record-actions"><button type="button" data-add="'+esc(record.id)+'"'+(isPicked?' disabled':'')+'>'+(isPicked?'已在比较':'＋ 加入叠图')+'</button><button type="button" data-read-record="'+esc(record.id)+'">读合成方法</button>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(source.access_label || '原始出处')+' ↗</a>':'')+'</div>'+details(record)+'</article>';
+      const primaryValues=contextOnly(record)?'<p class="context-label">电子参数参考 · '+(finite(record.work_function_eV)?'功函数 Φ '+num(record.work_function_eV,3)+' eV':finite(record.d_band_center_eV)?'d带中心 '+signed(record.d_band_center_eV)+' eV（费米相对值）':'见电子结构方法')+'</p>':'<div class="record-values"><span>Eg<b>'+esc(finite(record.gap_eV)?num(record.gap_eV)+' eV':'待核实')+'</b></span><span>CB<b>'+esc(n.ok?signed(n.cb):'待核实')+'</b></span><span>VB<b>'+esc(n.ok?signed(n.vb):'待核实')+'</b></span></div><p class="record-common-scale">CB / VB 主显示：V vs SHE</p><p class="record-original">原始：CB '+esc(signed(record.cb))+' / VB '+esc(signed(record.vb))+' · '+esc(scaleLabel(record))+'</p>';
+      return '<article class="band-record-card" id="band-'+esc(record.id)+'"><div><div class="record-eyebrow"><span>'+esc(record.id)+'</span><span>'+esc(record.role==='cathode'?'钒基正极':record.role==='partner'?'异质结候选':'研究上下文')+'</span><span>'+esc(publishedIds.has(record.id)?'文献样品':'本组会话数据')+'</span></div><h3>'+esc(label(record))+'</h3><p class="record-phase">'+esc(phase(record))+'</p>'+primaryValues+'<p class="record-state">'+esc(scaleLabel(record))+' · '+esc(record.edge_label || (n.ok?'带边可转换，方法见详情':'带边不齐或标尺待核实'))+'</p><div class="record-source-brief"><p>'+esc(source.title_zh || source.title || '本组会话输入，无公开合成出处')+'</p><span>'+esc(sourceBrief(record))+'</span></div></div><div class="record-actions"><button type="button" data-add="'+esc(record.id)+'"'+(isPicked?' disabled':'')+'>'+(isPicked?'已在比较':'＋ 加入叠图')+'</button><button type="button" data-read-record="'+esc(record.id)+'">读合成方法</button>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(source.access_label || '原始出处')+' ↗</a>':'')+'</div>'+details(record)+'</article>';
     }).join(''):'<p class="catalog-empty">没有匹配样品。试试化学式、晶相或 DOI，也可以清除筛选。</p>';
   }
   function syncUrl() {
@@ -220,7 +245,7 @@
     overlays.push(id);render();$('export-status').textContent='已添加叠图：'+label(map.get(id));
   }
   function exportSnapshot() {
-    return {exported_at:new Date().toISOString(),assumptions:{common_scale:'V vs SHE',vacuum_zero_eV:4.44,pH_shift:'不做自动pH平移',model:'理想独立组分前接触对齐；不能判定直接光充电',scope:'A/B用于主比较，overlay只叠图'},a_id:aId,b_id:bId,overlay_ids:overlays.slice(),records:selected().map(record=>({...record,normalized_SHE:normalized(record)}))};
+    return {exported_at:new Date().toISOString(),assumptions:{common_scale:'V vs SHE',vacuum_zero_eV:4.44,zinc_display:'vs Zn°采用−0.76 V标准态近似，非实际Zn电极',pH_shift:'不做自动pH平移',model:'理想独立组分前接触对齐；不能判定直接光充电',scope:'A/B用于主比较，overlay只叠图'},a_id:aId,b_id:bId,overlay_ids:overlays.slice(),records:selected().map(record=>({...record,normalized_SHE:normalized(record)}))};
   }
   function download(text,mime,name) {
     const url=URL.createObjectURL(new Blob([text],{type:mime})),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);$('export-status').textContent='已导出当前 '+selected().length+' 条样品及出处。';
@@ -246,7 +271,7 @@
   window.addEventListener('hashchange',()=>{const id=hashRecordId();if(id)openRecord(id,false);});
   ['band-search','band-role-filter','band-complete-filter'].forEach(id=>$(id).addEventListener(id==='band-search'?'input':'change',renderCatalog));
   $('photon-wavelength').addEventListener('input',renderPhoton);
-  ['redox-model','redox-cathode','redox-zinc'].forEach(id=>$(id).addEventListener('input',renderHeadroom));
+  ['redox-model','redox-cathode','redox-zinc','redox-scale','redox-zinc-mode'].forEach(id=>$(id).addEventListener('input',renderHeadroom));
   $('share-comparison').addEventListener('click',async()=>{
     const url=new URL('bands.html',location.href);const ids=[aId,bId,...overlays].filter(id=>publishedIds.has(id));url.searchParams.set('ids',ids.join(','));
     try {await navigator.clipboard.writeText(url.href);$('export-status').textContent='已复制公开样品比较链接'+(selected().some(r=>!publishedIds.has(r.id))?'；自定义数据未分享，打开时公共样品会重新默认补位。':'。');}
@@ -254,28 +279,48 @@
   });
   $('export-bands-json').addEventListener('click',()=>download(JSON.stringify(exportSnapshot(),null,2),'application/json;charset=utf-8','photo-zinc-band-comparison.json'));
   $('export-bands-csv').addEventListener('click',()=>{
-    const headers=['selection','id','material','formula','phase','sample','gap_eV','gap_basis','cb_original','vb_original','scale','pH','cb_SHE_V','vb_SHE_V','edge_label','charge_label','work_function_eV','d_band_center_eV','method','doi','source_url','locator','reference','title_zh','synthesis_status','synthesis_route','synthesis_precursors','synthesis_conditions','synthesis_phase_check','synthesis_locator','synthesis_missing','synthesis_fulltext_url','synthesis_supplement_url','notes'];
+    const headers=['selection','id','material','formula','phase','sample','gap_eV','gap_basis','cb_original','vb_original','scale','pH','reference_offset_V','zinc_reference_mode','temperature_C','electrolyte','soc','uncertainty_eV','cb_SHE_V','vb_SHE_V','common_scale','cb_vacuum_eV','vb_vacuum_eV','cb_Zn_standard_V','vb_Zn_standard_V','conversion_basis','band_data_status','edge_label','charge_label','work_function_eV','d_band_center_eV','method','doi','source_url','locator','reference','title_zh','synthesis_status','synthesis_route','synthesis_precursors','synthesis_conditions','synthesis_phase_check','synthesis_locator','synthesis_missing','synthesis_fulltext_url','synthesis_supplement_url','notes'];
     const quote=value=>{let text=String(value==null?'':value);if(typeof value!=='number'&&/^[\s]*[=+\-@]/.test(text))text="'"+text;return '"'+text.replace(/"/g,'""')+'"';};
-    const rows=selected().map(r=>{const n=normalized(r),s=r.source||{},syn=r.synthesis||{};return [r.id===aId?'A':r.id===bId?'B':'overlay',r.id,label(r),r.formula,r.phase,r.sample,r.gap_eV,r.gap_basis,r.cb,r.vb,r.scale,r.ph,n.ok?n.cb:null,n.ok?n.vb:null,r.edge_label,r.charge_label,r.work_function_eV,r.d_band_center_eV,r.method,s.doi,safeUrl(s.url),s.locator,citationText(r),s.title_zh,syn.status,syn.route,list(syn.precursors).join('；'),list(syn.conditions).join('；'),syn.phase_check,syn.locator,list(syn.missing).join('；'),safeUrl(syn.fulltext_url),safeUrl(syn.supplement_url),allNotes(r).join('；')];});
+    const rows=selected().map(r=>{const n=normalized(r),s=r.source||{},syn=r.synthesis||{};return [r.id===aId?'A':r.id===bId?'B':'overlay',r.id,label(r),r.formula,r.phase,r.sample,r.gap_eV,r.gap_basis,r.cb,r.vb,r.scale,r.ph,r.reference_offset_V,r.zinc_reference_mode,r.temperature_C,r.electrolyte,r.soc,r.uncertainty_eV,n.ok?n.cb:null,n.ok?n.vb:null,'V vs SHE',n.ok?core.fromSHE(n.cb,'vacuum'):null,n.ok?core.fromSHE(n.vb,'vacuum'):null,n.ok?core.fromSHE(n.cb,'Zn',standardZn):null,n.ok?core.fromSHE(n.vb,'Zn',standardZn):null,conversionBasis(r),r.band_data_status,r.edge_label,r.charge_label,r.work_function_eV,r.d_band_center_eV,r.method,s.doi,safeUrl(s.url),s.locator,citationText(r),s.title_zh,syn.status,syn.route,list(syn.precursors).join('；'),list(syn.conditions).join('；'),syn.phase_check,syn.locator,list(syn.missing).join('；'),safeUrl(syn.fulltext_url),safeUrl(syn.supplement_url),allNotes(r).join('；')];});
     download('\uFEFF'+[headers,...rows].map(row=>row.map(quote).join(',')).join('\r\n'),'text/csv;charset=utf-8','photo-zinc-band-comparison.csv');
   });
-  $('custom-scale').addEventListener('change',()=>{
-    const needs=['AgAgCl','SCE'].includes($('custom-scale').value);$('custom-offset-label').hidden=!needs;$('custom-band-form').elements.reference_offset_V.required=needs;
-  });
+  function updateCustomReference(){
+    const scale=$('custom-scale').value,zn=scale==='Zn',needs=['AgAgCl','SCE','Zn'].includes(scale);
+    $('custom-offset-label').hidden=!needs;$('custom-zinc-choice').hidden=!zn;
+    $('custom-band-form').elements.reference_offset_V.required=needs&&!(zn&&$('custom-zinc-standard').checked);
+  }
+  $('custom-scale').addEventListener('change',updateCustomReference);
+  $('custom-zinc-standard').addEventListener('change',updateCustomReference);
   $('custom-band-form').addEventListener('submit',event=>{
     event.preventDefault();const form=event.currentTarget,raw=Object.fromEntries(new FormData(form).entries());
     try {
       if(!raw.material.trim()||!raw.phase.trim()||!raw.sample.trim()||!raw.method.trim()||raw.ph.trim()==='')throw new Error('请补齐具体样品、晶相、pH 与测量方法。');
       if(!Number.isFinite(Number(raw.cb))||!Number.isFinite(Number(raw.vb))||Math.abs(Number(raw.cb))>30||Math.abs(Number(raw.vb))>30)throw new Error('本模块用于电池材料初筛，CB / VB 接受 −30 至 +30 V（真空为 eV）；请核对输入单位。');
       const input={...raw,role:'cathode',id:'CUSTOM-'+(++customIndex),source:{doi:null,url:null,title:'本组当前会话测量',locator:'用户填写，未上传'},edge_label:'本组测量输入，未由本站核验',charge_label:'直接光充电尚需实验验证',notes:['仅当前会话保留，不进入公开分享链接。']};
+      if(raw.scale==='Zn'&&$('custom-zinc-standard').checked)input.zinc_reference_mode='standard_approximation';
       if(!raw.gap_eV.trim())delete input.gap_eV;
       if(!raw.reference_offset_V.trim())delete input.reference_offset_V;
       const {source:customSource,...coreInput}=input;
       const validated=core.validateCustom(coreInput),record={...input,...validated,source:customSource};
       if(!finite(record.gap_eV)&&raw.gap_eV.trim())record.gap_eV=Number(raw.gap_eV);
-      record.ph=Number(raw.ph);records.push(record);map.set(record.id,record);bId=record.id;overlays=overlays.filter(id=>id!==bId).slice(0,2);options();render();$('custom-band-status').textContent='已加入 B；仅保留在当前会话。请导出后再关闭或刷新。';
+      record.ph=Number(raw.ph);records.push(record);map.set(record.id,record);bId=record.id;overlays=overlays.filter(id=>id!==bId).slice(0,2);options();render();$('custom-band-status').textContent='已加入 B；仅保留在当前会话。请导出后再关闭或刷新。'+normalized(record).warnings.filter(w=>w.includes('Zn参比')).join(' ');
     } catch(error){$('custom-band-status').textContent=error.message || '请核对数值和参比。';}
   });
+  function renderConverter(){
+    const scale=$('convert-scale').value,zn=scale==='Zn',needs=['AgAgCl','SCE','Zn'].includes(scale);
+    $('convert-ph-label').hidden=scale!=='RHE';$('convert-offset-label').hidden=!needs;$('convert-zinc-choice').hidden=!zn;
+    $('convert-input-label').textContent=scale==='vacuum'?'原始真空电子能量 / eV（带符号）':'原始电位 / V';
+    try{
+      const opts={ph:$('convert-ph').value,reference_offset_V:$('convert-offset').value};
+      if(zn&&$('convert-zinc-standard').checked)opts.zinc_reference_mode='standard_approximation';
+      const she=core.toSHE($('convert-value').value,scale,opts),vacuum=core.fromSHE(she,'vacuum'),zinc=core.fromSHE(she,'Zn',standardZn);
+      $('conversion-output').innerHTML='<span><b>'+signed(she)+' V</b>vs SHE</span><span><b>'+signed(vacuum)+' eV</b>真空电子能量</span><span><b>'+signed(zinc)+' V</b>vs Zn° · 标准态近似</span>';
+      $('conversion-status').textContent='Zn°输出固定采用−0.76 V vs SHE标准态近似，非实际Zn电极。真空采用4.44 V约定。'+(scale==='NHE'?'原文NHE按SHE常用近似。':'')+(scale==='RHE'?'RHE采用25°C斜率，仅统一坐标，不改变材料的实际pH条件。':'')+(zn&&$('convert-zinc-standard').checked?($('convert-offset').value.trim()?'已给显式Zn偏移，优先该值；标准模式与实测输入冲突，请核对。':'Zn输入也采用显式选择的标准态近似，非实测参比。'):'');
+    }catch(error){$('conversion-output').textContent='尚未换算';$('conversion-status').textContent=error.message;}
+  }
+  ['convert-scale','convert-value','convert-ph','convert-offset','convert-zinc-standard'].forEach(id=>$(id).addEventListener('input',renderConverter));
+  $('redox-zinc-mode').addEventListener('change',()=>{$('redox-zinc-label').hidden=$('redox-zinc-mode').value!=='measured';renderHeadroom();});
+  renderConverter();updateCustomReference();
   options();$('bands-app').hidden=false;$('catalog-controls').hidden=false;$('custom-band-section').hidden=false;$('bands-load-message').hidden=true;$('bands-static-catalog').hidden=true;render();
   const initialRecord=hashRecordId();if(initialRecord)openRecord(initialRecord,false);
 }());

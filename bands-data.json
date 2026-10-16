@@ -1,12 +1,46 @@
 {
   "schema_version": 2,
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "scope": "钒基正极优先 · 逐论文样品记录",
   "conventions": {
     "vacuum_offset_eV": 4.44,
     "temperature_K": 298.15,
-    "note": "仅统一坐标，不能消除pH、电解液、晶相、荷电态和方法差异；NHE近似SHE需保留提示。",
-    "source_url": "https://doi.org/10.1351/pac198658070955"
+    "note": "所有主显示采用V vs SHE；原文数值与标尺保留。换算仅统一坐标，不能消除pH、电解液、晶相、荷电态和方法差异；原文NHE按SHE常用近似显示并提示。Zn°仅25°C标准态近似，非任意浓度实际锌参比。",
+    "source_url": "https://doi.org/10.1351/pac198658070955",
+    "common_scale": "V vs SHE",
+    "zinc_standard_approximation_vs_SHE_V": -0.76,
+    "vacuum_formula": "电子能量 ε_vac(eV) = −(U_SHE(V) + 4.44)",
+    "Zn_formula": "U_SHE = U_vsZn + U_Zn_reference_vsSHE；实际偏移需按测量条件提供，只有显式选择标准态近似时才使用−0.76 V。",
+    "RHE_formula": "U_SHE = U_RHE − 0.05915935 × pH（25°C）；缺pH不换算。",
+    "coordinate_authorities": [
+      {
+        "quantity": "SHE绝对电位",
+        "value": 4.44,
+        "uncertainty": 0.02,
+        "unit": "V",
+        "temperature_K": 298.15,
+        "url": "https://goldbook.iupac.org/terms/view/S05917",
+        "primary_pdf": "https://publications.iupac.org/publications/pac/1986/pdf/5807x0955.pdf",
+        "doi": "10.1351/pac198658070955",
+        "reference": "Sergio Trasatti. The absolute electrode potential: an explanatory note (Recommendations 1986). Pure and Applied Chemistry, 1986, 58(7): 955–966. DOI: 10.1351/pac198658070955",
+        "locator": "IUPAC Gold Book S05917；1986 Recommendations Eq.(19)及Fig.2，水系298.15 K，4.44±0.02 V。"
+      },
+      {
+        "quantity": "Zn2+(aq)+2e−→Zn(s)标准还原电位",
+        "value": -0.7626,
+        "display_approximation": -0.76,
+        "unit": "V vs SHE",
+        "temperature_K": 298.15,
+        "url": "https://www.nist.gov/system/files/documents/srd/jpcrd444.pdf",
+        "doi": "10.1063/1.555909",
+        "reference": "H. Lawrence Clever, M. Elizabeth Derrick, Susan A. Johnson. The Solubility of Some Sparingly Soluble Salts of Zinc and Cadmium in Water and in Aqueous Electrolyte Solutions. Journal of Physical and Chemical Reference Data, 1992, 21(5): 941–1004. DOI: 10.1063/1.555909",
+        "locator": "期刊第945页Table 1，Some zinc and cadmium standard potentials at298.15K；表为−0.7626 V，note另列CODATA对应1atm/1bar−0.7628/−0.7627 V。",
+        "notes": [
+          "本站默认−0.76 V为有意舍入的显示近似，不是声称所有电解液中的锌参比都等于−0.76 V。",
+          "同表Zn(OH)4²−/Zn等碱性半反应标准电位不同，不能混同自由Zn²⁺/Zn。"
+        ]
+      }
+    ]
   },
   "records": [
     {
@@ -84,7 +118,8 @@
           "能带记录中的V2O5带边为作者示意值，按此路线合成不保证获得相同绝对带边。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "complete"
     },
     {
       "id": "V-VO2B-2021-rGO",
@@ -164,25 +199,26 @@
           "此路线对应VO2(B)，不能用于证明VO2(M/R)的能带与光响应。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "complete"
     },
     {
       "id": "V-VO2B-2021-ZnO",
       "material": "VO₂(B) / ZnO 堆叠光正极",
       "formula": "VO2",
-      "phase": "单斜 VO2(B)",
+      "phase": "单斜VO2(B)",
       "sample": "2021 JMCA CF/ZnO/VO2 电极；VO2为储能吸光组分，ZnO为电子传输/空穴阻挡层",
       "role": "cathode",
       "gap_eV": 2.3,
-      "cb": null,
-      "vb": null,
+      "cb": -3.8,
+      "vb": -6.1,
       "ph": null,
-      "method": "Eg：UV–vis 吸收；Fig. 2c给能级深度示意，但纵轴未明确真空零点与符号；为避免把正能量深度误作电势，本条不填可换算绝对带边",
+      "method": "原图明确标签，经高分辨率复核坐标负号后规范为真空负电子能量；作者示意带边，SI标定条件未核验",
       "source": {
         "doi": "10.1039/d1ta07572a",
         "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/186691ed-7ee0-4cb0-ad47-0bc911e34256/content",
         "title": "Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries",
-        "locator": "PDF 第2页 Fig. 1c,e,f；第3页 Fig. 2c；SoC变化的Eg见SI Fig. S5/Table S1",
+        "locator": "PDF第3页Fig.2c；第2页Fig.1a和正文Fig.1e带隙",
         "authors": [
           "Buddha Deka Boruah",
           "Michael De Volder"
@@ -192,18 +228,20 @@
         "title_zh": "用于光充电锌离子电池的二氧化钒–氧化锌堆叠光正极",
         "library_id": "L03",
         "reference": "Buddha Deka Boruah, Michael De Volder. Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries. Journal of Materials Chemistry A, 2021, 9(40): 23199-23205. DOI: 10.1039/d1ta07572a",
-        "access_label": "公开全文核验版本"
+        "access_label": "公开全文核验版本",
+        "fulltextUrl": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/186691ed-7ee0-4cb0-ad47-0bc911e34256/content",
+        "supplement_url": null
       },
       "notes": [
-        "只有Eg进入定量比较；能级图参考与符号需人工确认",
-        "正文直接报告本样品Eg约2.3 eV。",
-        "Fig. 2c VO2能级深度数字为3.8/6.1 eV，ZnO为4.4/7.7 eV；不作为本条绝对CB/VB输出。",
-        "文中报告无外部电源的直接光充电，光充电效率约0.51%；电极结构与rGO混合样品不同，不能合并为同一样品。"
+        "此前留空源于低分辨率下漏读纵轴负号；本轮高分辨率复核后纠正。",
+        "同图ZnO深度4.4/7.7、FTO4.5、Ag4.7，以及Fig.1a的CF5.0，均与负真空电子能量约定一致。",
+        "只将原图坐标规范化，不把该示意值升级为完整实测带边。",
+        "文中报告无外部电源的直接光充电；堆叠电极与rGO混合样品不同，不能合并为同一样品。"
       ],
-      "scale": null,
-      "edge_label": "仅带隙 · 能级图参照待核",
-      "edge_basis": "missing_reference_convention",
-      "charge_label": "该论文器件报告直接光充电",
+      "scale": "vacuum",
+      "edge_label": "原图负能量深度已规范 · 作者示意/SI标定待核",
+      "edge_basis": "author_schematic_negative_vacuum_depth_normalized",
+      "charge_label": "作者报告仅光照充电；热控制待复核",
       "gap_basis": "原文光学带隙，详见方法",
       "work_function_eV": null,
       "d_band_center_eV": null,
@@ -230,7 +268,11 @@
           "SI在出版社landing页列为可下载，但未取得真实文件URL及内容，故不造链接。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "original_scale": "Fig.2c纵轴Energy (−eV)：正数字代表负电子能量深度",
+      "raw_cb": 3.8,
+      "raw_vb": 6.1,
+      "band_data_status": "complete"
     },
     {
       "id": "V-V2O5-VO2-2025",
@@ -302,7 +344,8 @@
           "未验证的合成参数不由别篇V2O5或VO2论文填补。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "pending"
     },
     {
       "id": "V-V6O13-2025",
@@ -379,7 +422,8 @@
           "此样品不等于老师分享论文中UPS功函数为4.55 eV的V6O13对照；不能混用合成和能带。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "complete"
     },
     {
       "id": "V-KVOH-2025",
@@ -453,7 +497,8 @@
           "此文研究光辅助充放电；合成参考本身不构成无外电源光充电证明。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "pending"
     },
     {
       "id": "P-ZNO-ACS2021",
@@ -532,7 +577,8 @@
           "这是实际光充电锌电池的电子传输组分；将其与钒基材料重新组合仍需独立验证。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "complete"
     },
     {
       "id": "P-MOS2-2H-ACS2021",
@@ -611,7 +657,8 @@
           "方法概述帮助定位和比较路线，完整复现仍应核对原文/SI 与实验室设备条件。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "complete"
     },
     {
       "id": "P-SNO2-QD-AS2024",
@@ -655,7 +702,8 @@
         "正文给出该组分光学带隙 3.5 eV；复合样品光学带隙 2.1 eV 不是 SnO2 的带隙。",
         "正文明确 MoS2/SnO2 的 CB/VB 差值约 0.1/1.7 eV，但只有偏移量不足以填绝对能级。",
         "原论文 MoS2 样品含 1T/2H 混合特征，不与 2021 年 2H-MoS2 样品合并。",
-        "出版社全文通过公开索引可读，但本轮原图下载受限；不以推算或网上通用值补绝对能带。"
+        "出版社全文通过公开索引可读，但本轮原图下载受限；不以推算或网上通用值补绝对能带。",
+        "2026-10-16继续检索，仍保持绝对带边空值；缺失不等于材料不能光充电。"
       ],
       "scale": null,
       "edge_label": "仅光学带隙",
@@ -695,7 +743,8 @@
           "原样品是 MoS2/SnO2 光电池，不是钒基配对的实验验证。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "pending"
     },
     {
       "id": "P-TIO2-ANATASE-NANO2024",
@@ -770,7 +819,8 @@
           "该原研究是四环素光催化，不是锌电池或钒基光充电配对验证。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "complete"
     },
     {
       "id": "P-GCN-CM2026",
@@ -853,7 +903,8 @@
           "同文异质结段使用bulk-C₃N₄作为前驱体；不要把纯组分二次退火与复合物工艺混为一条已验证路线。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "complete"
     },
     {
       "id": "P-WO3-MONO-CM2026",
@@ -940,7 +991,8 @@
           "不得将此合成与能带数据套给 WO3−x、W18O49 或水合 WO3。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "complete"
     },
     {
       "id": "T-V6O13-2026",
@@ -1008,7 +1060,8 @@
           "VO与KVO的准确对照配方须分别回到SI，不能用其他V₆O₁₃或KVOH文献代替。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "context_only"
     },
     {
       "id": "T-K05V6O13-2026",
@@ -1076,7 +1129,8 @@
           "VO与KVO的准确对照配方须分别回到SI，不能用其他V₆O₁₃或KVOH文献代替。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "context_only"
     },
     {
       "id": "T-VOH-2026",
@@ -1157,7 +1211,8 @@
           "此记录的电子结构量是DFT d带中心，不能理解为这条合成路线已得到已测CB/VB或已验证光充电。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "context_only"
     },
     {
       "id": "T-BMIMVOH-2026",
@@ -1239,7 +1294,494 @@
           "此记录的电子结构量是DFT d带中心，不能理解为这条合成路线已得到已测CB/VB或已验证光充电。"
         ],
         "checked_on": "2026-10-15"
-      }
+      },
+      "band_data_status": "context_only"
+    },
+    {
+      "id": "V-V2O5-UPS-2026",
+      "material": "V₂O₅（VO水处理对照，2026 UPS）",
+      "formula": "V2O5",
+      "phase": "正交V2O5；原文写P m n m、No.59",
+      "sample": "10.1007/s42114-026-01644-7的无Cs源对照；与2020纳米纤维不是同一样品",
+      "role": "cathode",
+      "gap_eV": 2.71,
+      "cb": -3.11,
+      "vb": -5.82,
+      "scale": "vacuum",
+      "ph": null,
+      "work_function_eV": 4.98,
+      "original_scale": "相对费米能级EF=0的电子能量(eV)，另报UPS功函数",
+      "raw_cb_relative_EF": 1.87,
+      "raw_vb_relative_EF": -0.84,
+      "normalization_basis": "正文+Table3：CB_abs=1.87−4.98=−3.11；VB_abs=−0.84−4.98=−5.82 eV",
+      "method": "UPS给EF相对VBM和功函数；光学直接Tauc给Eg，作者CBM=VBM+Eg；本页再以同样品Φ规范到真空。SI §2：HeI21.22eV，Au能量校准，功函数采集施加−10V偏压、价带采集0V；不是电解液平带测量。",
+      "source": {
+        "doi": "10.1007/s42114-026-01644-7",
+        "url": "https://link.springer.com/article/10.1007/s42114-026-01644-7",
+        "fulltextUrl": "https://link.springer.com/content/pdf/10.1007/s42114-026-01644-7.pdf",
+        "title": "Eco-friendly synthesis of hierarchical heterostructured CsV3O8/V2O5 composite cathode: lattice stabilization and vanadium dissolution resistance for long-life aqueous zinc-ion batteries",
+        "locator": "正文§3.2，PDF第7页Table3及UPS讨论；PDF第4页Fig.1d,e；SI §2仪器条件、Fig.S3光学数据",
+        "supplement_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs42114-026-01644-7/MediaObjects/42114_2026_1644_MOESM1_ESM.docx",
+        "authors": [
+          "Hari Bandi",
+          "R. Shanthappa",
+          "Sowjanya Vallem",
+          "Daniel Ioan Stroe",
+          "Jae Su Yu"
+        ],
+        "journal": "Advanced Composites and Hybrid Materials",
+        "year": 2026,
+        "title_zh": "环保合成层级异质结构CsV₃O₈/V₂O₅复合正极：通过稳定晶格与抑制钒溶解延长水系锌离子电池寿命",
+        "reference": "Bandi H, Shanthappa R, Vallem S, Stroe DI, Yu JS. Eco-friendly synthesis of hierarchical heterostructured CsV3O8/V2O5 composite cathode: lattice stabilization and vanadium dissolution resistance for long-life aqueous zinc-ion batteries. Advanced Composites and Hybrid Materials. 2026;9:104. doi:10.1007/s42114-026-01644-7.",
+        "library_id": null,
+        "access_label": "出版社开放原文",
+        "volume": "9",
+        "article_number": "104"
+      },
+      "edge_basis": "derived_vacuum_from_same_sample_UPS_and_optical_gap",
+      "edge_label": "同一样品UPS+光学推导 · 图文小差异已注明",
+      "gap_basis": "直接Tauc（αhν）²，Eg2.71eV",
+      "charge_label": "常规水系锌电研究；未验证光充电",
+      "notes": [
+        "正文及Table3的VBM为−0.84eV，但Fig.1e示意写−0.86eV；本条透明采用正文和表格，图文0.02eV差异待作者核实。",
+        "功函数正文/表格为4.98eV，摘要写5.00eV；不将摘要取整值混入推导。",
+        "CB为UPS价带与光学Eg推导，非独立直接实测导带。"
+      ],
+      "synthesis": {
+        "status": "partial",
+        "route": "V2O5在去离子水中室温搅拌，采用同文复合物工艺但不加入Cs源，洗涤、离心、干燥。",
+        "precursors": [
+          "V2O5 0.36 g（99%）",
+          "去离子水50 mL"
+        ],
+        "conditions": [
+          "先室温搅拌30 min，随后按同条件持续3天。",
+          "离心、去离子水洗涤；干燥温度/时长未报，不补猜。"
+        ],
+        "phase_check": "Fig.1b与Table1的XRD精修：正交V2O5、No.59；不把该样品自动标为水合VOH。",
+        "locator": "正文§2，PDF第2–3页；SI §1原料/§2表征",
+        "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s42114-026-01644-7.pdf",
+        "supplement_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs42114-026-01644-7/MediaObjects/42114_2026_1644_MOESM1_ESM.docx",
+        "missing": [
+          "最终干燥温度与时长未报。"
+        ],
+        "notes": [
+          "SI真实链接与文件已获取200并读取；SI的120°C/12h属于后续电极烘干，不能当材料最终干燥条件。"
+        ],
+        "checked_on": "2026-10-16",
+        "supplement_checked": true
+      },
+      "d_band_center_eV": null,
+      "uncertainty_eV": null,
+      "electrolyte": null,
+      "soc": null,
+      "temperature_K": null,
+      "band_data_status": "complete",
+      "derived": true
+    },
+    {
+      "id": "V-CSVO-V2O5-UPS-2026",
+      "material": "CsV₃O₈/V₂O₅（HH–CsVO/VO，2026 UPS）",
+      "formula": "CsV3O8/V2O5",
+      "phase": "单斜CsV3O8（P21/m，No.11）/正交V2O5（No.59）双相",
+      "sample": "同文室温CsCl水处理形成的复合正极整体；不是其中单独CsV3O8相的带边",
+      "role": "cathode",
+      "gap_eV": 2.19,
+      "cb": -2.57,
+      "vb": -4.76,
+      "scale": "vacuum",
+      "ph": null,
+      "work_function_eV": 4.14,
+      "original_scale": "相对费米能级EF=0的电子能量(eV)，另报UPS功函数",
+      "raw_cb_relative_EF": 1.57,
+      "raw_vb_relative_EF": -0.62,
+      "normalization_basis": "CB_abs=1.57−4.14=−2.57；VB_abs=−0.62−4.14=−4.76 eV",
+      "method": "同一样品UPS VBM/Φ结合光学Eg后坐标规范；CBM由VBM+Eg推导；SI §2已核HeI/Au校准与采集偏压。",
+      "source": {
+        "doi": "10.1007/s42114-026-01644-7",
+        "url": "https://link.springer.com/article/10.1007/s42114-026-01644-7",
+        "fulltextUrl": "https://link.springer.com/content/pdf/10.1007/s42114-026-01644-7.pdf",
+        "title": "Eco-friendly synthesis of hierarchical heterostructured CsV3O8/V2O5 composite cathode: lattice stabilization and vanadium dissolution resistance for long-life aqueous zinc-ion batteries",
+        "locator": "正文§3.2，PDF第7页Table3；PDF第4页Fig.1d,e；SI §2与Fig.S3",
+        "supplement_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs42114-026-01644-7/MediaObjects/42114_2026_1644_MOESM1_ESM.docx",
+        "authors": [
+          "Hari Bandi",
+          "R. Shanthappa",
+          "Sowjanya Vallem",
+          "Daniel Ioan Stroe",
+          "Jae Su Yu"
+        ],
+        "journal": "Advanced Composites and Hybrid Materials",
+        "year": 2026,
+        "title_zh": "环保合成层级异质结构CsV₃O₈/V₂O₅复合正极：通过稳定晶格与抑制钒溶解延长水系锌离子电池寿命",
+        "reference": "Bandi H, Shanthappa R, Vallem S, Stroe DI, Yu JS. Eco-friendly synthesis of hierarchical heterostructured CsV3O8/V2O5 composite cathode: lattice stabilization and vanadium dissolution resistance for long-life aqueous zinc-ion batteries. Advanced Composites and Hybrid Materials. 2026;9:104. doi:10.1007/s42114-026-01644-7.",
+        "library_id": null,
+        "access_label": "出版社开放原文",
+        "volume": "9",
+        "article_number": "104"
+      },
+      "edge_basis": "derived_vacuum_from_same_sample_UPS_and_optical_gap",
+      "edge_label": "同一样品UPS+光学推导 · 复合物整体",
+      "gap_basis": "直接Tauc，Eg2.19eV",
+      "charge_label": "常规水系锌电研究；未验证光充电",
+      "notes": [
+        "本条是CsV3O8/V2O5复合物整体光学/UPS结果，不能拆成两相各自的CB/VB去自动判定II型或Z型。",
+        "两相能带对齐、界面弯曲、光伏输出与实际电池氧化还原条件仍需实验核验。"
+      ],
+      "synthesis": {
+        "status": "partial",
+        "route": "V2O5在水中分散后缓慢加入CsCl，室温持续搅拌形成双相复合物。",
+        "precursors": [
+          "V2O5 0.36 g（99%）",
+          "去离子水50 mL",
+          "CsCl 0.5 mmol（99%）"
+        ],
+        "conditions": [
+          "V2O5先室温搅拌30 min，加CsCl后继续室温搅拌3天。",
+          "离心、去离子水充分洗涤并干燥；最终干燥温度/时长未明确。"
+        ],
+        "phase_check": "Fig.1a XRD精修确认CsV3O8/V2O5双相，Table1列P21/m与正交No.59。",
+        "locator": "正文§2，PDF第2–3页；SI §1原料/§2表征",
+        "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s42114-026-01644-7.pdf",
+        "supplement_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs42114-026-01644-7/MediaObjects/42114_2026_1644_MOESM1_ESM.docx",
+        "missing": [
+          "最终干燥温度与时长未报。"
+        ],
+        "notes": [
+          "SI已下载并核读；不把7:2:1电极浆料配方或120°C电极烘干步骤混为材料合成。"
+        ],
+        "checked_on": "2026-10-16",
+        "supplement_checked": true
+      },
+      "d_band_center_eV": null,
+      "uncertainty_eV": null,
+      "electrolyte": null,
+      "soc": null,
+      "temperature_K": null,
+      "band_data_status": "complete",
+      "derived": true
+    },
+    {
+      "id": "P-ZNO-D1TA2021",
+      "material": "ZnO（2021 VO₂/ZnO同文电子传输层）",
+      "formula": "ZnO",
+      "phase": "ZnO；Fig.1f标注(100)/(101)峰，但已读正文未明确晶系/空间群，具体多晶型待SI核验",
+      "sample": "先涂覆于碳纤维CF集流体，再在其上直接生长VO2(B)；本条对应2021 JMCA的CF/ZnO/VO2光正极及FTO/ZnO/VO2/Ag光探测器能级示意",
+      "role": "partner",
+      "paired_cathode_id": "V-VO2B-2021-ZnO",
+      "gap_eV": 3.3,
+      "cb": -4.4,
+      "vb": -7.7,
+      "scale": "vacuum",
+      "ph": null,
+      "temperature_K": null,
+      "uncertainty_eV": null,
+      "electrolyte": null,
+      "soc": "能级示意的荷电态未明确",
+      "original_scale": "Fig.2c Energy (−eV)，正数字表示负真空电子能量深度",
+      "raw_cb": 4.4,
+      "raw_vb": 7.7,
+      "work_function_eV": null,
+      "d_band_center_eV": null,
+      "method": "Fig.2c明确能级标签经坐标负号规范；Eg=7.7−4.4=3.3eV为图中带边差，非另核ZnO吸收/Tauc实测。SI标定细节未取得。",
+      "edge_basis": "author_schematic_negative_vacuum_depth_normalized",
+      "edge_label": "同文作者示意值 · SI标定待核",
+      "gap_basis": "由同一原图CB/VB标签之差得到，非独立Tauc",
+      "charge_label": "VO₂(B)/ZnO原论文配对 · 作者报告仅光照充电",
+      "source": {
+        "doi": "10.1039/d1ta07572a",
+        "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/186691ed-7ee0-4cb0-ad47-0bc911e34256/content",
+        "title": "Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries",
+        "locator": "PDF第3页Fig.2c原图Energy(−eV)、ZnO4.4/7.7；PDF第2页Fig.1a、Fig.1f及正文ZnO层作用；SI Fig.S1为ZnO涂层XRD/SEM",
+        "authors": [
+          "Buddha Deka Boruah",
+          "Michael De Volder"
+        ],
+        "journal": "Journal of Materials Chemistry A",
+        "year": 2021,
+        "title_zh": "用于光充电锌离子电池的二氧化钒–氧化锌堆叠光正极",
+        "library_id": "L03",
+        "reference": "Buddha Deka Boruah, Michael De Volder. Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries. Journal of Materials Chemistry A, 2021, 9(40): 23199-23205. DOI: 10.1039/d1ta07572a",
+        "access_label": "公开全文核验版本",
+        "fulltextUrl": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/186691ed-7ee0-4cb0-ad47-0bc911e34256/content",
+        "supplement_url": null
+      },
+      "notes": [
+        "该条应与本论文VO2(B)配对使用；与ACS Nano2021 MoS2/ZnO的ZnO记录保持独立，尽管图中数值相同。",
+        "原论文ZnO用于电子传输和空穴阻挡，储锌吸光组分为VO2；不把ZnO层单独标为已验证储锌正极。",
+        "负真空能量规范来自本图轴标与FTO4.5/Ag4.7/CF5.0交叉一致，不表示完整实测参比已核。",
+        "同文配对说明作者器件设计；不保证换晶相、缺陷或电解液后仍有相同电荷方向/光充电能力。"
+      ],
+      "synthesis": {
+        "status": "partial",
+        "route": "在CF集流体先涂覆ZnO，再直接生长VO2形成堆叠电极；ZnO的具体制备操作在ESI。",
+        "precursors": [],
+        "conditions": [],
+        "phase_check": "正文Fig.1f有ZnO(100)/(101)峰；ZnO单独涂层XRD/SEM指向SI Fig.S1，尚未核读。",
+        "locator": "PDF第1页Introduction的工艺概述与ESI脚注；第2页Fig.1f；完整实验方法在ESI。",
+        "fulltext_url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/186691ed-7ee0-4cb0-ad47-0bc911e34256/content",
+        "supplement_url": null,
+        "missing": [
+          "ZnO具体化学前驱体、用量/浓度、涂覆过程与退火温度时间。",
+          "该ZnO表面的VO2生长条件。"
+        ],
+        "notes": [
+          "不能借用2021 ACS Nano MoS2/ZnO的配方填为本论文已核合成条件。",
+          "不从网络通用ZnO配方补参数。"
+        ],
+        "checked_on": "2026-10-16"
+      },
+      "band_data_status": "complete"
+    },
+    {
+      "id": "P-CDS-HEX-ACSAMI2023",
+      "material": "六方 CdS / ZnO 纳米棒光电极中的 CdS",
+      "formula": "CdS",
+      "phase": "六方 CdS，JCPDS 41-1049",
+      "sample": "2023 ACS AMI 的 PC/CdS@ZnO NRs/FTO 样品；CdS 包覆在 FTO 上生长的 ZnO 纳米棒外侧，表面另覆多孔碳",
+      "role": "partner",
+      "gap_eV": 2.3,
+      "gap_basis": "原文UV–vis讨论给出约2.3 eV，定位SI Fig.S3；与Fig.1b的6.6−4.3一致，未另行读取SI光谱原图",
+      "cb": -4.3,
+      "vb": -6.6,
+      "scale": "vacuum",
+      "ph": null,
+      "method": "原论文Fig.1b能级示意图明确标注，已放大目视核实；原图Energy(−eV)轴以4.3/6.6表示负电子能量深度。不是本轮独立带边谱学实测。",
+      "edge_label": "作者能级图标注 · 示意/估计，非独立实测",
+      "edge_basis": "author_schematic",
+      "charge_label": "光辅助锌离子电容器；不当作钒基电池直接光充电验证",
+      "work_function_eV": null,
+      "d_band_center_eV": null,
+      "uncertainty_eV": null,
+      "electrolyte": null,
+      "soc": null,
+      "temperature_K": null,
+      "vanadium_pair_verified": false,
+      "source": {
+        "doi": "10.1021/acsami.2c20995",
+        "url": "https://discovery.ucl.ac.uk/id/eprint/10163372/7/Deka%20Boruah_acsami.2c20995.pdf",
+        "title": "Porous Carbon Coated on Cadmium Sulfide-Decorated Zinc Oxide Nanorod Photocathodes for Photo-accelerated Zinc Ion Capacitors",
+        "title_zh": "多孔碳包覆的硫化镉修饰氧化锌纳米棒光正极用于光加速锌离子电容器",
+        "authors": [
+          "Xiaopeng Liu",
+          "Holly Andersen",
+          "Yinan Lu",
+          "Bo Wen",
+          "Ivan P. Parkin",
+          "Michael De Volder",
+          "Buddha Deka Boruah"
+        ],
+        "journal": "ACS Applied Materials & Interfaces",
+        "year": 2023,
+        "library_id": "L40",
+        "reference": "Xiaopeng Liu, Holly Andersen, Yinan Lu, Bo Wen, Ivan P. Parkin, Michael De Volder, Buddha Deka Boruah. Porous Carbon Coated on Cadmium Sulfide-Decorated Zinc Oxide Nanorod Photocathodes for Photo-accelerated Zinc Ion Capacitors. ACS Applied Materials & Interfaces, 2023, 15(5): 6963–6969. DOI: 10.1021/acsami.2c20995",
+        "access_label": "UCL公开发表版",
+        "locator": "PDF第2页/期刊6964页Fig.1b（CdS 4.3/6.6，轴Energy(−eV)）；同页Fig.1f相鉴定；PDF第4页/6966页明确CdS光学带隙约2.3 eV。"
+      },
+      "notes": [
+        "这是实际CdS/ZnO/多孔碳光电容器中的组分，不是与钒基正极复合的实测结果。",
+        "原文器件使用3 M Zn(CF3SO3)2水溶液，但带边示意图未给出相应标定pH；不能把器件电解液当作该能级测量条件。",
+        "图中FTO 4.5 eV和多孔碳5.0 eV是接触/功函数示意，不误当作CdS的CB/VB。",
+        "真空坐标可形式转换为SHE，但未知pH、方法与界面条件不能被坐标换算消除。"
+      ],
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "先按同文方法在FTO上长ZnO纳米棒，再以镉盐/硫脲溶液在其表面生长CdS；最后另覆多孔碳储能层。",
+        "precursors": [
+          "ZnO NRs/FTO，按同文独立前序方法制备",
+          "四水合硝酸镉Cd(NO3)2·4H2O，合成段用量1 mmol",
+          "硫脲，3 mmol",
+          "反应溶液总体积240 mL（该方法段未明确写出溶剂）"
+        ],
+        "conditions": [
+          "ZnO NRs/FTO的涂层面朝下浸入镉盐/硫脲溶液。",
+          "180 °C处理5 h。",
+          "去离子水与乙醇清洗，120 °C空气中干燥1 h。",
+          "多孔碳为单独柠檬酸钠热处理产物；其覆盖步骤不属于CdS本体合成。"
+        ],
+        "phase_check": "原文Fig.1f的(100)/(002)/(101)/(110)衍射峰对应六方CdS JCPDS 41-1049，Fig.1d显示表面CdS颗粒。",
+        "locator": "公开发表版PDF第6页/期刊6968页，Experimental Section / Chemicals、Synthesis of CdS@ZnO NRs；Fig.1f在PDF第2页。",
+        "fulltext_url": "https://discovery.ucl.ac.uk/id/eprint/10163372/7/Deka%20Boruah_acsami.2c20995.pdf",
+        "supplement_url": null,
+        "missing": [
+          "该240 mL反应液溶剂在所读合成段未明确写出。",
+          "设备容积、填充率、升降温程序、清洗次数与最终负载量。",
+          "SI实际文件链接及带边标定方法、pH和不确定度。"
+        ],
+        "notes": [
+          "主要步骤已读，不代表完整复现规程。",
+          "不能仅凭CdS的带边示意保证钒基异质结形成或光充电。"
+        ],
+        "checked_on": "2026-10-16"
+      },
+      "band_data_status": "complete",
+      "paired_partner_id": "P-ZNO-NR-ACSAMI2023"
+    },
+    {
+      "id": "P-ZNO-NR-ACSAMI2023",
+      "material": "纤锌矿 ZnO 纳米棒 / FTO",
+      "formula": "ZnO",
+      "phase": "六方纤锌矿，JCPDS 36-1451",
+      "sample": "2023 ACS AMI 的PC/CdS@ZnO NRs/FTO光电容器中的ZnO纳米棒；与2021 MoS2/ZnO薄层样品分开记录",
+      "role": "partner",
+      "gap_eV": 3.2,
+      "gap_basis": "仅由原图CB/VB数值差7.6−4.4计算；该记录未核实独立ZnO Tauc带隙",
+      "cb": -4.4,
+      "vb": -7.6,
+      "scale": "vacuum",
+      "ph": null,
+      "method": "原论文Fig.1b明确图示标签，已目视放大核实；原轴Energy(−eV)。不是独立UPS/XPS带边或测量不确定度已齐全的实测值。",
+      "edge_label": "作者能级图标注 · 示意/估计，非独立实测",
+      "edge_basis": "author_schematic",
+      "charge_label": "CdS/ZnO光辅助锌离子电容器的传输层；不是钒基配对验证",
+      "work_function_eV": null,
+      "d_band_center_eV": null,
+      "uncertainty_eV": null,
+      "electrolyte": null,
+      "soc": null,
+      "temperature_K": null,
+      "vanadium_pair_verified": false,
+      "source": {
+        "doi": "10.1021/acsami.2c20995",
+        "url": "https://discovery.ucl.ac.uk/id/eprint/10163372/7/Deka%20Boruah_acsami.2c20995.pdf",
+        "title": "Porous Carbon Coated on Cadmium Sulfide-Decorated Zinc Oxide Nanorod Photocathodes for Photo-accelerated Zinc Ion Capacitors",
+        "title_zh": "多孔碳包覆的硫化镉修饰氧化锌纳米棒光正极用于光加速锌离子电容器",
+        "authors": [
+          "Xiaopeng Liu",
+          "Holly Andersen",
+          "Yinan Lu",
+          "Bo Wen",
+          "Ivan P. Parkin",
+          "Michael De Volder",
+          "Buddha Deka Boruah"
+        ],
+        "journal": "ACS Applied Materials & Interfaces",
+        "year": 2023,
+        "library_id": "L40",
+        "reference": "Xiaopeng Liu, Holly Andersen, Yinan Lu, Bo Wen, Ivan P. Parkin, Michael De Volder, Buddha Deka Boruah. Porous Carbon Coated on Cadmium Sulfide-Decorated Zinc Oxide Nanorod Photocathodes for Photo-accelerated Zinc Ion Capacitors. ACS Applied Materials & Interfaces, 2023, 15(5): 6963–6969. DOI: 10.1021/acsami.2c20995",
+        "access_label": "UCL公开发表版",
+        "locator": "PDF第2页/期刊6964页Fig.1b（ZnO 4.4/7.6，轴Energy(−eV)）；Fig.1f与正文确认纤锌矿JCPDS 36-1451。"
+      },
+      "notes": [
+        "同名ZnO但不同制备与形貌；不能覆盖2021 MoS2/ZnO记录的−4.4/−7.7 eV。",
+        "Eg 3.2 eV为图中两带边差值，不标成独立光谱测得。",
+        "相和合成步骤较明确，但带边pH、标定过程和不确定度仍缺失。",
+        "原文未与钒基正极复合测量。"
+      ],
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "先由乙酸锌/DMF得到ZnO种子，再在FTO上旋涂种子并热处理，随后以硝酸锌/HMTA溶液生长纤锌矿ZnO纳米棒。",
+        "precursors": [
+          "二水合乙酸锌100 mg，DMF 100 mL",
+          "FTO玻璃，约7 Ω sq−1",
+          "六水合硝酸锌与六亚甲基四胺(HMTA)，等摩尔各25 mM，反应液200 mL"
+        ],
+        "conditions": [
+          "种子溶液105 °C保持5 h；FTO用异丙醇/乙醇/去离子水清洗后UV臭氧20 min。",
+          "1000 rpm旋涂1 min、150 °C干燥5 min，重复5次；250 °C空气处理1 h。",
+          "种子面朝下，95 °C生长纳米棒15 h。",
+          "去离子水和乙醇清洗，120 °C空气干燥1 h。"
+        ],
+        "phase_check": "Fig.1f的(100)/(002)/(101)/(102)对应纤锌矿ZnO JCPDS 36-1451；Fig.1c显示约140–160 nm直径有序棒状形貌。",
+        "locator": "公开发表版PDF第6页/期刊6968页，Experimental Section / Synthesis of ZnO NPs、Synthesis of ZnO NRs。",
+        "fulltext_url": "https://discovery.ucl.ac.uk/id/eprint/10163372/7/Deka%20Boruah_acsami.2c20995.pdf",
+        "supplement_url": null,
+        "missing": [
+          "200 mL生长液的溶剂在所读此段未明确写出。",
+          "升降温程序、清洗次数、负载量与形貌统计。",
+          "带边测量参比、pH、标定细节及SI实际文件链接。"
+        ],
+        "notes": [
+          "仅为主要已核步骤，不能保证复现相同带边。",
+          "不能套用到2021碳纤维ZnO薄层或其他缺陷ZnO。"
+        ],
+        "checked_on": "2026-10-16"
+      },
+      "band_data_status": "complete",
+      "paired_partner_id": "P-CDS-HEX-ACSAMI2023"
+    },
+    {
+      "id": "P-ZIS-HEX-NR2025",
+      "material": "六方 ZnIn₂S₄（CZN体系纯样品对照）",
+      "formula": "ZnIn2S4",
+      "phase": "六方ZnIn2S4；正文XRD JCPDS 72-0773，HRTEM(104)/(112)",
+      "sample": "2025 Nano Research 的NiCo-LDH/ZnIn2S4/CNT光电池研究，取纯ZnIn2S4对照，不能混用复合CZ或CZN的带隙",
+      "role": "partner",
+      "gap_eV": 2.45,
+      "gap_basis": "正文Fig.3b UV–vis/Tauc明确纯ZnIn2S4为2.45 eV；CZ/CZN为2.38/2.29 eV，分开保留",
+      "cb": -0.732,
+      "vb": 1.718,
+      "scale": "RHE",
+      "ph": null,
+      "method": "正文3.3给出−0.732/+1.718 V vs RHE。SI Eq.S1用ECB=EFB−0.1 V，VB再由Eg得出。M–S在0.5 M Na2SO4，未报告数值pH，不能强制换到SHE。",
+      "edge_label": "原RHE标尺值 · 缺pH，不参与SHE对齐",
+      "edge_basis": "flat_band_offset",
+      "charge_label": "NiCo-LDH/ZnIn2S4/CNT器件报告仅光照充电；不是钒基正极",
+      "work_function_eV": null,
+      "d_band_center_eV": null,
+      "uncertainty_eV": null,
+      "electrolyte": "M–S测量：0.5 M Na2SO4；实际电池为6 M KOH+0.2 M Zn(CH3COO)2，不能混作能带测量条件",
+      "soc": null,
+      "temperature_K": null,
+      "vanadium_pair_verified": false,
+      "source": {
+        "doi": "10.26599/NR.2025.94907419",
+        "url": "https://www.sciopen.com/local/article_pdf/10.26599/NR.2025.94907419.pdf",
+        "title": "Photo-driven rechargeable aqueous zinc batteries based on NiCo-layered double hydroxide nano composite cathodes",
+        "title_zh": "基于镍钴层状双氢氧化物纳米复合正极的光驱动可充电水系锌电池",
+        "authors": [
+          "Xiaohong Ma",
+          "Maokuan Guo",
+          "Xiaocheng Chen",
+          "Xuguang Liu",
+          "Jun Lu"
+        ],
+        "journal": "Nano Research",
+        "year": 2025,
+        "library_id": null,
+        "reference": "Xiaohong Ma, Maokuan Guo, Xiaocheng Chen, Xuguang Liu, Jun Lu. Photo-driven rechargeable aqueous zinc batteries based on NiCo-layered double hydroxide nano composite cathodes. Nano Research, 2025, 18(6): 94907419. DOI: 10.26599/NR.2025.94907419",
+        "access_label": "SciOpen公开全文",
+        "locator": "正文PDF第4页3.3节与Fig.3b/c（CB/VB原RHE数值）；ESM第1–2页Electrochemical measurements与Eq.S1–S3；正文第3–4页Fig.2相鉴定。"
+      },
+      "notes": [
+        "0.5 M Na2SO4不能直接当作pH 7，原文与SI没有给出可用于RHE→SHE换算的数值pH。",
+        "SI Eq.S2采用4.5 V而不是本站4.44 V约定；正文另称CB能量深度3.4 eV。此处只保留明确原RHE数值，不用该近似深度倒算pH或拼成另一条绝对带边。",
+        "SI Eq.S3：ERHE=EHg/HgO+0.0591pH+0.098；缺pH时不能消除参比转换不确定性。",
+        "碱性电池涉及Zn(OH)4²−/Zn，不可把−0.76 V的自由Zn²⁺标准还原电位当作它的实际Zn参比偏移。",
+        "需作者补充M–S的实际pH和能级标定细节后才可进入共同SHE/vacuum/Zn数值图。"
+      ],
+      "synthesis": {
+        "status": "verified_summary",
+        "route": "纯ZnIn2S4按SI的CZ水热路线去掉CNT制备；复合CZ再经Co-MOF与NiCo-LDH逐层构建，纯样品能带与复合器件配方分开。",
+        "precursors": [
+          "ZnCl2，2 mmol",
+          "InCl3，4 mmol",
+          "硫代乙酰胺(TAA)，8 mmol",
+          "去离子水70 mL；纯ZnIn2S4不加CNT"
+        ],
+        "conditions": [
+          "上述前驱体溶于70 mL水，按同路线搅拌24 h。",
+          "100 mL聚四氟乙烯内衬不锈钢反应釜，160 °C水热6 h，自然冷却。",
+          "无水乙醇和超纯水反复清洗过滤，60 °C真空干燥12 h。",
+          "CZ路线另加1 wt% CNT；该条纯ZnIn2S4对照明确不加CNT，不将CNT质量套入纯样品。"
+        ],
+        "phase_check": "正文Fig.2 XRD/形貌及第4页HRTEM讨论，0.293/0.195 nm对应六方ZnIn2S4的(104)/(112)晶面；原文JCPDS 72-0773。",
+        "locator": "ESM第1页Preparation of CZN / Synthesis of ZnIn2S4/CNTs (CZ)末句明确纯ZnIn2S4对照不加CNT。",
+        "fulltext_url": "https://www.sciopen.com/local/article_pdf/10.26599/NR.2025.94907419.pdf",
+        "supplement_url": "https://www.sciopen.com/article/enhance_pdf_preview?id=1930421030436212738",
+        "missing": [
+          "M–S的数值pH、初始表面/插层状态和带边不确定度。",
+          "纯样品搅拌细节、洗涤次数、水热升温程序及产率。"
+        ],
+        "notes": [
+          "ESM补充材料已核读；纯ZnIn₂S₄的合成方法位于第1页。",
+          "该方法用于非钒基体系的纯样品对照，不构成与钒基直接光充电的验证。"
+        ],
+        "checked_on": "2026-10-16",
+        "supplement_checked": true
+      },
+      "band_data_status": "reference_pending",
+      "derived": true
     }
   ],
   "method_sources": [
@@ -1254,6 +1796,10 @@
     {
       "title": "光电池中的热效应与荷电态影响",
       "url": "https://doi.org/10.1021/acsenergylett.3c01627"
+    },
+    {
+      "title": "Zn²⁺/Zn标准电位与碱性半反应的区别（NIST表1）",
+      "url": "https://www.nist.gov/system/files/documents/srd/jpcrd444.pdf"
     }
   ]
 }
