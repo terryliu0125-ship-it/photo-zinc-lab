@@ -43,7 +43,7 @@
       // A provided offset always wins. An invalid provided offset never falls back.
       if (has(options.reference_offset_V)) return number(options.reference_offset_V, '测量条件下Zn参比相对SHE的电位');
       if (text(options.zinc_reference_mode) === 'standard_approximation') return -0.76;
-      throw new Error('缺少测量条件下Zn参比相对SHE的电位；必须提供reference_offset_V，或显式选择standard_approximation标准态近似。');
+      throw new Error('缺少测量条件下Zn参比相对SHE的电位；请填写该参比偏移，或显式选择−0.76 V标准态近似。');
     }
     return number(options.reference_offset_V, '该参比在测量条件下相对SHE的偏移');
   }
@@ -117,7 +117,7 @@
       if (scale === 'RHE') warnings.push('RHE换算采用25°C斜率；仅统一坐标，不推算材料在其他pH下的能带变化。');
       if (scale === 'Zn') {
         if (has(record.reference_offset_V)) {
-          warnings.push('Zn参比使用显式reference_offset_V；该值须对应测量时的电解液、温度和Zn²⁺活度，不能把所有Zn电极视为相同参比。');
+          warnings.push('Zn参比使用明确填写的SHE偏移；该值须对应测量时的电解液、温度和Zn²⁺活度，不能把所有Zn电极视为相同参比。');
           if (text(record.zinc_reference_mode) === 'standard_approximation') warnings.push('Zn参比模式冲突：已给显式偏移时优先使用该偏移，不使用−0.76 V标准态近似；请核对模式与原始记录。');
         } else warnings.push('Zn参比采用显式选择的标准态近似−0.76 V vs SHE；非实际Zn电极的实测电位，不能代表本组电解液、活度或配位条件。');
       }
