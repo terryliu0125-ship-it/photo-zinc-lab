@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add literature.json index.html literature.html REFERENCES.md references.bib references.ris automation/monitor-state.json
+          git add literature.json index.html literature.html group.html REFERENCES.md references.bib references.ris automation/monitor-state.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update daily literature'
             git pull --rebase origin main
