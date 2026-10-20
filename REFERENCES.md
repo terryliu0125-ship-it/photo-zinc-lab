@@ -1201,3 +1201,13 @@ Ruyu Sun; Xinyu Gao; Jiaming Liu; Nana Zhang; Zhitao Shao; Yuan Zhang; Junxin Zh
 构建 ZnO@MnO₂ 异质结以改善载流子分离、导电性和反应动力学。公开摘要报告光照下在 0.2 A g⁻¹ 时约 545 mAh g⁻¹，比暗态提高 92.58%；非原位表征将储能反应与 MnO₂ / ZnMn₂O₄ 的可逆转化联系起来。
 
 阅读提示：容量测试为 0.2 A g⁻¹；80.28% 保持率对应 1 A g⁻¹ 下 200 次光照循环，两项结果应分开比较。本文通过与已核实作者 ORCID 和单位交叉检索补录。
+
+## L121 · 新近文献 · 待研读
+
+电池分类：锌基相关文献 · 文献类型：待分类
+
+Dan Yang; Chen Xin; Wenzhan Zhang; Yitao Lou; Zhongchao Bai; Ting Xiong. Unlocking efficient photo-rechargeable Zn-Ion batteries via 1 T/2H MoS2 structural synergy and coupled intercalation/plating mechanism. *Chemical Engineering Journal*, 2026. [DOI](https://doi.org/10.1016/j.cej.2026.183172) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.cej.2026.183172)
+
+标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。
+
+阅读提示：请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。

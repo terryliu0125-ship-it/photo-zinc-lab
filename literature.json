@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "scope": "精选阅读清单，并非系统综述或穷尽性检索。文献来自领域研究者，不代表本站自有成果。",
   "papers": [
     {
@@ -6885,11 +6885,52 @@
         "institution": "Northeast Forestry University",
         "checked_on": "2026-10-15"
       }
+    },
+    {
+      "title": "Unlocking efficient photo-rechargeable Zn-Ion batteries via 1 T/2H MoS2 structural synergy and coupled intercalation/plating mechanism",
+      "heading": "新近文献 · 待研读",
+      "tags": [
+        "auto",
+        "mechanism"
+      ],
+      "kind": "期刊文献",
+      "material": "请查阅原文材料体系",
+      "summary": "标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。",
+      "note": "请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。",
+      "authors": [
+        "Dan Yang",
+        "Chen Xin",
+        "Wenzhan Zhang",
+        "Yitao Lou",
+        "Zhongchao Bai",
+        "Ting Xiong"
+      ],
+      "citationAuthors": [
+        "Yang, Dan",
+        "Xin, Chen",
+        "Zhang, Wenzhan",
+        "Lou, Yitao",
+        "Bai, Zhongchao",
+        "Xiong, Ting"
+      ],
+      "journal": "Chemical Engineering Journal",
+      "year": 2026,
+      "publication_date": "2026-10",
+      "volume": "",
+      "issue": "",
+      "pages": "183172",
+      "doi": "10.1016/j.cej.2026.183172",
+      "url": "https://doi.org/10.1016/j.cej.2026.183172",
+      "source": "https://api.crossref.org/works/10.1016%2Fj.cej.2026.183172",
+      "abstract": "",
+      "review_status": "auto",
+      "added": "2026-10-20",
+      "id": "L121"
     }
   ],
   "curated_checked_on": "2026-10-15",
-  "last_checked_at": "2026-10-15T04:49:47.360928+00:00",
-  "last_added_count": 0,
+  "last_checked_at": "2026-10-20T10:21:24.479078+00:00",
+  "last_added_count": 1,
   "curated_expansion": {
     "date": "2026-10-13",
     "added_count": 31,
