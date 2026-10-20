@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import copy
+import http.client
+import io
 import json
 import re
 import shutil
@@ -98,6 +100,25 @@ class DiscoveryTests(unittest.TestCase):
         monitor.discover(config, {"last_checked_at": "2026-08-01T00:17:00+00:00"}, NOW)
         from urllib.parse import unquote
         self.assertIn("from-index-date:2026-07-31", unquote(fetch.call_args[0][0]))
+        self.assertIn("select=DOI%2Ctype", fetch.call_args[0][0])
+
+    def test_incomplete_crossref_transfer_retries_then_succeeds(self):
+        payload = io.BytesIO(b'{"status":"ok","message":{"items":[]}}')
+        with patch.object(monitor.urllib.request, "urlopen",
+                          side_effect=[http.client.IncompleteRead(b"partial"), payload]) as fetch, \
+             patch.object(monitor.time, "sleep") as sleep:
+            result = monitor.get_crossref("https://api.crossref.org/works?rows=1")
+        self.assertEqual(result["message"]["items"], [])
+        self.assertEqual(fetch.call_count, 2)
+        sleep.assert_called_once_with(1)
+
+    def test_repeated_incomplete_transfer_fails_cleanly(self):
+        with patch.object(monitor.urllib.request, "urlopen",
+                          side_effect=[http.client.IncompleteRead(b"partial") for _ in range(3)]) as fetch, \
+             patch.object(monitor.time, "sleep"):
+            with self.assertRaisesRegex(RuntimeError, "Crossref 连接失败"):
+                monitor.get_crossref("https://api.crossref.org/works?rows=1")
+        self.assertEqual(fetch.call_count, 3)
 
 
 class PipelineTests(unittest.TestCase):
