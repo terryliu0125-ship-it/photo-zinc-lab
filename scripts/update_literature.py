@@ -6,6 +6,7 @@ import argparse
 import copy
 import hashlib
 import html
+import http.client
 import json
 import os
 import re
@@ -19,7 +20,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from render_library import ROOT, generated_files
+from render_library import ROOT, render
 
 
 def clean_text(value: str) -> str:
@@ -129,7 +130,7 @@ def get_crossref(url: str) -> dict:
         except urllib.error.HTTPError as exc:
             if exc.code not in (429, 500, 502, 503, 504) or attempt == 2:
                 raise RuntimeError(f"Crossref 请求失败（HTTP {exc.code}）") from None
-        except (urllib.error.URLError, TimeoutError, OSError):
+        except (urllib.error.URLError, TimeoutError, OSError, http.client.IncompleteRead):
             if attempt == 2:
                 raise RuntimeError("Crossref 连接失败，未推进检索时间") from None
         except (json.JSONDecodeError, AttributeError):
@@ -153,6 +154,9 @@ def discover(config: dict, state: dict, now: datetime) -> list[dict]:
         params = {
             "query.title": query, "rows": str(config["candidates_per_query"]),
             "filter": f"type:journal-article,from-pub-date:{since},until-pub-date:{today},from-index-date:{indexed_since}",
+            # Limit response size to reduce interrupted chunked transfers.
+            "select": "DOI,type,title,published-online,published,issued,published-print,"
+                      "author,container-title,volume,issue,page,article-number,relation,abstract",
             "sort": "relevance", "order": "desc",
         }
         if os.environ.get("CROSSREF_EMAIL", "").strip():
@@ -219,9 +223,7 @@ def refresh(root: Path, now: datetime, *, dry_run: bool = False, site_only: bool
     for p in added:
         print(f"{p['publication_date']} · {p['title']} · {p['doi']}")
     if not dry_run:
-        files = generated_files(root, library)
-        for name, content in files.items():
-            (root / name).write_text(content, encoding="utf-8")
+        render(root, library)
         write_json(root / "literature.json", library)
         write_json(root / "automation/monitor-state.json", state)
     return added
