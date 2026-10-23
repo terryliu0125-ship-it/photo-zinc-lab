@@ -39,7 +39,7 @@ def coordinate_table(edges):
     cb,vb=edges
     rows=[('统一主标尺 · V vs SHE',cb,vb),('真空电子能量 · eV',-cb-4.44,-vb-4.44),('V vs Zn° · 标准态近似',cb+0.76,vb+0.76)]
     body=''.join(f'<tr><th scope="row">{esc(label)}</th><td>{a:.3f}</td><td>{b:.3f}</td></tr>' for label,a,b in rows)
-    return f'<div class="band-conversion-table"><table><caption>同一样品的三种参照</caption><thead><tr><th>参照标尺</th><th>CB</th><th>VB</th></tr></thead><tbody>{body}</tbody></table><p class="conversion-note">Zn°仅按−0.76 V vs SHE的25°C标准态近似换算，不代表实际电解液中的Zn参比；坐标统一不消除pH、晶相和荷电态差异。</p></div>'
+    return f'<div class="band-conversion-table"><table><caption>同一样品的三种参照</caption><thead><tr><th>参照标尺</th><th>CB</th><th>VB</th></tr></thead><tbody>{body}</tbody></table><p class="conversion-note">Zn°仅按−0.76 V vs SHE的25°C标准态近似换算，不代表实际电解液中的Zn参比。干态UPS或真空示意换至SHE只是能量零点平移，不等于电解液界面的实际带边；坐标统一不消除pH、晶相、吸附、带弯曲和荷电态差异。</p></div>'
 
 def esc(value):
     return html.escape(str(value), quote=True)

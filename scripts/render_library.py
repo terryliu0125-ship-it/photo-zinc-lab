@@ -108,6 +108,35 @@ def ris_entry(paper: dict) -> str:
     return "\n".join(lines)
 
 
+def theory_audit_html(paper: dict) -> str:
+    """Expose what was read, without presenting author claims as proven mechanisms."""
+    audit = paper.get("theory_audit")
+    if not isinstance(audit, dict):
+        return '<p class="paper-notice">导读核查：原始来源待逐条核对。<a href="theory-audit.html">查看核查范围</a></p>'
+    labels = {
+        "abstract-based": "原始摘要",
+        "abstract-fragment": "原始摘要相关片段（非完整摘要 / 正文）",
+        "abstract-plus-selected-SI": "原始摘要与指定 SI 段落",
+        "selected-main-text": "相关正文 / 图表 / 方法",
+        "fulltext-relevant-sections": "所提供正文的相关章节",
+        "review-scope": "综述范围与导读边界",
+        "editorial-screen-only": "仅扫读站内导读，原始来源待核",
+        "metadata-only": "仅书目信息，机理待核",
+    }
+    label = labels.get(audit.get("coverage"), "读取范围待说明")
+    status = "导读与所读范围相符" if audit.get("status") == "confirmed" else "仍有原始证据待核"
+    sources = ' · '.join(
+        f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">依据 {i + 1} ↗</a>'
+        for i, url in enumerate(audit.get("source_urls", []))
+        if isinstance(url, str) and re.match(r"https?://", url)
+    )
+    locator = f'<p>原文定位：{esc(audit["locator"])}</p>' if audit.get("locator") else ""
+    return (f'<div class="paper-audit"><p><strong>导读核查 · {esc(audit.get("checked_on", ""))}</strong>'
+            f' · {esc(status)}<br/>读取范围：{esc(label)}</p><p>{esc(audit.get("note", ""))}</p>'
+            f'{locator}<p>{sources}{" · " if sources else ""}'
+            '<a href="theory-audit.html#library-audit">全站核查记录</a></p></div>')
+
+
 def card(p: dict, performance: dict | None = None) -> str:
     authors = "; ".join(p["authors"][:3]) + ("; et al." if len(p["authors"]) > 3 else "")
     journal = " · ".join(str(value) for value in (p["journal"], p.get("publication_date") or p["year"]) if value)
@@ -153,7 +182,7 @@ def card(p: dict, performance: dict | None = None) -> str:
   {topic_line}
   <details><summary>阅读提示与书目信息</summary>
    <p>阅读切入点：{esc(p['heading'])}</p>
-   <p>{esc(p['note'])}</p>{basis}{abstract}{notices}
+   <p>{esc(p['note'])}</p>{basis}{theory_audit_html(p)}{abstract}{notices}
    <p>完整作者：{esc('; '.join(p['authors']))}</p>
    <a href="{esc(p['source'])}" target="_blank" rel="noopener noreferrer">查看 Crossref 书目记录 ↗</a>
    {publisher}
