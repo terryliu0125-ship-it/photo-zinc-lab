@@ -8,9 +8,9 @@
 
 Buddha Deka Boruah; Angus Mathieson; Bo Wen; Sascha Feldmann; Wesley M. Dose; Michael De Volder. Photo-rechargeable zinc-ion batteries. *Energy & Environmental Science*, 2020. [DOI](https://doi.org/10.1039/d0ee01392g) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd0ee01392g)
 
-介绍将光吸收、载流子分离与锌离子存储整合在同一光电极中的设计，并展示直接光充电。适合用来理解光电极各组分的作用。
+介绍 V₂O₅/P3HT/rGO 复合光电极。作者报告光照时记录开路电压恢复，并在随后恒流放电中回收电量；以此讨论无外加电流的光充电。可用于理解吸光与电荷传输组分的设计。
 
-阅读提示：重点阅读光充电后放电实验，并区分光照下容量增加与直接光充电。
+阅读提示：该光充测试采用 OCV 光照后放电协议；不能把开路电压升高、光照放电增容或拟议反应图单独当作闭路双极同步充电及锌再生的直接证据。需读温控、暗态静置及后续暗态放电对照。
 
 ## L02 · 用于高倍率光充电锌离子电池的二氧化钒正极
 
@@ -18,9 +18,9 @@ Buddha Deka Boruah; Angus Mathieson; Bo Wen; Sascha Feldmann; Wesley M. Dose; Mi
 
 Buddha Deka Boruah; Angus Mathieson; Sul Ki Park; Xiao Zhang; Bo Wen; Lifu Tan; Adam Boies; Michael De Volder. Vanadium Dioxide Cathodes for High‐Rate Photo‐Rechargeable Zinc‐Ion Batteries. *Advanced Energy Materials*, 2021. [DOI](https://doi.org/10.1002/aenm.202100115) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Faenm.202100115)
 
-以 VO₂ 纳米棒与还原氧化石墨烯构建光正极，讨论光充电及光照下的倍率表现，为钒氧化物的材料选择提供对照。
+以 VO₂(B) 纳米棒与还原氧化石墨烯构建光正极。作者报告无外加电流下的光照 OCV 恢复及后续暗态放电，并另测光照下的倍率表现；这两类协议需分别理解。
 
-阅读提示：比较测试电流、光照条件与循环条件，避免只依据容量判断材料优劣。
+阅读提示：Fig.5 光充采用无外加电流/开路记录，不能仅凭 OCV 与放电回收认定锌负极同步再生；倍率增益仍须按光照、温度、荷电态和循环条件比较。
 
 ## L03 · 用于光充电锌离子电池的二氧化钒–氧化锌堆叠光正极
 
@@ -28,9 +28,9 @@ Buddha Deka Boruah; Angus Mathieson; Sul Ki Park; Xiao Zhang; Bo Wen; Lifu Tan; 
 
 Buddha Deka Boruah; Michael De Volder. Vanadium dioxide–zinc oxide stacked photocathodes for photo-rechargeable zinc-ion batteries. *Journal of Materials Chemistry A*, 2021. [DOI](https://doi.org/10.1039/d1ta07572a) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd1ta07572a)
 
-通过 VO₂ 与 ZnO 的层状堆叠安排储能与电荷传输路径。可结合能带示意和光响应实验，理解界面设计为何影响光充电。
+通过 VO₂(B) 与 ZnO 堆叠安排电荷选择与传输路径。作者报告无外加电流光照后的电压恢复及随后放电，并另做零偏压光电流测试；可结合能带示意学习作者提出的界面机制。
 
-阅读提示：重点关注 ZnO 的电子传输与空穴阻挡作用，以及层间接触。
+阅读提示：ZnO 的电子传输/空穴阻挡解释属于该器件。Fig.5a 的无外加电流光照电压恢复与 Fig.5b 的 0 V 恒电位电流是不同协议；二者不能混作闭路双极光充和锌再生的直接证据。
 
 ## L04 · 用于光充电锌离子电池的二硫化钼–氧化锌光正极
 
@@ -38,9 +38,9 @@ Buddha Deka Boruah; Michael De Volder. Vanadium dioxide–zinc oxide stacked pho
 
 Buddha Deka Boruah; Bo Wen; Michael De Volder. Molybdenum Disulfide–Zinc Oxide Photocathodes for Photo-Rechargeable Zinc-Ion Batteries. *ACS Nano*, 2021. [DOI](https://doi.org/10.1021/acsnano.1c06372) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsnano.1c06372)
 
-将 MoS₂ 与 ZnO 分层生长在集流体上，探索异质界面的光生电荷分离与光充电。适合作为钒基光电极之外的比较体系。
+将 MoS₂ 与 ZnO 分层生长在集流体上，作者以能带、光探测器和电化学测试讨论异质界面电荷分离。文中光充记录为光照开路电压恢复及随后放电，可与钒基复合光电极比较。
 
-阅读提示：阅读堆叠光探测器的零偏压响应，再与电池的充电过程对应。
+阅读提示：零偏压堆叠光探测器响应与电池 OCV 光照后放电须分别读；前者不能单独证明后者已实现双极同步净充电或可逆锌沉积。
 
 ## L05 · 通过可控氧化制备 V₂O₅/VO₂ 空心纳米球光正极，实现光充电锌离子电池的超高容量增益
 
@@ -60,7 +60,7 @@ Meng Wei; Guangyu Lin; Donghui Chen; Qiongzhi Gao; Xin Cai; Shengsen Zhang; Lixi
 
 对比三种充电协议，并结合电流—电压同步测量、界面过程和理论计算讨论储能机理，提出扣除自充电贡献的 OCV 评价方法。
 
-阅读提示：OCV 回升需要排查极化恢复和自充电，不能仅凭电压升高认定净能量存储。
+阅读提示：该文的 η_OCV 是扣除内禀自充电后、特定开路协议下的净能量回收指标；测量时外电路电流为零，不等于闭路整电池的通用太阳能效率，也不能据此认定锌负极同步再生。
 
 ## L07 · 基于碳包覆水合钒氧化物的光电–光热协同增强光辅助锌离子电池
 
@@ -162,15 +162,15 @@ Xinyang Wen; Yaotang Zhong; Shuai Chen; Zhengchi Yang; Pengyu Dong; Yuqi Wang; L
 
 阅读提示：把结构带来的吸光改善、界面传输和活性物质负载变化分别比较。
 
-## L17 · 用于高效光充电锌离子电池的碳超结构支撑半金属 V₂O₃ 纳米球
+## L17 · 用于高效光充电锌离子电池的碳超结构支撑 half-metallic V₂O₃ 纳米球
 
 电池分类：锌基相关文献 · 文献类型：研究论文
 
 Yingying Zhao; Tianqi He; Jinhang Li; Chunling Zhu; Yujie Tan; Kai Zhu; Shulei Chou; Yujin Chen. Carbon Superstructure‐Supported Half‐Metallic V2O3 Nanospheres for High‐Efficiency Photorechargeable Zinc Ion Batteries. *Angewandte Chemie International Edition*, 2024. [DOI](https://doi.org/10.1002/anie.202408218) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fanie.202408218)
 
-用碳超结构支撑 V₂O₃ 纳米球，讨论半金属光电特性、电子传输网络与储锌功能的结合。
+用碳超结构支撑 V₂O₃ 纳米球，作者将该样品的电子结构描述为 half-metallic，并结合理论与光电表征讨论电荷传输和储锌功能。此表述限于文中样品及模型。
 
-阅读提示：结合理论计算与光电表征理解半金属材料的作用，比较同条件光暗测试。
+阅读提示：保留原文 half-metallic 术语：它涉及不同自旋通道的电子结构，不能仅按普通半导体的单一带隙理解；也不等于所有 V₂O₃ 晶相均有相同性能。该轮核对到原始摘要，完整自旋分辨计算与光充证据仍须读正文。
 
 ## L18 · 通过调控光诱导质子转移实现高稳定性光辅助锌离子电池
 
@@ -260,7 +260,7 @@ Yueyue Ma; Ling Li; Yifan Jiang; Zhibao Wang; Bo Wang; Wenming Zhang. Promoting 
 
 在碳布上构建 Cu₂O 与金属有机框架异质结，研究界面电荷分离及光充电储锌。
 
-阅读提示：将能带排列证据与光响应、充放电结果对应，注意 MOF 与氧化物各自的功能。
+阅读提示：摘要中的photo-charging主要以OCV由0.4升至0.94V描述；应继续核查电路状态、后续暗放电和锌再生，不能单独以OCV判定双极同步法拉第充电。
 
 ## L27 · 用于高倍率光充电锌离子电池的 V₂O₅/CdS 异质结构
 
@@ -300,7 +300,7 @@ Jiale Ji; Lei Zhao; Mengyuan Li; Zhongyi Kou; Wenzhu Li; Fengshi Cai. Tin oxide-
 
 将含萘二酰亚胺和三苯胺单元的 COF 与 SnO₂ 复合，结合有机活性位点、能级匹配及光生电荷分离。
 
-阅读提示：区分 COF 的储锌位点与 SnO₂ 的界面作用，并检查复合物质量归一化。
+阅读提示：摘要有无外电流光照下电压恢复，但这不是双极同步再生的独立证据；继续核查电路、暗放电、COF储锌位点及复合物质量归一化。
 
 ## L31 · 采用双功能 α-MnO₂ 光电极的光充电水系锌离子电池原位研究
 
@@ -408,7 +408,7 @@ Xiaopeng Liu; Holly Andersen; Yinan Lu; Bo Wen; Ivan P. Parkin; Michael De Volde
 
 Jalal Azadmanjiri; Jakub Regner; Lukáš Děkanovský; Bing Wu; Jan Luxa; Zdeněk Sofer. Powering the Future: Unleashing the Potential of MXene‐Based Dual‐Functional Photoactive Cathodes in Photo‐Rechargeable Zinc‐Ion Capacitor. *Small*, 2024. [DOI](https://doi.org/10.1002/smll.202305972) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fsmll.202305972)
 
-比较 MXene 与 Te/MXene 复合光正极的光响应及光充电储能，关注双功能电极和光热电耦合特性。
+比较 MXene 与 Te/MXene 复合光正极的光响应及光充电储能。作者报告热释电与光生载流子耦合的 pyro-phototronic 行为，讨论其在双功能光正极中的作用。
 
 阅读提示：结合波长、扫描速率和温度理解光响应；本条为研究正文，未重复收录同名封面。
 
@@ -528,7 +528,7 @@ Chen Hu; Ling Chen; Yanjie Hu; Aiping Chen; Long Chen; Hao Jiang; Chunzhong Li. 
 
 Amar Kumar; Pallavi Thakur; Rahul Sharma; Anand B. Puthirath; Pulickel M. Ajayan; Tharangattu N. Narayanan. Photo Rechargeable Li‐Ion Batteries Using Nanorod Heterostructure Electrodes. *Small*, 2021. [DOI](https://doi.org/10.1002/smll.202105029) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fsmll.202105029)
 
-以晶态二硫化钼与非晶氧化钼组成的纳米棒异质结构构建双电极锂光电池。交错能带帮助分离光生电子与空穴，研究据此探索光驱动脱锂以及光照延长放电的过程。
+以晶态 MoS₂ 与非晶 MoOₓ 组成的纳米棒异质结构构建双电极锂光电池。作者提出交错能带有助于分离光生电子与空穴，并据此探索光驱动脱锂和太阳光充电。
 
 阅读提示：使用锂金属对电极，阅读时核对异质结构与简单物理混合的差别，并分别评价光充电和光照放电。
 
@@ -548,7 +548,7 @@ Jie Wang; Yan Wang; Chaofeng Zhu; Bo Liu. Photoinduced Rechargeable Lithium-Ion 
 
 Michael Wilhelm; Ruth Adam; Aman Bhardwaj; Iuliia Neumann; Sung Hun Cho; Yuki Yamada; Tohru Sekino; Jianming Tao; Zhensheng Hong; Thomas Fischer; Sanjay Mathur. Carbon‐Coated Electrospun V2O5 Nanofibers as Photoresponsive Cathode for Lithium‐Ion Batteries. *Advanced Engineering Materials*, 2023. [DOI](https://doi.org/10.1002/adem.202200765) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fadem.202200765)
 
-以连续碳层包覆电纺五氧化二钒纳米纤维，研究其作为兼具光响应和储锂功能正极的表现。光暗循环与循环后分析显示，碳包覆不仅改善导电，还帮助维持纤维结构并抑制副反应。
+以连续碳层包覆电纺五氧化二钒纳米纤维，研究其作为兼具光响应和储锂功能正极的表现。作者的光暗循环与循环后分析表明，碳包覆有助于导电以及维持纤维结构和形貌；光充电采用紫外灯。
 
 阅读提示：光充电实验使用紫外灯；与可见光或太阳光器件比较效率时，须核对光谱、入射功率和有效照射面积。
 
@@ -578,9 +578,9 @@ Amar Kumar; Raheel Hammad; Mansi Pahuja; Raul Arenal; Kaushik Ghosh; Soumya Ghos
 
 Raj Pandya; Angus Mathieson; Buddha Deka Boruah; Hilton B. de Aguiar; Michael de Volder. Interrogating the Light-Induced Charging Mechanism in Li-Ion Batteries Using Operando Optical Microscopy. *Nano Letters*, 2023. [DOI](https://doi.org/10.1021/acs.nanolett.3c01148) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facs.nanolett.3c01148)
 
-借助工况光学反射显微镜追踪LiₓV₂O₅单颗粒在光充电、光增强循环和纯加热条件下的变化。研究发现光可引起颗粒内部锂浓度极化，提示法拉第反应和非均匀锂分布共同参与光响应。
+借助工况光学反射显微镜追踪 LiₓV₂O₅ 单颗粒在光照、光增强循环和纯加热条件下的变化。作者观察到颗粒内部锂浓度极化，并提出法拉第与非法拉第效应可能共同参与光响应。
 
-阅读提示：重点阅读热对照和颗粒核心与边缘的差异，避免将光照放电容量增加直接解释为储存电荷总量增加。
+阅读提示：该结果揭示颗粒内锂分布变化；不能单独证明锂金属对电极同步再生。应结合电路状态、热对照和随后暗态放电，区分浓度极化、持续光能输入和实际新增可回收储能。
 
 ## L59 · 光辅助锂离子脱嵌与Niδ⁺价态转变协同提升Ni/CdS@Ni₃S₂锂离子电池储能性能
 
@@ -600,7 +600,7 @@ Shangyu Liu; Zan Ding; Tongxin Jiang; Tianxi Chi; Haisheng San; Jingqin Cui; Shi
 
 将高长径比五氧化二钒纳米棒、单壁碳纳米管和二氧化钛整合成异质结构光电极。碳管改善导电性，三维界面网络促进电化学反应与光生电荷传输，为锂光电池提供复合材料设计思路。
 
-阅读提示：同时核对光充电电压与后续暗态放电能量，单独的电压上升并不足以说明光能已被高效储存。
+阅读提示：原摘要光充电使用紫外辐照；与可见光/太阳光器件比较时应核对光谱、面积和输入能量，并检查后续暗态放电。
 
 ## L61 · LiFePO₄/TiO₂复合正极对锂离子电池性能的光辅助增强
 
@@ -608,7 +608,7 @@ Shangyu Liu; Zan Ding; Tongxin Jiang; Tianxi Chi; Haisheng San; Jingqin Cui; Shi
 
 Can Cui; Xiying Wang; Hongzheng Zhu; Yishu Jin; Yiheng Li; Beili Pang; Mingwei Shang; Hongzhou Dong; Liyan Yu; Lifeng Dong. Photo-assisted enhancement of lithium-ion battery performance with a LiFePO4/TiO2 composite cathode. *Ceramics International*, 2024. [DOI](https://doi.org/10.1016/j.ceramint.2024.01.029) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.ceramint.2024.01.029)
 
-构建二氧化钛与磷酸铁锂复合光正极，使光电转换和电化学储锂在同一电极中协同发生。研究通过光暗条件下的充放电比较，分析太阳光照对电池容量及光响应行为的影响。
+以 LiFePO₄/TiO₂ 复合正极研究光辅助锂电池性能。公开摘要和原文题名支持其复合光电极设计及受光电化学表现；具体界面电荷路径、净光能储存和独立纯光充协议仍需完整原文核对。
 
 阅读提示：该文重点是光辅助性能增强；需查看是否有独立的纯光充电与撤光放电实验，勿据光照增容直接推断自充电。
 
@@ -648,7 +648,7 @@ Zelin Ma; Shiyao Wang; Zhuangzhuang Ma; Juan Li; Luomeng Zhao; Zhihuan Li; Shiyu
 
 Can Cui; Beili Pang; Song Xu; Jianguang Feng; Hongzhou Dong; Mingwei Shang; Liyan Yu; Lifeng Dong. Enhanced photo-assisted lithium-ion batteries using natural dye-impregnated LiFePO4 cathodes. *Journal of Materials Chemistry C*, 2025. [DOI](https://doi.org/10.1039/d5tc01579k) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd5tc01579k)
 
-通过溶液浸渍将天然姜黄染料引入磷酸铁锂正极，制备兼具光电与电化学响应的复合电极。研究利用染料吸光增强光照下的电荷传输，并对比电池的充放电及倍率表现。
+通过浸渍将天然姜黄染料引入 LiFePO₄ 正极，研究光辅助锂电池。出版社登记摘要报告在 0.5 C 光照条件下充电与放电容量分别提高约 9.9% 和 7.7%；电荷转移及稳定性的具体证据仍需正文核对。
 
 阅读提示：适合比较低成本天然敏化剂与N719染料路线，但需检查染料稳定性、光照持续时间及暗态循环对照。
 
@@ -680,7 +680,7 @@ Neha Tewari; Davy Lam; Pui Kei Ko; Pai Geng; Herman H. Y. Sung; C.-H. Angus Li; 
 
 将无铅全无机双钙钛矿Cs₂NaBiI₆作为锂电池电极与光电极活性层，在改装扣式电池中整合光采集和储能。研究对比常规电化学储锂与双功能光电池表现，并讨论相较既有铋钙钛矿的稳定性。
 
-阅读提示：正文提示光充电时金属锂负极的再生存在能量限制；重点查看首轮光转换效率与长期可逆循环是否使用相同边界。
+阅读提示：常规储锂的非原位证据包括 Bi³⁺→Bi⁰ 及 LiBi/Li₃Bi 生成，涉及转化与合金化；不能只套用完整钙钛矿骨架插层模型。作者另指出光充后重建锂金属负极存在能量限制；首轮光转换效率与长期循环需分开评价。
 
 ## L69 · 金属卤化物钙钛矿中缺陷触发的原位重构用于光充电锂离子电池
 
@@ -758,9 +758,9 @@ Jiantie Xu; Yonghua Chen; Liming Dai. Efficiently photo-charging lithium-ion bat
 
 Gang Cheng; Zhenyu Guo; Nagaraju Goli; Filip Podjaski; Kaitian Zheng; Jinglin Jiang; Sami Ramadan; Gwilherm Kerherve; Stefano Tagliaferri; Mauro Och; Norbert Klein; Mattia Cattelan; Stefano Agnoli; Maria-Magdalena Titirici; Cecilia Mattevi. Photo-Rechargeable Sodium-Ion Batteries with a Two-Dimensional MoSe2 Crystal Cathode. *Nano Letters*, 2025. [DOI](https://doi.org/10.1021/acs.nanolett.4c03471) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facs.nanolett.4c03471)
 
-研究以二维二硒化钼晶体构建兼具光吸收与储钠功能的正极。公开摘要表明，光生空穴促进钠离子脱嵌，同时改善电荷转移与离子扩散；器件可在不施加外部电流的条件下光充电。
+以二维 MoSe₂ 纳米片构建光活性储钠电极。作者在钠金属半电池中报告无外加电压/电流的光照响应，并将其与空穴辅助脱钠联系；另测得恒流光照循环的容量提升。
 
-阅读提示：重点比较纯光充电后的放电与恒流光照循环，并留意钠金属对电极的半电池条件及热效应对照。
+阅读提示：原文明确为钠金属半电池，后续放电由过量 Na 阳极提供离子；不能由电压恢复或无外加电源一项认定 Na 负极已可逆再生。需分别核对光充后暗态放电、温控与重复循环。
 
 ## L77 · 用于光辅助钠离子电池的 SnS₂@再生石墨烯类似物
 
@@ -768,7 +768,7 @@ Gang Cheng; Zhenyu Guo; Nagaraju Goli; Filip Podjaski; Kaitian Zheng; Jinglin Ji
 
 Bao Yue; Long Chen; Haoyun Dou; Xuanpan Xu; Qiang Huo; Ting Zhu; Chen Qing; Ruchun Li; Hong-En Wang. SnS2@recycled graphene analogs for photoassisted sodium-ion batteries. *Chemical Communications*, 2026. [DOI](https://doi.org/10.1039/d6cc02182d) · [Crossref 元数据](https://api.crossref.org/works/10.1039%2Fd6cc02182d)
 
-将硫化锡纳米片与再生石墨烯类似物构成双功能光阳极，利用异质界面改善载流子分离。公开摘要将光照下储钠增强归因于电荷转移动力学和钠离子扩散改善，并报告纯光充电后的持续放电。
+将 SnS₂ 与再生石墨烯类似物 RGA 构成双功能光电极。出版社登记摘要将其光照储钠响应与界面内建场、电荷转移和 Na⁺ 扩散改善联系；具体独立光充与放电协议仍需完整原文核对。
 
 阅读提示：区分异质结中的光生电荷分离、光照增容与纯光充电证据；材料中的硫属于硫化物晶格，并非钠硫电池。
 
@@ -818,7 +818,7 @@ Yuxiang Hu; Yang Bai; Bin Luo; Songcan Wang; Han Hu; Peng Chen; Miaoqiang Lyu; J
 
 Xuefeng Zhang; Wei-Li Song; Mingyong Wang; Jiguo Tu; Handong Jiao; Shuqiang Jiao. Photo-electrochemical enhanced mechanism enables a fast-charging and high-energy aqueous Al/MnO2 battery. *Energy Storage Materials*, 2022. [DOI](https://doi.org/10.1016/j.ensm.2021.12.020) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.ensm.2021.12.020)
 
-研究利用二氧化锰的半导体特性构建水系铝锰光电化学耦合电池。公开摘要指出，光生电子改善反应动力学和倍率表现，光化学氧化还可使放电形成的可溶锰物种重新参与储能，提供电极反应调控思路。
+以 MnO₂ 正极研究水系 Al/MnO₂ 光电化学耦合电池。可读原始摘要将快速充电、倍率改善与光生电子联系起来；可溶 Mn²⁺ 的再氧化及溶解—沉积贡献仍需完整原文核查。
 
 阅读提示：关注 Mn²⁺/Mn⁴⁺转化及溶解—沉积贡献，不把全部容量直接解释成 Al³⁺嵌入；勿与同工作预印本重复计数。
 
@@ -908,9 +908,9 @@ Xingyu Guo; Zhenbin Wang; Zhi Deng; Xiangguo Li; Bo Wang; Xi Chen; Shyue Ping On
 
 Zhiyin Yang; Ailun Huang; Cheng-Wei Lin; Bradley C. Kroes; Xueying Chang; Maher F. El-Kady; Yuzhang Li; Richard B. Kaner. High-Energy Aqueous Sodium-Ion Batteries Using Water-in-Salt Electrolytes and 3D Structured Electrodes. *ACS Applied Materials & Interfaces*, 2025. [DOI](https://doi.org/10.1021/acsami.4c15832) · [Crossref 元数据](https://api.crossref.org/works/10.1021%2Facsami.4c15832)
 
-结合高浓度水系钠盐电解液与三维结构电极，并与普鲁士蓝类正极组装全电池，考察器件表现。
+将三维 VOₓ/激光刻写石墨烯负极与 NaMnHCF 正极组合，并研究浓 NaClO₄ 及含 Na₄Fe(CN)₆ 的活性水系电解液。原文将容量和循环改善与电极结构、电解液稳定窗口、Mn 溶出控制和电解液氧化还原容量共同联系。
 
-阅读提示：关注水系电解液稳定窗口、盐浓度，以及全电池容量和能量密度的计算口径。
+阅读提示：Na₄Fe(CN)₆ 既参与 Mn 捕获，也作为氧化还原活性电解液额外贡献容量；不能把全部增容归给固体电极。比较能量密度时需核对电解液活性物及整电池质量范围；可用稳定窗口也依测试电极和判据而变。
 
 ## L92 · 迈向高能量与长循环寿命的普鲁士蓝基水系钠离子电池
 
@@ -920,7 +920,7 @@ Xueqian Zhang; Yu Hong; Tianwen Zhang; Xiaohang Ma; Yiyong Wei; Zhenfa Zi; Zhigu
 
 以普鲁士蓝类材料组成水系钠电全电池，研究抑制析氢、析氧副反应与扩大工作电压窗口的关系。
 
-阅读提示：论文报告的电压、容量和循环次数需要结合测试条件、质量归一化范围与全电池配置阅读。
+阅读提示：原文的扩窗指抑制副反应后、特定测试条件下的可用工作窗口，不代表把同条件水分解的热力学电压由 1.23 V 改成 2 V。电压、容量和循环次数仍须结合全电池配置、检测判据与质量范围。
 
 ## L93 · 采用金属氧化物嵌入正极的高容量、长寿命水系可充电锌电池
 
@@ -1000,7 +1000,7 @@ Mingzhuang Liu; Xinghua Li; Mengxia Cui; Feiyu Chen; Jiaxing Li; Weijian Shi; Yu
 
 构筑由无序一维链及原子／分子尺度孔隙组成的有机杂化钒氧化物，结合结构表征和动力学分析研究降低 Zn²⁺ 迁移障碍的途径，并展示 Ah 级软包电池。适合进一步阅读非晶化和有机／无机杂化设计。
 
-阅读提示：“近无势垒”是论文对其特定测试体系的表述，不等同于零能耗；应分别核对固相扩散、界面过程与软包测试条件。
+阅读提示：“近无势垒”对应特定体系较低而非为零的活化能：正文报告界面约 6.3、固相平均约 7.8 kJ mol⁻¹。实验平均活化能与 DFT 单路径势垒不能混用；软包表现仍须连同载量、电解液和电流阅读。
 
 ## L101 · 抑制水系锌离子电池中钒基正极的溶解
 
@@ -1128,7 +1128,7 @@ Yihui Zou; Jin Sun; Yulong Chi; Xueyan Cheng; Dongjiang Yang. Recent advances an
 
 Wenhao Liang; Yecheng Qiu; Manman Li; Fushan Geng; Bingwen Hu; Tao Chen; Wai‐Yeung Wong. Pre‐Intercalated Cation Optimizing Proton Topochemistry for High‐Performance Aqueous Zinc‐Ion Batteries. *Advanced Materials*, 2026. [DOI](https://doi.org/10.1002/adma.75300) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fadma.75300)
 
-研究 K⁺ 预嵌入 K₀.₅V₆O₁₃ 对钒氧骨架和受限晶格水氢键网络的双重作用，结合固体核磁、同位素对照与电化学表征分析质子输运。除低载量测试外，还给出高载量软包结果，适合把预嵌入设计与实际评价条件连接起来。
+以初始不含晶格水的 V₆O₁₃ 与 K₀.₅V₆O₁₃ 为对照，研究 K⁺ 对钒氧骨架，以及循环中引入晶格水后氢键网络的影响。作者结合固体核磁、H₂O／D₂O 同位素对照和计算，将增强的质子输运与重组后的氢键网络联系起来；另给出高载量软包结果。
 
 阅读提示：重点对照 H₂O／D₂O 电解液与质子、Zn²⁺ 贡献的拆分。462.9 mAh g⁻¹（0.2 A g⁻¹）和 20000 次循环（20 A g⁻¹）属于不同工况；软包载量与小电池性能也应分开比较。
 
@@ -1160,7 +1160,7 @@ Keyi Chen; Quan Zong; Haoran Yuan; Qiaoling Kang; Qilong Zhang; Guoying Wei; Shu
 
 以咪唑鎓阳离子为层间调控单元，结合同步辐射谱学和理论计算，研究 BMIM⁺ 预嵌入对钒氧八面体局部配位场及电子态的影响。论文将工作电压提升与 V 3d 能级变化联系起来，并在其他层状钒氧化物中验证策略。
 
-阅读提示：区分开路电位、平均工作电位与电池能量密度；“普适”应按文中实际验证的材料范围理解。505 mAh g⁻¹（0.1 A g⁻¹）与 15000 次循环（8 A g⁻¹）并非同一测试条件。
+阅读提示：V 3d-band center 是文中 DFT 电子态描述符，不能当作 CB／VB，也不能由其位移直接计算光充电电压。工作电压按电化学实测判断；“普适”限于文中实际验证材料。505 mAh g⁻¹（0.1 A g⁻¹）与 15000 次循环（8 A g⁻¹）属于不同工况。
 
 ## L117 · VO₂ 在电化学储能中的应用：最新进展
 
@@ -1188,9 +1188,9 @@ Xinyu Gao; Dongyue Tian; Zhengguang Shi; Nana Zhang; Ruyu Sun; Jiaming Liu; Hsu�
 
 Ruyu Sun; Xin Liu; Nana Zhang; Xinyu Gao; Zhitao Shao; Jiaming Liu; Yunhe Zhao; Wei Feng. Nanocrystal‑iron oxide fiber yarn electrodes with ultralong cycling life for flexible supercapacitors. *Journal of Energy Storage*, 2024. [DOI](https://doi.org/10.1016/j.est.2024.114136) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.est.2024.114136)
 
-该研究以纳米晶氧化铁纤维纱线电极为对象，面向柔性超级电容器的循环寿命与器件设计。当前简介依据题名和已核实书目，具体制备路线、储能指标及循环测试条件尚待进一步核对。
+以纳米晶氧化铁纤维纱线电极构建水系准固态柔性超级电容器。出版社摘要与 Highlights 讨论多孔电极、PAM-Li₂SO₄ 凝胶及柔性循环表现；具体制备和指标计算仍需完整正文核对。
 
-阅读提示：归入关联储能器件。现有书目没有提供光辅助实验依据；不将电容器性能按锌离子电池容量进行比较。用户给出的 PII S2352152X24037228 与本 DOI 在 Crossref alternative-id 中精确对应。
+阅读提示：归入关联储能器件。该轮取得的摘要/Highlights 没有给出光辅助电池验证，不能将其性能计作光充锌离子电池证据；PII S2352152X24037228 与该 DOI 对应。
 
 ## L120 · 用于高容量光辅助锌离子电池的 ZnO@MnO₂ 异质结光正极
 

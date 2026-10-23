@@ -67,3 +67,5 @@
   .paper-actions { gap:10px; }
   .doi-link { padding:8px 10px; }
 }
+
+.paper-audit{border-left:2px solid #b9cfc2;padding:2px 0 2px 14px;margin:18px 0}.paper-audit p{font-size:.85rem}

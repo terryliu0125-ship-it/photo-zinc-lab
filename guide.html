@@ -13,17 +13,17 @@
   <article class="reading-card">
 <span class="reading-step">01 / BUILD A FRAMEWORK</span>
 <h3>先厘清：光辅助还是光充电？</h3>
-<p>用综述建立运行模式与设计原则的框架，再读 2020 年的代表性器件，理解光吸收、载流子分离与储能功能怎样衔接。</p>
+<p>先用综述区分运行模式，再读原始器件报告。无外加供电不等于必须开路；要核对光照时的电子回路和两极反应。早期 V₂O₅ 锌体系报告的开路照光后放电，是需要进一步排查机理的案例。</p>
 <div class="reading-links">
 <a href="literature.html#paper-L11">L11 · 模式综述 ↗</a>
 <a href="literature.html#paper-L09">L09 · 设计原则 ↗</a>
-<a href="literature.html#paper-L01">L01 · 经典器件 ↗</a>
+<a href="literature.html#paper-L01">L01 · 早期开路照光报告 ↗</a>
 </div>
 </article>
   <article class="reading-card">
 <span class="reading-step">02 / FOLLOW THE INTERFACE</span>
 <h3>再追问：界面如何分离电荷？</h3>
-<p>从 VO₂ 的材料选择读到 VO₂/ZnO 堆叠设计，再比较 V₂O₅/VO₂ 的界面构筑。将能带、光响应与电化学结果放在一起看。</p>
+<p>从 VO₂ 的材料选择读到 VO₂/ZnO 堆叠设计，再比较 V₂O₅/VO₂ 的界面构筑。把能带、工作光照下的准费米能级、光响应和电化学结果结合起来，检验作者提出的电荷路径；能带示意本身不能确证迁移机制或直接光充电。</p>
 <div class="reading-links">
 <a href="literature.html#paper-L02">L02 · VO₂ ↗</a>
 <a href="literature.html#paper-L03">L03 · VO₂/ZnO ↗</a>
@@ -33,7 +33,7 @@
   <article class="reading-card">
 <span class="reading-step">03 / CHECK THE EVIDENCE</span>
 <h3>最后核实：光能到底储存了多少？</h3>
-<p>关注充电协议、后续暗态放电和能量收支；讨论光电与光热贡献时，回到匹配温度、光强和充放电条件的实验。</p>
+<p>先看回路连接、充电方向电流与两极反应，再核对暗态放电和净能量。区分光电与光热时，应尽量匹配电极内部温度及其时间变化；壳体同温并不保证内部同温，扣除热贡献后的差异仍需其他证据。</p>
 <div class="reading-links">
 <a href="literature.html#paper-L06">L06 · 充电模式评价 ↗</a>
 <a href="literature.html#paper-L07">L07 · 光电/光热协同 ↗</a>
@@ -43,14 +43,23 @@
  <div class="evidence-note">
 <div>
 <h3>光辅助：关注电化学过程怎样改变</h3>
-<p>在外加电流或电压的充放电条件下，比较光照对容量、动力学、极化和能耗的影响。比较时需要记录光强、波长、温度、活性物质质量与电流密度。</p>
+<p>在受控充放电协议下比较光照对容量、动力学、极化和能耗的影响。测试仪控制放电负载，并不意味着它在向电池供电。应记录光强、波长、受光面积、内部温度、活性物质质量、SOC 与电流密度；照光放电所得额外输出也可能含有当时持续输入的光能。</p>
 </div>
 <div>
 <h3>光充电：关注净能量是否被储存</h3>
-<p>结合无外加电源的光照步骤、后续放电和能量收支判断；同时排查极化恢复、自充电及光热贡献。单独的开路电压回升不足以说明全部储能过程。</p>
+<p>典型双极法拉第光充电需明确无外加供电时的闭合电子通路，记录净电流方向、电量及两极反应，再撤光测暗态放电。开路电压（OCV）回升或随后能放电，不能单独证明 Zn 负极同步光沉积；还需排查化学自充电、副反应、电容重分配与热效应。</p>
+</div>
+<div>
+<h3>容量 Q 与能量 E：分别算账</h3>
+<p>容量是电量：分别按明确的充、放电方向积分电流，Q＝∫I dt，常用 mAh。能量还需计入工作电压，E＝∫V I dt，常用 mWh；相同容量不代表相同可回收能量。净光贡献应比较匹配暗态基线后的 ΔE<sub>放</sub>，不能直接用容量增幅代替光储能效率。</p>
+</div>
+<div>
+<h3>效率：先写分子、分母与协议</h3>
+<p>库仑效率比较放出与充入的电量，电能效率比较能量，二者不能混用。对起终状态相同的完整循环，可明确报告总能量口径 E<sub>放</sub>／（E<sub>电充</sub>＋E<sub>入射光</sub>）；减少用电本身不等于这个比值提高。纯光步骤需用净增可回收能量除以入射光能，并注明光谱、面积与基线。</p>
+<p>若采用开路照光后放电，所得净能量回收比只是该协议的操作性指标；它不能代替已证明闭路双极充电的转换效率，也不能证明 Zn 已被还原沉积。<a href="literature.html#paper-L06">核对 L06 的 OCV 评价口径 ↗</a></p>
 </div>
 </div>
- <p class="section-source">延伸阅读：<a href="literature.html#paper-L11">运行模式综述 [L11]</a> · <a href="literature.html#paper-L06">充电协议与 OCV 评价 [L06]</a>
+ <p class="section-source">延伸阅读：<a href="literature.html#paper-L11">运行模式综述 [L11]</a> · <a href="literature.html#paper-L06">充电协议与 OCV 评价 [L06]</a> · <a href="https://doi.org/10.1021/acsenergylett.4c01350" target="_blank" rel="noopener noreferrer">准费米能级与闭路充电实验（Fig. 2–3）</a> · <a href="https://doi.org/10.1021/acsenergylett.3c01627" target="_blank" rel="noopener noreferrer">热效应与自恢复对照（Fig. 1、7）</a> · <a href="https://doi.org/10.1038/ncomms9103" target="_blank" rel="noopener noreferrer">电量与系统能量效率实例（Methods, Eqs. 1–4）</a>
 </p>
 </section>
-<aside class="shared-source"><span class="kicker">TEACHER'S READING LIST</span><h3>老师分享，接到你的阅读清单</h3><p><a href="literature.html?scope=teacher">查看 4 篇论文及中文导读 →</a> · <a href="literature.html?compare=L113,L116">对比两篇钒基新研究 →</a></p><p><a href="https://mp.weixin.qq.com/s/czu5BmE3LxwChaqcbSy_Ag" target="_blank" rel="noopener noreferrer">老师分享的公众号文章 ↗</a></p><span class="source-status">公众号链接内容待核对；原论文与公众号解读分别阅读。</span></aside><section class="scope-section" id="research"><h2>研究范围</h2><div class="scope-grid"><article><h3>光电极界面设计</h3><p>关注半导体与储能材料的耦合，理解光生电荷如何分离、迁移并参与界面反应。</p></article><article><h3>储能反应动力学</h3><p>比较光暗条件下离子传输、电荷转移与氧化还原过程，核对电极体系及工作条件。</p></article><article><h3>工况表征与理论</h3><p>结合光谱、电化学和计算，追踪材料、界面与中间体变化，为机理判断寻找证据。</p></article></div></section><section class="contribute" id="contribute"><div><h2>一起完善这份阅读清单</h2><p>有值得推荐的论文或需要更正的信息？在项目仓库中提供 DOI、研究主题与推荐理由。</p></div><a class="button" href="https://github.com/terryliu0125-ship-it/photo-zinc-lab/issues" target="_blank" rel="noopener noreferrer">推荐文献 ↗</a></section></main><footer class="site-footer"><span>© 2026 PHOTO–ZINC LAB · 光能与电化学储能</span><div class="footer-links"><a href="guide.html#research">研究范围</a><a href="https://github.com/terryliu0125-ship-it/photo-zinc-lab/issues" target="_blank" rel="noopener noreferrer">推荐文献 ↗</a><a href="https://github.com/terryliu0125-ship-it/photo-zinc-lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer><script src="site.js?v=20261013-pages1" defer></script></body></html>
+<aside class="shared-source"><span class="kicker">TEACHER'S READING LIST</span><h3>老师分享，接到你的阅读清单</h3><p><a href="literature.html?scope=teacher">查看 4 篇论文及中文导读 →</a> · <a href="literature.html?compare=L113,L116">对比两篇钒基新研究 →</a></p><p><a href="https://mp.weixin.qq.com/s/czu5BmE3LxwChaqcbSy_Ag" target="_blank" rel="noopener noreferrer">老师分享的公众号文章 ↗</a></p><span class="source-status">公众号链接内容待核对；原论文与公众号解读分别阅读。</span></aside><section class="scope-section" id="research"><h2>研究范围</h2><div class="scope-grid"><article><h3>光电极界面设计</h3><p>关注半导体与储能材料的耦合，理解光生电荷如何分离、迁移并参与界面反应。</p></article><article><h3>储能反应动力学</h3><p>比较光暗条件下离子传输、电荷转移与氧化还原过程，核对电极体系及工作条件。</p></article><article><h3>工况表征与理论</h3><p>结合光谱、电化学和计算，追踪材料、界面与中间体变化，为机理判断寻找证据。</p></article></div></section><section class="contribute" id="contribute"><div><h2>一起完善这份阅读清单</h2><p>有值得推荐的论文或需要更正的信息？在项目仓库中提供 DOI、研究主题与推荐理由。</p></div><a class="button" href="https://github.com/terryliu0125-ship-it/photo-zinc-lab/issues" target="_blank" rel="noopener noreferrer">推荐文献 ↗</a></section></main><footer class="site-footer"><span>© 2026 PHOTO–ZINC LAB · 光能与电化学储能</span><div class="footer-links"><a href="theory-audit.html">理论核查记录</a><a href="guide.html#research">研究范围</a><a href="https://github.com/terryliu0125-ship-it/photo-zinc-lab/issues" target="_blank" rel="noopener noreferrer">推荐文献 ↗</a><a href="https://github.com/terryliu0125-ship-it/photo-zinc-lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer><script src="site.js?v=20261013-pages1" defer></script></body></html>

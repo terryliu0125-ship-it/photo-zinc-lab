@@ -4,6 +4,14 @@
 
 [访问网站](https://terryliu0125-ship-it.github.io/photo-zinc-lab/)
 
+## 理论核查记录
+
+2026-10-23 对七个页面的理论文字与图示、22 条能带样品和当时全部 121 篇文献导读建立了分层核查台账。[查看核查结果与读取范围](https://terryliu0125-ship-it.github.io/photo-zinc-lab/theory-audit.html)。核查不等于重新测量、复算 DFT 或全文全部机制的独立证明，原始来源待核、仅摘要支持及缺失的 SI 均明确标记。
+
+主要修订涉及无外加供电与开路的区别、OCV 与完整双极光充电、半导体带间激发的适用范围、内部温度对照、容量与净能量、干态 UPS 与湿态带边、还原电势约定、循环引入晶格水以及 half-metallic / d 带中心术语。原始能带样品数值未改；SHE、真空、RHE 与 Zn 的换算式通过复核。
+
+`literature.json` 的 `theory_audit` 只记录每篇导读在所列来源范围内的核对情况。未来自动新增文章默认待核，不继承已审条目的状态。`theory-audit-data.json` 是有日期的快照，运行 `python scripts/render_theory_audit.py` 生成 `theory-audit.html` 和 `THEORY_AUDIT.md`；使用 `--check` 验证一致性。需要更新快照时应先重新核读来源，不能仅变更核查日期。
+
 ## 文献资料
 
 截至 2026-10-15，文献库共 120 篇（100 篇研究、20 篇综述/观点），保留中文标题、简介、阅读提示和 DOI。锌基相关文献 72 篇，其他金属离子电池 47 篇，关联储能器件 1 篇。老师分享的 4 篇论文标记“老师分享”；其中 3 篇研究、1 篇 Perspective。公众号仅保留用户提供的原始链接，内容尚未核对，与学术论文分开呈现。

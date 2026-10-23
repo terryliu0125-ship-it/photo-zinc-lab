@@ -112,7 +112,7 @@
         phase: text(record.phase),
         temperature_C: temperature
       };
-      if (scale === 'vacuum') warnings.push('真空刻度按带符号电子能量、SHE绝对电位4.44 V换算；这是25°C水系约定。');
+      if (scale === 'vacuum') warnings.push('真空刻度按带符号电子能量、SHE绝对电位4.44 V换算；这是25°C水系约定。仅平移能量零点，干态UPS或真空示意值不因此成为湿态电极/电解液界面的实测带边；表面偶极、吸附与带弯曲需另行核验。');
       if (scale === 'NHE') warnings.push('保留原文NHE标注；本图按与SHE相同的常用近似坐标展示。');
       if (scale === 'RHE') warnings.push('RHE换算采用25°C斜率；仅统一坐标，不推算材料在其他pH下的能带变化。');
       if (scale === 'Zn') {

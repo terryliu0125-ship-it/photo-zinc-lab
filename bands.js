@@ -48,7 +48,7 @@
   function conversionTable(record) {
     if(contextOnly(record))return '<p class="conversion-note">电子参数参考：功函数、d带中心不换算成CB/VB，也不计入半导体带边完整率。</p>';
     const v=convertedValues(record),cell=value=>esc(finite(value)?signed(value):'待核实');
-    return '<div class="band-conversion-table"><table><caption>同一条样品的统一换算 · 保留原始参比条件</caption><thead><tr><th scope="col">标尺</th><th scope="col">CB</th><th scope="col">VB</th></tr></thead><tbody><tr><th scope="row">V vs SHE（主显示）</th><td>'+cell(v.n.cb)+'</td><td>'+cell(v.n.vb)+'</td></tr><tr><th scope="row">真空电子能量 / eV</th><td>'+cell(v.vacuum_cb)+'</td><td>'+cell(v.vacuum_vb)+'</td></tr><tr><th scope="row">V vs Zn°（标准态近似）</th><td>'+cell(v.zn_cb)+'</td><td>'+cell(v.zn_vb)+'</td></tr></tbody></table><p class="conversion-note">真空采用4.44 V约定；Zn°按−0.76 V vs SHE估算，非实际Zn电极。坐标统一不消除pH、电解液、晶相与荷电状态差异。'+(!v.n.ok?' '+esc(v.n.reason):'')+'</p></div>';
+    return '<div class="band-conversion-table"><table><caption>同一条样品的统一换算 · 保留原始参比条件</caption><thead><tr><th scope="col">标尺</th><th scope="col">CB</th><th scope="col">VB</th></tr></thead><tbody><tr><th scope="row">V vs SHE（主显示）</th><td>'+cell(v.n.cb)+'</td><td>'+cell(v.n.vb)+'</td></tr><tr><th scope="row">真空电子能量 / eV</th><td>'+cell(v.vacuum_cb)+'</td><td>'+cell(v.vacuum_vb)+'</td></tr><tr><th scope="row">V vs Zn°（标准态近似）</th><td>'+cell(v.zn_cb)+'</td><td>'+cell(v.zn_vb)+'</td></tr></tbody></table><p class="conversion-note">真空采用4.44 V约定，仅平移能量零点，不确认湿态界面的实际带边；Zn°按−0.76 V vs SHE估算，非实际Zn电极。坐标统一不消除pH、电解液、晶相与荷电状态差异。'+(!v.n.ok?' '+esc(v.n.reason):'')+'</p></div>';
   }
   const isEstimate = record => record.derived === true || record.estimated === true || /图|示意|估|近似|推导|待核|未核/.test(String(record.edge_label || '') + String(record.method || ''));
   const allNotes = record => Array.isArray(record.notes) ? record.notes : record.notes ? [record.notes] : [];
@@ -187,7 +187,7 @@
   }
   function renderHeadroom() {
     const target=$('headroom-results'),rawCathode=$('redox-cathode').value.trim();
-    if (!rawCathode) { target.innerHTML='<p class="headroom-note">填写正极氧化电位并选择原始参比后，统一到 SHE 再计算两侧余量。</p>';return; }
+    if (!rawCathode) { target.innerHTML='<p class="headroom-note">填写正极反应电位并选择原始参比后，统一到 SHE 再计算两侧余量。</p>';return; }
     const model=$('redox-model').value,a=normalized(getA()),b=normalized(getB());
     let e,h;
     if (model==='typeII') {
@@ -203,7 +203,7 @@
       const result=core.headroom(e,h,cathode,zinc);
       const basis=mode==='standard_approximation'?'Zn参比使用标准态近似−0.76 V，非实际Zn电极。':'Zn参比采用所填测量条件下的电位。';
       $('redox-zinc-note').textContent=basis+' 正极换算为 '+signed(cathode)+' V vs SHE；Zn参比为 '+signed(zinc)+' V vs SHE。';
-      target.innerHTML='<div class="headroom-grid"><div class="headroom-value"><b>'+signed(result.zinc)+' V</b><span>电子还原锌余量<br/>U(Zn²⁺/Zn) − U(电子)</span></div><div class="headroom-value"><b>'+signed(result.cathode)+' V</b><span>空穴氧化正极余量<br/>U(空穴) − U(正极氧化)</span></div></div><p class="headroom-note"><strong>这是以 CB/VB 代替光照准费米能级的乐观上限，仅用于无外加偏压的理想初筛。</strong>正值表示此模型下的方向性余量，负值表示此模型中的缺口；未计入过电位、欧姆损失和复合，不代表器件结论，也不否定外加偏压下的光辅助。</p>';
+      target.innerHTML='<div class="headroom-grid"><div class="headroom-value"><b>'+signed(result.zinc)+' V</b><span>电子还原锌余量<br/>U(Zn²⁺/Zn) − U(电子)</span></div><div class="headroom-value"><b>'+signed(result.cathode)+' V</b><span>空穴氧化正极余量<br/>U(空穴) − U(正极反应)</span></div></div><p class="headroom-note"><strong>这是在常规热化、非简并载流子模型中，以 CB/VB 代替光照准费米能级的乐观估计，仅用于无外加偏压的理想初筛。</strong>正值表示此模型下的方向性余量，负值表示此模型中的缺口；带边不等于实际光电压；准费米能级、荷电状态、界面带弯曲、过电位、欧姆损失和复合均需另行核验。输入沿用还原电势坐标，充电方向不把电位取反；若采用CV峰或充电工作电位，应注明工况，不能当成平衡电位。结果不代表器件结论，也不否定外加偏压下的光辅助。</p>';
     } catch (error) { target.innerHTML='<p class="headroom-note">'+esc(error.message || '请填写有效反应电位与Zn参比。')+'</p>';$('redox-zinc-note').textContent='正极电位与Zn参比必须使用同一套测量条件。'; }
   }
   function details(record) {

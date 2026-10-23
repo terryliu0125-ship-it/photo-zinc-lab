@@ -11,8 +11,8 @@
       ],
       "kind": "研究论文",
       "material": "V₂O₅ / P3HT / rGO",
-      "summary": "介绍将光吸收、载流子分离与锌离子存储整合在同一光电极中的设计，并展示直接光充电。适合用来理解光电极各组分的作用。",
-      "note": "重点阅读光充电后放电实验，并区分光照下容量增加与直接光充电。",
+      "summary": "介绍 V₂O₅/P3HT/rGO 复合光电极。作者报告光照时记录开路电压恢复，并在随后恒流放电中回收电量；以此讨论无外加电流的光充电。可用于理解吸光与电荷传输组分的设计。",
+      "note": "该光充测试采用 OCV 光照后放电协议；不能把开路电压升高、光照放电增容或拟议反应图单独当作闭路双极同步充电及锌再生的直接证据。需读温控、暗态静置及后续暗态放电对照。",
       "authors": [
         "Buddha Deka Boruah",
         "Angus Mathieson",
@@ -43,7 +43,21 @@
       "material_groups": [
         "vanadium"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://api.repository.cam.ac.uk/server/api/core/bitstreams/85b148d4-4d3e-43b2-85d3-5c8c9e6ba1eb/content"
+        ],
+        "locator": "作者稿摘要、Fig.1/2/4 与 Methods/Characterization",
+        "note": "V₂O₅/P3HT/rGO 复合电极与作者报告的 OCV 光照后放电相符；这不保证本征 V₂O₅ 在任意状态均能光充，也不单独证明 Zn 同步再生。",
+        "finding_ids": [
+          "VL-008"
+        ]
+      }
     },
     {
       "id": "L02",
@@ -54,8 +68,8 @@
       ],
       "kind": "研究论文",
       "material": "VO₂ / rGO",
-      "summary": "以 VO₂ 纳米棒与还原氧化石墨烯构建光正极，讨论光充电及光照下的倍率表现，为钒氧化物的材料选择提供对照。",
-      "note": "比较测试电流、光照条件与循环条件，避免只依据容量判断材料优劣。",
+      "summary": "以 VO₂(B) 纳米棒与还原氧化石墨烯构建光正极。作者报告无外加电流下的光照 OCV 恢复及后续暗态放电，并另测光照下的倍率表现；这两类协议需分别理解。",
+      "note": "Fig.5 光充采用无外加电流/开路记录，不能仅凭 OCV 与放电回收认定锌负极同步再生；倍率增益仍须按光照、温度、荷电态和循环条件比较。",
       "authors": [
         "Buddha Deka Boruah",
         "Angus Mathieson",
@@ -90,7 +104,21 @@
       "material_groups": [
         "vanadium"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://d-nb.info/1228577064/34"
+        ],
+        "locator": "作者稿摘要、Fig.2、Fig.5",
+        "note": "VO₂(B)/rGO 与直接光充电、光照倍率测试区分相符；不得泛化到所有 VO₂ 晶相。",
+        "finding_ids": [
+          "VL-008"
+        ]
+      }
     },
     {
       "id": "L03",
@@ -102,8 +130,8 @@
       ],
       "kind": "研究论文",
       "material": "VO₂ / ZnO",
-      "summary": "通过 VO₂ 与 ZnO 的层状堆叠安排储能与电荷传输路径。可结合能带示意和光响应实验，理解界面设计为何影响光充电。",
-      "note": "重点关注 ZnO 的电子传输与空穴阻挡作用，以及层间接触。",
+      "summary": "通过 VO₂(B) 与 ZnO 堆叠安排电荷选择与传输路径。作者报告无外加电流光照后的电压恢复及随后放电，并另做零偏压光电流测试；可结合能带示意学习作者提出的界面机制。",
+      "note": "ZnO 的电子传输/空穴阻挡解释属于该器件。Fig.5a 的无外加电流光照电压恢复与 Fig.5b 的 0 V 恒电位电流是不同协议；二者不能混作闭路双极光充和锌再生的直接证据。",
       "authors": [
         "Buddha Deka Boruah",
         "Michael De Volder"
@@ -128,7 +156,21 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://api.repository.cam.ac.uk/server/api/core/bitstreams/186691ed-7ee0-4cb0-ad47-0bc911e34256/content"
+        ],
+        "locator": "作者稿摘要、Fig.2 及光充电讨论",
+        "note": "ZnO 的电荷选择/传输功能和 VO₂/ZnO 堆叠设计相符；不是任意两种材料接触即得到该功能。",
+        "finding_ids": [
+          "VL-008"
+        ]
+      }
     },
     {
       "id": "L04",
@@ -139,8 +181,8 @@
       ],
       "kind": "研究论文",
       "material": "MoS₂ / ZnO",
-      "summary": "将 MoS₂ 与 ZnO 分层生长在集流体上，探索异质界面的光生电荷分离与光充电。适合作为钒基光电极之外的比较体系。",
-      "note": "阅读堆叠光探测器的零偏压响应，再与电池的充电过程对应。",
+      "summary": "将 MoS₂ 与 ZnO 分层生长在集流体上，作者以能带、光探测器和电化学测试讨论异质界面电荷分离。文中光充记录为光照开路电压恢复及随后放电，可与钒基复合光电极比较。",
+      "note": "零偏压堆叠光探测器响应与电池 OCV 光照后放电须分别读；前者不能单独证明后者已实现双极同步净充电或可逆锌沉积。",
       "authors": [
         "Buddha Deka Boruah",
         "Bo Wen",
@@ -167,7 +209,21 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://doi.org/10.1021/acsnano.1c06372"
+        ],
+        "locator": "公开作者稿，能带/堆叠光探测器与光充电相关段落",
+        "note": "MoS₂/ZnO 分层与作者报告的光响应设计一致；光探测器的零偏压电流不能单独替代整电池光储能证据。",
+        "finding_ids": [
+          "VL-008"
+        ]
+      }
     },
     {
       "id": "L05",
@@ -215,7 +271,19 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://pubs.rsc.org/en/content/articlehtml/2025/ta/d5ta00517e"
+        ],
+        "locator": "Fig.4、Fig.5、SI Fig.S7 的正文讨论",
+        "note": "原文明确比较光/暗恒流及光充暗放实验，导读未把放电增容直接说成纯光充；其机制图不等于独立证明所有界面因果。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L06",
@@ -228,7 +296,7 @@
       "kind": "研究论文",
       "material": "TiO₂ / MoS₂",
       "summary": "对比三种充电协议，并结合电流—电压同步测量、界面过程和理论计算讨论储能机理，提出扣除自充电贡献的 OCV 评价方法。",
-      "note": "OCV 回升需要排查极化恢复和自充电，不能仅凭电压升高认定净能量存储。",
+      "note": "该文的 η_OCV 是扣除内禀自充电后、特定开路协议下的净能量回收指标；测量时外电路电流为零，不等于闭路整电池的通用太阳能效率，也不能据此认定锌负极同步再生。",
       "authors": [
         "Meng Wei",
         "Guangyu Lin",
@@ -270,7 +338,21 @@
       "research_topics": [
         "heterojunction",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://pubs.acs.org/doi/abs/10.1021/jacsau.6c00282"
+        ],
+        "locator": "摘要、§2.5、Fig.7/8 与 Eq.(2) 附近公开正文",
+        "note": "扣除内禀 self-charging 的 OCV 指标有原文依据；须保留外电流为零和单电极界面过程边界。",
+        "finding_ids": [
+          "VL-004"
+        ]
+      }
     },
     {
       "id": "L07",
@@ -336,6 +418,18 @@
         "kind": "user-confirmed",
         "source": "用户提供的课题组论文清单",
         "checked_on": "2026-10-15"
+      },
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.rsc.org/en/content/articlelanding/2026/ta/d6ta03521c/unauth"
+        ],
+        "locator": "出版社公开摘要",
+        "note": "碳包覆 K⁺ 插层水合钒氧化物、光电/光热及低温条件均与摘要相符；具体两者定量拆分未核 SI。",
+        "finding_ids": []
       }
     },
     {
@@ -383,7 +477,19 @@
       "material_groups": [
         "other"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "review-scope",
+        "source_level": "review-scope",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/38877647/"
+        ],
+        "locator": "出版社原始摘要的 PubMed 记录；Wiley 的总结范围",
+        "note": "是跨金属电池综述，站内已说明超出锌；不能把综述全部例子视为嵌入型锌电。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L09",
@@ -422,7 +528,19 @@
       "research_topics": [
         "photothermal",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/pii/S2095495625000324"
+        ],
+        "locator": "Abstract",
+        "note": "摘要明确四项：能带调节、光生载流子分离、复合抑制、光热利用；现导读相符。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L10",
@@ -475,7 +593,19 @@
       "material_groups": [
         "other"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/pii/S0378775324018068"
+        ],
+        "locator": "Abstract; volume628 date2025-02-01",
+        "note": "摘要范围为工作原理、光电极选材与结构；卷期2025与导读注明一致。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L11",
@@ -519,7 +649,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/pii/S2468025725003310"
+        ],
+        "locator": "Abstract and Highlights",
+        "note": "摘要明分photo-assisted与不依赖外电源的photo-rechargeable，并综述工作机制、整合策略和应用。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L12",
@@ -562,7 +704,19 @@
       "material_groups": [
         "other"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://www.repository.cam.ac.uk/items/445c88f8-5e2e-49b8-a804-5af0a0b9cafc"
+        ],
+        "locator": "作者机构库的原始摘要",
+        "note": "确为二维 g-C₃N₄ 光充电锌离子电容器；器件边界已保留。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L13",
@@ -608,7 +762,19 @@
       "material_groups": [
         "vanadium"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acsenergylett.0c01528"
+        ],
+        "locator": "出版社摘要",
+        "note": "确为 V₂O₅/活性炭锌离子电容器；银纳米线与其他组分不能从标题省略后据此推定纯材料性质。",
+        "finding_ids": []
+      }
     },
     {
       "title": "Voltage matching strategy to design efficient photo-rechargeable zinc-ion batteries",
@@ -683,7 +849,19 @@
         "voltage",
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/pii/S1385894726099055"
+        ],
+        "locator": "Abstract and Highlights",
+        "note": "原文为PSC-ZIB系统电压/子电池匹配，摘要报告离网定位芯片，非单一双功能材料；现说明正确。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L15",
@@ -729,7 +907,19 @@
       "material_groups": [
         "perovskite"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://pubs.rsc.org/en/content/articlelanding/2025/ta/d5ta05014f/unauth"
+        ],
+        "locator": "Abstract, not the short Crossref graphical summary",
+        "note": "摘要明确Ag掺入Cs-Bi-I无铅钙钛矿，分别报告光辅助与photo-only两模式；导读不混淆模式。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L16",
@@ -795,19 +985,31 @@
       "research_topics": [
         "heterojunction",
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fadvs.202309555"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要明确MoS2片/SnO2量子点在碳布上形成3D自支撑捕光结构，并称改善电荷分离；现summary匹配。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L17",
       "title": "Carbon Superstructure‐Supported Half‐Metallic V2O3 Nanospheres for High‐Efficiency Photorechargeable Zinc Ion Batteries",
-      "heading": "半金属 V₂O₃ 与碳超结构协同储能",
+      "heading": "V₂O₃@碳超结构：作者报告的 half-metallic 光正极",
       "tags": [
         "vanadium"
       ],
       "kind": "研究论文",
       "material": "V₂O₃ / 碳超结构",
-      "summary": "用碳超结构支撑 V₂O₃ 纳米球，讨论半金属光电特性、电子传输网络与储锌功能的结合。",
-      "note": "结合理论计算与光电表征理解半金属材料的作用，比较同条件光暗测试。",
+      "summary": "用碳超结构支撑 V₂O₃ 纳米球，作者将该样品的电子结构描述为 half-metallic，并结合理论与光电表征讨论电荷传输和储锌功能。此表述限于文中样品及模型。",
+      "note": "保留原文 half-metallic 术语：它涉及不同自旋通道的电子结构，不能仅按普通半导体的单一带隙理解；也不等于所有 V₂O₃ 晶相均有相同性能。该轮核对到原始摘要，完整自旋分辨计算与光充证据仍须读正文。",
       "authors": [
         "Yingying Zhao",
         "Tianqi He",
@@ -843,13 +1045,27 @@
       "review_status": "curated",
       "added": "2026-10-13",
       "verified_on": "2026-10-13",
-      "title_zh": "用于高效光充电锌离子电池的碳超结构支撑半金属 V₂O₃ 纳米球",
+      "title_zh": "用于高效光充电锌离子电池的碳超结构支撑 half-metallic V₂O₃ 纳米球",
       "article_type": "research",
       "battery_category": "zinc",
       "material_groups": [
         "vanadium"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.202408218"
+        ],
+        "locator": "原文题名及摘要",
+        "note": "原文为 half-metallic，中文“半金属”需要保留英文以免误解成 semimetal 或普通窄带隙半导体。",
+        "finding_ids": [
+          "VL-003"
+        ]
+      }
     },
     {
       "id": "L18",
@@ -908,7 +1124,19 @@
         "dissolution",
         "proton",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/anie.202400621"
+        ],
+        "locator": "公开索引原文第 1 页摘要和引言",
+        "note": "作者把光诱导质子转移与增容及稳定性代价联系，负极合金化是其特定方案；不能泛化所有材料。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L19",
@@ -968,6 +1196,18 @@
         "kind": "user-confirmed",
         "source": "用户提供的课题组论文清单",
         "checked_on": "2026-10-15"
+      },
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.rsc.org/en/content/articlelanding/2025/ta/d5ta03701h/unauth"
+        ],
+        "locator": "出版社公开摘要",
+        "note": "Al 掺杂 MnO₂ 的层间、能带和稳定性说明与摘要相符；不是掺杂普适方向。",
+        "finding_ids": []
       }
     },
     {
@@ -1042,7 +1282,19 @@
           "url": "https://doi.org/10.1016/j.est.2025.117613",
           "verified_on": "2026-10-15"
         }
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S2352152X25021747"
+        ],
+        "locator": "出版社摘要/Highlights；页面列出的 Corrigendum 117613",
+        "note": "KVOH 改性与光辅助性能、存在更正均相符；未读取更正全文，不推断更正只涉及某一种内容。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L21",
@@ -1100,7 +1352,19 @@
       "research_topics": [
         "heterojunction",
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S2405829724004720"
+        ],
+        "locator": "出版社摘要与 Highlights",
+        "note": "有序 ZnO 微棒/C@VO₂ 三维设计相符；摘要的长期循环明确是暗态，不能移作光照稳定性。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L22",
@@ -1151,7 +1415,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.jmst.org/EN/abstract/abstract35360.shtml"
+        ],
+        "locator": "Abstract",
+        "note": "原始期刊摘要明确自支撑BiOI@MWCNTs膜、分离、光充与光照电化学增强；暗放电是现note的阅读建议，不是已核实验结论。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L23",
@@ -1201,7 +1477,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://pubs.rsc.org/en/content/articlelanding/2024/ta/d3ta07464a/unauth"
+        ],
+        "locator": "Abstract, full author abstract rather than Crossref teaser",
+        "note": "摘要为中空管状MoS2/C与photo-accelerated ZIB；导读未把光照增容独立当纯光充电。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L24",
@@ -1256,7 +1544,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Faenm.202204058"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要明确刚性VO2/C@SiCuOC、3D捕光与hybrid-reflection；现导读合理。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L25",
@@ -1316,7 +1616,19 @@
       "research_topics": [
         "heterojunction",
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/pii/S0021979725012512"
+        ],
+        "locator": "Abstract",
+        "note": "原始摘要明确MnO2@PANI核壳、p-n分离、储锌与应变传感；现导读与双功能范围相符。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L26",
@@ -1329,7 +1641,7 @@
       "kind": "研究论文",
       "material": "Cu₂O / Cu₃(BTC)₂ / 碳布",
       "summary": "在碳布上构建 Cu₂O 与金属有机框架异质结，研究界面电荷分离及光充电储锌。",
-      "note": "将能带排列证据与光响应、充放电结果对应，注意 MOF 与氧化物各自的功能。",
+      "note": "摘要中的photo-charging主要以OCV由0.4升至0.94V描述；应继续核查电路状态、后续暗放电和锌再生，不能单独以OCV判定双极同步法拉第充电。",
       "authors": [
         "Yueyue Ma",
         "Ling Li",
@@ -1368,7 +1680,19 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S0021979726001268"
+        ],
+        "locator": "Abstract",
+        "note": "摘要明确Cu2O@Cu3(BTC)2/CC、作者提出TypeII及界面分离，并以OCV升至0.94V描述photocharging；不能由摘要独立证明双极同步再生。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L27",
@@ -1429,7 +1753,19 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/41489425/"
+        ],
+        "locator": "原始摘要",
+        "note": "原文报告无外部电源光充电及高电流光照增容两种测试，导读分别表述正确。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L28",
@@ -1485,7 +1821,19 @@
       "research_topics": [
         "heterojunction",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/39031481/"
+        ],
+        "locator": "原始摘要",
+        "note": "MoS₂/SnO₂ 向氧气转移电子的光辅助化学自充电相符；氧气化学能不能全部计作光能存储。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L29",
@@ -1554,7 +1902,19 @@
       "research_topics": [
         "proton",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/pii/S2405829725005306"
+        ],
+        "locator": "Abstract and Graphical Abstract",
+        "note": "作者摘要明确V6O13、光诱导质子嵌入、抑制溶解与非活性ZVO，并分述光辅助与光充电。带边细节另见本站能带比较页。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L30",
@@ -1567,7 +1927,7 @@
       "kind": "研究论文",
       "material": "NTCOF / SnO₂",
       "summary": "将含萘二酰亚胺和三苯胺单元的 COF 与 SnO₂ 复合，结合有机活性位点、能级匹配及光生电荷分离。",
-      "note": "区分 COF 的储锌位点与 SnO₂ 的界面作用，并检查复合物质量归一化。",
+      "note": "摘要有无外电流光照下电压恢复，但这不是双极同步再生的独立证据；继续核查电路、暗放电、COF储锌位点及复合物质量归一化。",
       "authors": [
         "Jiale Ji",
         "Lei Zhao",
@@ -1606,7 +1966,19 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/pii/S0925838825040599"
+        ],
+        "locator": "Abstract and Highlights",
+        "note": "摘要明确含NDI/TPA单元NTCOF-SnO2、界面/能级匹配与复合抑制。电压恢复不被本轮认定为双极法拉第证明。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L31",
@@ -1668,7 +2040,19 @@
       "research_topics": [
         "dissolution",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202500182"
+        ],
+        "locator": "出版社摘要中列出的三个机制分支",
+        "note": "结构畸变、Mn²⁺ 溶解、Zn²⁺/H⁺ 与脱溶剂化是作者在 α-MnO₂ 体系的解释；导读不应变成所有锰基正极的定律。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L32",
@@ -1723,7 +2107,19 @@
       "research_topics": [
         "proton",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/41186071/"
+        ],
+        "locator": "原始摘要：photogenerated electrons/proton intercalation、coordinated-water deprotonation",
+        "note": "描述的质子-阳离子级联方向与原始摘要相符；这不是游离 Zn²⁺ 在所有盐条件下的普适机制。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L33",
@@ -1788,7 +2184,19 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S2095495625006114"
+        ],
+        "locator": "Abstract",
+        "note": "摘要逐项明确2D MoS2/1D PPy三维结构、Mo–N键诱导d–p轨道杂化和定向传输。导读为作者提出的解释，不是本站独立证实。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L34",
@@ -1856,6 +2264,18 @@
         "kind": "user-confirmed",
         "source": "用户提供的课题组论文清单",
         "checked_on": "2026-10-15"
+      },
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/pii/S258996512600108X"
+        ],
+        "locator": "出版社原始摘要",
+        "note": "PPy-MnO₂ 纳米层及 DFT 支持的插层/层间距联系相符；计算支持不等于对实际全部动态的直接观察。",
+        "finding_ids": []
       }
     },
     {
@@ -1912,7 +2332,19 @@
       "research_topics": [
         "proton",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.76596?af=R"
+        ],
+        "locator": "出版社摘要",
+        "note": "BQQPH 为 COF、12 电子与 H⁺/Zn²⁺ 结合位点均为原作者报告，未混作无机嵌入。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L36",
@@ -1979,7 +2411,19 @@
       "research_topics": [
         "heterojunction",
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/pii/S2405829723005238"
+        ],
+        "locator": "Abstract; author institutional copy https://research.polyu.edu.hk/en/publications/photo-powered-all-in-one-energy-harvesting-and-storage-fibers-tow/",
+        "note": "摘要明确MoS2/TiO2@Ti纤维电池、织物及环境光/太阳光演示；串并联、遮挡/弯折是阅读建议，未标已完成验证。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L37",
@@ -2034,7 +2478,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acsnano.2c10762"
+        ],
+        "locator": "Abstract; PubMed36622820 agrees",
+        "note": "摘要确为Janus钙钛矿/Te水系Zn–Te；原文同时说photo-assisted与无外电流photocharge。现note保留其与嵌入ZIB的区别。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L38",
@@ -2092,7 +2548,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fcelc.201901712"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要明确TiO2空穴氧化I−到I3−，电子还原Zn2+，0.56V外加充电仍需电能；现note正确区分节电与光效。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L39",
@@ -2155,7 +2623,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Feom2.70027"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要明确导电碳防水层、钙钛矿水系Zn-I电池及逾一周光电极稳定性；现note不把周稳定性混成电池循环寿命。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L40",
@@ -2210,7 +2690,19 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://discovery.ucl.ac.uk/id/eprint/10163372/7/Deka%20Boruah_acsami.2c20995.pdf"
+        ],
+        "locator": "Published paper p6963 Abstract",
+        "note": "摘要明确多孔碳/ZnO-CdS光正极与Photo-ZIC；现导读正确称电容器。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L41",
@@ -2221,7 +2713,7 @@
       ],
       "kind": "关联器件",
       "material": "Ti₃C₂Tₓ / Te · 锌离子电容器",
-      "summary": "比较 MXene 与 Te/MXene 复合光正极的光响应及光充电储能，关注双功能电极和光热电耦合特性。",
+      "summary": "比较 MXene 与 Te/MXene 复合光正极的光响应及光充电储能。作者报告热释电与光生载流子耦合的 pyro-phototronic 行为，讨论其在双功能光正极中的作用。",
       "note": "结合波长、扫描速率和温度理解光响应；本条为研究正文，未重复收录同名封面。",
       "authors": [
         "Jalal Azadmanjiri",
@@ -2262,7 +2754,22 @@
       ],
       "research_topics": [
         "photothermal"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fsmll.202305972"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要明确MXene/Te-MXene与pyro-phototronic行为；现“光热电耦合”应明确为热释电-光生载流子耦合，避免混淆Seebeck热电。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "resolution": "导读已按所读范围收窄；未读机理仍保留限制。",
+        "finding_ids": [
+          "SUP-L41"
+        ]
+      }
     },
     {
       "id": "L42",
@@ -2320,7 +2827,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fcnl2.41"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要逐项列tandem hybrid、photoelectrode-integrated、photo-rechargeable三构型与ZIB/ZIC，现导读范围相符。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L43",
@@ -2373,6 +2892,18 @@
         "kind": "user-confirmed",
         "source": "用户提供的课题组论文清单",
         "checked_on": "2026-10-15"
+      },
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/pii/S0378775324001551"
+        ],
+        "locator": "Abstract",
+        "note": "摘要范围明确为两电极光充电锂/锌体系、机制进展及设计策略，与导读相符。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
       }
     },
     {
@@ -2420,7 +2951,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1007%2Fs43979-024-00104-9"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要明确direct-photocharge水系Zn电池、电容器和Zn-air，现note已区分器件范围。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L45",
@@ -2474,7 +3017,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/38349943/"
+        ],
+        "locator": "原始摘要",
+        "note": "BiOI 半导体/液体界面光电压与受光输出电压相符；不表示水的本征分解电位已变为 2.4 V。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L46",
@@ -2555,7 +3110,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://www.nature.com/articles/ncomms14643"
+        ],
+        "locator": "Global mechanism of LFP photo-oxidation，Fig.7/8",
+        "note": "导读对锂金属与 SEI 的限定正确：原文未在光充时追踪到再生锂，且氧/碳酸酯及 SEI 过程参与。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L47",
@@ -2608,7 +3175,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://pubs.rsc.org/en/content/articlelanding/2017/ta/c7ta00493a"
+        ],
+        "locator": "Abstract, full rather than Crossref teaser",
+        "note": "摘要明确3D LixTiO2介孔薄膜、空穴氧化Ti3+→Ti4+及Li脱出；原文的potentially infinite capacity已由现note正确限定为有光持续输入时的过程。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L48",
@@ -2660,7 +3239,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "original-author-abstract",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/29425044/"
+        ],
+        "locator": "Original publisher abstract via NCBI efetch PubMed29425044; local library-abstracts-a-pubmed.xml",
+        "note": "作者摘要明确二维铅卤有机无机杂化钙钛矿同时photocharging和Li存储，现材料/功能导读相符。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L49",
@@ -2726,7 +3317,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "coverage": "selected-main-text",
+        "source_level": "publisher-fulltext-relevant-sections",
+        "source_urls": [
+          "https://www.nature.com/articles/s41467-019-12863-6"
+        ],
+        "locator": "摘要；Fig.2 的 4.07 V 恒压光/暗对照及其邻近讨论；红外滤光与随后暗态放电。",
+        "note": "LiMn₂O₄ 受光加速充电与原文相符；实验使用外加电压，不能当作仅靠光的充电。原文提出的电荷分离机理需连同其光谱、动力学与温控证据阅读。",
+        "finding_ids": [],
+        "checked_on": "2026-10-23"
+      }
     },
     {
       "id": "L50",
@@ -2794,7 +3397,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acs.nanolett.0c03311"
+        ],
+        "locator": "Abstract; NCBI PubMed33416335 original abstract also retrieved",
+        "note": "原摘要明确天然来源TKL、Li-TKL电子空穴与Li金属负极；现summary是对应作者模型，不独立证明产物。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L51",
@@ -2842,7 +3457,19 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acs.nanolett.1c00298"
+        ],
+        "locator": "Abstract; author repository https://discovery.ucl.ac.uk/id/eprint/10141784/",
+        "note": "摘要明确V2O5纳米纤维/P3HT/rGO双功能正极和电荷分离传输；现note保留锂/锌条件差别。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L52",
@@ -2899,7 +3526,19 @@
       "research_topics": [
         "heterojunction",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fadma.202103558"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要明确SnO2/TiO2纳米阵列负极、作者提出电子空穴改善Li动力学；仅确认导读与作者解释一致，不独立证实所有载流子路径。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L53",
@@ -2915,7 +3554,7 @@
       "battery_category": "other-metals",
       "metal_system": "lithium",
       "material": "MoS₂ / MoOₓ纳米棒",
-      "summary": "以晶态二硫化钼与非晶氧化钼组成的纳米棒异质结构构建双电极锂光电池。交错能带帮助分离光生电子与空穴，研究据此探索光驱动脱锂以及光照延长放电的过程。",
+      "summary": "以晶态 MoS₂ 与非晶 MoOₓ 组成的纳米棒异质结构构建双电极锂光电池。作者提出交错能带有助于分离光生电子与空穴，并据此探索光驱动脱锂和太阳光充电。",
       "note": "使用锂金属对电极，阅读时核对异质结构与简单物理混合的差别，并分别评价光充电和光照放电。",
       "authors": [
         "Amar Kumar",
@@ -2954,7 +3593,22 @@
       "research_topics": [
         "heterojunction",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fsmll.202105029"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要明确MoS2晶态/MoOx非晶纳米棒、TypeII及光驱脱锂。摘要未具体写光照延长放电，不宜在本轮将此细节标已核。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "resolution": "导读已按所读范围收窄；未读机理仍保留限制。",
+        "finding_ids": [
+          "SUP-L53"
+        ]
+      }
     },
     {
       "id": "L54",
@@ -3004,7 +3658,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-plus-selected-SI",
+        "source_level": "publisher-abstract-plus-selected-SI",
+        "source_urls": [
+          "https://pubs.acs.org/doi/abs/10.1021/acsami.1c20359"
+        ],
+        "locator": "Abstract plus indexed SI S-2 Preparation of LVO electrode",
+        "note": "摘要明确LiV2O5与光辅助/光单独充电两模式、间价转移解释；SI配方有superP/PTFE，支持现note对without additives的限定。仅所选摘要与SI段落，不代表全文全核。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L55",
@@ -3020,7 +3686,7 @@
       "battery_category": "other-metals",
       "metal_system": "lithium",
       "material": "碳包覆V₂O₅电纺纳米纤维",
-      "summary": "以连续碳层包覆电纺五氧化二钒纳米纤维，研究其作为兼具光响应和储锂功能正极的表现。光暗循环与循环后分析显示，碳包覆不仅改善导电，还帮助维持纤维结构并抑制副反应。",
+      "summary": "以连续碳层包覆电纺五氧化二钒纳米纤维，研究其作为兼具光响应和储锂功能正极的表现。作者的光暗循环与循环后分析表明，碳包覆有助于导电以及维持纤维结构和形貌；光充电采用紫外灯。",
       "note": "光充电实验使用紫外灯；与可见光或太阳光器件比较效率时，须核对光谱、入射功率和有效照射面积。",
       "authors": [
         "Michael Wilhelm",
@@ -3068,7 +3734,22 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fadem.202200765"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要支持碳层导电和纤维结构/形貌保持及UV光充；未直接支持现导读“抑制副反应”，需删去或回全文核实。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "resolution": "导读已按所读范围收窄；未读机理仍保留限制。",
+        "finding_ids": [
+          "SUP-L55"
+        ]
+      }
     },
     {
       "id": "L56",
@@ -3115,7 +3796,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fadsu.202300043"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要明确α-Fe2O3纳米棒+MWCNT/PCBM、可见光2.1eV与conversion-type锂存储，现导读未错套嵌入机制。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L57",
@@ -3174,7 +3867,19 @@
         "heterojunction",
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fsmll.202303319"
+        ],
+        "locator": "Crossref message.abstract（publisher-deposited abstract；非站内摘要）",
+        "note": "出版社提交摘要明确TiS2-TiO2片/TypeII、固态及石墨全电池；现note鼓励检查石墨插层证据，未直接接纳作者“无任何副反应”的强表述。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L58",
@@ -3190,8 +3895,8 @@
       "battery_category": "other-metals",
       "metal_system": "lithium",
       "material": "LiₓV₂O₅单颗粒",
-      "summary": "借助工况光学反射显微镜追踪LiₓV₂O₅单颗粒在光充电、光增强循环和纯加热条件下的变化。研究发现光可引起颗粒内部锂浓度极化，提示法拉第反应和非均匀锂分布共同参与光响应。",
-      "note": "重点阅读热对照和颗粒核心与边缘的差异，避免将光照放电容量增加直接解释为储存电荷总量增加。",
+      "summary": "借助工况光学反射显微镜追踪 LiₓV₂O₅ 单颗粒在光照、光增强循环和纯加热条件下的变化。作者观察到颗粒内部锂浓度极化，并提出法拉第与非法拉第效应可能共同参与光响应。",
+      "note": "该结果揭示颗粒内锂分布变化；不能单独证明锂金属对电极同步再生。应结合电路状态、热对照和随后暗态放电，区分浓度极化、持续光能输入和实际新增可回收储能。",
       "authors": [
         "Raj Pandya",
         "Angus Mathieson",
@@ -3226,7 +3931,22 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "original-author-abstract",
+        "source_urls": [
+          "https://api.repository.cam.ac.uk/server/api/core/bitstreams/85273f7a-da9a-471e-802e-0152376afa5d/content"
+        ],
+        "locator": "Published abstract p7288; NCBI PubMed37552026 original abstract; selected discussion indexed from ACS",
+        "note": "摘要称法拉第/非法拉第效应可能共同作用；主文强调颗粒内浓度极化。宜明确可能性，且非均匀Li分布不等于两极同步Li金属再生。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "resolution": "导读已按所读范围收窄；未读机理仍保留限制。",
+        "finding_ids": [
+          "SUP-L58"
+        ]
+      }
     },
     {
       "id": "L59",
@@ -3288,7 +4008,19 @@
       "research_topics": [
         "heterojunction",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S1385894723002735"
+        ],
+        "locator": "Abstract",
+        "note": "摘要明确Ni泡沫/CdS@Ni3S2核壳、off-grid净光充与on-grid光辅助充/放，机制解释包含Li脱嵌和Ni价态。现三模式导读成立。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L60",
@@ -3305,7 +4037,7 @@
       "metal_system": "lithium",
       "material": "V₂O₅纳米棒 / SWCNT / TiO₂",
       "summary": "将高长径比五氧化二钒纳米棒、单壁碳纳米管和二氧化钛整合成异质结构光电极。碳管改善导电性，三维界面网络促进电化学反应与光生电荷传输，为锂光电池提供复合材料设计思路。",
-      "note": "同时核对光充电电压与后续暗态放电能量，单独的电压上升并不足以说明光能已被高效储存。",
+      "note": "原摘要光充电使用紫外辐照；与可见光/太阳光器件比较时应核对光谱、面积和输入能量，并检查后续暗态放电。",
       "authors": [
         "Shangyu Liu",
         "Zan Ding",
@@ -3349,7 +4081,19 @@
       ],
       "research_topics": [
         "heterojunction"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-original-abstract",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S2352152X24004067"
+        ],
+        "locator": "Abstract and Highlights",
+        "note": "摘要明确高长径比V2O5纳米棒、SWCNT、TiO2/3D网络；光充使用UV而非太阳光，现导读未夸大波段但可加阅读提示。 本轮核对作者摘要及指明的少量原始段落，不代表全文/SI或原始数据全部复核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L61",
@@ -3365,7 +4109,7 @@
       "battery_category": "other-metals",
       "metal_system": "lithium",
       "material": "LiFePO₄ / TiO₂",
-      "summary": "构建二氧化钛与磷酸铁锂复合光正极，使光电转换和电化学储锂在同一电极中协同发生。研究通过光暗条件下的充放电比较，分析太阳光照对电池容量及光响应行为的影响。",
+      "summary": "以 LiFePO₄/TiO₂ 复合正极研究光辅助锂电池性能。公开摘要和原文题名支持其复合光电极设计及受光电化学表现；具体界面电荷路径、净光能储存和独立纯光充协议仍需完整原文核对。",
       "note": "该文重点是光辅助性能增强；需查看是否有独立的纯光充电与撤光放电实验，勿据光照增容直接推断自充电。",
       "authors": [
         "Can Cui",
@@ -3411,7 +4155,22 @@
       "research_topics": [
         "heterojunction",
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-fragment",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S0272884224000294"
+        ],
+        "locator": "出版社公开索引摘要片段、原文题名及正文的复合电极制备片段",
+        "note": "材料 LiFePO₄/TiO₂ 与光辅助锂电性能主题相符；本轮仅取得摘要/正文相关片段，不能将“光电转换与储锂协同发生”当独立净光能储存验证。",
+        "finding_ids": [
+          "SUP-L61"
+        ],
+        "resolution": "导读已按所读范围收窄；未读机理仍保留限制。"
+      }
     },
     {
       "id": "L62",
@@ -3465,7 +4224,19 @@
       "research_topics": [
         "heterojunction",
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.rsc.org/en/content/articlelanding/2024/su/d4su00494a"
+        ],
+        "locator": "出版社完整摘要",
+        "note": "CsPbBr₃/植酸铅双功能正极、聚合物电解液及准固态光辅助充放电均与摘要一致。摘要报告的增容属于有电化学过程的光辅助模式，现有 note 已限定。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L63",
@@ -3521,7 +4292,19 @@
         "photothermal",
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://discovery.ucl.ac.uk/id/eprint/10196763/"
+        ],
+        "locator": "作者机构库原始摘要，另有合法出版版 PDF",
+        "note": "PBA 直接生长于碳集流体、受控温度、光热升温与锂电表现都有原始摘要支持。没有把光热当成无偏压光载流子充电。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L64",
@@ -3596,7 +4379,19 @@
       "research_topics": [
         "heterojunction",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1007%2Fs40820-024-01570-7"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/other-metals-progress.json",
+        "note": "原始摘要完整支持激光嵌入等离激元纳米晶、热电子注入、肖特基接触后缺陷和导电改善的作者解释。热电子与宏观升温的区别已在 note 保留；不将其作为所有氧空位必然有益的定律。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L65",
@@ -3612,7 +4407,7 @@
       "battery_category": "other-metals",
       "metal_system": "lithium",
       "material": "LiFePO₄ / 天然姜黄染料",
-      "summary": "通过溶液浸渍将天然姜黄染料引入磷酸铁锂正极，制备兼具光电与电化学响应的复合电极。研究利用染料吸光增强光照下的电荷传输，并对比电池的充放电及倍率表现。",
+      "summary": "通过浸渍将天然姜黄染料引入 LiFePO₄ 正极，研究光辅助锂电池。出版社登记摘要报告在 0.5 C 光照条件下充电与放电容量分别提高约 9.9% 和 7.7%；电荷转移及稳定性的具体证据仍需正文核对。",
       "note": "适合比较低成本天然敏化剂与N719染料路线，但需检查染料稳定性、光照持续时间及暗态循环对照。",
       "authors": [
         "Can Cui",
@@ -3654,7 +4449,22 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-fragment",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1039%2Fd5tc01579k"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/other-metals-progress.json",
+        "note": "出版社登记 abstract 较短，支持天然姜黄染料浸渍 LiFePO₄ 以及光照容量提升；“增强电荷传输”具体因果没有在该短摘要中展开，建议缩窄到作者报告性能。",
+        "finding_ids": [
+          "SUP-L65"
+        ],
+        "resolution": "导读已按所读范围收窄；未读机理仍保留限制。"
+      }
     },
     {
       "id": "L66",
@@ -3713,7 +4523,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202501498"
+        ],
+        "locator": "Fig.6/7 及 EIS、光照和价态正文讨论",
+        "note": "为 WO₃ 负极及光辅助测试；导读已将持续受光额外响应与撤光能量分开，未作普通插层定律。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L67",
@@ -3767,7 +4589,19 @@
       "research_topics": [
         "photothermal",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://pubs.acs.org/doi/full/10.1021/acselectrochem.4c00212"
+        ],
+        "locator": "Fig.4/5 与 Conclusions",
+        "note": "主导机制随电压、SOC、材料重构变化；电解液副反应与电容也会参与。导读相符。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L68",
@@ -3784,7 +4618,7 @@
       "metal_system": "lithium",
       "material": "Cs₂NaBiI₆无铅双钙钛矿",
       "summary": "将无铅全无机双钙钛矿Cs₂NaBiI₆作为锂电池电极与光电极活性层，在改装扣式电池中整合光采集和储能。研究对比常规电化学储锂与双功能光电池表现，并讨论相较既有铋钙钛矿的稳定性。",
-      "note": "正文提示光充电时金属锂负极的再生存在能量限制；重点查看首轮光转换效率与长期可逆循环是否使用相同边界。",
+      "note": "常规储锂的非原位证据包括 Bi³⁺→Bi⁰ 及 LiBi/Li₃Bi 生成，涉及转化与合金化；不能只套用完整钙钛矿骨架插层模型。作者另指出光充后重建锂金属负极存在能量限制；首轮光转换效率与长期循环需分开评价。",
       "authors": [
         "Neha Tewari",
         "Davy Lam",
@@ -3826,7 +4660,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acsami.5c06043"
+        ],
+        "locator": "原始摘要、§3 Conclusion；正文关于重新还原 Li 金属的能量限制段",
+        "note": "双钙钛矿与改装扣式光电池、首轮效率及锂负极再生限制都相符。结论还明确 Bi³⁺ 还原为 Bi⁰ 后生成 LiBi/Li₃Bi，故不能当作初始钙钛矿一直保持的简单插层。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L69",
@@ -3899,7 +4745,19 @@
         "heterojunction",
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fidm2.70058"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/other-metals-progress.json",
+        "note": "完整原始摘要支持八面体缺陷/排列触发两步重构、NMP 中部分溶解、铜集流体活化与 CuO(CuI)/MHP 异质结；现有导读的起始材料不等于工作态提示正确。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L70",
@@ -3956,7 +4814,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fente.202502455"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/other-metals-progress.json",
+        "note": "完整原始摘要支持镍碲氧化物双功能负极、太阳光与电充两种模式，以及较低电压和库仑效率差异。未据此推断成熟实用全电池。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L71",
@@ -4009,7 +4879,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1149%2F1945-7111%2Fabb178"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/other-metals-progress.json",
+        "note": "完整原始摘要确认短综述讨论光电化学转换/存储、代表性架构和待解决挑战。现有导读是范围描述，未强加某种特定材料机理。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L72",
@@ -4064,7 +4946,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "review-scope",
+        "source_level": "review-scope",
+        "source_urls": [
+          "https://discovery.ucl.ac.uk/id/eprint/10161240/"
+        ],
+        "locator": "作者 UCL 库原始 Abstract，正文行 34–37",
+        "note": "原始作者摘要明确综述 Li 光电池的器件构型、机理、选材及效率/寿命/电压挑战，当前导读在范围层面相符；不表示所有引用研究的机制已逐篇确认。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L73",
@@ -4125,7 +5019,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "review-scope",
+        "source_level": "review-scope",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acsenergylett.5c01365"
+        ],
+        "locator": "出版社公开索引完整 Abstract",
+        "note": "原始摘要明确涵盖 Li–O₂、Li–CO₂、Li–S 电催化类及插层型锂电；当前导读保留范围边界正确。直接页面访问受限后未重试，以正常公开索引的原始摘要核对范围。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L74",
@@ -4174,7 +5080,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acs.nanolett.1c01000"
+        ],
+        "locator": "出版社完整 Abstract；作者 HKUST 库摘要交叉确认",
+        "note": "Cs₃Bi₂I₉、Cu/FTO/碳毡三种集流体、首轮指标及受光放电增容均为摘要内容。现有 note 把光照放电与独立光充后暗放分开，未升级为锂再生已证。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L75",
@@ -4221,7 +5139,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "coverage": "selected-main-text",
+        "source_level": "author-hosted-published-fulltext-relevant-sections",
+        "source_urls": [
+          "https://case.edu/cse/eche/daigroup/Journal%20Articles/2015/%E2%80%9CEfficiently%20photo-charging%20lithium%20ion%20battery%20by%20perovskite%20solar%20cell%E2%80%9D.pdf"
+        ],
+        "locator": "作者公开发表版全文 7 页；摘要、Fig.1 的四个串联太阳电池与开关回路、光充/暗放结果及效率定义。",
+        "note": "串联钙钛矿光伏给 LiFePO₄/Li₄Ti₅O₁₂ 电池充电，与站内的光伏耦合定位相符；它需要连接的电子回路，不能套为任意单一锌正极的本征光充能力。",
+        "finding_ids": [],
+        "checked_on": "2026-10-23"
+      }
     },
     {
       "id": "L76",
@@ -4236,8 +5166,8 @@
       "battery_category": "other-metals",
       "metal_system": "sodium",
       "material": "二维 MoSe₂ / 碳纸 / Na",
-      "summary": "研究以二维二硒化钼晶体构建兼具光吸收与储钠功能的正极。公开摘要表明，光生空穴促进钠离子脱嵌，同时改善电荷转移与离子扩散；器件可在不施加外部电流的条件下光充电。",
-      "note": "重点比较纯光充电后的放电与恒流光照循环，并留意钠金属对电极的半电池条件及热效应对照。",
+      "summary": "以二维 MoSe₂ 纳米片构建光活性储钠电极。作者在钠金属半电池中报告无外加电压/电流的光照响应，并将其与空穴辅助脱钠联系；另测得恒流光照循环的容量提升。",
+      "note": "原文明确为钠金属半电池，后续放电由过量 Na 阳极提供离子；不能由电压恢复或无外加电源一项认定 Na 负极已可逆再生。需分别核对光充后暗态放电、温控与重复循环。",
       "authors": [
         "Gang Cheng",
         "Zhenyu Guo",
@@ -4292,7 +5222,22 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.4c03471"
+        ],
+        "locator": "出版社原始摘要与 Introduction/Results 开头的 half-cell 声明",
+        "note": "材料和空穴促脱钠与摘要一致；原文强调钠金属半电池、进一步放电使用过量 Na 阳极提供的离子，不能把其无外电流光照响应当 Na 金属同步再生。",
+        "finding_ids": [
+          "SUP-L76"
+        ],
+        "resolution": "导读已按所读范围收窄；未读机理仍保留限制。"
+      }
     },
     {
       "id": "L77",
@@ -4308,7 +5253,7 @@
       "battery_category": "other-metals",
       "metal_system": "sodium",
       "material": "SnS₂ / 再生石墨烯类似物（RGA）",
-      "summary": "将硫化锡纳米片与再生石墨烯类似物构成双功能光阳极，利用异质界面改善载流子分离。公开摘要将光照下储钠增强归因于电荷转移动力学和钠离子扩散改善，并报告纯光充电后的持续放电。",
+      "summary": "将 SnS₂ 与再生石墨烯类似物 RGA 构成双功能光电极。出版社登记摘要将其光照储钠响应与界面内建场、电荷转移和 Na⁺ 扩散改善联系；具体独立光充与放电协议仍需完整原文核对。",
       "note": "区分异质结中的光生电荷分离、光照增容与纯光充电证据；材料中的硫属于硫化物晶格，并非钠硫电池。",
       "authors": [
         "Bao Yue",
@@ -4353,7 +5298,22 @@
       "research_topics": [
         "heterojunction",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-fragment",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1039%2Fd6cc02182d"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/other-metals-progress.json",
+        "note": "出版社登记短 abstract 支持 SnS₂/RGA、内建场与作者报告的光照电荷转移/Na⁺ 扩散改善；“纯光充后持续放电”的完整协议未从该短摘要读到。",
+        "finding_ids": [
+          "SUP-L77"
+        ],
+        "resolution": "导读已按所读范围收窄；未读机理仍保留限制。"
+      }
     },
     {
       "id": "L78",
@@ -4418,7 +5378,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "needs_qualification",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-fragment",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S0378775324014691"
+        ],
+        "locator": "出版社 Highlights 与原始摘要可读片段",
+        "note": "GaAs 光伏/钠电/多功能调节器、约 30.24% 指标及 −20°C 试验在原始 Highlights 有支持；具体正极化学式及总体效率分母本轮未取到完整正文。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L79",
@@ -4476,7 +5448,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://doi.org/10.1016/j.xcrp.2022.101123"
+        ],
+        "locator": "Cell Reports Physical Science 原始 Summary、PV-battery setup 与 Discussion",
+        "note": "钙钛矿光伏与磷酸钛钠/Na 电池直接耦合、无需功率调节、室内到 AM1.5G 范围及效率区分都有原文支持。网站没有照抄原文 Summary 中疑似 NaTi₂(PO₄)₂ 排印问题，保留泛称合理。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L80",
@@ -4538,7 +5522,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://pubs.rsc.org/en/content/articlehtml/2024/ta/d4ta04729j"
+        ],
+        "locator": "Abstract；Results/Battery characterization；Conclusions",
+        "note": "OPV PM6:Y6:PCBM 直接耦合 NaTi₂(PO₄)₃/Na，电压与功率匹配、室内照度范围及无需调节器都有原文支持。lux 与辐照功率的区别是必要边界。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L81",
@@ -4599,7 +5595,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Faenm.201900872"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/other-metals-progress.json",
+        "note": "完整原始摘要确认钙钛矿光伏模块与铝离子电池共享双功能 Al 电极、MPP 与充电电压匹配。现有导读把共享电极与双功能光活性储能材料区分，正确。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L82",
@@ -4615,7 +5623,7 @@
       "battery_category": "other-metals",
       "metal_system": "aluminum",
       "material": "水系 Al / MnO₂ 光电化学电池",
-      "summary": "研究利用二氧化锰的半导体特性构建水系铝锰光电化学耦合电池。公开摘要指出，光生电子改善反应动力学和倍率表现，光化学氧化还可使放电形成的可溶锰物种重新参与储能，提供电极反应调控思路。",
+      "summary": "以 MnO₂ 正极研究水系 Al/MnO₂ 光电化学耦合电池。可读原始摘要将快速充电、倍率改善与光生电子联系起来；可溶 Mn²⁺ 的再氧化及溶解—沉积贡献仍需完整原文核查。",
       "note": "关注 Mn²⁺/Mn⁴⁺转化及溶解—沉积贡献，不把全部容量直接解释成 Al³⁺嵌入；勿与同工作预印本重复计数。",
       "authors": [
         "Xuefeng Zhang",
@@ -4652,7 +5660,22 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-fragment",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S2405829721006012"
+        ],
+        "locator": "出版社原始摘要可读片段及题名",
+        "note": "已核水系 Al/MnO₂ 光电化学耦合及作者关于电子改善动力学的摘要表述。光氧化可溶锰的完整段落本轮未读到，故不升级全部机理已证。",
+        "finding_ids": [
+          "SUP-L82"
+        ],
+        "resolution": "导读已按所读范围收窄；未读机理仍保留限制。"
+      }
     },
     {
       "id": "L83",
@@ -4712,7 +5735,19 @@
       ],
       "research_topics": [
         "device"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://tugraz.elsevierpure.com/en/publications/new-solar-cell-battery-hybrid-energy-system-integrating-organic-p/"
+        ],
+        "locator": "作者 Graz 大学库的完整原始 Abstract/AB 字段",
+        "note": "有机叠层光伏、碱金属电池、两个负极与共享正极的三端结构、兼容性/封装及分项效率均与原始摘要相符。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L84",
@@ -4776,7 +5811,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Faenm.201700545"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/other-metals-progress.json",
+        "note": "完整原始摘要支持 operando 同步辐射衍射、MoO₃ 先两相转化至 Na₀.₃₃MoO₃ 再形成 NaₓMoO₃ 固溶体，以及时间电位相关性。导读未将电极机理直接等同实用完整电池。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L85",
@@ -4832,7 +5879,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "review-scope",
+        "source_level": "review-scope",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S2211285524002866"
+        ],
+        "locator": "原始 Abstract、Highlights、Introduction 及 section snippets",
+        "note": "综述范围确实包含轻金属 Li/Na/Zn、金属卤素、气体以及其他光辅助储能；现有导读没有把金属空气机制当成一般嵌入。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L86",
@@ -4883,7 +5942,19 @@
       "research_topics": [
         "device",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Faenm.202301143"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/other-metals-verified.json",
+        "note": "完整原始摘要确认从电池与超级电容器基础、器件构型/工作原理到瓶颈的广义综述。现有范围说明恰当。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L87",
@@ -4933,7 +6004,19 @@
       "material_groups": [
         "other"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "review-scope",
+        "source_level": "review-scope",
+        "source_urls": [
+          "https://onlinelibrary.wiley.com/doi/10.1002/bte2.20230036"
+        ],
+        "locator": "原始 Conclusion/Perspective 与该综述范围",
+        "note": "正文总结直接支持水系钠电的窄可用窗口、选材、界面、制造及实用差距。当前导读保留水系/非水系/钠金属边界；未移用其全文的每个绝对性主张。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L88",
@@ -4999,7 +6082,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acsmaterialsau.1c00035"
+        ],
+        "locator": "原始 Abstract、operando XRD/XAS 与 Experimental 部分",
+        "note": "Na₃Fe₃(PO₄)₄ 为负极，Fe³⁺/Fe²⁺ 驱动两 Na 插层、operando 的小体积变化及全电池均有原文支持。current note 单电极/全电池区分正确。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L89",
@@ -5050,7 +6145,19 @@
       "material_groups": [
         "other"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acsami.2c06304"
+        ],
+        "locator": "出版社原始完整 Abstract",
+        "note": "Na₂SO₄ 负极液、Na₄Fe(CN)₆ 活性正极液、NTP 负极/NiFe-PB 正极、两侧电解液与额外氧化还原容量的说明均准确。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L90",
@@ -5104,7 +6211,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acs.chemmater.9b02269"
+        ],
+        "locator": "出版社完整 Abstract；作者组公开稿摘要交叉确认",
+        "note": "工作是第一性原理/巨正则相图研究，湿/干 PBA 的 Na/水共嵌、相变与电位曲线差异是计算预测。现有 note 已避免当成全部实测全电池结论。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L91",
@@ -5119,8 +6238,8 @@
       "battery_category": "other-metals",
       "metal_system": "sodium",
       "material": "高浓度 NaClO₄ / 三维电极",
-      "summary": "结合高浓度水系钠盐电解液与三维结构电极，并与普鲁士蓝类正极组装全电池，考察器件表现。",
-      "note": "关注水系电解液稳定窗口、盐浓度，以及全电池容量和能量密度的计算口径。",
+      "summary": "将三维 VOₓ/激光刻写石墨烯负极与 NaMnHCF 正极组合，并研究浓 NaClO₄ 及含 Na₄Fe(CN)₆ 的活性水系电解液。原文将容量和循环改善与电极结构、电解液稳定窗口、Mn 溶出控制和电解液氧化还原容量共同联系。",
+      "note": "Na₄Fe(CN)₆ 既参与 Mn 捕获，也作为氧化还原活性电解液额外贡献容量；不能把全部增容归给固体电极。比较能量密度时需核对电解液活性物及整电池质量范围；可用稳定窗口也依测试电极和判据而变。",
       "authors": [
         "Zhiyin Yang",
         "Ailun Huang",
@@ -5157,7 +6276,22 @@
       "material_groups": [
         "other"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acsami.4c15832"
+        ],
+        "locator": "Fig.7 后对照实验与 Fig.S13 的正文讨论；17.0 M NaClO₄/0.33 M Na₄Fe(CN)₆ 段",
+        "note": "原文不仅有浓盐/3D 电极，还明确 Na₄Fe(CN)₆ 的 Mn 捕获及氧化还原活性电解液额外容量。建议补能量/容量的活性物范围。",
+        "finding_ids": [
+          "SUP-L91"
+        ],
+        "resolution": "导读已按所读范围收窄；未读机理仍保留限制。"
+      }
     },
     {
       "id": "L92",
@@ -5173,7 +6307,7 @@
       "metal_system": "sodium",
       "material": "锰铁普鲁士蓝类正极",
       "summary": "以普鲁士蓝类材料组成水系钠电全电池，研究抑制析氢、析氧副反应与扩大工作电压窗口的关系。",
-      "note": "论文报告的电压、容量和循环次数需要结合测试条件、质量归一化范围与全电池配置阅读。",
+      "note": "原文的扩窗指抑制副反应后、特定测试条件下的可用工作窗口，不代表把同条件水分解的热力学电压由 1.23 V 改成 2 V。电压、容量和循环次数仍须结合全电池配置、检测判据与质量范围。",
       "authors": [
         "Xueqian Zhang",
         "Yu Hong",
@@ -5208,7 +6342,19 @@
       "material_groups": [
         "other"
       ],
-      "research_topics": []
+      "research_topics": [],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.acs.org/doi/abs/10.1021/acsanm.4c06180"
+        ],
+        "locator": "出版社完整 Abstract",
+        "note": "原文明确水分解 1.23 V 是热力学值，并研究抑制析氢/析氧以拓展可用 ESW；现有导读基本准确，建议显式防止将 2 V 工作电压理解为改变水分解热力学。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L93",
@@ -5260,7 +6406,19 @@
       "research_topics": [
         "hydration",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://www.nature.com/articles/nenergy2016119"
+        ],
+        "locator": "出版社摘要",
+        "note": "Zn₀.₂₅V₂O₅·nH₂O 中 Zn²⁺/水支柱与作者报告储锌相符；未外推为所有钒基机制。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L94",
@@ -5330,7 +6488,19 @@
       "research_topics": [
         "hydration",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.201703725"
+        ],
+        "locator": "出版社摘要",
+        "note": "水溶剂化的屏蔽效应是该材料中作者的解释；“有效电荷降低”不是 Zn 正式氧化态由 +2 改变。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L95",
@@ -5383,7 +6553,19 @@
         "hydration",
         "preintercalation",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/29432667/"
+        ],
+        "locator": "原始摘要",
+        "note": "层状钙钒氧化物青铜为水系储锌宿主；不是钙离子电池，也不自行证明光辅助。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L96",
@@ -5450,7 +6632,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.acs.org/doi/10.1021/acs.chemmater.6b05092"
+        ],
+        "locator": "出版社摘要",
+        "note": "LiV₃O₈ 储锌、化学计量 ZnLiV₃O₈ 与后续固溶区均与摘要相符。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L97",
@@ -5505,7 +6699,19 @@
         "hydration",
         "proton",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://www.nature.com/articles/s41467-018-04060-8"
+        ],
+        "locator": "Discussion、Methods/Assembly of Zn/NVO batteries",
+        "note": "水合钒酸钠/H⁺ 与 Zn²⁺ 共嵌、Na₂SO₄ 添加剂及准固态器件正确；具体盐与构型已区分。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L98",
@@ -5567,7 +6773,19 @@
       "research_topics": [
         "preintercalation",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1039%2Fc8ee01651h"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/cathode-crossref.json",
+        "note": "完整出版社登记摘要支持 Li⁺ 化学预嵌入 V₂O₅·nH₂O、扩大层间距与快速 Zn²⁺ 扩散的该样品联系；现有 note 不外推为所有扩层必然更好，正确。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L99",
@@ -5623,7 +6841,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-fragment",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.201601920"
+        ],
+        "locator": "出版社公开原始摘要片段及题名",
+        "note": "VS₂ 层状纳米片作为水系 Zn 电正极、较大层间距和高导电性与作者摘要解释一致；具体盐浓度/相变没有本轮全部重核。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L100",
@@ -5639,7 +6869,7 @@
       "material": "非晶有机杂化钒氧化物 AOH-VO",
       "heading": "无序结构如何改变离子迁移路径",
       "summary": "构筑由无序一维链及原子／分子尺度孔隙组成的有机杂化钒氧化物，结合结构表征和动力学分析研究降低 Zn²⁺ 迁移障碍的途径，并展示 Ah 级软包电池。适合进一步阅读非晶化和有机／无机杂化设计。",
-      "note": "“近无势垒”是论文对其特定测试体系的表述，不等同于零能耗；应分别核对固相扩散、界面过程与软包测试条件。",
+      "note": "“近无势垒”对应特定体系较低而非为零的活化能：正文报告界面约 6.3、固相平均约 7.8 kJ mol⁻¹。实验平均活化能与 DFT 单路径势垒不能混用；软包表现仍须连同载量、电解液和电流阅读。",
       "kind": "研究论文",
       "battery_category": "zinc",
       "metal_system": "zinc",
@@ -5688,7 +6918,21 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://www.nature.com/articles/s41467-024-55000-8"
+        ],
+        "locator": "Zn²⁺ dynamics/Stable fast-charging performance 与总结",
+        "note": "近无势垒仍是非零：正文约 6.3 kJ mol⁻¹ 界面及 7.8 kJ mol⁻¹ 固相平均活化能；计算单路径势垒与实验平均值不同。",
+        "finding_ids": [
+          "VL-005"
+        ]
+      }
     },
     {
       "id": "L101",
@@ -5764,7 +7008,19 @@
       "research_topics": [
         "dissolution",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://discovery.ucl.ac.uk/id/eprint/10186033/"
+        ],
+        "locator": "作者机构库摘要；出版社原始摘要",
+        "note": "低电流长时间溶解、疏水人工界面及溶解物外迁限制与作者报告相符。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L102",
@@ -5823,7 +7079,19 @@
         "preintercalation",
         "defect",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "review-scope",
+        "source_level": "review-scope",
+        "source_urls": [
+          "https://onlinelibrary.wiley.com/doi/abs/10.1002/smm2.1231"
+        ],
+        "locator": "原始综述摘要、§3.1 可读正文",
+        "note": "四类结构策略与超越扩层的导读相符；仅核综述范围而非逐篇验证其所有引用。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L103",
@@ -5880,7 +7148,19 @@
       "research_topics": [
         "preintercalation",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "review-scope",
+        "source_level": "review-scope",
+        "source_urls": [
+          "https://onlinelibrary.wiley.com/doi/full/10.1002/cey2.681"
+        ],
+        "locator": "§3、Conclusion/Perspective",
+        "note": "综述的层间距与性能跨论文比较包含混杂因素；站内拒绝把约 12 Å 当普适最优值的边界合理。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L104",
@@ -5947,7 +7227,19 @@
       "research_topics": [
         "proton",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://www.pnnl.gov/publications/reversible-aqueous-zincmanganese-oxide-energy-storage-conversion-reactions"
+        ],
+        "locator": "作者机构原始论文摘要；原始期刊题名/摘要",
+        "note": "α-MnO₂/H⁺ 转化研究归于锌基器件而非纯 Zn²⁺ 往返嵌入，方向正确。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L105",
@@ -6004,7 +7296,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://www.nature.com/articles/s41467-017-00467-x"
+        ],
+        "locator": "Fig.2 与首次放电/后续循环相变正文",
+        "note": "温和酸性三氟甲磺酸盐中隧道 MnO₂ → 层状 Zn-buserite，后续储锌与原文一致；不能转用于所有 MnO₂。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L106",
@@ -6049,7 +7353,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/25510850/"
+        ],
+        "locator": "原始摘要",
+        "note": "20 mM ZnSO₄/pH 6、CuHCF、析氢与 Zn 表面局部 pH 的说明相符；不外推所有 PBA。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L107",
@@ -6101,7 +7417,19 @@
         "dissolution",
         "defect",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "review-scope",
+        "source_level": "review-scope",
+        "source_urls": [
+          "https://pubs.acs.org/doi/full/10.1021/acselectrochem.6c00024"
+        ],
+        "locator": "原始 Review 标注、Crystal Chemistry 与各 PBA takeaway/失效/稳定化相关正文",
+        "note": "PBA 空位、水合、晶体对称性及溶解/结构变化、涂层与实际工况的综述范围相符。该轮只确认本站导读范围，不把综述引用的所有金属位点机理逐一当独立证据。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L108",
@@ -6156,7 +7484,19 @@
       ],
       "research_topics": [
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.8b01317"
+        ],
+        "locator": "出版社原始摘要",
+        "note": "DFT 分子转动、operando XRD 及固液边界相演变均有摘要支持；不是只由初始结构断言循环机制。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L109",
@@ -6210,7 +7550,19 @@
       "research_topics": [
         "proton",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "selected-main-text",
+        "source_level": "selected-main-text",
+        "source_urls": [
+          "https://www.nature.com/articles/s41467-021-24701-9"
+        ],
+        "locator": "摘要及 Fig.5/质子传导相关正文",
+        "note": "TABQ 特定弱酸锌电解液中的质子主导储能及氢键网络相符；不是所有醌的统一机制。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L110",
@@ -6272,7 +7624,19 @@
       "research_topics": [
         "proton",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubs.rsc.org/en/content/articlepdf/2025/sc/d5sc00311c"
+        ],
+        "locator": "原始摘要",
+        "note": "先 Zn²⁺ 配位形成 O–Zn–N，再随羰基还原 H⁺/Zn²⁺ 共存储，与原摘要一致。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L111",
@@ -6325,7 +7689,19 @@
       "research_topics": [
         "defect",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "review-scope",
+        "source_level": "review-scope",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S2095495624003784"
+        ],
+        "locator": "原始 Review 摘要可读段；出版方 Science Press/ScienceEngine PDF 第 1 页",
+        "note": "已核综述主题、AZIB 正极与优化策略范围；摘要中各子类详细机理没有逐条复核，现有导读只作入门总览，边界合理。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L112",
@@ -6378,7 +7754,19 @@
         "preintercalation",
         "defect",
         "mechanism"
-      ]
+      ],
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "publisher-deposited-abstract",
+        "source_urls": [
+          "https://api.crossref.org/works/10.1002%2Fece2.61"
+        ],
+        "locator": "出版社向 Crossref 登记的原始 abstract；本地实际 API 响应缓存 work/cathode-crossref.json",
+        "note": "完整出版社登记原始摘要确认锰、钒、镍/钴、锂/钠插层类正极及结构、纳米、掺杂、导电复合等策略，现有导读范围相符。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L113",
@@ -6393,7 +7781,7 @@
       ],
       "material": "K₀.₅V₆O₁₃（KVO）/ K⁺ 预嵌入",
       "heading": "预嵌入怎样改变晶格水氢键网络与质子输运",
-      "summary": "研究 K⁺ 预嵌入 K₀.₅V₆O₁₃ 对钒氧骨架和受限晶格水氢键网络的双重作用，结合固体核磁、同位素对照与电化学表征分析质子输运。除低载量测试外，还给出高载量软包结果，适合把预嵌入设计与实际评价条件连接起来。",
+      "summary": "以初始不含晶格水的 V₆O₁₃ 与 K₀.₅V₆O₁₃ 为对照，研究 K⁺ 对钒氧骨架，以及循环中引入晶格水后氢键网络的影响。作者结合固体核磁、H₂O／D₂O 同位素对照和计算，将增强的质子输运与重组后的氢键网络联系起来；另给出高载量软包结果。",
       "note": "重点对照 H₂O／D₂O 电解液与质子、Zn²⁺ 贡献的拆分。462.9 mAh g⁻¹（0.2 A g⁻¹）和 20000 次循环（20 A g⁻¹）属于不同工况；软包载量与小电池性能也应分开比较。",
       "article_type": "research",
       "kind": "研究论文",
@@ -6437,7 +7825,21 @@
       "publisher_source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.75300",
       "reading_basis": "用户提供的论文正文、摘要与图注；Crossref 核对书目，未据补充信息推定缺失条件",
       "verified_on": "2026-10-15",
-      "added_on": "2026-10-15"
+      "added_on": "2026-10-15",
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "fulltext-relevant-sections",
+        "source_level": "fulltext-relevant-sections",
+        "source_urls": [
+          "https://doi.org/10.1002/adma.75300"
+        ],
+        "locator": "用户提供正文：Fig.1/S9 初始无晶格水；Fig.2/S20/S21 循环中引水；Fig.3、NMR/H–D/迁移计算相关段落",
+        "note": "KVO 初始无晶格水，循环后引入晶格水再讨论氢键网络和质子输运，须保留这一状态顺序。",
+        "finding_ids": [
+          "VL-001"
+        ]
+      }
     },
     {
       "id": "L114",
@@ -6494,7 +7896,19 @@
       "publisher_source": "https://pubs.acs.org/nalefd/article/doi/10.1021/acs.nanolett.6c02373/5449469/Photobattery-Architectures-to-Suppress-Charge",
       "reading_basis": "用户提供的论文正文、摘要与图注；Crossref 核对书目，未据补充信息推定缺失条件",
       "verified_on": "2026-10-15",
-      "added_on": "2026-10-15"
+      "added_on": "2026-10-15",
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "fulltext-relevant-sections",
+        "source_level": "fulltext-relevant-sections",
+        "source_urls": [
+          "https://doi.org/10.1021/acs.nanolett.6c02373"
+        ],
+        "locator": "用户提供正文：Fig.1–4，Fig.3f/g 的 1.2 V vs Zn 及暗态放电；光热对照正文",
+        "note": "约 1 V 光电压、0D/1D/2D 架构与有偏压的能量演示相符；不能只凭光电压称无偏压全电池光充。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L115",
@@ -6543,7 +7957,19 @@
       "publisher_source": "https://onlinelibrary.wiley.com/doi/10.1002/smll.76243",
       "reading_basis": "用户提供的论文正文、摘要与图注；Crossref 核对书目，未据补充信息推定缺失条件",
       "verified_on": "2026-10-15",
-      "added_on": "2026-10-15"
+      "added_on": "2026-10-15",
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "fulltext-relevant-sections",
+        "source_level": "fulltext-relevant-sections",
+        "source_urls": [
+          "https://doi.org/10.1002/smll.76243"
+        ],
+        "locator": "用户提供 Perspective：摘要、§2 和正极/电解液评价相关章节",
+        "note": "原始文件确为 Perspective；导读关于载量、锌用量、工况和机理证据的边界相符。",
+        "finding_ids": []
+      }
     },
     {
       "id": "L116",
@@ -6559,7 +7985,7 @@
       "material": "BMIM⁺ 预嵌入层状钒氧化物 / 配位场调控",
       "heading": "层间有机离子如何通过局部配位环境改变工作电压",
       "summary": "以咪唑鎓阳离子为层间调控单元，结合同步辐射谱学和理论计算，研究 BMIM⁺ 预嵌入对钒氧八面体局部配位场及电子态的影响。论文将工作电压提升与 V 3d 能级变化联系起来，并在其他层状钒氧化物中验证策略。",
-      "note": "区分开路电位、平均工作电位与电池能量密度；“普适”应按文中实际验证的材料范围理解。505 mAh g⁻¹（0.1 A g⁻¹）与 15000 次循环（8 A g⁻¹）并非同一测试条件。",
+      "note": "V 3d-band center 是文中 DFT 电子态描述符，不能当作 CB／VB，也不能由其位移直接计算光充电电压。工作电压按电化学实测判断；“普适”限于文中实际验证材料。505 mAh g⁻¹（0.1 A g⁻¹）与 15000 次循环（8 A g⁻¹）属于不同工况。",
       "article_type": "research",
       "kind": "研究论文",
       "battery_category": "zinc",
@@ -6608,7 +8034,21 @@
       "publisher_source": "https://pubs.acs.org/ancac3/article/doi/10.1021/acsnano.6c15858/5448078/Universal-Ligand-Field-Engineering-of-Layered",
       "reading_basis": "用户提供的论文正文、摘要与图注；Crossref 核对书目，未据补充信息推定缺失条件",
       "verified_on": "2026-10-15",
-      "added_on": "2026-10-15"
+      "added_on": "2026-10-15",
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "fulltext-relevant-sections",
+        "source_level": "fulltext-relevant-sections",
+        "source_urls": [
+          "https://doi.org/10.1021/acsnano.6c15858"
+        ],
+        "locator": "用户提供正文：Fig.2/3/4/5 的电位、局部配位与 DFT 分析",
+        "note": "实际电压由电化学测量支持，d-band center 为特定 DFT 模型描述符，不能拿来当绝对带边。",
+        "finding_ids": [
+          "VL-002"
+        ]
+      }
     },
     {
       "id": "L117",
@@ -6679,6 +8119,18 @@
         "kind": "user-confirmed",
         "source": "用户提供的课题组论文清单",
         "checked_on": "2026-10-15"
+      },
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "review-scope",
+        "source_level": "review-scope",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/40801706/"
+        ],
+        "locator": "原始摘要及公开图注，尤其 Fig.3/4/5/6",
+        "note": "确是跨锂、锌、光辅助、超级电容器的小型综述；本站说明光辅助仅为一部分正确。",
+        "finding_ids": []
       }
     },
     {
@@ -6746,6 +8198,18 @@
         "kind": "user-confirmed",
         "source": "用户提供的课题组论文清单",
         "checked_on": "2026-10-15"
+      },
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/39139012/"
+        ],
+        "locator": "原始摘要",
+        "note": "SnO₂@MnO₂、约 598 mAh g⁻¹/0.1 A g⁻¹ 与作者归因相符；没有把摘要当原位机制验证。",
+        "finding_ids": []
       }
     },
     {
@@ -6770,9 +8234,9 @@
         "device"
       ],
       "material": "纳米晶氧化铁纤维纱线电极 / 柔性超级电容器",
-      "summary": "该研究以纳米晶氧化铁纤维纱线电极为对象，面向柔性超级电容器的循环寿命与器件设计。当前简介依据题名和已核实书目，具体制备路线、储能指标及循环测试条件尚待进一步核对。",
-      "note": "归入关联储能器件。现有书目没有提供光辅助实验依据；不将电容器性能按锌离子电池容量进行比较。用户给出的 PII S2352152X24037228 与本 DOI 在 Crossref alternative-id 中精确对应。",
-      "reading_basis": "仅核对题名、作者、期刊及 PII/DOI 对应关系；尚未据全文编写导读",
+      "summary": "以纳米晶氧化铁纤维纱线电极构建水系准固态柔性超级电容器。出版社摘要与 Highlights 讨论多孔电极、PAM-Li₂SO₄ 凝胶及柔性循环表现；具体制备和指标计算仍需完整正文核对。",
+      "note": "归入关联储能器件。该轮取得的摘要/Highlights 没有给出光辅助电池验证，不能将其性能计作光充锌离子电池证据；PII S2352152X24037228 与该 DOI 对应。",
+      "reading_basis": "出版社原始摘要可读片段、Highlights 与已核书目；尚未逐图核验全文",
       "title": "Nanocrystal‑iron oxide fiber yarn electrodes with ultralong cycling life for flexible supercapacitors",
       "publisher_pii": "S2352152X24037228",
       "doi": "10.1016/j.est.2024.114136",
@@ -6813,6 +8277,18 @@
         "kind": "user-confirmed",
         "source": "用户提供的课题组论文清单",
         "checked_on": "2026-10-15"
+      },
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-fragment",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S2352152X24037228"
+        ],
+        "locator": "出版社原始题名、Highlights、Abstract 可读片段",
+        "note": "原始页面确认是准固态柔性超级电容器与氧化铁纤维纱线，PAM-Li₂SO₄ 凝胶等为其器件路线；不是可据此认定光辅助锌电的文章。原来仅题名/书目状态现在可更新为摘要相关片段。",
+        "finding_ids": []
       }
     },
     {
@@ -6884,6 +8360,18 @@
         "orcid": "0000-0001-6902-0024",
         "institution": "Northeast Forestry University",
         "checked_on": "2026-10-15"
+      },
+      "theory_audit": {
+        "status": "confirmed",
+        "checked_on": "2026-10-23",
+        "coverage": "abstract-based",
+        "source_level": "abstract-based",
+        "source_urls": [
+          "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adsu.202501531"
+        ],
+        "locator": "原始摘要",
+        "note": "545 mAh g⁻¹/0.2 A g⁻¹，循环为 1 A g⁻¹，非原位 MnO₂/ZnMn₂O₄ 对应正确；不视为所有 MnO₂ 的机理。",
+        "finding_ids": []
       }
     },
     {
@@ -6925,7 +8413,19 @@
       "abstract": "",
       "review_status": "auto",
       "added": "2026-10-20",
-      "id": "L121"
+      "id": "L121",
+      "theory_audit": {
+        "status": "unverified",
+        "checked_on": "2026-10-23",
+        "coverage": "metadata-only",
+        "source_level": "metadata-only",
+        "source_urls": [
+          "https://doi.org/10.1016/j.cej.2026.183172"
+        ],
+        "locator": "现有 Crossref 书目与题名；本轮公开检索未发现可读原始摘要",
+        "note": "保留自动待研读：未取得作者原始摘要或全文，不能确认题名中的 1T/2H 协同及插层/沉积耦合机制。",
+        "finding_ids": []
+      }
     }
   ],
   "curated_checked_on": "2026-10-15",
@@ -7128,5 +8628,30 @@
       "L120"
     ],
     "note": "5条已有记录保留，补录4条并建立课题组入口；更正不作为独立研究计数。"
+  },
+  "theory_audit_scope": {
+    "checked_on": "2026-10-23",
+    "papers_screened": 121,
+    "original_sources_checked": 119,
+    "meaning": "核对站内导读与已读取的原始来源是否相符，不代表复现实验、重算 DFT 或全文所有因果均被独立证实。",
+    "levels": {
+      "abstract-based": "原始摘要层面相符",
+      "selected-main-text": "相关正文/图表/方法段落相符",
+      "fulltext-relevant-sections": "已核用户提供正文的相关章节，未推定未读 SI",
+      "review-scope": "仅核综述范围与导读边界",
+      "editorial-screen-only": "已扫读站内文字，原始来源尚待逐条核验",
+      "abstract-fragment": "仅取得原始摘要的相关片段，不能据此确认摘要其余部分或全文机理",
+      "abstract-plus-selected-SI": "原始摘要与指定SI段落，不代表完整SI已核"
+    },
+    "snapshot_url": "theory-audit.html",
+    "coverage_counts": {
+      "selected-main-text": 21,
+      "abstract-based": 77,
+      "review-scope": 10,
+      "abstract-plus-selected-SI": 1,
+      "abstract-fragment": 7,
+      "fulltext-relevant-sections": 4,
+      "metadata-only": 1
+    }
   }
 }
