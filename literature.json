@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-11-03",
   "scope": "精选阅读清单，并非系统综述或穷尽性检索。文献来自领域研究者，不代表本站自有成果。",
   "papers": [
     {
@@ -8426,11 +8426,45 @@
         "note": "保留自动待研读：未取得作者原始摘要或全文，不能确认题名中的 1T/2H 协同及插层/沉积耦合机制。",
         "finding_ids": []
       }
+    },
+    {
+      "title": "NiCo2S4 Nanoparticles Decorated Carbon-Rich Carbon Nitride Nanosheets for Indoor Light-Active Photo-Rechargeable Hybrid Zinc-Ion Battery",
+      "heading": "新近文献 · 待研读",
+      "tags": [
+        "auto"
+      ],
+      "kind": "期刊文献",
+      "material": "请查阅原文材料体系",
+      "summary": "标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。",
+      "note": "请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。",
+      "authors": [
+        "Vinay Kumar Sriramadasu",
+        "Nagabandi Jayababu",
+        "Santanu Bhattacharyya"
+      ],
+      "citationAuthors": [
+        "Sriramadasu, Vinay Kumar",
+        "Jayababu, Nagabandi",
+        "Bhattacharyya, Santanu"
+      ],
+      "journal": "ACS Applied Engineering Materials",
+      "year": 2026,
+      "publication_date": "2026-11-02",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1021/acsaenm.6c01138",
+      "url": "https://doi.org/10.1021/acsaenm.6c01138",
+      "source": "https://api.crossref.org/works/10.1021%2Facsaenm.6c01138",
+      "abstract": "Abstract Photorechargeable storage devices are an emerging field for storing solar energy as a charge. In this work, a hybrid hierarchical nanomaterial made of carbon-rich carbon nitride nanosheets (CCN) and NiCo2S4 nanodots (NCS) is prepared for a photoactive electrode. Optoelectronic studies suggest that the prepared CCN has excellent surface properties, broad visible-light absorbance, and good conductivity, whereas NCS has a higher density of redox-active sites, thereby improving light-induced storage performance. A suitable bandgap with aligned band positions between the counterparts enables efficient charge separation in the pristine materials. The fabricated NCS@CCN-based photoelectrode is evaluated for a photorechargeable hybrid zinc-ion battery in 3 E and 2 E configurations. The electrode shows a maximum specific capacity of 15.56 and 19.44 mAh g−1 under dark and light conditions, respectively (scan rate of 25 mV s−1), and a maximum 93.34% photoinduced capacity increment is observed at 200 mV s−1. Furthermore, the photo-assisted storage performance of the fabricated device is demonstrated using an indoor light source. The photo-induced enhancement in specific capacitance (%) ranges from 64.46% to 83.92%. Even after 500 cycles of CV and GCD, the device shows a retention capacitance of 73%. Furthermore, the possible energy storage mechanisms on the photocathode are investigated in detail.",
+      "review_status": "auto",
+      "added": "2026-11-03",
+      "id": "L122"
     }
   ],
   "curated_checked_on": "2026-10-15",
-  "last_checked_at": "2026-11-02T06:20:33.661508+00:00",
-  "last_added_count": 0,
+  "last_checked_at": "2026-11-03T06:56:24.812353+00:00",
+  "last_added_count": 1,
   "curated_expansion": {
     "date": "2026-10-13",
     "added_count": 31,
