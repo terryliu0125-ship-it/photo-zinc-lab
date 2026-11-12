@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-12",
   "scope": "精选阅读清单，并非系统综述或穷尽性检索。文献来自领域研究者，不代表本站自有成果。",
   "papers": [
     {
@@ -8460,11 +8460,53 @@
       "review_status": "auto",
       "added": "2026-11-03",
       "id": "L122"
+    },
+    {
+      "title": "Layer-by-layer structured V2O5/g-C3N4 photocathode with S-scheme heterojunction for highly efficient photo-rechargeable zinc-ion batteries",
+      "heading": "新近文献 · 待研读",
+      "tags": [
+        "auto",
+        "vanadium",
+        "heterojunction"
+      ],
+      "kind": "期刊文献",
+      "material": "请查阅原文材料体系",
+      "summary": "标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。",
+      "note": "请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。",
+      "authors": [
+        "Weiyue Wang",
+        "Liguo Zhang",
+        "Yu Xie",
+        "Kexin Li",
+        "Ziyang Guo",
+        "Qiancheng Zhu"
+      ],
+      "citationAuthors": [
+        "Wang, Weiyue",
+        "Zhang, Liguo",
+        "Xie, Yu",
+        "Li, Kexin",
+        "Guo, Ziyang",
+        "Zhu, Qiancheng"
+      ],
+      "journal": "Chemical Engineering Journal",
+      "year": 2026,
+      "publication_date": "2026-11",
+      "volume": "547",
+      "issue": "",
+      "pages": "180919",
+      "doi": "10.1016/j.cej.2026.180919",
+      "url": "https://doi.org/10.1016/j.cej.2026.180919",
+      "source": "https://api.crossref.org/works/10.1016%2Fj.cej.2026.180919",
+      "abstract": "",
+      "review_status": "auto",
+      "added": "2026-11-12",
+      "id": "L123"
     }
   ],
   "curated_checked_on": "2026-10-15",
-  "last_checked_at": "2026-11-11T06:39:07.475033+00:00",
-  "last_added_count": 0,
+  "last_checked_at": "2026-11-12T07:21:49.837136+00:00",
+  "last_added_count": 1,
   "curated_expansion": {
     "date": "2026-10-13",
     "added_count": 31,

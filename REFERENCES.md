@@ -1221,3 +1221,13 @@ Vinay Kumar Sriramadasu; Nagabandi Jayababu; Santanu Bhattacharyya. NiCo2S4 Nano
 标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。
 
 阅读提示：请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。
+
+## L123 · 新近文献 · 待研读
+
+电池分类：锌基相关文献 · 文献类型：待分类
+
+Weiyue Wang; Liguo Zhang; Yu Xie; Kexin Li; Ziyang Guo; Qiancheng Zhu. Layer-by-layer structured V2O5/g-C3N4 photocathode with S-scheme heterojunction for highly efficient photo-rechargeable zinc-ion batteries. *Chemical Engineering Journal*, 2026. [DOI](https://doi.org/10.1016/j.cej.2026.180919) · [Crossref 元数据](https://api.crossref.org/works/10.1016%2Fj.cej.2026.180919)
+
+标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。
+
+阅读提示：请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。
