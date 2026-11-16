@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-16",
   "scope": "精选阅读清单，并非系统综述或穷尽性检索。文献来自领域研究者，不代表本站自有成果。",
   "papers": [
     {
@@ -8502,11 +8502,60 @@
       "review_status": "auto",
       "added": "2026-11-12",
       "id": "L123"
+    },
+    {
+      "title": "Light‐Triggered Hole‐Driven Interfacial Desolvation and Reversible Defect Buffering in a ZnPc‐VOH p‐n Heterojunction for Photo‐Assisted Zinc‐Ion Batteries",
+      "heading": "新近文献 · 待研读",
+      "tags": [
+        "auto",
+        "heterojunction"
+      ],
+      "kind": "期刊文献",
+      "material": "请查阅原文材料体系",
+      "summary": "标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。",
+      "note": "请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。",
+      "authors": [
+        "Xiaojie Lu",
+        "Fan Yang",
+        "Lei Chen",
+        "Wenxiao Li",
+        "Xiaoliang Zhang",
+        "Weili Chi",
+        "Weifeng Shen",
+        "Chunxia Wang",
+        "Yong Liu",
+        "Xiangwu Zhang"
+      ],
+      "citationAuthors": [
+        "Lu, Xiaojie",
+        "Yang, Fan",
+        "Chen, Lei",
+        "Li, Wenxiao",
+        "Zhang, Xiaoliang",
+        "Chi, Weili",
+        "Shen, Weifeng",
+        "Wang, Chunxia",
+        "Liu, Yong",
+        "Zhang, Xiangwu"
+      ],
+      "journal": "Advanced Functional Materials",
+      "year": 2026,
+      "publication_date": "2026-11-15",
+      "volume": "",
+      "issue": "",
+      "pages": "e79704",
+      "doi": "10.1002/adfm.79704",
+      "url": "https://doi.org/10.1002/adfm.79704",
+      "source": "https://api.crossref.org/works/10.1002%2Fadfm.79704",
+      "abstract": "ABSTRACT The grand challenge for photo‐assisted Zn‐ion batteries is not just slow ion diffusion but kinetic penalties from interfacial desolvation and photo‑induced degradation. To address this challenge, we construct a molecular/inorganic p‐n heterojunction comprising p‐type ZnPc and n‐type VOH assembled on a cotton‐carbon‐fiber scaffold. Under illumination, this heterojunction generates electron‐hole pairs that are spatially separated by the built‐in electric field. The photogenerated holes, confined to the ZnPc HOMO level, reconfigure the electric double layer and modulate the local H + /Zn 2+ equilibrium, substantially lowering the desolvation barrier for Zn 2 + intercalation. Concurrently, the photogenerated electrons injected into VOH trigger reversible V 5 + /V 4 + reduction with oxygen‐vacancy formation during discharge, while the holes facilitate the annihilation of these vacancies and drive the re‐formation of V─O bonds upon charging, establishing a reversible defect buffering effect that stabilizes the layered framework. This dual synergy elevates the capacitive contribution to 71% at 1.0 mV s − 1 , cuts charge‐transfer resistance by 43%, delivers a bias‐free photo‐charging voltage of 0.87 V with 0.96% efficiency at 5 A g − 1 , and boosts capacity by 25.2% at high rates with stable cycling over 2000 cycles. This work defines a photo‑reconfigurable electro‑ionic dynamics concept, shifting design from static to dynamic interfaces for solar‑rechargeable systems.",
+      "review_status": "auto",
+      "added": "2026-11-16",
+      "id": "L124"
     }
   ],
   "curated_checked_on": "2026-10-15",
-  "last_checked_at": "2026-11-15T06:44:40.241780+00:00",
-  "last_added_count": 0,
+  "last_checked_at": "2026-11-16T06:43:39.778255+00:00",
+  "last_added_count": 1,
   "curated_expansion": {
     "date": "2026-10-13",
     "added_count": 31,

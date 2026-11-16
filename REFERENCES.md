@@ -1231,3 +1231,13 @@ Weiyue Wang; Liguo Zhang; Yu Xie; Kexin Li; Ziyang Guo; Qiancheng Zhu. Layer-by-
 标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。
 
 阅读提示：请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。
+
+## L124 · 新近文献 · 待研读
+
+电池分类：锌基相关文献 · 文献类型：待分类
+
+Xiaojie Lu; Fan Yang; Lei Chen; Wenxiao Li; Xiaoliang Zhang; Weili Chi; Weifeng Shen; Chunxia Wang; Yong Liu; Xiangwu Zhang. Light‐Triggered Hole‐Driven Interfacial Desolvation and Reversible Defect Buffering in a ZnPc‐VOH p‐n Heterojunction for Photo‐Assisted Zinc‐Ion Batteries. *Advanced Functional Materials*, 2026. [DOI](https://doi.org/10.1002/adfm.79704) · [Crossref 元数据](https://api.crossref.org/works/10.1002%2Fadfm.79704)
+
+标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。
+
+阅读提示：请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。
