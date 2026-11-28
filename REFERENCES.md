@@ -1241,3 +1241,13 @@ Xiaojie Lu; Fan Yang; Lei Chen; Wenxiao Li; Xiaoliang Zhang; Weili Chi; Weifeng 
 标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。
 
 阅读提示：请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。
+
+## L125 · 新近文献 · 待研读
+
+电池分类：锌基相关文献 · 文献类型：待分类
+
+Binhe Wang; Hongjia Chi; Siqi Zhang; Xin Li; Yanli Chen; Huilian Liu; Lili Yang; Qiong Wu. Nickel-Ion and Polyaniline Co-Intercalation into Layered Vanadium Oxide as Stable Cathodes for Photo-Enhanced Aqueous Zinc Ion Batteries. *Molecules*, 2026. [DOI](https://doi.org/10.3390/molecules31234342) · [Crossref 元数据](https://api.crossref.org/works/10.3390%2Fmolecules31234342)
+
+标题匹配光辅助或光充电锌离子储能主题，书目信息来自 Crossref。自动收录尚未经过人工研读，实验结论请以原文为准。
+
+阅读提示：请核对光照条件、器件类型及暗态对照；自动收录不代表已验证论文结论。
